@@ -5,36 +5,26 @@ using UnityEngine;
 using TMPro;
 public class TimerScript : MonoBehaviour
 {
-    [SerializeField] private TMP_Text uiText;
+    [SerializeField] public TMP_Text uiText;
 
     private float timer;
-    public bool runTimer;
+    public bool runTimer = true;
 
     void Start()
     {
-        timer = 0;
-        runTimer = true;
+        timer = 0.0f;
+        uiText.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Only run the timer if box is checked
         if (runTimer)
         {
             timer += Time.deltaTime;
             uiText.text = timer.ToString("F");
         }
 
-        else
-        {
-            addTime();
-            timer = 0;
-            runTimer = true;
-        }
-        
     }
-
-    public void addTime()
-    {
-        
-    }}
+}
