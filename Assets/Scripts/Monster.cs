@@ -23,7 +23,7 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(-30, 0, 5);
+        transform.position = new Vector3(-50, 0, 5);
     }
 
     // Update is called once per frame

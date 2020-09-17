@@ -95,4 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  speed: 10
+  slidingSpeed: 30
+  currentSpeed: 0
+  readyToLeave: 0
