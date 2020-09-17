@@ -420,9 +420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1971734bb0e3e42269cbf695ac26bf25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monstersToSpawn: []
-  birdPerson: {fileID: 2914981590723852871, guid: 29891ec1e303f4e3dbdc48f53485c33c,
-    type: 3}
+  monstersToSpawn:
+  - {fileID: 8879039643753111776, guid: 29891ec1e303f4e3dbdc48f53485c33c, type: 3}
+  - {fileID: 8879039643753111776, guid: 29891ec1e303f4e3dbdc48f53485c33c, type: 3}
+  monstersOnScreen: []
 --- !u!1 &1181351122
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865748787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.28, y: -10.9, z: 0}
+  m_LocalPosition: {x: 0, y: -10.9, z: 0}
   m_LocalScale: {x: 24.85329, y: 6.494491, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

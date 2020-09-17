@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class MonsterSpawner : MonoBehaviour
 {
-    public List<GameObject> monstersToSpawn;
+    public List<Monster> monstersToSpawn = new List<Monster>();
+    public List<Monster> monstersOnScreen = new List<Monster>();
 
     private float spawnerTimer;
 
-    public GameObject birdPerson;
     private bool birdPersonSpawned;
 
     // Start is called before the first frame update
     void Start()
     {
-        monstersToSpawn = new List<GameObject>();
-        monstersToSpawn.Add(birdPerson);
-
         spawnerTimer = 0;
 
         birdPersonSpawned = false;
@@ -27,13 +24,26 @@ public class MonsterSpawner : MonoBehaviour
     {
         spawnerTimer += Time.deltaTime;
 
-        //Debug.Log("spawner's timer is " + spawnerTimer);
-
         // spawn birdPerson after certain amount of time
         if(spawnerTimer >= 1.0f && !birdPersonSpawned)
         {
-            Instantiate(birdPerson, new Vector3(0, 0, 0), Quaternion.identity);
+            Monster instantiatedMonster = Instantiate(monstersToSpawn[0], new Vector3(0, 0, 0), Quaternion.identity);
             birdPersonSpawned = true;
+
+            monstersToSpawn.RemoveAt(0);
+            monstersOnScreen.Add(instantiatedMonster);
+        }
+
+        // cycle through on screen monsters and despawn them if they're offscreen
+        for(int i = 0; i < monstersOnScreen.Count; i++)
+        {
+            Monster monster = monstersOnScreen[i];
+            if (monster.state == Monster.MonsterState.offscreen)
+            {
+                monstersOnScreen.RemoveAt(i);
+                i--;
+                Destroy(monster.gameObject);
+            }
         }
     }
 }
