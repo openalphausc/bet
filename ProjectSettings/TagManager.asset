@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 329643649
+    locked: 0
+  - name: Monsters
+    uniqueID: 2789366111
+    locked: 0
+  - name: Table
+    uniqueID: 3856028025
+    locked: 0
+  - name: Drinks
+    uniqueID: 247957067
+    locked: 0
