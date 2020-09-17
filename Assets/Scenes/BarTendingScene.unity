@@ -423,6 +423,9 @@ MonoBehaviour:
   monstersToSpawn:
   - {fileID: 8879039643753111776, guid: 29891ec1e303f4e3dbdc48f53485c33c, type: 3}
   - {fileID: 8879039643753111776, guid: 29891ec1e303f4e3dbdc48f53485c33c, type: 3}
+  - {fileID: 8879039643753111776, guid: 29891ec1e303f4e3dbdc48f53485c33c, type: 3}
+  - {fileID: 8879039643753111776, guid: 29891ec1e303f4e3dbdc48f53485c33c, type: 3}
+  - {fileID: 8879039643753111776, guid: 29891ec1e303f4e3dbdc48f53485c33c, type: 3}
   monstersOnScreen: []
 --- !u!1 &1181351122
 GameObject:

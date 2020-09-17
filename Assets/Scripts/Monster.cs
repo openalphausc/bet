@@ -51,7 +51,7 @@ public class Monster : MonoBehaviour
         }
 
         // set state to offscreen (ready to be despawned) if offscreen
-        float offscreenX = 200.0f;
+        float offscreenX = 100.0f;
         if(state == MonsterState.slidingOff && transform.position.x > offscreenX)
         {
             state = MonsterState.offscreen;

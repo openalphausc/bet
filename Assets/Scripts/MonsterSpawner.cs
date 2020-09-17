@@ -7,16 +7,14 @@ public class MonsterSpawner : MonoBehaviour
     public List<Monster> monstersToSpawn = new List<Monster>();
     public List<Monster> monstersOnScreen = new List<Monster>();
 
-    private float spawnerTimer;
+    private float spawnerTimer = 0.0f;
 
-    private bool birdPersonSpawned;
+    private bool readyToSpawn = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnerTimer = 0;
 
-        birdPersonSpawned = false;
     }
 
     // Update is called once per frame
@@ -24,11 +22,11 @@ public class MonsterSpawner : MonoBehaviour
     {
         spawnerTimer += Time.deltaTime;
 
-        // spawn birdPerson after certain amount of time
-        if(spawnerTimer >= 1.0f && !birdPersonSpawned)
+        // spawn monsters after certain amount of time
+        if(spawnerTimer >= 1.0f && readyToSpawn && monstersToSpawn.Count > 0)
         {
             Monster instantiatedMonster = Instantiate(monstersToSpawn[0], new Vector3(0, 0, 0), Quaternion.identity);
-            birdPersonSpawned = true;
+            readyToSpawn = false;
 
             monstersToSpawn.RemoveAt(0);
             monstersOnScreen.Add(instantiatedMonster);
@@ -43,6 +41,9 @@ public class MonsterSpawner : MonoBehaviour
                 monstersOnScreen.RemoveAt(i);
                 i--;
                 Destroy(monster.gameObject);
+
+                readyToSpawn = true;
+                spawnerTimer = 0.0f;
             }
         }
     }
