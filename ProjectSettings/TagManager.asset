@@ -53,3 +53,6 @@ TagManager:
   - name: Drinks
     uniqueID: 247957067
     locked: 0
+  - name: Ingredients
+    uniqueID: 1767314061
+    locked: 0
