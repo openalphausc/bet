@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9051825858424444617}
   m_Layer: 0
   m_Name: HalfFullGlass
-  m_TagString: Untagged
+  m_TagString: Glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,3 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bab0fbf3ac3503429da8e0f74b280cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
+    type: 3}

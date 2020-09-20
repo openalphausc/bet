@@ -36,16 +36,23 @@ public class DragIngredient : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //Detects if the ingredient comes into contact with a glass
     void OnTriggerEnter2D(Collider2D collisionInfo)
     {
-        if (collisionInfo.gameObject.name == "EmptyGlass" && full == false)
+        //the full boolean separates what happens when the glass is full versus empty, currently, if it's empty, it just repalces it with the full sprite
+        if (collisionInfo.gameObject.tag == "Glass" && full == false)
         {
             full = true;
-            Instantiate(fullGlass);
-            Destroy(collisionInfo.gameObject);
-            Destroy(gameObject);
+            //makes sure that the glass isn't in the customer's hands (colliding errors otherwise)
+            if(collisionInfo.gameObject.GetComponent<GlassFill>().purchased == false)
+            {
+                GameObject tempGlass = Instantiate(fullGlass);
+                tempGlass.GetComponent<GlassFill>().full = true;
+                Destroy(collisionInfo.gameObject);
+                Destroy(gameObject);
+            }
         }
-        if (collisionInfo.gameObject.name == "FullGlass" && full == true)
+        if (collisionInfo.gameObject.tag == "Glass" && full == true)
         {
 
         }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GlassFill : MonoBehaviour
 {
-    private bool full = false;
     private ArrayList ingredients = new ArrayList();
     private bool dragging = false;
-    private bool purchased = false;
+    public bool purchased = false;
     private GameObject monsterCol;
     public GameObject emptyGlass;
+    public bool full = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +27,11 @@ public class GlassFill : MonoBehaviour
         dragging = false;
     }
 
+    //determines what occurs when a glass comes into contact with an ingredient versus a monster, since the glass only moves when it is full, we don't need to check for that
     void OnTriggerEnter2D(Collider2D collisionInfo)
     {
         if(collisionInfo.gameObject.tag == "Ingredient")
         {
-            full = true;
             ingredients.Add(collisionInfo.gameObject.name);
         }
         if (collisionInfo.gameObject.tag == "Monster")
@@ -49,11 +49,16 @@ public class GlassFill : MonoBehaviour
         {
             gameObject.transform.position = monsterCol.gameObject.transform.position;
         }
-        else if (dragging == true)
+        else if (dragging == true && full == true)
         {
-            Debug.Log("Here");
             Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 30.0f)) - transform.position;
             transform.Translate(point);
+        }
+
+        float offscreenX = 80.0f;
+        if (transform.position.x > offscreenX)
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -26,6 +26,15 @@ public class Monster : MonoBehaviour
         transform.position = new Vector3(-50, 0, 5);
     }
 
+    //Checks if it has encoutnered the drink, if it has, then it is ready to leave
+    void OnTriggerEnter2D(Collider2D collisionInfo)
+    {
+        if (collisionInfo.gameObject.tag == "Glass")
+        {
+            readyToLeave = true;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -43,7 +52,6 @@ public class Monster : MonoBehaviour
         }
 
         // slide off when ready
-        if (Input.GetKeyDown(KeyCode.Space)) readyToLeave = true; // temporary for testing, just set "readyToLeave" to true whenever the drink is completed/dialogue is finished
         if(state == MonsterState.center && readyToLeave)
         {
             currentSpeed = slidingSpeed;
@@ -51,7 +59,7 @@ public class Monster : MonoBehaviour
         }
 
         // set state to offscreen (ready to be despawned) if offscreen
-        float offscreenX = 100.0f;
+        float offscreenX = 80.0f;
         if(state == MonsterState.slidingOff && transform.position.x > offscreenX)
         {
             state = MonsterState.offscreen;
