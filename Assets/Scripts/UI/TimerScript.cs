@@ -18,7 +18,7 @@ public class TimerScript : MonoBehaviour
     {
         timer = 0.0f;
         uiText.text = "";
-        slider.value = 0.0f;
+        slider.value = 100.0f;
         currentMonster = GameObject.FindWithTag("Monster");
     }
 
@@ -37,14 +37,14 @@ public class TimerScript : MonoBehaviour
         }
         if (dialogueBox.activeSelf == true)
         {
-            slider.value += (Time.deltaTime*timerMultiplier);
+            slider.value -= (Time.deltaTime*timerMultiplier);
         }
         
         if (currentMonster != null)
         {
             if (currentMonster.transform.position.x > offscreenX)
             {
-                slider.value = 0;
+                slider.value = 100.0f;
             }
         }
         
