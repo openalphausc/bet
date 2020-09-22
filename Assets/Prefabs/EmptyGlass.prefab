@@ -143,4 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bab0fbf3ac3503429da8e0f74b280cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchased: 0
   emptyGlass: {fileID: 320813404919778300}
+  full: 0
+  recipeFile: {fileID: 4900000, guid: f05c578d4da0e26428c68513eec41332, type: 3}
+  drink: 
