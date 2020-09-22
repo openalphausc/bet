@@ -123,7 +123,7 @@ public class GlassFill : MonoBehaviour
 
             // If but one of the ingredients is off, then the drink is not correct
             for (int i = 0; i < drinkIngredients.Count; ++i)
-                if (drinkIngredients[i].Equals(ingredients[i]))
+                if (!drinkIngredients[i].Equals(ingredients[i]))
                 {
                     Debug.Log("The recipes are not equal because the ingredients are different:");
                     Debug.Log(drinkIngredients[i]);

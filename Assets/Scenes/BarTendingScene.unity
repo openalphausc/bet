@@ -451,6 +451,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textFile: {fileID: 4900000, guid: 0d4748efb0c9c6945b880e5423ed2442, type: 3}
   monster: {fileID: 0}
+  drink: 
+  ingredients: []
   textBox: {fileID: 2027525373}
   text: {fileID: 2062664924}
   isTextBoxActive: 0
@@ -3120,5 +3122,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3911200650410499331, guid: 214cb99ea254835429949faf0430016a,
+        type: 3}
+      propertyPath: recipeFile
+      value: 
+      objectReference: {fileID: 4900000, guid: f05c578d4da0e26428c68513eec41332, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 214cb99ea254835429949faf0430016a, type: 3}
