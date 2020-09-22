@@ -15,7 +15,7 @@ public class TextBoxScript : MonoBehaviour
 
     // Text Box game object
     public GameObject textBox;
-    public TextMeshPro text;
+    public TextMeshProUGUI text;
     public bool isTextBoxActive;
 
 
@@ -23,6 +23,7 @@ public class TextBoxScript : MonoBehaviour
     {
         textBox.SetActive(false);
         drinks = textFile.text.Split('\n');
+        Debug.Log(drinks.Length);
     }
 
     public void Update()
