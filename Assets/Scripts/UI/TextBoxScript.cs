@@ -23,7 +23,6 @@ public class TextBoxScript : MonoBehaviour
     {
         textBox.SetActive(false);
         drinks = textFile.text.Split('\n');
-        Debug.Log(drinks.Length);
     }
 
     public void Update()
