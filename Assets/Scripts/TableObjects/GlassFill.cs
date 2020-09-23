@@ -84,18 +84,20 @@ public class GlassFill : MonoBehaviour
 
                 Debug.Log((drinkIsCorrect ? "Drink is correct" : "Drink is wrong"));
 
+                GameObject face;
                 if(drinkIsCorrect)
                 {
                     // if drink is correct and timely, happy face
-                    if (emotionSlider.value > 0.5f) Instantiate(happyFace);
+                    if (emotionSlider.value > 0.5f) face = Instantiate(happyFace);
                     // if drink is correct and badly timed, neutral face
-                    else Instantiate(neutralFace);
+                    else face = Instantiate(neutralFace);
                 }
                 else
                 {
                     // if drink is wrong, frown face
-                    Instantiate(frownFace);
+                    face = Instantiate(frownFace);
                 }
+                face.transform.parent = GameObject.FindWithTag("Monster").transform;
             }
             Instantiate(emptyGlass);
         }
