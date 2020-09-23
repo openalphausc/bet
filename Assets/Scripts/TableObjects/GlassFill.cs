@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GlassFill : MonoBehaviour
 {
@@ -22,10 +23,20 @@ public class GlassFill : MonoBehaviour
     // Remove this once the data persistence is solved
     public TextBoxScript textBox = null;
 
+    // Smiley face prefabs
+    public GameObject happyFace;
+    public GameObject neutralFace;
+    public GameObject frownFace;
+
+    // Reference to emotion slider
+    private Slider emotionSlider;
+
     // Start is called before the first frame update
     void Start()
     {
         getRecipes();
+
+        emotionSlider = GameObject.Find("EmotionSlider").GetComponent<Slider>();
     }
 
     public void OnMouseDown()
@@ -47,7 +58,6 @@ public class GlassFill : MonoBehaviour
                 textBox = FindObjectOfType<TextBoxScript>();
             ingredients.Add(collisionInfo.gameObject.name);
             textBox.ingredients.Add(collisionInfo.gameObject.name);
-            Debug.Log(collisionInfo.gameObject.name);
         }
         if (collisionInfo.gameObject.tag == "Monster")
         {
@@ -63,19 +73,30 @@ public class GlassFill : MonoBehaviour
             this.drink = drinkNamedRecipe.drinkName;
             // Find the drink in the sorted list of drinks
             int index = recipes.BinarySearch(drinkNamedRecipe, new RecipeComp());
-            if (index < 0 )
+            if (index < 0)
             {
                 Debug.Log("Recipe for " + this.drink + " not found");
             }
             else
             {
-                Debug.Log("Found recipe for " + this.drink);
                 Recipe targetDrink = recipes[index];
-                bool isDrinkCorrect = targetDrink.isCorrect(ingredients);
+                bool drinkIsCorrect = targetDrink.isCorrect(ingredients);
 
-                Debug.Log(isDrinkCorrect);
+                Debug.Log((drinkIsCorrect ? "Drink is correct" : "Drink is wrong"));
+
+                if(drinkIsCorrect)
+                {
+                    // if drink is correct and timely, happy face
+                    if (emotionSlider.value > 0.5f) Instantiate(happyFace);
+                    // if drink is correct and badly timed, neutral face
+                    else Instantiate(neutralFace);
+                }
+                else
+                {
+                    // if drink is wrong, frown face
+                    Instantiate(frownFace);
+                }
             }
-
             Instantiate(emptyGlass);
         }
     }
@@ -116,8 +137,8 @@ public class GlassFill : MonoBehaviour
             if (drinkIngredients.Count != ingredients.Count)
             {
                 Debug.Log("The recipes are not equal because the number of ingredients is not the same:");
-                Debug.Log(drinkIngredients.Count);
-                Debug.Log(ingredients.Count);
+                //Debug.Log(drinkIngredients.Count);
+                //Debug.Log(ingredients.Count);
                 return false;
             }
 
@@ -126,8 +147,8 @@ public class GlassFill : MonoBehaviour
                 if (!drinkIngredients[i].Equals(ingredients[i]))
                 {
                     Debug.Log("The recipes are not equal because the ingredients are different:");
-                    Debug.Log(drinkIngredients[i]);
-                    Debug.Log(ingredients[i]);
+                    //Debug.Log(drinkIngredients[i]);
+                    //Debug.Log(ingredients[i]);
                     return false;
                 }
             return true;
