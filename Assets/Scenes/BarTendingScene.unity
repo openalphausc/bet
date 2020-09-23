@@ -1690,11 +1690,13 @@ MonoBehaviour:
   uiText: {fileID: 432541864}
   runTimer: 1
   offscreenX: 79
-  timerMultiplier: 1
+  timerMultiplier: 0.05
   slider: {fileID: 1201855000}
   currentMonster: {fileID: 0}
   dialogueBox: {fileID: 2027525373}
   emptyGlassPrefab: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
+    type: 3}
+  frownFace: {fileID: 6091655751931043891, guid: c24a99e8b3fa94a09948bd2e4992324b,
     type: 3}
 --- !u!1 &1430043039
 GameObject:

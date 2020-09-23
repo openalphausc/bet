@@ -16,6 +16,7 @@ public class TimerScript : MonoBehaviour
     public GameObject dialogueBox;
 
     public GameObject emptyGlassPrefab;
+    public GameObject frownFace;
 
     void Start()
     {
@@ -52,7 +53,7 @@ public class TimerScript : MonoBehaviour
         }
 
         // If emotion bar is empty, monster moves on and drink re-spawns
-        if (slider.value <= 0)
+        if (slider.value <= 0 && currentMonster.GetComponent<Monster>().state == Monster.MonsterState.center)
         {
             // change monster's state
             currentMonster.GetComponent<Monster>().state = Monster.MonsterState.slidingOff;
@@ -63,6 +64,10 @@ public class TimerScript : MonoBehaviour
 
             // spawn empty glass prefab
             Instantiate(emptyGlassPrefab);
+
+            // frown face
+            GameObject face = Instantiate(frownFace);
+            face.transform.parent = GameObject.FindWithTag("Monster").transform;
         }
     }
 }
