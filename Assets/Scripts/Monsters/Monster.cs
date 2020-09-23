@@ -54,8 +54,11 @@ public class Monster : MonoBehaviour
         // slide off when ready
         if(state == MonsterState.center && readyToLeave)
         {
-            currentSpeed = slidingSpeed;
             state = MonsterState.slidingOff;
+        }
+        if(state == MonsterState.slidingOff)
+        {
+            currentSpeed = slidingSpeed;
         }
 
         // set state to offscreen (ready to be despawned) if offscreen
