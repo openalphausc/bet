@@ -106,11 +106,11 @@ public class GlassFill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (purchased == true)
+        if (purchased)
         {
             gameObject.transform.position = monsterCol.gameObject.transform.position;
         }
-        else if (dragging == true && full == true)
+        else if (dragging && full)
         {
             Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 30.0f)) - transform.position;
             transform.Translate(point);

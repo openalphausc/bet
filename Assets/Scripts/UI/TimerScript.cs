@@ -10,10 +10,13 @@ public class TimerScript : MonoBehaviour
     private float timer;
     public bool runTimer = true;
     public float offscreenX = 79.0f;
-    public float timerMultiplier = 1.0f;
+    public float timerMultiplier;
     public Slider slider;
     public GameObject currentMonster;
     public GameObject dialogueBox;
+
+    public GameObject emptyGlassPrefab;
+
     void Start()
     {
         timer = 0.0f;
@@ -35,7 +38,7 @@ public class TimerScript : MonoBehaviour
             timer += Time.deltaTime;
             uiText.text = timer.ToString("F");
         }
-        if (dialogueBox.activeSelf == true)
+        if (dialogueBox.activeSelf)
         {
             slider.value -= (Time.deltaTime*timerMultiplier);
         }
@@ -47,6 +50,19 @@ public class TimerScript : MonoBehaviour
                 slider.value = 100.0f;
             }
         }
-        
+
+        // If emotion bar is empty, monster moves on and drink re-spawns
+        if (slider.value <= 0)
+        {
+            // change monster's state
+            currentMonster.GetComponent<Monster>().state = Monster.MonsterState.slidingOff;
+
+            // destroy drink
+            GameObject currentDrink = GameObject.FindWithTag("Glass");
+            Destroy(currentDrink);
+
+            // spawn empty glass prefab
+            Instantiate(emptyGlassPrefab);
+        }
     }
 }
