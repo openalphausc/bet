@@ -10,7 +10,7 @@ public class TimerScript : MonoBehaviour
     private float timer;
     public bool runTimer = true;
     public float offscreenX = 79.0f;
-    public float timerMultiplier = 1.0f;
+    public float timerMultiplier;
     public Slider slider;
     public GameObject currentMonster;
     public GameObject dialogueBox;
@@ -35,7 +35,7 @@ public class TimerScript : MonoBehaviour
             timer += Time.deltaTime;
             uiText.text = timer.ToString("F");
         }
-        if (dialogueBox.activeSelf == true)
+        if (dialogueBox.activeSelf)
         {
             slider.value -= (Time.deltaTime*timerMultiplier);
         }

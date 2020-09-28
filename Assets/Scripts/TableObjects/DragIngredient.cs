@@ -10,7 +10,8 @@ public class DragIngredient : MonoBehaviour
     private bool instanceCreated = false;
     private bool dragging = false;
     private Vector2 mousePos;
-    private bool full = false;
+    private bool colliding = true;
+    private Collider2D collisionInfoCopy;
 
     // Start is called before the first frame update
     void Start()
@@ -27,35 +28,47 @@ public class DragIngredient : MonoBehaviour
             Instantiate(gameObject);
         }
         instanceCreated = true;
+        colliding = false;
 
     }
 
     public void OnMouseUp()
     {
         dragging = false;
+
+        //if we are currently colliding with something at the frame of OnMouseUp(), we enter
+        if (colliding)
+        {
+            if (collisionInfoCopy.gameObject.tag == "Glass")
+            {
+                //makes sure that the glass isn't in the customer's hands (colliding errors otherwise)
+                if (collisionInfoCopy.gameObject.GetComponent<GlassFill>().purchased == false && !dragging)
+                {
+                    GameObject tempGlass = Instantiate(fullGlass);
+                    tempGlass.GetComponent<GlassFill>().full = true;
+                    Destroy(collisionInfoCopy.gameObject);
+                    Destroy(gameObject);
+                }
+            }
+        }
+
         Destroy(gameObject);
     }
 
     //Detects if the ingredient comes into contact with a glass
     void OnTriggerEnter2D(Collider2D collisionInfo)
     {
-        //the full boolean separates what happens when the glass is full versus empty, currently, if it's empty, it just repalces it with the full sprite
-        if (collisionInfo.gameObject.tag == "Glass" && full == false)
-        {
-            full = true;
-            //makes sure that the glass isn't in the customer's hands (colliding errors otherwise)
-            if(collisionInfo.gameObject.GetComponent<GlassFill>().purchased == false)
-            {
-                GameObject tempGlass = Instantiate(fullGlass);
-                tempGlass.GetComponent<GlassFill>().full = true;
-                Destroy(collisionInfo.gameObject);
-                Destroy(gameObject);
-            }
-        }
-        if (collisionInfo.gameObject.tag == "Glass" && full == true)
-        {
+        //moved original code to onMouseUp
+        //We just assign collisionInfoCopy here and colliding
+        collisionInfoCopy = collisionInfo;
+        colliding = true;
+    }
 
-        }
+    void OnTriggerExit2D(Collider2D collisionInfo)
+    {
+        //adjusting data members for non-collision
+        colliding = false;
+        collisionInfoCopy = null;
     }
 
     // Update is called once per frame
