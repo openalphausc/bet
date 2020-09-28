@@ -10,14 +10,15 @@ public class TextBoxScript : MonoBehaviour
     public TextAsset textFile;
     public static string[] drinks;
 
-    // The monster current ordering
+    // The monster current ordering and which drink they want
     public Monster monster;
+    public string drink;
+    public List<string> ingredients = new List<string>();
 
     // Text Box game object
     public GameObject textBox;
     public TextMeshProUGUI text;
     public bool isTextBoxActive;
-
 
     public void Start()
     {
@@ -32,7 +33,6 @@ public class TextBoxScript : MonoBehaviour
 
         if (monster == null)
         {
-            
             return;
         }
 
@@ -47,6 +47,9 @@ public class TextBoxScript : MonoBehaviour
                 text.text = drink;
                 textBox.SetActive(true);
                 isTextBoxActive = true;
+
+                // the monster wants this drink
+                this.drink = drink;
             }
         }
         else
