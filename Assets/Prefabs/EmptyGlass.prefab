@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 320813404919778289}
   - component: {fileID: 3147815532739337282}
   - component: {fileID: 3911200650410499331}
+  - component: {fileID: 6225251175301827994}
+  - component: {fileID: 8825615940758909225}
   m_Layer: 0
   m_Name: EmptyGlass
   m_TagString: Glass
@@ -52,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.09214926, y: -0.012102127}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.2, y: 14.62}
+  m_Size: {x: 12.517463, y: 17.040146}
   m_EdgeRadius: 0
 --- !u!50 &3147815532739337282
 Rigidbody2D:
@@ -148,7 +150,6 @@ MonoBehaviour:
   recipeFile: {fileID: 4900000, guid: f05c578d4da0e26428c68513eec41332, type: 3}
   drink: 
   textBox: {fileID: 0}
-  emptyGlassPrefab: {fileID: 320813404919778300}
   happyFace: {fileID: 114152390962653731, guid: b4ae820a312ae461a8c3ee8d3a492f35,
     type: 3}
   neutralFace: {fileID: 2386820289288274983, guid: 1248c8f3a14d34219aa5ddc37c6ae79f,
@@ -157,3 +158,56 @@ MonoBehaviour:
     type: 3}
   emptySprite: {fileID: 21300000, guid: ee115d4e8e9ad46ef95db812ead0f7ce, type: 3}
   fullSprite: {fileID: 21300000, guid: 174f74a442ab5a8468d98b5e19bc5484, type: 3}
+--- !u!114 &6225251175301827994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320813404919778300}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000005f5942a67951d6e5
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 3
+  m_PointLightOuterRadius: 7
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &8825615940758909225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320813404919778300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58151950f439f4e20a64729408bc2e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

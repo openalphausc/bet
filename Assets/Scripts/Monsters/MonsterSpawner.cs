@@ -40,7 +40,7 @@ public class MonsterSpawner : MonoBehaviour
         // spawn monsters after certain amount of time
         if(spawnerTimer >= 1.0f && readyToSpawn && monstersToSpawn.Count > 0)
         {
-            Monster instantiatedMonster = Instantiate(monstersToSpawn[0], new Vector3(0, 0, 0), Quaternion.identity);
+            Monster instantiatedMonster = Instantiate(monstersToSpawn[0]);
             instantiatedMonster.name = monstersToSpawn[0].name;
             readyToSpawn = false;
 
