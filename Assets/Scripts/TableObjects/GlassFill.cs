@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class GlassFill : MonoBehaviour
 {
     private List<string> ingredients = new List<string>();
-    private bool dragging = false;
     public bool purchased = false;
     private GameObject monsterCol;
-    
+
+    private bool mouseDown = false;
+    private bool holding = false;
+
     public bool full = false;
 
     // Data members for reading recipes
@@ -53,13 +55,26 @@ public class GlassFill : MonoBehaviour
 
     public void OnMouseDown()
     {
-        // only let the player drag the glass if they aren't already holding an ingredient
-        if(equipIngredient.equippedObject == null) dragging = true;
+       mouseDown = true;
+    }
+
+    public void OnMouseExit()
+    {
+        mouseDown = false;
     }
 
     public void OnMouseUp()
     {
-        dragging = false;
+        // only let the player hold the glass if they aren't already holding an ingredient
+        if (equipIngredient.equippedObject == null && mouseDown && !holding && full && !purchased)
+        {
+            holding = true;
+        }
+        else if (holding)
+        {
+            holding = false;
+        }
+        mouseDown = false;
 
         if(equipIngredient.equippedObject != null) {
             AddIngredient(equipIngredient.equippedObject);
@@ -88,6 +103,7 @@ public class GlassFill : MonoBehaviour
             if (textBox == null)
                 textBox = FindObjectOfType<TextBoxScript>();
             purchased = true;
+            holding = false;
             gameObject.transform.parent = GameObject.FindWithTag("Monster").transform;
             monsterCol = collisionInfo.gameObject;
             List<string> ingredients = textBox.ingredients;
@@ -131,7 +147,7 @@ public class GlassFill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dragging && full && !purchased)
+        if (holding)
         {
             Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 30.0f)) - transform.position;
             transform.Translate(point);
