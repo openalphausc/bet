@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320813404919778300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.93, y: -5.42, z: 0}
+  m_LocalPosition: {x: 0, y: -6.3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -144,14 +144,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purchased: 0
-  emptyGlass: {fileID: 320813404919778300}
   full: 0
   recipeFile: {fileID: 4900000, guid: f05c578d4da0e26428c68513eec41332, type: 3}
   drink: 
   textBox: {fileID: 0}
+  emptyGlassPrefab: {fileID: 320813404919778300}
   happyFace: {fileID: 114152390962653731, guid: b4ae820a312ae461a8c3ee8d3a492f35,
     type: 3}
   neutralFace: {fileID: 2386820289288274983, guid: 1248c8f3a14d34219aa5ddc37c6ae79f,
     type: 3}
   frownFace: {fileID: 6091655751931043891, guid: c24a99e8b3fa94a09948bd2e4992324b,
     type: 3}
+  emptySprite: {fileID: 21300000, guid: ee115d4e8e9ad46ef95db812ead0f7ce, type: 3}
+  fullSprite: {fileID: 21300000, guid: 174f74a442ab5a8468d98b5e19bc5484, type: 3}

@@ -242,10 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!1 &393045336
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,9 +251,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 393045337}
+  - component: {fileID: 393045338}
   m_Layer: 0
   m_Name: Ingredients
-  m_TagString: Untagged
+  m_TagString: EquipIngredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,6 +284,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &393045338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393045336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b77bd1ac5a2a34681eb5b362f2bc1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equippedObject: {fileID: 0}
 --- !u!1 &432541862
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,10 +718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,10 +931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!1 &802311712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,10 +1052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,10 +1256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!1 &1060202936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,10 +1475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!61 &1102533644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1819,10 +1809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!1 &1464669677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,10 +1930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!1 &1514982328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,10 +2051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!1 &1516924721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2194,10 +2172,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
+--- !u!1 &1541500625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1541500627}
+  - component: {fileID: 1541500626}
+  m_Layer: 0
+  m_Name: GlassSpawner
+  m_TagString: GlassSpawner
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1541500626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541500625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ceb8befbde5cee418d5055dec0e4082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emptyGlassPrefab: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
     type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
+--- !u!4 &1541500627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541500625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1736156391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,10 +2488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a354b5600334f840a07dc7d7f3d9e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyGlass: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
-    type: 3}
-  fullGlass: {fileID: 8917791572307348401, guid: 9a828fc37e2df82408360c53329277a1,
-    type: 3}
 --- !u!1 &1865748787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,50 +3076,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 320813404919778289, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 320813404919778300, guid: 214cb99ea254835429949faf0430016a,
         type: 3}
       propertyPath: m_Name
-      value: EmptyGlass
-      objectReference: {fileID: 0}
-    - target: {fileID: 320813404919778302, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 320813404919778302, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 320813404919778302, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 320813404919778302, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 320813404919778302, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 320813404919778302, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 320813404919778302, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
+      value: Glass
       objectReference: {fileID: 0}
     - target: {fileID: 320813404919778302, guid: 214cb99ea254835429949faf0430016a,
         type: 3}
@@ -3126,10 +3101,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3911200650410499331, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: recipeFile
-      value: 
-      objectReference: {fileID: 4900000, guid: f05c578d4da0e26428c68513eec41332, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 214cb99ea254835429949faf0430016a, type: 3}

@@ -10,7 +10,7 @@ public class GlassFill : MonoBehaviour
     private bool dragging = false;
     public bool purchased = false;
     private GameObject monsterCol;
-    public GameObject emptyGlass;
+    
     public bool full = false;
 
     // Data members for reading recipes
@@ -31,39 +31,64 @@ public class GlassFill : MonoBehaviour
     // Reference to emotion slider
     private Slider emotionSlider;
 
+    // sprite stuff
+    private SpriteRenderer spriteRenderer;
+    public Sprite emptySprite;
+    public Sprite fullSprite;
+
+    // reference to EquipIngredient
+    private EquipIngredient equipIngredient;
+
     // Start is called before the first frame update
     void Start()
     {
         getRecipes();
 
         emotionSlider = GameObject.Find("EmotionSlider").GetComponent<Slider>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
     }
 
     public void OnMouseDown()
     {
-        dragging = true;
+        // only let the player drag the glass if they aren't already holding an ingredient
+        if(equipIngredient.equippedObject == null) dragging = true;
     }
 
     public void OnMouseUp()
     {
         dragging = false;
+
+        if(equipIngredient.equippedObject != null) {
+            AddIngredient(equipIngredient.equippedObject);
+        }
+    }
+
+    public void AddIngredient(GameObject ingredient)
+    {
+        // add to ingredients
+        if (textBox == null) textBox = FindObjectOfType<TextBoxScript>();
+        textBox.ingredients.Add(ingredient.name);
+
+        // add to ingredients
+        ingredients.Add(ingredient.name);
+
+        // change the sprite
+        full = true;
+        spriteRenderer.sprite = fullSprite;
     }
 
     //determines what occurs when a glass comes into contact with an ingredient versus a monster, since the glass only moves when it is full, we don't need to check for that
     void OnTriggerEnter2D(Collider2D collisionInfo)
     {
-        if (collisionInfo.gameObject.tag == "Ingredient")
-        {
-            if (textBox == null)
-                textBox = FindObjectOfType<TextBoxScript>();
-            ingredients.Add(collisionInfo.gameObject.name);
-            textBox.ingredients.Add(collisionInfo.gameObject.name);
-        }
-        if (collisionInfo.gameObject.tag == "Monster")
+        if (collisionInfo.gameObject.tag == "Monster" && !purchased)
         {
             if (textBox == null)
                 textBox = FindObjectOfType<TextBoxScript>();
             purchased = true;
+            gameObject.transform.parent = GameObject.FindWithTag("Monster").transform;
             monsterCol = collisionInfo.gameObject;
             List<string> ingredients = textBox.ingredients;
 
@@ -99,18 +124,14 @@ public class GlassFill : MonoBehaviour
                 }
                 face.transform.parent = GameObject.FindWithTag("Monster").transform;
             }
-            Instantiate(emptyGlass);
+            GameObject.FindWithTag("GlassSpawner").GetComponent<GlassSpawner>().SpawnGlass();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (purchased)
-        {
-            gameObject.transform.position = monsterCol.gameObject.transform.position;
-        }
-        else if (dragging && full)
+        if (dragging && full && !purchased)
         {
             Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 30.0f)) - transform.position;
             transform.Translate(point);
