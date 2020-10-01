@@ -15,6 +15,8 @@ public class GlassFill : MonoBehaviour
 
     public bool full = false;
 
+    public int ingredientCount = 0;
+
     // Data members for reading recipes
     public TextAsset recipeFile; // the csv of recipes
     public List<Recipe> recipes = new List<Recipe>();
@@ -93,6 +95,41 @@ public class GlassFill : MonoBehaviour
         // change the sprite
         full = true;
         spriteRenderer.sprite = fullSprite;
+
+        //counter for number of ingredients in the drink
+        ingredientCount++;
+
+        //changes the sprite of the cup to the number of ingredients
+        //TODO: change the fullSprite to different sprites
+        switch (ingredientCount)
+        {
+            case 1:
+                spriteRenderer.sprite = fullSprite;
+                break;
+            case 2:
+                spriteRenderer.sprite = fullSprite;
+                break;
+            case 3:
+                spriteRenderer.sprite = fullSprite;
+                break;
+            case 4:
+                spriteRenderer.sprite = fullSprite;
+                break;
+            case 5:
+                spriteRenderer.sprite = fullSprite;
+                break;
+            case 6:
+                spriteRenderer.sprite = fullSprite;
+                break;
+            default:
+                //alert that tells the user the glass is full
+                glassIsFullAlert();
+        }
+    }
+    //alerts the user when the ingredient count is already full
+    void glassIsFullAlert()
+    {
+        //TODO: Charlie and Helen
     }
 
     //determines what occurs when a glass comes into contact with an ingredient versus a monster, since the glass only moves when it is full, we don't need to check for that
