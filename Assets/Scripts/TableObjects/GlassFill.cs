@@ -100,8 +100,6 @@ public class GlassFill : MonoBehaviour
     {
         if (collisionInfo.gameObject.tag == "Monster" && !purchased)
         {
-            if (textBox == null)
-                textBox = FindObjectOfType<TextBoxScript>();
             purchased = true;
             holding = false;
             gameObject.transform.parent = GameObject.FindWithTag("Monster").transform;

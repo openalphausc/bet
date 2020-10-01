@@ -13,7 +13,6 @@ public class TimerScript : MonoBehaviour
     public float timerMultiplier;
     public Slider slider;
     public GameObject currentMonster;
-    public GameObject dialogueBox;
 
     public GameObject emptyGlassPrefab;
     public GameObject frownFace;
@@ -39,13 +38,13 @@ public class TimerScript : MonoBehaviour
             timer += Time.deltaTime;
             uiText.text = timer.ToString("F");
         }
-        if (dialogueBox.activeSelf)
-        {
-            slider.value -= (Time.deltaTime*timerMultiplier);
-        }
         
         if (currentMonster != null)
         {
+            if (currentMonster.GetComponent<Monster>().state == Monster.MonsterState.center)
+            {
+                slider.value -= (Time.deltaTime * timerMultiplier);
+            }
             if (currentMonster.transform.position.x > offscreenX)
             {
                 slider.value = 100.0f;

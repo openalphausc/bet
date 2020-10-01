@@ -5,8 +5,6 @@ using UnityEngine;
 public class ClickToStartDialogue : MonoBehaviour
 {
 
-    private int proximityRadius = 100;
-    
     public bool clickable;
     public string dialogueNode;
 

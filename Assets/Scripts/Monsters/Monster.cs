@@ -15,10 +15,12 @@ public class Monster : MonoBehaviour
 
     public MonsterState state = MonsterState.slidingOn;
 
-    public float slidingSpeed = 50.0f;
-    public float currentSpeed = 0.0f;
+    private float slidingSpeed = 30.0f;
+    private float currentSpeed;
 
     public bool readyToLeave = false;
+
+    public string dialogueToStart = "";
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +51,12 @@ public class Monster : MonoBehaviour
             transform.position = new Vector3(0, transform.position.y, transform.position.z);
             currentSpeed = 0.0f;
             state = MonsterState.center;
+
+            // if there is a dialogue for the monster, load it
+            if(dialogueToStart != "")
+            {
+                FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart);
+            }
         }
 
         // slide off when ready

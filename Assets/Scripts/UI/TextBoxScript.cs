@@ -14,15 +14,10 @@ public class TextBoxScript : MonoBehaviour
     public Monster monster;
     public string drink;
     public List<string> ingredients = new List<string>();
-
-    // Text Box game object
-    public GameObject textBox;
-    public TextMeshProUGUI text;
-    public bool isTextBoxActive;
+    private bool drinkRetrieved = false;
 
     public void Start()
     {
-        textBox.SetActive(false);
         drinks = textFile.text.Split('\n');
     }
 
@@ -40,13 +35,11 @@ public class TextBoxScript : MonoBehaviour
         if (monster.state == Monster.MonsterState.center)
         {
             // If the monster's order hasn't yet been shown
-            if (isTextBoxActive == false)
+            if (!drinkRetrieved)
             {
                 // Create an order and display it
                 string drink = getRandomDrink();
-                text.text = drink;
-                textBox.SetActive(true);
-                isTextBoxActive = true;
+                drinkRetrieved = true;
 
                 // the monster wants this drink
                 this.drink = drink;
@@ -55,8 +48,7 @@ public class TextBoxScript : MonoBehaviour
         else
         {
             // Otherwise, the monster is leaving / has left
-            textBox.SetActive(false);
-            isTextBoxActive = false;
+            drinkRetrieved = false;
         }
     }
 
