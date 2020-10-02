@@ -4,8 +4,12 @@ tags:
 colorID:
 position: 
 ---
-Hello tasty human.
-I vill have vone Bloody Mary.
-You vill put ze blood of Mary, then some vodka.
+<<if visited("VampireOrder") is true>>
+    Ze Bloody Mary for me.
+<<else>>
+    Hello tasty human. (Press SPACEBAR to continue) 
+    I vill have vone Bloody Mary.
+    You vill put ze blood of Mary, then some vodka.
+<<endif>>
 And use fresh blood, please.
 ===

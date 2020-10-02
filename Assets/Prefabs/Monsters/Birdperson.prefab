@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
-  dialogueToStart: 
+  dialogueToStart: BirdpersonOrder
   drinkOrder: 8 Ball
 --- !u!61 &3534611185494281461
 BoxCollider2D:
