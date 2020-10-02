@@ -39,6 +39,12 @@ public class GlassFill : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Sprite emptySprite;
     public Sprite fullSprite;
+    public Sprite oneSixthSprite;
+    public Sprite twoSixthSprite;
+    public Sprite threeSixthSprite;
+    public Sprite fourSixthSprite;
+    public Sprite fiveSixthSprite;
+    public Sprite sixSixthSprite;
 
     // reference to EquipIngredient
     private EquipIngredient equipIngredient;
@@ -104,32 +110,35 @@ public class GlassFill : MonoBehaviour
         switch (ingredientCount)
         {
             case 1:
-                spriteRenderer.sprite = fullSprite;
+                spriteRenderer.sprite = oneSixthSprite;
                 break;
             case 2:
-                spriteRenderer.sprite = fullSprite;
+                spriteRenderer.sprite = twoSixthSprite;
                 break;
             case 3:
-                spriteRenderer.sprite = fullSprite;
+                spriteRenderer.sprite = threeSixthSprite;
                 break;
             case 4:
-                spriteRenderer.sprite = fullSprite;
+                spriteRenderer.sprite = fourSixthSprite;
                 break;
             case 5:
-                spriteRenderer.sprite = fullSprite;
+                spriteRenderer.sprite = fiveSixthSprite;                
                 break;
             case 6:
-                spriteRenderer.sprite = fullSprite;
+                // This might end up being fullSprite - but in case we change from sixths to 
+                // 8ths and such, I'll keep it this for now?
+                spriteRenderer.sprite = sixSixthSprite;
                 break;
             default:
                 //alert that tells the user the glass is full
                 glassIsFullAlert();
+                break;
         }
     }
-    //alerts the user when the ingredient count is already full
-    void glassIsFullAlert()
+
+    void glassIsFullAlert() 
     {
-        //TODO: Charlie and Helen
+        //TODO Charlie and Helen
     }
 
     //determines what occurs when a glass comes into contact with an ingredient versus a monster, since the glass only moves when it is full, we don't need to check for that
