@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 320813404919778303}
   - component: {fileID: 320813404919778289}
   - component: {fileID: 3147815532739337282}
-  - component: {fileID: 3911200650410499331}
   - component: {fileID: 6225251175301827994}
   - component: {fileID: 8825615940758909225}
+  - component: {fileID: 5659268838681881260}
+  - component: {fileID: 8761791047644038165}
   m_Layer: 0
   m_Name: EmptyGlass
   m_TagString: Glass
@@ -133,38 +134,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3911200650410499331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320813404919778300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bab0fbf3ac3503429da8e0f74b280cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  purchased: 0
-  full: 0
-  ingredientCount: 0
-  recipeFile: {fileID: 4900000, guid: f05c578d4da0e26428c68513eec41332, type: 3}
-  drink: 
-  textBox: {fileID: 0}
-  happyFace: {fileID: 114152390962653731, guid: b4ae820a312ae461a8c3ee8d3a492f35,
-    type: 3}
-  neutralFace: {fileID: 2386820289288274983, guid: 1248c8f3a14d34219aa5ddc37c6ae79f,
-    type: 3}
-  frownFace: {fileID: 6091655751931043891, guid: c24a99e8b3fa94a09948bd2e4992324b,
-    type: 3}
-  emptySprite: {fileID: 21300000, guid: 6bc07ef81f02f4f8ba0daa9719fdb2d1, type: 3}
-  fullSprite: {fileID: 21300000, guid: 174f74a442ab5a8468d98b5e19bc5484, type: 3}
-  oneSixthSprite: {fileID: 21300000, guid: 92c730cbf78f24273a2cf36643670767, type: 3}
-  twoSixthSprite: {fileID: 21300000, guid: f5844ee1511e04921bfed529bb9e7201, type: 3}
-  threeSixthSprite: {fileID: 21300000, guid: a890776f0a9b944a6bdd3787213ea86c, type: 3}
-  fourSixthSprite: {fileID: 21300000, guid: 58b97196992b14b368a8878c087bbbad, type: 3}
-  fiveSixthSprite: {fileID: 21300000, guid: f07c7cefbd1264fe0b781169fe2ce286, type: 3}
-  sixSixthSprite: {fileID: 21300000, guid: 9fe3a138097bd4d3eac6fe1a39af9e9b, type: 3}
 --- !u!114 &6225251175301827994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,3 +187,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58151950f439f4e20a64729408bc2e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5659268838681881260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320813404919778300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8793d126aaf343e6b0031a4a3cd638b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purchased: 0
+  recipeFile: {fileID: 4900000, guid: f05c578d4da0e26428c68513eec41332, type: 3}
+  happyFace: {fileID: 114152390962653731, guid: b4ae820a312ae461a8c3ee8d3a492f35,
+    type: 3}
+  neutralFace: {fileID: 2386820289288274983, guid: 1248c8f3a14d34219aa5ddc37c6ae79f,
+    type: 3}
+  frownFace: {fileID: 6091655751931043891, guid: c24a99e8b3fa94a09948bd2e4992324b,
+    type: 3}
+  emptySprite: {fileID: 21300000, guid: 6bc07ef81f02f4f8ba0daa9719fdb2d1, type: 3}
+  fullSprite: {fileID: 21300000, guid: 9fe3a138097bd4d3eac6fe1a39af9e9b, type: 3}
+  oneSixthSprite: {fileID: 21300000, guid: 92c730cbf78f24273a2cf36643670767, type: 3}
+  twoSixthSprite: {fileID: 21300000, guid: f5844ee1511e04921bfed529bb9e7201, type: 3}
+  threeSixthSprite: {fileID: 21300000, guid: a890776f0a9b944a6bdd3787213ea86c, type: 3}
+  fourSixthSprite: {fileID: 21300000, guid: 58b97196992b14b368a8878c087bbbad, type: 3}
+  fiveSixthSprite: {fileID: 21300000, guid: f07c7cefbd1264fe0b781169fe2ce286, type: 3}
+  sixSixthSprite: {fileID: 21300000, guid: 9fe3a138097bd4d3eac6fe1a39af9e9b, type: 3}
+--- !u!114 &8761791047644038165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320813404919778300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9b7dda260f84d45810276239641a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holding: 0

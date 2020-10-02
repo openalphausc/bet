@@ -3858,10 +3858,5 @@ PrefabInstance:
       propertyPath: m_ApplyToSortingLayers.Array.data[4]
       value: -237702197
       objectReference: {fileID: 0}
-    - target: {fileID: 6225251175301827994, guid: 214cb99ea254835429949faf0430016a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 214cb99ea254835429949faf0430016a, type: 3}

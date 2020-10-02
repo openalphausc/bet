@@ -2,43 +2,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using System.Linq;
 
 public class GlassFill : MonoBehaviour
 {
-    private List<string> ingredients = new List<string>();
+    private Drink targetDrink = new Drink();
+    private Drink currentDrink = new Drink();
+
     public bool purchased = false;
-    private GameObject monsterCol;
-
-    private bool mouseDown = false;
-    private bool holding = false;
-
-    public bool full = false;
-
-    public int ingredientCount = 0;
 
     // Data members for reading recipes
     public TextAsset recipeFile; // the csv of recipes
-    public List<Recipe> recipes = new List<Recipe>(); // a list of all recipes
-
-    // The drink the monster wants
-    public string drink;
-
-    // Remove this once the data persistence is solved
-    public TextBoxScript textBox = null;
+    private List<Drink> recipes = new List<Drink>(); // a list of all recipes
 
     // Smiley face prefabs
     public GameObject happyFace;
     public GameObject neutralFace;
     public GameObject frownFace;
-
     // Reference to emotion slider
     private Slider emotionSlider;
+
+    // references
+    private EquipIngredient equipIngredient;
+    private GlassMove glassMove;
 
     // sprite stuff
     private SpriteRenderer spriteRenderer;
     public Sprite emptySprite;
-    public Sprite fullSprite;
     public Sprite oneSixthSprite;
     public Sprite twoSixthSprite;
     public Sprite threeSixthSprite;
@@ -46,68 +36,100 @@ public class GlassFill : MonoBehaviour
     public Sprite fiveSixthSprite;
     public Sprite sixSixthSprite;
 
-    // reference to EquipIngredient
-    private EquipIngredient equipIngredient;
-
     // Start is called before the first frame update
     void Start()
     {
         getRecipes();
 
-        emotionSlider = GameObject.Find("EmotionSlider").GetComponent<Slider>();
-
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
         equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
+        glassMove = gameObject.GetComponent<GlassMove>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        emotionSlider = GameObject.Find("EmotionSlider").GetComponent<Slider>();
     }
 
-    public void OnMouseDown()
+    // Update is called once per frame
+    void Update()
     {
-       mouseDown = true;
-    }
-
-    public void OnMouseExit()
-    {
-        mouseDown = false;
+        // if current monster's order has changed, re-get the target drink
+        GameObject currentMonster = GameObject.FindWithTag("Monster");
+        if(currentMonster != null) {
+            string newDrinkName = currentMonster.GetComponent<Monster>().drinkOrder;
+            if (newDrinkName.CompareTo(targetDrink.name) != 0)
+            {
+                Drink nameToSearch = new Drink();
+                nameToSearch.name = newDrinkName;
+                int index = recipes.BinarySearch(nameToSearch, new DrinkComp());
+                if (index >= 0) targetDrink = recipes[index];
+            }
+        }
     }
 
     public void OnMouseUp()
     {
-        // only let the player hold the glass if they aren't already holding an ingredient
-        if (equipIngredient.equippedObject == null && mouseDown && !holding && !purchased)
+        if (equipIngredient.equippedObject != null)
         {
-            holding = true;
-        }
-        else if (holding)
-        {
-            holding = false;
-        }
-        mouseDown = false;
-
-        if(equipIngredient.equippedObject != null) {
             AddIngredient(equipIngredient.equippedObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collisionInfo)
+    {
+        if (collisionInfo.gameObject.tag == "Monster" && !purchased)
+        {
+            // check if current drink = target drink
+            bool drinkIsCorrect = (currentDrink.name.CompareTo(targetDrink.name) == 0);
+            Debug.Log("currentDrink.name = " + currentDrink.name + ", targetDrink.name = " + targetDrink.name);
+            Debug.Log((drinkIsCorrect ? "Drink is correct" : "Drink is wrong"));
+
+            // show emoji face
+            GameObject face;
+            if (drinkIsCorrect)
+            {
+                // if drink is correct and timely, happy face
+                if (emotionSlider.value > 0.4f) face = Instantiate(happyFace);
+                // if drink is correct and badly timed, neutral face
+                else face = Instantiate(neutralFace);
+            }
+            else face = Instantiate(frownFace);
+            face.transform.parent = GameObject.FindWithTag("Monster").transform;
+
+            // attach drink to monster so they carry it offscreen
+            gameObject.transform.parent = collisionInfo.gameObject.transform;
+            purchased = true;
+            glassMove.holding = false;
+
+            // spawn new glass
+            GameObject.FindWithTag("GlassSpawner").GetComponent<GlassSpawner>().SpawnGlass();
         }
     }
 
     public void AddIngredient(GameObject ingredient)
     {
-        // add to ingredients
-        if (textBox == null) textBox = FindObjectOfType<TextBoxScript>();
-        textBox.ingredients.Add(ingredient.name);
+        // add to current ingredients
+        currentDrink.ingredients.Add(ingredient.name);
 
-        // add to ingredients
-        ingredients.Add(ingredient.name);
+        // look for a recipe that current drink conforms to
+        bool matchesWithRecipe = false;
+        foreach(Drink recipe in recipes)
+        {
+            if(currentDrink.matches(recipe))
+            {
+                // if found, store name of recipe
+                currentDrink.name = recipe.name;
+                matchesWithRecipe = true;
+                break;
+            }
+        }
 
-        // change the sprite
-        full = true;
-        spriteRenderer.sprite = fullSprite;
+        // if nothing found
+        if(!matchesWithRecipe)
+        {
+            currentDrink.name = "";
+        }
 
-        //counter for number of ingredients in the drink
-        ingredientCount++;
-
-        //changes the sprite of the cup to the number of ingredients
+        //changes the sprite of the glass to the number of ingredients
         //TODO: change the fullSprite to different sprites
-        switch (ingredientCount)
+        switch (currentDrink.ingredients.Count)
         {
             case 1:
                 spriteRenderer.sprite = oneSixthSprite;
@@ -122,7 +144,7 @@ public class GlassFill : MonoBehaviour
                 spriteRenderer.sprite = fourSixthSprite;
                 break;
             case 5:
-                spriteRenderer.sprite = fiveSixthSprite;                
+                spriteRenderer.sprite = fiveSixthSprite;
                 break;
             case 6:
                 // This might end up being fullSprite - but in case we change from sixths to 
@@ -136,154 +158,90 @@ public class GlassFill : MonoBehaviour
         }
     }
 
-    void glassIsFullAlert() 
+    void glassIsFullAlert()
     {
         //TODO Charlie and Helen
     }
 
-    //determines what occurs when a glass comes into contact with an ingredient versus a monster, since the glass only moves when it is full, we don't need to check for that
-    void OnTriggerEnter2D(Collider2D collisionInfo)
-    {
-        if (collisionInfo.gameObject.tag == "Monster" && !purchased)
-        {
-            purchased = true;
-            holding = false;
-            gameObject.transform.parent = GameObject.FindWithTag("Monster").transform;
-            monsterCol = collisionInfo.gameObject;
-            List<string> ingredients = textBox.ingredients;
 
-            // Check if drink is correct. Create a Recipe object meant just for searching the array
-            Recipe drinkNamedRecipe = new Recipe();
-            drinkNamedRecipe.drinkName = textBox.drink;
-            this.drink = drinkNamedRecipe.drinkName;
-            // Find the drink in the sorted list of drinks
-            int index = recipes.BinarySearch(drinkNamedRecipe, new RecipeComp());
-            if (index < 0)
-            {
-                Debug.Log("Recipe for " + this.drink + " not found");
-            }
-            else
-            {
-                Recipe targetDrink = recipes[index];
-                bool drinkIsCorrect = targetDrink.isCorrect(ingredients);
-
-                Debug.Log((drinkIsCorrect ? "Drink is correct" : "Drink is wrong"));
-
-                GameObject face;
-                if(drinkIsCorrect)
-                {
-                    // if drink is correct and timely, happy face
-                    if (emotionSlider.value > 0.5f) face = Instantiate(happyFace);
-                    // if drink is correct and badly timed, neutral face
-                    else face = Instantiate(neutralFace);
-                }
-                else
-                {
-                    // if drink is wrong, frown face
-                    face = Instantiate(frownFace);
-                }
-                face.transform.parent = GameObject.FindWithTag("Monster").transform;
-            }
-            GameObject.FindWithTag("GlassSpawner").GetComponent<GlassSpawner>().SpawnGlass();
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (holding)
-        {
-            Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 30.0f)) - transform.position;
-            transform.Translate(point);
-        }
-
-        float offscreenX = 80.0f;
-        if (transform.position.x > offscreenX)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    public class Recipe
+    public class Drink
     {
         // drinkName like "Bloody Mary" or "Oktoberfest"
-        public string drinkName;
+        public string name;
 
         // The order of ingredients required to make this drink
         public List<string> ingredients;
 
-        // Returns whether or not a drink has the right ingredients for the recipe
-        public bool isCorrect(List<string> drinkIngredients)
+        public Drink()
         {
-            // If the drink and the recipe have different numbers of ingredients,
-            // then of course the drink has the wrong list of ingredients
-            if (drinkIngredients.Count != ingredients.Count)
-            {
-                Debug.Log("The recipes are not equal because the number of ingredients is not the same:");
-                return false;
-            }
+            name = "";
+            ingredients = new List<string>();
+        }
 
-            // If but one of the ingredients is off, then the drink is not correct
-            for (int i = 0; i < drinkIngredients.Count; ++i)
-                if (!drinkIngredients[i].Equals(ingredients[i]))
-                {
-                    Debug.Log("The recipes are not equal because the ingredients are different:");
-                    //Debug.Log(drinkIngredients[i]);
-                    //Debug.Log(ingredients[i]);
-                    return false;
-                }
-            return true;
+        // Returns whether two drinks match
+        public bool matches(Drink otherDrink)
+        {
+            return Enumerable.SequenceEqual(this.ingredients, otherDrink.ingredients);
+        }
+
+        // format the drink for Debug.Log-ing
+        public string ToString()
+        {
+            string output = name + "; ";
+            foreach(string ingredient in ingredients)
+            {
+                output += ingredient + ", ";
+            }
+            return output;
         }
     }
 
-    public class RecipeComp : IComparer<Recipe>
+    public class DrinkComp : IComparer<Drink>
     {
-        // returns 0 if x and y have the same drink names
-        public int Compare(Recipe x, Recipe y)
+        // returns 0 if x and y have the same names
+        public int Compare(Drink x, Drink y)
         {
             // compare the recipes' drink names
-            string xName = x.drinkName;
-            string yName = y.drinkName;
+            string xName = x.name;
+            string yName = y.name;
             return String.Compare(xName, yName);
         }
     }
 
-    // Gets the recipes from a CSV
+    // Gets the drink recipes from a CSV, stores in recipes List
     void getRecipes()
     {
         // For each line in the CSV, set the drink name and the ingredients
         List<List<string>> csvResults = readRecipeCSV();
         for (int i = 0; i < csvResults.Count; i++)
         {
-            Recipe currentRecipe = new Recipe();
+            Drink currentDrink = new Drink();
             List<string> ingredients = new List<string>();
             for (int j = 0; j < csvResults[i].Count; j++)
             {
                 if (j == 0)
                 {
                     // Recipe name
-                    currentRecipe.drinkName = csvResults[i][j];
+                    currentDrink.name = csvResults[i][j];
                 }
                 else
                 {
                     // Ingredient
-                    //Debug.Log(csvResults[i][j]);
                     ingredients.Add(csvResults[i][j]);
                 }
             }
 
-            currentRecipe.ingredients = ingredients;
-            recipes.Add(currentRecipe);
+            currentDrink.ingredients = ingredients;
+            recipes.Add(currentDrink);
         }
-        RecipeComp recipeComp = new RecipeComp();
-        recipes.Sort(recipeComp);
+        recipes.Sort(new DrinkComp());
     }
 
     private List<List<string>> readRecipeCSV()
     {
         string[] stringRecipes = recipeFile.text.Split('\n');
         // first row is the header 
-        List<List<string>> recipes = new List<List<string>>();
+        List<List<string>> recipesTemp = new List<List<string>>();
         for (int i = 1; i < stringRecipes.Length; ++i)
         {
             // Get the drink name and all the ingredients. Put them into an ArrayList
@@ -296,11 +254,9 @@ public class GlassFill : MonoBehaviour
                 recipe.RemoveAt(recipe.Count - 1);
 
             // put this ArrayList into recipes
-            recipes.Add(recipe);
+            recipesTemp.Add(recipe);
         }
 
-        return recipes;
+        return recipesTemp;
     }
-
 }
-
