@@ -5,7 +5,6 @@ using UnityEngine;
 using TMPro;
 public class TimerScript : MonoBehaviour
 {
-    [SerializeField] public TMP_Text uiText;
 
     private float timer;
     public bool runTimer = true;
@@ -20,7 +19,6 @@ public class TimerScript : MonoBehaviour
     void Start()
     {
         timer = 0.0f;
-        uiText.text = "";
         slider.value = 100.0f;
         currentMonster = GameObject.FindWithTag("Monster");
     }
@@ -36,7 +34,6 @@ public class TimerScript : MonoBehaviour
         if (runTimer)
         {
             timer += Time.deltaTime;
-            uiText.text = timer.ToString("F");
         }
         
         if (currentMonster != null)
