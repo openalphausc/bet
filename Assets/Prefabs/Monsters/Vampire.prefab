@@ -98,6 +98,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: VampireOrder
+  drinkOrder: Bloody Mary
 --- !u!61 &5656821696653845331
 BoxCollider2D:
   m_ObjectHideFlags: 0

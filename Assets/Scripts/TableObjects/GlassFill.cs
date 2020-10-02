@@ -19,7 +19,7 @@ public class GlassFill : MonoBehaviour
 
     // Data members for reading recipes
     public TextAsset recipeFile; // the csv of recipes
-    public List<Recipe> recipes = new List<Recipe>();
+    public List<Recipe> recipes = new List<Recipe>(); // a list of all recipes
 
     // The drink the monster wants
     public string drink;
@@ -220,8 +220,6 @@ public class GlassFill : MonoBehaviour
             if (drinkIngredients.Count != ingredients.Count)
             {
                 Debug.Log("The recipes are not equal because the number of ingredients is not the same:");
-                //Debug.Log(drinkIngredients.Count);
-                //Debug.Log(ingredients.Count);
                 return false;
             }
 

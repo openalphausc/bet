@@ -22,6 +22,8 @@ public class Monster : MonoBehaviour
 
     public string dialogueToStart = "";
 
+    public string drinkOrder;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +65,7 @@ public class Monster : MonoBehaviour
         if(state == MonsterState.center && readyToLeave)
         {
             state = MonsterState.slidingOff;
+            FindObjectOfType<Yarn.Unity.DialogueUI>().DialogueComplete();
         }
         if(state == MonsterState.slidingOff)
         {

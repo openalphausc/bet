@@ -37,12 +37,9 @@ public class TextBoxScript : MonoBehaviour
             // If the monster's order hasn't yet been shown
             if (!drinkRetrieved)
             {
-                // Create an order and display it
-                string drink = getRandomDrink();
+                // retrieve the drink order
+                drink = monster.drinkOrder;
                 drinkRetrieved = true;
-
-                // the monster wants this drink
-                this.drink = drink;
             }
         }
         else
@@ -53,9 +50,9 @@ public class TextBoxScript : MonoBehaviour
     }
 
     // Gets a random drink from the imported list of drinks
-    public string getRandomDrink()
-    {
-        int index = Random.Range(0, drinks.Length - 1);
-        return drinks[index];
-    }
+    //public string getRandomDrink()
+    //{
+    //    int index = Random.Range(0, drinks.Length - 1);
+    //    return drinks[index];
+    //}
 }

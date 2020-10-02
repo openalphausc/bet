@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8879039643753111776}
   - component: {fileID: 3534611185494281461}
   m_Layer: 0
-  m_Name: MonsterBirdperson
+  m_Name: Birdperson
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  slidingSpeed: 30
   readyToLeave: 0
   dialogueToStart: 
+  drinkOrder: 8 Ball
 --- !u!61 &3534611185494281461
 BoxCollider2D:
   m_ObjectHideFlags: 0
