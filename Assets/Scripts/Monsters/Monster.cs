@@ -27,7 +27,7 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(-50, 0, 0);
+        transform.position = new Vector3(-50, transform.position.y, 0);
     }
 
     //Checks if it has encoutnered the drink, if it has, then it is ready to leave

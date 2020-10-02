@@ -40,11 +40,13 @@ public class MonsterSpawner : MonoBehaviour
         // spawn monsters after certain amount of time
         if(spawnerTimer >= 1.0f && readyToSpawn && monstersToSpawn.Count > 0)
         {
-            Monster instantiatedMonster = Instantiate(monstersToSpawn[0]);
-            instantiatedMonster.name = monstersToSpawn[0].name;
+            // pick a random monster to spawn
+            int randomIndex = Random.Range(0, monstersToSpawn.Count);
+            Monster instantiatedMonster = Instantiate(monstersToSpawn[randomIndex]);
+            instantiatedMonster.name = monstersToSpawn[randomIndex].name;
             readyToSpawn = false;
 
-            monstersToSpawn.RemoveAt(0);
+            monstersToSpawn.RemoveAt(randomIndex);
             monstersOnScreen.Add(instantiatedMonster);
         }
 
