@@ -11,6 +11,9 @@ public class GlassMove : MonoBehaviour
     private EquipIngredient equipIngredient;
     private GlassFill glassFill;
 
+    // sound
+    public AudioSource setDown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +58,11 @@ public class GlassMove : MonoBehaviour
         {
             holding = true;
         }
-        else if (holding) holding = false;
+        else if (holding)
+        {
+            holding = false;
+            setDown.Play();
+        }
         mouseDown = false;
     }
 }
