@@ -8,6 +8,6 @@ public class GlassSpawner : MonoBehaviour
 
     public void SpawnGlass()
     {
-        Instantiate(emptyGlassPrefab);
+        GameObject newGlass = Instantiate(emptyGlassPrefab);
     }
 }

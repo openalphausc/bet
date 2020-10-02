@@ -23,12 +23,14 @@ public class GlassMove : MonoBehaviour
     {
         if (glassFill.purchased) holding = false;
 
-        if (holding)
-        {
-            Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 30.0f)) - transform.position;
-            transform.Translate(point);
-        }
+        // if holding, position = mouse position
+        if (holding) transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 30.0f));
 
+        // make sure rotation = 0
+        // TODO: why is this necessary? what is changing the glass' rotation when it's handed to the monster
+        transform.rotation = Quaternion.identity;
+
+        // if offscreen, delete object
         float offscreenX = 80.0f;
         if (transform.position.x > offscreenX)
         {
@@ -53,10 +55,7 @@ public class GlassMove : MonoBehaviour
         {
             holding = true;
         }
-        else if (holding)
-        {
-            holding = false;
-        }
+        else if (holding) holding = false;
         mouseDown = false;
     }
 }

@@ -154,12 +154,12 @@ public class GlassFill : MonoBehaviour
                 break;
             default:
                 //alert that tells the user the glass is full
-                glassIsFullAlert();
+                GlassIsFullAlert();
                 break;
         }
     }
 
-    void glassIsFullAlert()
+    void GlassIsFullAlert()
     {
         //TODO Charlie and Helen
     }
@@ -186,7 +186,7 @@ public class GlassFill : MonoBehaviour
         }
 
         // format the drink for Debug.Log-ing
-        public string ToString()
+        public override string ToString()
         {
             string output = name + "; ";
             foreach(string ingredient in ingredients)
