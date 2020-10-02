@@ -36,6 +36,7 @@ public class GlassFill : MonoBehaviour
     public Sprite fourSixthSprite;
     public Sprite fiveSixthSprite;
     public Sprite sixSixthSprite;
+    public Sprite sevenSixthSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -162,6 +163,8 @@ public class GlassFill : MonoBehaviour
     void GlassIsFullAlert()
     {
         //TODO Charlie and Helen
+        //For now: per, design decisions 10/1, just change sprite to have a bright arrow toward the monster
+        spriteRenderer.sprite = sevenSixthSprite;
     }
 
 
