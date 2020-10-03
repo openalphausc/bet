@@ -5,13 +5,13 @@ colorID:
 position:
 ---
 <<if visited("GhostSarahOrder") is true>>
-	Another Corpse Reviver would hit the spot.
+	Another Corpse Reviver would hit the spot. (Press SPACEBAR to continue)
 <<else>>
 	Early in the night and I’m already tired! (Press SPACEBAR to continue)
-	But nothing like a Corpse Reviver to liven up my night.
-	Gin, then angel’s tears, followed by kraken tentacles.
-	Grandmother used to have them all the time.
-	She’s a ghost too, runs in the family. 
+	But nothing like a Corpse Reviver to liven up my night. (Press SPACEBAR to continue)
+	Gin, then angel’s tears, followed by kraken tentacles. (Press SPACEBAR to continue)
+	Grandmother used to have them all the time. (Press SPACEBAR to continue)
+	She’s a ghost too, runs in the family. (Press SPACEBAR to continue)
 <<endif>>
 Please hurry. I might fall asleep on the counter.
 ===

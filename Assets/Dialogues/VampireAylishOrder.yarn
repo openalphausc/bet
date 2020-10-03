@@ -5,11 +5,11 @@ colorID:
 position:
 ---
 <<if visited("VampireAylishOrder") is true>>
-	Hey, how’s it going? I’ll have one Bloodier.
+	Hey, how’s it going? I’ll have one Bloodier. (Press SPACEBAR to continue)
 <<else>>
 	Hey, love the bar. Great aesthetic. (Press SPACEBAR to continue)
-	I’ll have one Bloodier. Never had it, but my friend says it’s killer.
-	She says you make it by pouring blood, then adding some syrup.
+	I’ll have one Bloodier. Never had it, but my friend says it’s killer. (Press SPACEBAR to continue)
+	She says you make it by pouring blood, then adding some syrup. (Press SPACEBAR to continue)
 <<endif>>
 Awesome! I’ll be over here, thinking about skateboards.
 ===
