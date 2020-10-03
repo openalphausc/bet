@@ -1,0 +1,15 @@
+
+title: UnicornNoirSarahOrder
+tags: 
+colorID:
+position:
+---
+<<if visited("UnicornNoirSarahOrder") is true>>
+	Undead & Stormy. Make it snappy.
+<<else>>
+	You don’t need to know my name, I don’t need to know yours.  (Press SPACEBAR to continue)
+	One Undead & Stormy. Looks like a nightmare, tastes like a pack of cigarettes.
+	Pour the gin, then some blood, then pumpkin juice. And I’m warning you, if I see you try to pull anything funny..
+<<endif>>
+Hurry up. I think I’m being followed...
+===

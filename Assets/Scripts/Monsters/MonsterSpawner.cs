@@ -46,7 +46,7 @@ public class MonsterSpawner : MonoBehaviour
             instantiatedMonster.name = monstersToSpawn[randomIndex].name;
             readyToSpawn = false;
 
-            monstersToSpawn.RemoveAt(randomIndex);
+            // monstersToSpawn.RemoveAt(randomIndex);
             monstersOnScreen.Add(instantiatedMonster);
         }
 

@@ -1,0 +1,15 @@
+
+title: GhostAylishOrder
+tags: 
+colorID:
+position:
+---
+<<if visited("GhostAylishOrder") is true>>
+	I'll have the Bee's Knees please. If that's okay.
+<<else>>
+	I'm sorry, you look pretty busy... (Press SPACEBAR)
+	Can I please have a Bee's Knees?
+	It's whiskey, then pumpkin juice, then a sprinkling of zombie flesh.
+<<endif>>
+Thank you so much, I appreciate it.
+===

@@ -265,9 +265,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yarnScripts:
-  - {fileID: 2480198943629176163, guid: d5b40d71c11be5741892df75e6a2dd23, type: 3}
+  - {fileID: 2480198943629176163, guid: 3b9c25d503b0347abb2050f702a28a83, type: 3}
   - {fileID: 2480198943629176163, guid: dc6a1ad7c52d24839858511237ef9665, type: 3}
   - {fileID: 2480198943629176163, guid: 5e3d8e37010964c1dabbfd2c6583a56e, type: 3}
+  - {fileID: 2480198943629176163, guid: c16047ae78ff54af496240bea2f830a5, type: 3}
+  - {fileID: 2480198943629176163, guid: 0ee28d4e25f0b418e82f7ff5f352a1e4, type: 3}
+  - {fileID: 2480198943629176163, guid: efa8acc6061d1453bae4fdbd7f000769, type: 3}
+  - {fileID: 2480198943629176163, guid: 777acc576a2f941f4b866563ea88d8b0, type: 3}
+  - {fileID: 2480198943629176163, guid: 23b39a5191b9145608eacde0d845a249, type: 3}
+  - {fileID: 2480198943629176163, guid: ac06db41940324968ab34699d75fb577, type: 3}
+  - {fileID: 2480198943629176163, guid: 6f59dc328b28d410fbbc7a0850f3dcd5, type: 3}
+  - {fileID: 2480198943629176163, guid: 6f2f3af9dafd64bc0898d12f96caa39d, type: 3}
+  - {fileID: 2480198943629176163, guid: a93241353a725415ba25d5c18a9c49cd, type: 3}
   textLanguage: 
   variableStorage: {fileID: 5639802912432844920}
   dialogueUI: {fileID: 5639802912432844922}

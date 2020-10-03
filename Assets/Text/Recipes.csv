@@ -1,6 +1,13 @@
 Drink,Ingredient 1,Ingredient 2,Ingredient 3,Ingredient 4
-Drink1,ginBottle,krakenTentacles,vodkaBottle,whiskeyBottle
-Drink2,pixieBottle,angelTears,simpleSyrup,pumpkinJuice
-Drink3,vialOfBlood,giantsToe,zombieFlesh
 Bloody Mary,vialOfBlood,vodkaBottle
-8 Ball,ginBottle,angelTears,
+8 Ball,ginBottle,angelTears
+Corpse Reviver,ginBottle,angelTears,krakenTentacles
+Dead Vodka,vodkaBottle,vodkaBottle
+Spooky Margarita,ginBottle,vialOfBlood,giantsToe
+Pumpkin Sour,pumpkinJuice,vialOfBlood
+Gin and Toenail,ginBottle,pixieBottle,giantsToe
+Undead and Stormy,ginBottle,vialOfBlood,pumpkinJuice
+Bloodier,vialOfBlood,simpleSyrup
+Big Toe Manhattan,whiskeyBottle,angelTears,angelTears,giantsToe
+French 75,ginBottle,simpleSyrup,zombieFlesh
+Bee's Knees,whiskeyBottle,pumpkinJuice,zombieFlesh,

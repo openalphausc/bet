@@ -97,8 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
-  dialogueToStart: BirdpersonOrder
-  drinkOrder: Bloody Mary
+  dialogueToStart: MummyOrder
+  drinkOrder: Dead Vodka
 --- !u!61 &112965291309479922
 BoxCollider2D:
   m_ObjectHideFlags: 0

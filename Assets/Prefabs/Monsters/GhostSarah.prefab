@@ -97,8 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
-  dialogueToStart: BirdpersonOrder
-  drinkOrder: Bloody Mary
+  dialogueToStart: GhostSarahOrder
+  drinkOrder: Corpse Reviver
 --- !u!61 &7932031498631005744
 BoxCollider2D:
   m_ObjectHideFlags: 0
