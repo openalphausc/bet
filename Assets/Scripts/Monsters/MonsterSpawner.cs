@@ -22,16 +22,6 @@ public class MonsterSpawner : MonoBehaviour
     {
         spawnerTimer += Time.deltaTime;
 
-        // spawn monsters after certain amount of time
-        if(spawnerTimer >= 1.0f && readyToSpawn && monstersToSpawn.Count > 0)
-        {
-            Monster instantiatedMonster = Instantiate(monstersToSpawn[0], new Vector3(0, 0, 0), Quaternion.identity);
-            readyToSpawn = false;
-
-            monstersToSpawn.RemoveAt(0);
-            monstersOnScreen.Add(instantiatedMonster);
-        }
-
         // cycle through on screen monsters and despawn them if they're offscreen
         for(int i = 0; i < monstersOnScreen.Count; i++)
         {
@@ -46,5 +36,20 @@ public class MonsterSpawner : MonoBehaviour
                 spawnerTimer = 0.0f;
             }
         }
+
+        // spawn monsters after certain amount of time
+        if(spawnerTimer >= 1.0f && readyToSpawn && monstersToSpawn.Count > 0)
+        {
+            // pick a random monster to spawn
+            int randomIndex = Random.Range(0, monstersToSpawn.Count);
+            Monster instantiatedMonster = Instantiate(monstersToSpawn[randomIndex]);
+            instantiatedMonster.name = monstersToSpawn[randomIndex].name;
+            readyToSpawn = false;
+
+            // monstersToSpawn.RemoveAt(randomIndex);
+            monstersOnScreen.Add(instantiatedMonster);
+        }
+
+        
     }
 }

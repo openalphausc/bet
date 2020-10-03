@@ -1,0 +1,20 @@
+
+title: VampireOrder
+tags: 
+colorID:
+position: 
+---
+<<if visited("VampireOrder") is true>>
+    Ze Bloody Mary for me.
+<<else>>
+    Hello tasty human. (Press SPACEBAR to continue) 
+    I vill have vone Bloody Mary.
+    You vill put ze blood of Mary, then some vodka.
+<<endif>>
+And use fresh blood, please.
+How was your day?
+-> good
+	ok cool didnt ask
+-> bad
+	ok whyd you tell me that
+===

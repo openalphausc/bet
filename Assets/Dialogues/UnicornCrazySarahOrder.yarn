@@ -1,0 +1,15 @@
+
+title: UnicornCrazySarahOrder
+tags: 
+colorID:
+position:
+---
+<<if visited("UnicornCrazySarahOrder") is true>>
+	Give me one of those Pumpkin Sours.
+<<else>>
+	You have a lot of sharp objects… They’re so pointy. So dangerous. (Press SPACEBAR to continue)
+	Oh, I was daydreaming again. My order? How about a Pumpkin Sour? Customers like those...
+	Just add some pumpkin juice, then some blood. I do like blood.
+<<endif>>
+...where’s my knife... shit.
+===

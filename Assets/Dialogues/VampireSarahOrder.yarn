@@ -1,0 +1,15 @@
+
+title: VampireSarahOrder
+tags: 
+colorID:
+position:
+---
+<<if visited("VampireSarahOrder") is true>>
+	French 75. Quickly, if you will. 
+<<else>>
+	Hello, you look eager, don’t you?. (Press SPACEBAR to continue)
+	I’ll have a French 75. Silly name, good drink. I was in France in 75, you know. 1475, that is. Pour the gin. 
+	After the gin add some syrup and zombie flesh.
+<<endif>>
+Haven’t changed my drink order in a century. Zombie flesh never gets old, does it?
+===

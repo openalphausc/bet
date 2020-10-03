@@ -1,0 +1,17 @@
+
+title: GhostSarahOrder
+tags: 
+colorID:
+position:
+---
+<<if visited("GhostSarahOrder") is true>>
+	Another Corpse Reviver would hit the spot.
+<<else>>
+	Early in the night and I’m already tired! (Press SPACEBAR to continue)
+	But nothing like a Corpse Reviver to liven up my night.
+	Gin, then angel’s tears, followed by kraken tentacles.
+	Grandmother used to have them all the time.
+	She’s a ghost too, runs in the family. 
+<<endif>>
+Please hurry. I might fall asleep on the counter.
+===

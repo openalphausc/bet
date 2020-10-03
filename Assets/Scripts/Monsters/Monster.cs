@@ -15,15 +15,19 @@ public class Monster : MonoBehaviour
 
     public MonsterState state = MonsterState.slidingOn;
 
-    public float slidingSpeed = 50.0f;
-    public float currentSpeed = 0.0f;
+    private float slidingSpeed = 30.0f;
+    private float currentSpeed;
 
     public bool readyToLeave = false;
+
+    public string dialogueToStart = "";
+
+    public string drinkOrder;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(-50, 0, 5);
+        transform.position = new Vector3(-50, transform.position.y, 0);
     }
 
     //Checks if it has encoutnered the drink, if it has, then it is ready to leave
@@ -49,13 +53,23 @@ public class Monster : MonoBehaviour
             transform.position = new Vector3(0, transform.position.y, transform.position.z);
             currentSpeed = 0.0f;
             state = MonsterState.center;
+
+            // if there is a dialogue for the monster, load it
+            if(dialogueToStart != "")
+            {
+                FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart);
+            }
         }
 
         // slide off when ready
         if(state == MonsterState.center && readyToLeave)
         {
-            currentSpeed = slidingSpeed;
             state = MonsterState.slidingOff;
+            FindObjectOfType<Yarn.Unity.DialogueUI>().DialogueComplete();
+        }
+        if(state == MonsterState.slidingOff)
+        {
+            currentSpeed = slidingSpeed;
         }
 
         // set state to offscreen (ready to be despawned) if offscreen

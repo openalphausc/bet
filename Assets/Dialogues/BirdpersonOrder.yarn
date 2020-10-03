@@ -1,0 +1,17 @@
+
+title: BirdpersonOrder
+tags: 
+colorID:
+position: 
+---
+
+<<if visited("BirdpersonOrder") is true>>
+    I'll have that 8 Ball again.
+<<else>>
+    Hello there! (Press SPACEBAR to continue)
+    Can I please have an 8 Ball?
+    It's just some gin and some angel tears.
+    Not too difficult.
+<<endif>>
+Thanks!
+===
