@@ -22,12 +22,16 @@ public class Monster : MonoBehaviour
 
     public string dialogueToStart = "";
 
-    public string drinkOrder;
+    public string drinkOrder = "";
+
+    public RecipeSheet recipeSheet;
 
     // Start is called before the first frame update
     void Start()
     {
         transform.position = new Vector3(-50, transform.position.y, 0);
+
+        recipeSheet = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeSheet>();
     }
 
     //Checks if it has encoutnered the drink, if it has, then it is ready to leave
@@ -59,6 +63,9 @@ public class Monster : MonoBehaviour
             {
                 FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart);
             }
+
+            Debug.Log("something");
+            recipeSheet.AddRecipeToSheet(drinkOrder);
         }
 
         // slide off when ready
