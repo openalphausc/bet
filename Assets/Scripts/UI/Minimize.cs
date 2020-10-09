@@ -16,7 +16,7 @@ public class Minimize : MonoBehaviour
     {
         if(Input.GetMouseButton(0))
         {
-            gameObject.active = false;
+            gameObject.SetActive(false);
         }
     }
 }
