@@ -170,6 +170,13 @@ public class GlassFill : MonoBehaviour
         //TODO Charlie and Helen
     }
 
+    // Clears the drink of ingredients and resets its sprite
+    public void clearIngredients()
+    {
+        currentDrink.ingredients = new List<string>();
+        spriteRenderer.sprite = emptySprite;
+    }
+
 
     public class Drink
     {
