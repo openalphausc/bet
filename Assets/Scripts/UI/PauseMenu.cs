@@ -25,6 +25,15 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            // if game is paused, go back to main menu
+            if (isPaused)
+            {
+                LoadMenu();
+            }
+        }
     }
 
     // TODO: Pitch down music while in pause menu?
@@ -56,6 +65,5 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Quitting Game");
         Application.Quit();
-        isPaused = false; // lol
     }
 }
