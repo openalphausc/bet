@@ -17,12 +17,15 @@ public class Monster : MonoBehaviour
 
     private float slidingSpeed = 30.0f;
     private float currentSpeed;
-
     public bool readyToLeave = false;
 
     public string dialogueToStart = "";
 
     public string drinkOrder;
+
+    public Monster prefab;
+
+    public int happiness; // on a scale from -10 to 10, or whatever
 
     // Start is called before the first frame update
     void Start()
@@ -78,5 +81,15 @@ public class Monster : MonoBehaviour
         {
             state = MonsterState.offscreen;
         }
+    }
+
+    // functions for all the ways in which the player can change the monster's happiness
+    
+    // correctness is a float from 0.0 to 1.0, where 0.0 is totally wrong and 1.0 is totally correct
+    public void GivenDrink(float correctness) {
+        int change = (int)Mathf.Round(4 * (correctness - 0.5f));
+        Debug.Log("correctness = " + correctness + ", change = " + change);
+        happiness += change; 
+        prefab.GetComponent<Monster>().happiness = happiness; // update the prefab's data
     }
 }
