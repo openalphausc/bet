@@ -53,8 +53,8 @@ public class GlassMove : MonoBehaviour
 
     public void OnMouseUp()
     {
-        // only let the player hold the glass if they aren't already holding an ingredient
-        if (equipIngredient.equippedObject == null && mouseDown && !holding && !glassFill.purchased)
+        // only let the player hold the glass if they aren't already holding an ingredient AND if the game isn't paused
+        if (!PauseMenu.isPaused && equipIngredient.equippedObject == null && mouseDown && !holding && !glassFill.purchased)
         {
             holding = true;
         }

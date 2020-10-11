@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EquipIngredient : MonoBehaviour
 {
-
     public GameObject equippedObject = null;
+    public Vector3 objOriginalPosition;
 
     // sound
     private AudioSource setDown;
@@ -27,7 +27,9 @@ public class EquipIngredient : MonoBehaviour
     public void ClickOnObject(GameObject clicked) {
         // if equippedObject == object, put it down on an empty space
         if(equippedObject == clicked) {
+            equippedObject.transform.position = objOriginalPosition;
             equippedObject = null;
+            objOriginalPosition = new Vector3(0,0,-1); // if any ingredients pop behind the screen, it's because of this
             setDown.Play();
             return;
         }
@@ -36,10 +38,11 @@ public class EquipIngredient : MonoBehaviour
         if(equippedObject != null) {
             Vector3 temp = clicked.transform.position;
             clicked.transform.position = equippedObject.transform.position;
-            equippedObject.transform.position = temp;
+            equippedObject.transform.position = objOriginalPosition;
             setDown.Play();
         }
         // assign equippedObject
         equippedObject = clicked;
+        objOriginalPosition = equippedObject.transform.position;
     }
 }

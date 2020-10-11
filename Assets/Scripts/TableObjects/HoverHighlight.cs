@@ -17,7 +17,7 @@ public class HoverHighlight : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (equipIngredient.equippedObject != gameObject) light.enabled = true;
+        if (equipIngredient.equippedObject != gameObject && !PauseMenu.isPaused) light.enabled = true;
     }
 
     void OnMouseExit()

@@ -44,6 +44,7 @@ public class MonsterSpawner : MonoBehaviour
             int randomIndex = Random.Range(0, monstersToSpawn.Count);
             Monster instantiatedMonster = Instantiate(monstersToSpawn[randomIndex]);
             instantiatedMonster.name = monstersToSpawn[randomIndex].name;
+            instantiatedMonster.prefab = monstersToSpawn[randomIndex];
             readyToSpawn = false;
 
             // monstersToSpawn.RemoveAt(randomIndex);

@@ -85,7 +85,7 @@ public class GlassFill : MonoBehaviour
             Debug.Log("currentDrink.name = " + currentDrink.name + ", targetDrink.name = " + targetDrink.name);
             Debug.Log((drinkIsCorrect ? "Drink is correct" : "Drink is wrong"));
 
-            // show emoji face
+            // show smiley face
             GameObject face;
             if (drinkIsCorrect)
             {
@@ -96,6 +96,12 @@ public class GlassFill : MonoBehaviour
             }
             else face = Instantiate(frownFace);
             face.transform.parent = GameObject.FindWithTag("Monster").transform;
+
+            // update monster's happiness
+            float correctness;
+            if(emotionSlider.value < 0.4f && drinkIsCorrect) correctness = 0.5f;
+            else correctness = drinkIsCorrect ? 1.0f : 0.0f;
+            collisionInfo.gameObject.GetComponent<Monster>().GivenDrink(correctness);
 
             // attach drink to monster so they carry it offscreen
             gameObject.transform.parent = collisionInfo.gameObject.transform;
@@ -168,6 +174,13 @@ public class GlassFill : MonoBehaviour
     void GlassIsFullAlert()
     {
         //TODO Charlie and Helen
+    }
+
+    // Clears the drink of ingredients and resets its sprite
+    public void clearIngredients()
+    {
+        currentDrink.ingredients = new List<string>();
+        spriteRenderer.sprite = emptySprite;
     }
 
 
