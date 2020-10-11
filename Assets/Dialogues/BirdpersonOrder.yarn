@@ -6,12 +6,12 @@ position:
 ---
 
 <<if visited("BirdpersonOrder") is true>>
-    I'll have that 8 Ball again.
+    I'll have that 8 Ball again. (Press SPACEBAR to continue)
 <<else>>
     Hello there! (Press SPACEBAR to continue)
-    Can I please have an 8 Ball?
-    It's just some gin and some angel tears.
-    Not too difficult.
+    Can I please have an 8 Ball? (Press SPACEBAR to continue)
+    It's just some gin and some angel tears. (Press SPACEBAR to continue)
+    Not too difficult. (Press SPACEBAR to continue)
 <<endif>>
 Thanks!
 ===

@@ -8,8 +8,13 @@ position:
     Ze Bloody Mary for me.
 <<else>>
     Hello tasty human. (Press SPACEBAR to continue) 
-    I vill have vone Bloody Mary.
-    You vill put ze blood of Mary, then some vodka.
+    I vill have vone Bloody Mary. (Press SPACEBAR to continue)
+    You vill put ze blood of Mary, then some vodka. (Press SPACEBAR to continue)
 <<endif>>
-And use fresh blood, please.
+And use fresh blood, please. (Press SPACEBAR to continue)
+How was your day?
+-> good
+	ok cool didnt ask (Press SPACEBAR to continue)
+-> bad
+	ok whyd you tell me that (Press SPACEBAR to continue)
 ===

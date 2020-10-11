@@ -7,10 +7,13 @@ public class EquipIngredient : MonoBehaviour
 
     public GameObject equippedObject = null;
 
+    // sound
+    private AudioSource setDown;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        setDown = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class EquipIngredient : MonoBehaviour
         // if equippedObject == object, put it down on an empty space
         if(equippedObject == clicked) {
             equippedObject = null;
+            setDown.Play();
             return;
         }
 
@@ -33,6 +37,7 @@ public class EquipIngredient : MonoBehaviour
             Vector3 temp = clicked.transform.position;
             clicked.transform.position = equippedObject.transform.position;
             equippedObject.transform.position = temp;
+            setDown.Play();
         }
         // assign equippedObject
         equippedObject = clicked;

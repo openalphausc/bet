@@ -37,6 +37,9 @@ public class GlassFill : MonoBehaviour
     public Sprite fiveSixthSprite;
     public Sprite sixSixthSprite;
 
+    // sound
+    public AudioSource pourDrink;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -157,6 +160,9 @@ public class GlassFill : MonoBehaviour
                 GlassIsFullAlert();
                 break;
         }
+
+        // play pouring sound
+        pourDrink.Play();
     }
 
     void GlassIsFullAlert()

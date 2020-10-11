@@ -1,0 +1,15 @@
+
+title: UnicornAylishOrder
+tags: 
+colorID:
+position:
+---
+<<if visited("UnicornAylishOrder") is true>>
+	Spooky Margarita. You don’t seem to have anything better. (Press SPACEBAR to continue)
+<<else>>
+	Uhhh, Hello. (Press SPACEBAR to continue)
+	I’ll have the Spooky Margarita. Hopefully it won’t be as horrible as whatever else you’re serving. (Press SPACEBAR to continue)
+	Really? You don’t know how to make it? Fine. Gin, then blood. And a giant’s toe, for flavor. (Press SPACEBAR to continue)
+<<endif>>
+And for the toe, make sure rigor mortis hasn’t set in. I don’t like chewy.
+===
