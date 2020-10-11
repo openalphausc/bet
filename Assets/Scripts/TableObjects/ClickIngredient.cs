@@ -26,7 +26,7 @@ public class ClickIngredient : MonoBehaviour
 
     void OnMouseUp()
     {
-        if(mouseDown) {
+        if(mouseDown && !PauseMenu.isPaused) {
             equipIngredient.ClickOnObject(gameObject);
             mouseDown = false;
         }
