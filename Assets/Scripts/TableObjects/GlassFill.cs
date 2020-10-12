@@ -20,8 +20,6 @@ public class GlassFill : MonoBehaviour
     public GameObject happyFace;
     public GameObject neutralFace;
     public GameObject frownFace;
-    // Reference to emotion slider
-    private Slider emotionSlider;
 
     // references
     private EquipIngredient equipIngredient;
@@ -48,7 +46,6 @@ public class GlassFill : MonoBehaviour
         equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
         glassMove = gameObject.GetComponent<GlassMove>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        emotionSlider = GameObject.Find("EmotionSlider").GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -90,17 +87,14 @@ public class GlassFill : MonoBehaviour
             if (drinkIsCorrect)
             {
                 // if drink is correct and timely, happy face
-                if (emotionSlider.value > 0.4f) face = Instantiate(happyFace);
-                // if drink is correct and badly timed, neutral face
-                else face = Instantiate(neutralFace);
+                 face = Instantiate(happyFace);
             }
             else face = Instantiate(frownFace);
             face.transform.parent = GameObject.FindWithTag("Monster").transform;
 
             // update monster's happiness
             float correctness;
-            if(emotionSlider.value < 0.4f && drinkIsCorrect) correctness = 0.5f;
-            else correctness = drinkIsCorrect ? 1.0f : 0.0f;
+            correctness = drinkIsCorrect ? 1.0f : 0.0f;
             collisionInfo.gameObject.GetComponent<Monster>().GivenDrink(correctness);
 
             // attach drink to monster so they carry it offscreen
