@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
 
 public class GlassFill : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class GlassFill : MonoBehaviour
 
     // Data members for reading recipes
     public TextAsset recipeFile; // the csv of recipes
-    private List<Drink> recipes = new List<Drink>(); // a list of all recipes
+    public List<Drink> recipes = new List<Drink>(); // a list of all recipes
 
     // Smiley face prefabs
     public GameObject happyFace;
@@ -62,7 +61,7 @@ public class GlassFill : MonoBehaviour
             {
                 Drink nameToSearch = new Drink();
                 nameToSearch.name = newDrinkName;
-                int index = recipes.BinarySearch(nameToSearch, new DrinkComp());
+                int index = recipes.BinarySearch(nameToSearch, new Drink.DrinkComp());
                 if (index >= 0) targetDrink = recipes[index];
             }
         }
@@ -85,7 +84,7 @@ public class GlassFill : MonoBehaviour
             Debug.Log("currentDrink.name = " + currentDrink.name + ", targetDrink.name = " + targetDrink.name);
             Debug.Log((drinkIsCorrect ? "Drink is correct" : "Drink is wrong"));
 
-            // show smiley face
+            // show emoji face
             GameObject face;
             if (drinkIsCorrect)
             {
@@ -96,12 +95,6 @@ public class GlassFill : MonoBehaviour
             }
             else face = Instantiate(frownFace);
             face.transform.parent = GameObject.FindWithTag("Monster").transform;
-
-            // update monster's happiness
-            float correctness;
-            if(emotionSlider.value < 0.4f && drinkIsCorrect) correctness = 0.5f;
-            else correctness = drinkIsCorrect ? 1.0f : 0.0f;
-            collisionInfo.gameObject.GetComponent<Monster>().GivenDrink(correctness);
 
             // attach drink to monster so they carry it offscreen
             gameObject.transform.parent = collisionInfo.gameObject.transform;
@@ -182,51 +175,7 @@ public class GlassFill : MonoBehaviour
         currentDrink.ingredients = new List<string>();
         spriteRenderer.sprite = emptySprite;
     }
-
-
-    public class Drink
-    {
-        // drinkName like "Bloody Mary" or "Oktoberfest"
-        public string name;
-
-        // The order of ingredients required to make this drink
-        public List<string> ingredients;
-
-        public Drink()
-        {
-            name = "";
-            ingredients = new List<string>();
-        }
-
-        // Returns whether two drinks match
-        public bool matches(Drink otherDrink)
-        {
-            return Enumerable.SequenceEqual(this.ingredients, otherDrink.ingredients);
-        }
-
-        // format the drink for Debug.Log-ing
-        public override string ToString()
-        {
-            string output = name + "; ";
-            foreach(string ingredient in ingredients)
-            {
-                output += ingredient + ", ";
-            }
-            return output;
-        }
-    }
-
-    public class DrinkComp : IComparer<Drink>
-    {
-        // returns 0 if x and y have the same names
-        public int Compare(Drink x, Drink y)
-        {
-            // compare the recipes' drink names
-            string xName = x.name;
-            string yName = y.name;
-            return String.Compare(xName, yName);
-        }
-    }
+    
 
     // Gets the drink recipes from a CSV, stores in recipes List
     void getRecipes()
@@ -254,7 +203,7 @@ public class GlassFill : MonoBehaviour
             currentDrink.ingredients = ingredients;
             recipes.Add(currentDrink);
         }
-        recipes.Sort(new DrinkComp());
+        recipes.Sort(new Drink.DrinkComp());
     }
 
     private List<List<string>> readRecipeCSV()
@@ -279,4 +228,7 @@ public class GlassFill : MonoBehaviour
 
         return recipesTemp;
     }
+    
+
+    
 }

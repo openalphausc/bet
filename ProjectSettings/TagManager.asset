@@ -9,6 +9,7 @@ TagManager:
   - Glass
   - EquipIngredient
   - GlassSpawner
+  - RecipeSheet
   layers:
   - Default
   - TransparentFX
