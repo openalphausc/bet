@@ -11,10 +11,6 @@ public class GlassFill : MonoBehaviour
 
     public bool purchased = false;
 
-    // Data members for reading recipes
-    public TextAsset recipeFile; // the csv of recipes
-    public List<Drink> recipes = new List<Drink>(); // a list of all recipes
-
     // Smiley face prefabs
     public GameObject happyFace;
     public GameObject neutralFace;
@@ -39,15 +35,16 @@ public class GlassFill : MonoBehaviour
     // sound
     public AudioSource pourDrink;
 
+    private RecipeManager recipeManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        getRecipes();
-
         equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
         glassMove = gameObject.GetComponent<GlassMove>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         emotionSlider = GameObject.Find("EmotionSlider").GetComponent<Slider>();
+        recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
     }
 
     // Update is called once per frame
@@ -61,8 +58,8 @@ public class GlassFill : MonoBehaviour
             {
                 Drink nameToSearch = new Drink();
                 nameToSearch.name = newDrinkName;
-                int index = recipes.BinarySearch(nameToSearch, new Drink.DrinkComp());
-                if (index >= 0) targetDrink = recipes[index];
+                int index = recipeManager.recipes.BinarySearch(nameToSearch, new Drink.DrinkComp());
+                if (index >= 0) targetDrink = recipeManager.recipes[index];
             }
         }
     }
@@ -80,8 +77,8 @@ public class GlassFill : MonoBehaviour
         if (collisionInfo.gameObject.tag == "Monster" && !purchased)
         {
             // check if current drink = target drink
-            bool drinkIsCorrect = (currentDrink.name.CompareTo(targetDrink.name) == 0);
-            Debug.Log("currentDrink.name = " + currentDrink.name + ", targetDrink.name = " + targetDrink.name);
+            bool drinkIsCorrect = currentDrink.Matches(targetDrink);
+            Debug.Log("currentDrink.color = " + currentDrink.color.ToString() + ", targetDrink.color = " + targetDrink.color.ToString());
             Debug.Log((drinkIsCorrect ? "Drink is correct" : "Drink is wrong"));
 
             // show emoji face
@@ -108,27 +105,8 @@ public class GlassFill : MonoBehaviour
 
     public void AddIngredient(GameObject ingredient)
     {
-        // add to current ingredients
-        currentDrink.ingredients.Add(ingredient.name);
-
-        // look for a recipe that current drink conforms to
-        bool matchesWithRecipe = false;
-        foreach(Drink recipe in recipes)
-        {
-            if(currentDrink.matches(recipe))
-            {
-                // if found, store name of recipe
-                currentDrink.name = recipe.name;
-                matchesWithRecipe = true;
-                break;
-            }
-        }
-
-        // if nothing found
-        if(!matchesWithRecipe)
-        {
-            currentDrink.name = "";
-        }
+        // add ingredient to current drink
+        currentDrink.AddIngredient(ingredient.name);
 
         //changes the sprite of the glass to the number of ingredients
         //TODO: change the fullSprite to different sprites
@@ -172,63 +150,7 @@ public class GlassFill : MonoBehaviour
     // Clears the drink of ingredients and resets its sprite
     public void clearIngredients()
     {
-        currentDrink.ingredients = new List<string>();
+        currentDrink = new Drink();
         spriteRenderer.sprite = emptySprite;
     }
-    
-
-    // Gets the drink recipes from a CSV, stores in recipes List
-    void getRecipes()
-    {
-        // For each line in the CSV, set the drink name and the ingredients
-        List<List<string>> csvResults = readRecipeCSV();
-        for (int i = 0; i < csvResults.Count; i++)
-        {
-            Drink currentDrink = new Drink();
-            List<string> ingredients = new List<string>();
-            for (int j = 0; j < csvResults[i].Count; j++)
-            {
-                if (j == 0)
-                {
-                    // Recipe name
-                    currentDrink.name = csvResults[i][j];
-                }
-                else
-                {
-                    // Ingredient
-                    ingredients.Add(csvResults[i][j]);
-                }
-            }
-
-            currentDrink.ingredients = ingredients;
-            recipes.Add(currentDrink);
-        }
-        recipes.Sort(new Drink.DrinkComp());
-    }
-
-    private List<List<string>> readRecipeCSV()
-    {
-        string[] stringRecipes = recipeFile.text.Split('\n');
-        // first row is the header 
-        List<List<string>> recipesTemp = new List<List<string>>();
-        for (int i = 1; i < stringRecipes.Length; ++i)
-        {
-            // Get the drink name and all the ingredients. Put them into an ArrayList
-            string[] individualIngredients = stringRecipes[i].Split(',');
-            List<string> recipe = new List<string>();
-            recipe.AddRange(individualIngredients);
-
-            // last one is blank
-            if (i == stringRecipes.Length - 1)
-                recipe.RemoveAt(recipe.Count - 1);
-
-            // put this ArrayList into recipes
-            recipesTemp.Add(recipe);
-        }
-
-        return recipesTemp;
-    }
-    
-
-    
 }

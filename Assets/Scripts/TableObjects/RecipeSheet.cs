@@ -7,7 +7,7 @@ public class RecipeSheet : MonoBehaviour
 {
     private List<Drink> recipesStored = new List<Drink>();
 
-    public GlassFill glassFill;
+    public RecipeManager recipeManager;
 
     public GameObject recipeSheetWindow;
     public TextMeshProUGUI recipeText;
@@ -18,6 +18,7 @@ public class RecipeSheet : MonoBehaviour
     void Start()
     {
         recipeText.text = "";
+        recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
     }
 
     // Update is called once per frame
@@ -35,9 +36,8 @@ public class RecipeSheet : MonoBehaviour
         Drink alreadyContains = recipesStored.Find(item => item.name == drinkName);
         if (alreadyContains != null) return;
 
-        // find Drink object from GlassFill and add to recipesStored
-        glassFill = GameObject.FindWithTag("Glass").GetComponent<GlassFill>();
-        List<Drink> allRecipes = glassFill.recipes;
+        // find recipe and add to recipesStored
+        List<Drink> allRecipes = recipeManager.recipes;
         Drink drink = allRecipes.Find(item => item.name == drinkName);
         recipesStored.Add(drink);
     }

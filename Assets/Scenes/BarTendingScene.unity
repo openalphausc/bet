@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 163259948}
   - component: {fileID: 163259947}
   - component: {fileID: 163259950}
+  - component: {fileID: 163259951}
   m_Layer: 0
   m_Name: RecipeSheet
   m_TagString: RecipeSheet
@@ -483,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24e3d336440d456fb115ffb124f0156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glassFill: {fileID: 0}
+  recipeManager: {fileID: 0}
   recipeSheetWindow: {fileID: 97059304}
   recipeText: {fileID: 469984184}
 --- !u!114 &163259948
@@ -565,6 +566,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &163259951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163259944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af7803bf47e14f348c3154fe8f7d25d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeFile: {fileID: 4900000, guid: f05c578d4da0e26428c68513eec41332, type: 3}
+  colorsFile: {fileID: 4900000, guid: bf25e61559f77491bb8f1a469183a648, type: 3}
 --- !u!1 &189076817
 GameObject:
   m_ObjectHideFlags: 0
