@@ -15,8 +15,6 @@ public class GlassFill : MonoBehaviour
     public GameObject happyFace;
     public GameObject neutralFace;
     public GameObject frownFace;
-    // Reference to emotion slider
-    private Slider emotionSlider;
 
     // references
     private EquipIngredient equipIngredient;
@@ -43,7 +41,6 @@ public class GlassFill : MonoBehaviour
         equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
         glassMove = gameObject.GetComponent<GlassMove>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        emotionSlider = GameObject.Find("EmotionSlider").GetComponent<Slider>();
         recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
     }
 
@@ -85,10 +82,13 @@ public class GlassFill : MonoBehaviour
             GameObject face;
             if (drinkIsCorrect)
             {
-                // if drink is correct and timely, happy face
-                if (emotionSlider.value > 0.4f) face = Instantiate(happyFace);
+                // if drink is correct happy face
+                face = Instantiate(happyFace);
+                //TODO: deepen logic here to change face based on how close to drink
+                //Antiquated: 
                 // if drink is correct and badly timed, neutral face
-                else face = Instantiate(neutralFace);
+                // else face = Instantiate(neutralFace);
+                //end of antiquated
             }
             else face = Instantiate(frownFace);
             face.transform.parent = GameObject.FindWithTag("Monster").transform;
