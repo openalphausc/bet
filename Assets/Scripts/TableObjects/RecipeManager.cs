@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class RecipeManager : MonoBehaviour
 {
@@ -21,6 +22,16 @@ public class RecipeManager : MonoBehaviour
     void GetData() {
     	GetColors();
     	GetRecipes();
+    	SetIngredientGlows();
+    }
+
+    // set all ingredients' 2D lights to the associated color
+    void SetIngredientGlows() {
+    	GameObject[] ingredients = GameObject.FindGameObjectsWithTag("Ingredient");
+    	foreach(GameObject ingredient in ingredients) {
+    		Color lightColor = ingredientColors[ingredient.name]/255.0f;
+    		ingredient.GetComponent<Light2D>().color = lightColor;
+    	}
     }
 
     // Gets the ingredient colors from a CSV, stores in ingredientColors dictionary
