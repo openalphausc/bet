@@ -19,7 +19,16 @@ public class EquipIngredient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(equippedObject != null) {
+        // if the game is paused, unequip the ingredient
+        if (equippedObject != null && PauseMenu.isPaused)
+        {
+            equippedObject.transform.position = objOriginalPosition;
+            equippedObject = null;
+            setDown.Play();
+        }
+
+        if (equippedObject != null)
+        {
             equippedObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 30.0f));
         }
     }
