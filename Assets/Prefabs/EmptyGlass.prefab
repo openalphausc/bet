@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6bc07ef81f02f4f8ba0daa9719fdb2d1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.70980394}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -210,7 +210,6 @@ MonoBehaviour:
   frownFace: {fileID: 6091655751931043891, guid: c24a99e8b3fa94a09948bd2e4992324b,
     type: 3}
   liquidSprite: {fileID: 8971800103817609847}
-  emptySprite: {fileID: 21300000, guid: 6bc07ef81f02f4f8ba0daa9719fdb2d1, type: 3}
   oneSixthSprite: {fileID: 21300000, guid: ce070c3691f1341d2bcca3aa9263b154, type: 3}
   twoSixthSprite: {fileID: 21300000, guid: abb1c77fbbce049768500f73491be183, type: 3}
   threeSixthSprite: {fileID: 21300000, guid: 2d01ab2eaa7bb4c4cab9f7b63002db9e, type: 3}
