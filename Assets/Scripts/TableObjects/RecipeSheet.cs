@@ -12,8 +12,6 @@ public class RecipeSheet : MonoBehaviour
     public GameObject recipeSheetWindow;
     public TextMeshProUGUI recipeText;
 
-    private SortedDictionary<string, string> ingredientNames;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +22,7 @@ public class RecipeSheet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PopulateIngredientNames();
+        
     }
 
     public void OnMouseUp() {
@@ -51,30 +49,11 @@ public class RecipeSheet : MonoBehaviour
             temp += drink.name + ": ";
             for(int i = 0; i < drink.ingredients.Count; i++)
             {
-                string ingredientCode = drink.ingredients[i];
-                temp += ingredientNames[ingredientCode];
+                temp += drink.ingredients[i];
                 if (i < drink.ingredients.Count - 1) temp += ", ";
             }
             temp += "\n";
         }
         recipeText.text = temp;
-    }
-
-    
-    // populate the map with ingredient codes that refer to names
-    private void PopulateIngredientNames()
-    {
-        ingredientNames = new SortedDictionary<string, string>();
-        ingredientNames.Add("ginBottle", "gin");
-        ingredientNames.Add("krakenTentacles", "kraken tentacles");
-        ingredientNames.Add("vodkaBottle", "vodka");
-        ingredientNames.Add("whiskeyBottle", "whiskey");
-        ingredientNames.Add("pixieBottle", "pixie dust");
-        ingredientNames.Add("angelTears", "angel tears");
-        ingredientNames.Add("simpleSyrup", "simple syrup");
-        ingredientNames.Add("pumpkinJuice", "pumpkin juice");
-        ingredientNames.Add("vialOfBlood", "blood");
-        ingredientNames.Add("giantsToe", "a giant's toe");
-        ingredientNames.Add("zombieFlesh", "zombie flesh");
     }
 }

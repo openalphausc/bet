@@ -28,12 +28,11 @@ public class Drink
     // Returns whether two drinks match
     public bool Matches(Drink otherDrink)
     {
-        float maxDifference = 10.0f;
-        if(Mathf.Abs(this.color.r - otherDrink.color.r) > maxDifference) return false;
-        if(Mathf.Abs(this.color.g - otherDrink.color.g) > maxDifference) return false;
-        if(Mathf.Abs(this.color.b - otherDrink.color.b) > maxDifference) return false;
-        // for now, ignore transparency component?
-        return true;
+        float maxDifference = 25.5f; // 10% of the color range?
+        // treat the 3 components of color as a vector so you can do some ez pz vector math
+        Vector3 thisColor = new Vector3(color.r, color.g, color.b);
+        Vector3 otherColor = new Vector3(otherDrink.color.r, otherDrink.color.g, otherDrink.color.b);
+        return (Vector3.Distance(thisColor, otherColor) < maxDifference);
     }
 
     // format the drink for Debug.Log-ing
