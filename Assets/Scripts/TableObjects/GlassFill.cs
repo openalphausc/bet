@@ -22,7 +22,7 @@ public class GlassFill : MonoBehaviour
 
     // sprite stuff
     public SpriteRenderer liquidSprite;
-    public Sprite emptySprite;
+    // public Sprite emptySprite;
     public Sprite oneSixthSprite;
     public Sprite twoSixthSprite;
     public Sprite threeSixthSprite;
@@ -154,7 +154,6 @@ public class GlassFill : MonoBehaviour
     public void clearIngredients()
     {
         currentDrink = new Drink();
-        liquidSprite.sprite = emptySprite;
-        liquidSprite.color = new Color(255.0f, 255.0f, 255.0f, 255.0f);
+        liquidSprite.color = new Color(255.0f, 255.0f, 255.0f, 0.0f);
     }
 }

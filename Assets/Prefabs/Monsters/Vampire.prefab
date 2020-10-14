@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8879039643753111776}
   - component: {fileID: 3534611185494281461}
   m_Layer: 0
-  m_Name: Birdperson
+  m_Name: Vampire
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,12 +97,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
-  dialogueToStart: BirdpersonOrder
-  drinkOrder: 8 Ball
+  dialogueToStart: VampireOrder
+  drinkOrder: Bloody Mary
   prefab: {fileID: 0}
   happiness: 0
-  drinkIconPrefab: {fileID: 3430023029609515746, guid: 384b4e3a9895044e990cd782bac04b32,
-    type: 3}
 --- !u!61 &3534611185494281461
 BoxCollider2D:
   m_ObjectHideFlags: 0
