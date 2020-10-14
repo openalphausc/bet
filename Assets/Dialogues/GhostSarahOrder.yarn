@@ -8,10 +8,9 @@ position:
 	Another Corpse Reviver would hit the spot. (Press SPACEBAR to continue)
 <<else>>
 	Early in the night and I’m already tired! (Press SPACEBAR to continue)
-	But nothing like a Corpse Reviver to liven up my night. (Press SPACEBAR to continue)
-	Gin, then angel’s tears, followed by kraken tentacles. (Press SPACEBAR to continue)
-	Grandmother used to have them all the time. (Press SPACEBAR to continue)
-	She’s a ghost too, runs in the family. (Press SPACEBAR to continue)
+	But nothing like a Corpse Reviver to liven up my night. Grandmother used to have them all the time. (SPACEBAR)
+	She’s a ghost too - it runs in the family. (SPACEBAR)
+	Vodka, then a bit of this liquid, I saw it in another bar once - it's blueish and salty. Then some kraken's tentacles. (SPACEBAR)
 <<endif>>
 Please hurry. I might fall asleep on the counter.
 ===

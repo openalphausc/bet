@@ -7,9 +7,10 @@ position:
 <<if visited("GhostAylishOrder") is true>>
 	I'll have the Bee's Knees please. If that's okay. (Press SPACEBAR to continue)
 <<else>>
-	I'm sorry, you look pretty busy... (Press SPACEBAR to continue)
-	Can I please have a Bee's Knees? (Press SPACEBAR to continue)
-	It's whiskey, then pumpkin juice, then a sprinkling of zombie flesh. (Press SPACEBAR to continue)
+	I'm sorry, you look pretty busy... (SPACEBAR to continue)
+	Can I please have a Bee's Knees? (SPACEBAR)
+	It's goblin whiskey, and I don't remember what's next. (SPACEBAR)
+	It was my favorite, orange, for Halloween. (SPACEBAR)
 <<endif>>
 Thank you so much, I appreciate it.
 ===

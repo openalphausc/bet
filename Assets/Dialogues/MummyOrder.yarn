@@ -5,11 +5,12 @@ colorID:
 position:
 ---
 <<if visited("MummyOrder") is true>>
-	Hmm… I don’t know… I guess a, well, a Dead Vodka? (Press SPACEBAR to continue)
+	Hmm... I don’t know... I guess a, well, a Dead Vodka? (Press SPACEBAR to continue)
 <<else>>
-	So many options. I’ll admit, I don’t know what I want… (Press SPACEBAR to continue)
-	I’m holding up the line? Oh, well then. I’ll have a.... Dead Vodka. (Press SPACEBAR to continue)
-	It’s Vodka... then more Vodka. Hells, I can’t think under pressure. Can you tell I just made it up? (Press SPACEBAR to continue)
+	So many options. I’ll admit, I don’t know what I want... (Press SPACEBAR to continue)
+	I’m holding up the line? Oh, well then. I’ll have a.... Dead Vodka. (SPACEBAR)
+	It’s Vodka... then more Vodka. Hells, I can’t think under pressure. *ACHOO* (SPACEBAR)
+	Can you tell I just made it up? (SPACEBAR)
 <<endif>>
 Next time I’ll be more ready to order. 
 ===
