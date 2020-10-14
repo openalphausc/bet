@@ -25,6 +25,13 @@ public class RecipeManager : MonoBehaviour
     	SetIngredientGlows();
     }
 
+    public Drink GetDrinkByName(string drinkName) {
+    	Drink nameToSearch = new Drink();
+        nameToSearch.name = drinkName;
+        int index = recipes.BinarySearch(nameToSearch, new Drink.DrinkComp());
+        return recipes[index];
+    }
+
     // set all ingredients' 2D lights to the associated color
     void SetIngredientGlows() {
     	GameObject[] ingredients = GameObject.FindGameObjectsWithTag("Ingredient");

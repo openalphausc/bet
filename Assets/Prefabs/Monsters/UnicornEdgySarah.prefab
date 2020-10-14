@@ -99,6 +99,10 @@ MonoBehaviour:
   readyToLeave: 0
   dialogueToStart: UnicornEdgySarahOrder
   drinkOrder: Gin and Toenail
+  prefab: {fileID: 0}
+  happiness: 0
+  drinkIconPrefab: {fileID: 3430023029609515746, guid: 384b4e3a9895044e990cd782bac04b32,
+    type: 3}
 --- !u!61 &7173060465039907911
 BoxCollider2D:
   m_ObjectHideFlags: 0

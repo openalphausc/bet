@@ -52,10 +52,7 @@ public class GlassFill : MonoBehaviour
             string newDrinkName = currentMonster.GetComponent<Monster>().drinkOrder;
             if (newDrinkName.CompareTo(targetDrink.name) != 0)
             {
-                Drink nameToSearch = new Drink();
-                nameToSearch.name = newDrinkName;
-                int index = recipeManager.recipes.BinarySearch(nameToSearch, new Drink.DrinkComp());
-                if (index >= 0) targetDrink = recipeManager.recipes[index];
+                targetDrink = recipeManager.GetDrinkByName(newDrinkName);
             }
         }
     }
