@@ -21,7 +21,7 @@ public class GlassFill : MonoBehaviour
     private GlassMove glassMove;
 
     // sprite stuff
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer liquidSprite;
     public Sprite emptySprite;
     public Sprite oneSixthSprite;
     public Sprite twoSixthSprite;
@@ -40,7 +40,6 @@ public class GlassFill : MonoBehaviour
     {
         equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
         glassMove = gameObject.GetComponent<GlassMove>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
     }
 
@@ -103,8 +102,14 @@ public class GlassFill : MonoBehaviour
         }
     }
 
-    public void AddIngredient(GameObject ingredient)
+    void AddIngredient(GameObject ingredient)
     {
+        // if 6 ingredients already in the drink, don't do anything
+        if(currentDrink.ingredients.Count >= 6) {
+            GlassIsFullAlert(); //alert that tells the user the glass is full
+            return;
+        }
+
         // add ingredient to current drink
         currentDrink.AddIngredient(ingredient.name);
 
@@ -113,30 +118,31 @@ public class GlassFill : MonoBehaviour
         switch (currentDrink.ingredients.Count)
         {
             case 1:
-                spriteRenderer.sprite = oneSixthSprite;
+                liquidSprite.sprite = oneSixthSprite;
                 break;
             case 2:
-                spriteRenderer.sprite = twoSixthSprite;
+                liquidSprite.sprite = twoSixthSprite;
                 break;
             case 3:
-                spriteRenderer.sprite = threeSixthSprite;
+                liquidSprite.sprite = threeSixthSprite;
                 break;
             case 4:
-                spriteRenderer.sprite = fourSixthSprite;
+                liquidSprite.sprite = fourSixthSprite;
                 break;
             case 5:
-                spriteRenderer.sprite = fiveSixthSprite;
+                liquidSprite.sprite = fiveSixthSprite;
                 break;
             case 6:
                 // This might end up being fullSprite - but in case we change from sixths to 
                 // 8ths and such, I'll keep it this for now?
-                spriteRenderer.sprite = sixSixthSprite;
+                liquidSprite.sprite = sixSixthSprite;
                 break;
             default:
-                //alert that tells the user the glass is full
-                GlassIsFullAlert();
                 break;
         }
+
+        // set color of liquid to appropriate color
+        liquidSprite.color = currentDrink.GetDisplayColor();
 
         // play pouring sound
         pourDrink.Play();
@@ -151,6 +157,7 @@ public class GlassFill : MonoBehaviour
     public void clearIngredients()
     {
         currentDrink = new Drink();
-        spriteRenderer.sprite = emptySprite;
+        liquidSprite.sprite = emptySprite;
+        liquidSprite.color = new Color(255.0f, 255.0f, 255.0f, 255.0f);
     }
 }

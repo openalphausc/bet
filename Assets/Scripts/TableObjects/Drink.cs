@@ -75,6 +75,12 @@ public class Drink
         // }
     }
 
+    public Color GetDisplayColor() {
+        Color displayColor = color / 255.0f;
+        displayColor.a *= 255.0f;
+        return displayColor;
+    }
+
     public class DrinkComp : IComparer<Drink>
     {
         // returns 0 if x and y have the same names

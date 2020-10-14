@@ -35,7 +35,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -6.3, z: 0}
   m_LocalScale: {x: 0.81495756, y: 0.81495756, z: 1.6299151}
-  m_Children: []
+  m_Children:
+  - {fileID: 8308685707898502015}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -202,20 +203,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purchased: 0
-  recipeFile: {fileID: 4900000, guid: f05c578d4da0e26428c68513eec41332, type: 3}
   happyFace: {fileID: 114152390962653731, guid: b4ae820a312ae461a8c3ee8d3a492f35,
     type: 3}
   neutralFace: {fileID: 2386820289288274983, guid: 1248c8f3a14d34219aa5ddc37c6ae79f,
     type: 3}
   frownFace: {fileID: 6091655751931043891, guid: c24a99e8b3fa94a09948bd2e4992324b,
     type: 3}
+  liquidSprite: {fileID: 8971800103817609847}
   emptySprite: {fileID: 21300000, guid: 6bc07ef81f02f4f8ba0daa9719fdb2d1, type: 3}
-  oneSixthSprite: {fileID: 21300000, guid: 92c730cbf78f24273a2cf36643670767, type: 3}
-  twoSixthSprite: {fileID: 21300000, guid: f5844ee1511e04921bfed529bb9e7201, type: 3}
-  threeSixthSprite: {fileID: 21300000, guid: a890776f0a9b944a6bdd3787213ea86c, type: 3}
-  fourSixthSprite: {fileID: 21300000, guid: 58b97196992b14b368a8878c087bbbad, type: 3}
-  fiveSixthSprite: {fileID: 21300000, guid: f07c7cefbd1264fe0b781169fe2ce286, type: 3}
-  sixSixthSprite: {fileID: 21300000, guid: 9fe3a138097bd4d3eac6fe1a39af9e9b, type: 3}
+  oneSixthSprite: {fileID: 21300000, guid: ce070c3691f1341d2bcca3aa9263b154, type: 3}
+  twoSixthSprite: {fileID: 21300000, guid: abb1c77fbbce049768500f73491be183, type: 3}
+  threeSixthSprite: {fileID: 21300000, guid: 2d01ab2eaa7bb4c4cab9f7b63002db9e, type: 3}
+  fourSixthSprite: {fileID: 21300000, guid: 13d5732bc8ed14db48b33dcb83ac6bd8, type: 3}
+  fiveSixthSprite: {fileID: 21300000, guid: 8bbbd069cc0a443c68d83a69b2d73718, type: 3}
+  sixSixthSprite: {fileID: 21300000, guid: 5ea6e865ef00946f1b75a54888889971, type: 3}
   pourDrink: {fileID: 3051370186403674415}
 --- !u!114 &8761791047644038165
 MonoBehaviour:
@@ -423,3 +424,84 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &731825031472004267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8308685707898502015}
+  - component: {fileID: 8971800103817609847}
+  m_Layer: 0
+  m_Name: Liquid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8308685707898502015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731825031472004267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 320813404919778302}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &8971800103817609847
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731825031472004267}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 247957067
+  m_SortingLayer: 4
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 6bc07ef81f02f4f8ba0daa9719fdb2d1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10, y: 10}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
