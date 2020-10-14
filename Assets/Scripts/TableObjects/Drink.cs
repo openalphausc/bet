@@ -25,7 +25,7 @@ public class Drink
         color = new Color(0.0f, 0.0f, 0.0f);
     }
 
-    // Returns whether two drinks match
+    // returns whether two drinks match
     public bool Matches(Drink otherDrink)
     {
         float maxDifference = 25.5f; // 10% of the color range?
@@ -33,6 +33,21 @@ public class Drink
         Vector3 thisColor = new Vector3(color.r, color.g, color.b);
         Vector3 otherColor = new Vector3(otherDrink.color.r, otherDrink.color.g, otherDrink.color.b);
         return (Vector3.Distance(thisColor, otherColor) < maxDifference);
+    }
+
+    // returns whether two drinks have the same ingredients
+    public bool HasSameIngredients(Drink otherDrink) {
+        // check this drink
+        foreach(string ingredient in this.ingredients) {
+            if(!otherDrink.ingredients.Contains(ingredient)) return false;
+        }
+
+        // check other drink
+        foreach(string ingredient in otherDrink.ingredients) {
+            if(!this.ingredients.Contains(ingredient)) return false;
+        }
+
+        return true;
     }
 
     // format the drink for Debug.Log-ing

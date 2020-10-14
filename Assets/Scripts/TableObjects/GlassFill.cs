@@ -69,24 +69,28 @@ public class GlassFill : MonoBehaviour
     {
         if (collisionInfo.gameObject.tag == "Monster" && !purchased)
         {
-            // check if current drink = target drink
-            bool drinkIsCorrect = currentDrink.Matches(targetDrink);
             Debug.Log("currentDrink.color = " + currentDrink.color.ToString() + ", targetDrink.color = " + targetDrink.color.ToString());
-            Debug.Log((drinkIsCorrect ? "Drink is correct" : "Drink is wrong"));
 
-            // show emoji face
+            // check if current drink = target drink
             GameObject face;
-            if (drinkIsCorrect)
+            if (currentDrink.Matches(targetDrink))
             {
-                // if drink is correct happy face
+                // if drink matches color, happy face
                 face = Instantiate(happyFace);
-                //TODO: deepen logic here to change face based on how close to drink
-                //Antiquated: 
-                // if drink is correct and badly timed, neutral face
-                // else face = Instantiate(neutralFace);
-                //end of antiquated
+                Debug.Log("Drink matches color");
             }
-            else face = Instantiate(frownFace);
+            else {
+                // if doesn't match color, but has same ingredients, neutral face
+                if(currentDrink.HasSameIngredients(targetDrink)) {
+                    face = Instantiate(neutralFace);
+                    Debug.Log("Drink matches ingredients, not color.");
+                }
+                // if totally wrong, frown face
+                else {
+                    face = Instantiate(frownFace);
+                    Debug.Log("Drink is wrong.");
+                }
+            }
             face.transform.parent = GameObject.FindWithTag("Monster").transform;
 
             // attach drink to monster so they carry it offscreen
