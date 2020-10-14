@@ -91,6 +91,7 @@ public class Monster : MonoBehaviour
             state = MonsterState.slidingOff;
             // stop dialogue
             FindObjectOfType<Yarn.Unity.DialogueUI>().DialogueComplete();
+            FindObjectOfType<NodeVisitedTracker>().NodeComplete(dialogueToStart);
             // hide the drink icon
             drinkIcon.transform.GetChild(0).gameObject.SetActive(false);
             drinkIcon.transform.GetChild(1).gameObject.SetActive(false);
