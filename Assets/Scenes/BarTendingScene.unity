@@ -4846,6 +4846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1799133689}
+  MainMenuSceneName: Menu
 --- !u!1 &1983300330
 GameObject:
   m_ObjectHideFlags: 0

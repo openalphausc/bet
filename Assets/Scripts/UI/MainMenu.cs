@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public TMP_Text versionText;
-    
+    public string BarTendingSceneName;
+    public string PlaytestingContextSceneName;
+    public bool LoadPlaytestingContext;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,15 @@ public class MainMenu : MonoBehaviour
     // TODO: Don't hardcode load scene. Create some sort of global variable
     public void Play()
     {
-        SceneManager.LoadScene("BarTendingScene");
+        if (LoadPlaytestingContext)
+        {
+            Debug.Log("Loading Playtesting Context Menu");
+            SceneManager.LoadScene(PlaytestingContextSceneName);
+        }
+        else
+        {
+            SceneManager.LoadScene(BarTendingSceneName);
+        }
     }
 
     public void Quit()
