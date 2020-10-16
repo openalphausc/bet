@@ -154,7 +154,7 @@ RectTransform:
   - {fileID: 1429048179}
   - {fileID: 469984183}
   m_Father: {fileID: 1969349049}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 107912324}
   - component: {fileID: 107912325}
   m_Layer: 0
-  m_Name: pumpkinJuice
+  m_Name: pumpkin juice
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +293,7 @@ Transform:
   m_LocalScale: {x: 0.8819217, y: 0.8567801, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &107912322
 BoxCollider2D:
@@ -386,6 +386,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58151950f439f4e20a64729408bc2e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &108999916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108999917}
+  - component: {fileID: 108999919}
+  - component: {fileID: 108999918}
+  m_Layer: 0
+  m_Name: DrinkIconGlass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &108999917
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108999916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 713684056}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &108999918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108999916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.43137255}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6bc07ef81f02f4f8ba0daa9719fdb2d1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &108999919
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108999916}
+  m_CullTransparentMesh: 0
 --- !u!1 &163259944
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +787,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189076817}
   m_CullTransparentMesh: 0
+--- !u!114 &291476650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5826592486603288553, guid: 8ba6525bd9f78416a86b05e5d5916665,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043393172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fa6d5d964154cdf9012d10053067f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &364844531 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5639802912432844922, guid: 8ba6525bd9f78416a86b05e5d5916665,
@@ -754,16 +840,16 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1102533642}
-  - {fileID: 963339179}
-  - {fileID: 487980790}
-  - {fileID: 1464669679}
-  - {fileID: 1516924723}
-  - {fileID: 1863220562}
-  - {fileID: 802311714}
-  - {fileID: 107912321}
   - {fileID: 1430043041}
+  - {fileID: 107912321}
+  - {fileID: 1516924723}
+  - {fileID: 1464669679}
+  - {fileID: 1863220562}
+  - {fileID: 963339179}
+  - {fileID: 802311714}
   - {fileID: 761574006}
+  - {fileID: 487980790}
+  - {fileID: 1102533642}
   - {fileID: 1514982330}
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -889,6 +975,7 @@ GameObject:
   - component: {fileID: 444279229}
   - component: {fileID: 444279228}
   - component: {fileID: 444279230}
+  - component: {fileID: 444279231}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -970,11 +1057,107 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 49e5cfbac9c7948e6ab23ae8ef8b9b86, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 476baf1e9061e4962ad3f00a9b455a12, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.12
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &444279231
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444279227}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a994ca68893194eb5a21a5ae667c52aa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1204,7 +1387,7 @@ GameObject:
   - component: {fileID: 487980793}
   - component: {fileID: 487980794}
   m_Layer: 0
-  m_Name: vodkaBottle
+  m_Name: vodka
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1272,7 +1455,7 @@ Transform:
   m_LocalScale: {x: 0.4037705, y: 0.5093681, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
-  m_RootOrder: 2
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &487980791
 BoxCollider2D:
@@ -1365,6 +1548,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58151950f439f4e20a64729408bc2e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &713684055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 713684056}
+  - component: {fileID: 713684058}
+  m_Layer: 0
+  m_Name: DrinkIcon
+  m_TagString: DrinkIcon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &713684056
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713684055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 108999917}
+  - {fileID: 1276274646}
+  m_Father: {fileID: 1969349049}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 166, y: -229}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &713684058
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713684055}
+  m_CullTransparentMesh: 0
 --- !u!1 &732510357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,7 +1758,7 @@ GameObject:
   - component: {fileID: 761574009}
   - component: {fileID: 761574010}
   m_Layer: 0
-  m_Name: giantsToe
+  m_Name: giant's toe
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1597,7 +1826,7 @@ Transform:
   m_LocalScale: {x: 0.5867137, y: 0.63286614, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &761574007
 BoxCollider2D:
@@ -1705,7 +1934,7 @@ GameObject:
   - component: {fileID: 802311717}
   - component: {fileID: 802311718}
   m_Layer: 0
-  m_Name: simpleSyrup
+  m_Name: violent syrup
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1750,7 +1979,7 @@ SpriteRenderer:
   m_SortingLayerID: 1767314061
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8cdacd4edede0e4418ecf049dde2ff9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e29c83c70288a4f85afe4497d9fdb699, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1770,7 +1999,7 @@ Transform:
   m_GameObject: {fileID: 802311712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 21.899994, y: -3.800003, z: 0}
-  m_LocalScale: {x: 1.4913673, y: 1.3867495, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
   m_RootOrder: 6
@@ -1788,18 +2017,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000047683716, y: 0.92383194}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.88, y: 6.9}
+    oldSize: {x: 3.74, y: 15.78}
     newSize: {x: 5.88, y: 6.9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.88, y: 6.9}
+  m_Size: {x: 8.189557, y: 17.985916}
   m_EdgeRadius: 0
 --- !u!114 &802311716
 MonoBehaviour:
@@ -2193,7 +2422,7 @@ GameObject:
   - component: {fileID: 963339182}
   - component: {fileID: 963339183}
   m_Layer: 0
-  m_Name: krakenTentacles
+  m_Name: kraken tentacles
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2257,11 +2486,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963339177}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.700005, y: -13.000002, z: 0}
+  m_LocalPosition: {x: -31.700005, y: -13, z: 0}
   m_LocalScale: {x: 1.7535014, y: 1.6627961, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &963339180
 BoxCollider2D:
@@ -2276,7 +2505,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.19756699, y: 0.041669846}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2287,7 +2516,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.58, y: 4.09}
+  m_Size: {x: 7.2912426, y: 5.3400726}
   m_EdgeRadius: 0
 --- !u!114 &963339181
 MonoBehaviour:
@@ -2469,6 +2698,7 @@ GameObject:
   - component: {fileID: 1091579444}
   - component: {fileID: 1091579443}
   - component: {fileID: 1091579445}
+  - component: {fileID: 1091579446}
   m_Layer: 0
   m_Name: Mood Light 1
   m_TagString: Untagged
@@ -2544,6 +2774,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+--- !u!114 &1091579446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091579442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5fbc0ff2cf94483a927842914e24ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxIntensity: 1
 --- !u!1 &1102533640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2802,7 @@ GameObject:
   - component: {fileID: 1102533645}
   - component: {fileID: 1102533646}
   m_Layer: 0
-  m_Name: ginBottle
+  m_Name: gin
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2604,7 +2847,7 @@ SpriteRenderer:
   m_SortingLayerID: 1767314061
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a9a042c8ee669ef48af9007e51634d2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af699a7ab65c941c7b52e72efa6d380a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2627,7 +2870,7 @@ Transform:
   m_LocalScale: {x: 0.78580725, y: 0.646078, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
-  m_RootOrder: 0
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1102533643
 MonoBehaviour:
@@ -2654,18 +2897,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.108148575, y: -0.3946166}
+  m_Offset: {x: 0.019977093, y: -0.18013763}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.93, y: 8}
+    oldSize: {x: 12.8, y: 12.8}
     newSize: {x: 3.93, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.876686, y: 10.367703}
+  m_Size: {x: 6.4057217, y: 13.79945}
   m_EdgeRadius: 0
 --- !u!114 &1102533645
 MonoBehaviour:
@@ -2730,6 +2973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140409327}
   - component: {fileID: 1140409326}
+  - component: {fileID: 1140409328}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -2792,6 +3036,93 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1140409328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140409325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5fbc0ff2cf94483a927842914e24ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxIntensity: 0.6
+--- !u!1 &1276274645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1276274646}
+  - component: {fileID: 1276274648}
+  - component: {fileID: 1276274647}
+  m_Layer: 0
+  m_Name: DrinkIconLiquid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1276274646
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276274645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 713684056}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1276274647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276274645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 13d5732bc8ed14db48b33dcb83ac6bd8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1276274648
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276274645}
+  m_CullTransparentMesh: 0
 --- !u!1 &1429048178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,7 +3271,7 @@ GameObject:
   - component: {fileID: 1430043044}
   - component: {fileID: 1430043045}
   m_Layer: 0
-  m_Name: vialOfBlood
+  m_Name: blood
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3008,7 +3339,7 @@ Transform:
   m_LocalScale: {x: 0.6532982, y: 0.5655357, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1430043042
 BoxCollider2D:
@@ -3116,7 +3447,7 @@ GameObject:
   - component: {fileID: 1464669682}
   - component: {fileID: 1464669683}
   m_Layer: 0
-  m_Name: whiskeyBottle
+  m_Name: goblin whiskey
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3161,7 +3492,7 @@ SpriteRenderer:
   m_SortingLayerID: 1767314061
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6630f41f6f5240f45bb4ff68ceaa4c4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a325708438b6434e8751eb2a51b5a95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3181,7 +3512,7 @@ Transform:
   m_GameObject: {fileID: 1464669677}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 17.1, y: -9, z: 0}
-  m_LocalScale: {x: 1.3942982, y: 1.3072714, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
   m_RootOrder: 3
@@ -3199,18 +3530,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.15396261, y: -0.46191502}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.71, y: 8.41}
+    oldSize: {x: 10, y: 12.78}
     newSize: {x: 4.71, y: 8.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.71, y: 8.41}
+  m_Size: {x: 6.865591, y: 11.181484}
   m_EdgeRadius: 0
 --- !u!114 &1464669681
 MonoBehaviour:
@@ -3292,7 +3623,7 @@ GameObject:
   - component: {fileID: 1514982333}
   - component: {fileID: 1514982334}
   m_Layer: 0
-  m_Name: zombieFlesh
+  m_Name: zombie flesh
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3375,18 +3706,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.053539753, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.02, y: 3.35}
+    oldSize: {x: 4.39, y: 4.52}
     newSize: {x: 6.02, y: 3.35}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.02, y: 3.35}
+  m_Size: {x: 4.628008, y: 4.301672}
   m_EdgeRadius: 0
 --- !u!114 &1514982332
 MonoBehaviour:
@@ -3468,7 +3799,7 @@ GameObject:
   - component: {fileID: 1516924726}
   - component: {fileID: 1516924727}
   m_Layer: 0
-  m_Name: pixieBottle
+  m_Name: pixie dust
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3513,7 +3844,7 @@ SpriteRenderer:
   m_SortingLayerID: 1767314061
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5bcf5d20d6560f84dab6f717f6f418e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7bf8ee07755a2481ab85c8a425de8028, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3533,10 +3864,10 @@ Transform:
   m_GameObject: {fileID: 1516924721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -17.300003, y: -3.7000027, z: 0}
-  m_LocalScale: {x: 0.5438753, y: 0.47879022, z: 1}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1516924724
 BoxCollider2D:
@@ -3551,18 +3882,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0866164, y: -0.08660412}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.6, y: 12.09}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 8.6, y: 12.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.6, y: 12.09}
+  m_Size: {x: 4.4427853, y: 4.2952137}
   m_EdgeRadius: 0
 --- !u!114 &1516924725
 MonoBehaviour:
@@ -4057,7 +4388,7 @@ GameObject:
   - component: {fileID: 1863220565}
   - component: {fileID: 1863220566}
   m_Layer: 0
-  m_Name: angelTears
+  m_Name: angel tears
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4102,7 +4433,7 @@ SpriteRenderer:
   m_SortingLayerID: 1767314061
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed9638d0fcf7c0f438364239713fa438, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bcf5d20d6560f84dab6f717f6f418e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4122,10 +4453,10 @@ Transform:
   m_GameObject: {fileID: 1863220560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.9, y: -12, z: 0}
-  m_LocalScale: {x: 1.8146968, y: 1.8621392, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1863220563
 BoxCollider2D:
@@ -4140,18 +4471,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0000009536743, y: -0.13857174}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.51, y: 5.12}
+    oldSize: {x: 8.6, y: 12.09}
     newSize: {x: 3.51, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.51, y: 5.12}
+  m_Size: {x: 10.715841, y: 15.928759}
   m_EdgeRadius: 0
 --- !u!114 &1863220564
 MonoBehaviour:
@@ -4310,6 +4641,7 @@ GameObject:
   - component: {fileID: 1963682487}
   - component: {fileID: 1963682486}
   - component: {fileID: 1963682488}
+  - component: {fileID: 1963682489}
   m_Layer: 0
   m_Name: Mood Light 2
   m_TagString: Untagged
@@ -4385,6 +4717,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+--- !u!114 &1963682489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963682485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5fbc0ff2cf94483a927842914e24ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxIntensity: 1
 --- !u!1 &1969349048
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,6 +4763,7 @@ RectTransform:
   m_Children:
   - {fileID: 1799133690}
   - {fileID: 2011658893}
+  - {fileID: 713684056}
   - {fileID: 97059305}
   m_Father: {fileID: 1736156392}
   m_RootOrder: 0
@@ -4882,6 +5228,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 291476650}
+    - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5639802912432844922, guid: 8ba6525bd9f78416a86b05e5d5916665,
         type: 3}

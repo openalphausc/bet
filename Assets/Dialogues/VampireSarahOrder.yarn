@@ -5,11 +5,11 @@ colorID:
 position:
 ---
 <<if visited("VampireSarahOrder") is true>>
-	French 75. Quickly, if you will. 
+	French 75. Quickly, if you will. (Press SPACEBAR to continue)
 <<else>>
-	Hello, you look eager, don’t you?. (Press SPACEBAR to continue)
-	I’ll have a French 75. Silly name, good drink. I was in France in 75, you know. 1475, that is. Pour the gin. (Press SPACEBAR to continue)
-	After the gin add some syrup and zombie flesh. (Press SPACEBAR to continue)
+	Hello, you look eager, don’t you? (Press SPACEBAR to continue)
+	I’ll have a French 75. Silly name, good drink. I was in France in 75, you know. 1475, that is. (SPACEBAR)
+	Pour the tears, plenty of zombie flesh, then some sweet thing. I can't be bothered to remember the name. (SPACEBAR)
 <<endif>>
-Haven’t changed my drink order in a century. Zombie flesh never gets old, does it? (Press SPACEBAR to continue)
+Haven't changed my drink order in a century. Zombie flesh never gets old, does it?
 ===

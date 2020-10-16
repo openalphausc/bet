@@ -21,8 +21,8 @@ public class GlassFill : MonoBehaviour
     private GlassMove glassMove;
 
     // sprite stuff
-    private SpriteRenderer spriteRenderer;
-    public Sprite emptySprite;
+    public SpriteRenderer liquidSprite;
+    // public Sprite emptySprite;
     public Sprite oneSixthSprite;
     public Sprite twoSixthSprite;
     public Sprite threeSixthSprite;
@@ -40,7 +40,6 @@ public class GlassFill : MonoBehaviour
     {
         equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
         glassMove = gameObject.GetComponent<GlassMove>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
     }
 
@@ -53,10 +52,7 @@ public class GlassFill : MonoBehaviour
             string newDrinkName = currentMonster.GetComponent<Monster>().drinkOrder;
             if (newDrinkName.CompareTo(targetDrink.name) != 0)
             {
-                Drink nameToSearch = new Drink();
-                nameToSearch.name = newDrinkName;
-                int index = recipeManager.recipes.BinarySearch(nameToSearch, new Drink.DrinkComp());
-                if (index >= 0) targetDrink = recipeManager.recipes[index];
+                targetDrink = recipeManager.GetDrinkByName(newDrinkName);
             }
         }
     }
@@ -73,24 +69,28 @@ public class GlassFill : MonoBehaviour
     {
         if (collisionInfo.gameObject.tag == "Monster" && !purchased)
         {
-            // check if current drink = target drink
-            bool drinkIsCorrect = currentDrink.Matches(targetDrink);
             Debug.Log("currentDrink.color = " + currentDrink.color.ToString() + ", targetDrink.color = " + targetDrink.color.ToString());
-            Debug.Log((drinkIsCorrect ? "Drink is correct" : "Drink is wrong"));
 
-            // show emoji face
+            // check if current drink = target drink
             GameObject face;
-            if (drinkIsCorrect)
+            if (currentDrink.Matches(targetDrink))
             {
-                // if drink is correct happy face
+                // if drink matches color, happy face
                 face = Instantiate(happyFace);
-                //TODO: deepen logic here to change face based on how close to drink
-                //Antiquated: 
-                // if drink is correct and badly timed, neutral face
-                // else face = Instantiate(neutralFace);
-                //end of antiquated
+                Debug.Log("Drink matches color");
             }
-            else face = Instantiate(frownFace);
+            else {
+                // if doesn't match color, but has same ingredients, neutral face
+                if(currentDrink.HasSameIngredients(targetDrink)) {
+                    face = Instantiate(neutralFace);
+                    Debug.Log("Drink matches ingredients, not color.");
+                }
+                // if totally wrong, frown face
+                else {
+                    face = Instantiate(frownFace);
+                    Debug.Log("Drink is wrong.");
+                }
+            }
             face.transform.parent = GameObject.FindWithTag("Monster").transform;
 
             // attach drink to monster so they carry it offscreen
@@ -103,8 +103,14 @@ public class GlassFill : MonoBehaviour
         }
     }
 
-    public void AddIngredient(GameObject ingredient)
+    void AddIngredient(GameObject ingredient)
     {
+        // if 6 ingredients already in the drink, don't do anything
+        if(currentDrink.ingredients.Count >= 6) {
+            GlassIsFullAlert(); //alert that tells the user the glass is full
+            return;
+        }
+
         // add ingredient to current drink
         currentDrink.AddIngredient(ingredient.name);
 
@@ -113,30 +119,31 @@ public class GlassFill : MonoBehaviour
         switch (currentDrink.ingredients.Count)
         {
             case 1:
-                spriteRenderer.sprite = oneSixthSprite;
+                liquidSprite.sprite = oneSixthSprite;
                 break;
             case 2:
-                spriteRenderer.sprite = twoSixthSprite;
+                liquidSprite.sprite = twoSixthSprite;
                 break;
             case 3:
-                spriteRenderer.sprite = threeSixthSprite;
+                liquidSprite.sprite = threeSixthSprite;
                 break;
             case 4:
-                spriteRenderer.sprite = fourSixthSprite;
+                liquidSprite.sprite = fourSixthSprite;
                 break;
             case 5:
-                spriteRenderer.sprite = fiveSixthSprite;
+                liquidSprite.sprite = fiveSixthSprite;
                 break;
             case 6:
                 // This might end up being fullSprite - but in case we change from sixths to 
                 // 8ths and such, I'll keep it this for now?
-                spriteRenderer.sprite = sixSixthSprite;
+                liquidSprite.sprite = sixSixthSprite;
                 break;
             default:
-                //alert that tells the user the glass is full
-                GlassIsFullAlert();
                 break;
         }
+
+        // set color of liquid to appropriate color
+        liquidSprite.color = currentDrink.GetDisplayColor();
 
         // play pouring sound
         pourDrink.Play();
@@ -151,6 +158,6 @@ public class GlassFill : MonoBehaviour
     public void clearIngredients()
     {
         currentDrink = new Drink();
-        spriteRenderer.sprite = emptySprite;
+        liquidSprite.color = new Color(255.0f, 255.0f, 255.0f, 0.0f);
     }
 }

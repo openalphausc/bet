@@ -10,6 +10,7 @@ TagManager:
   - EquipIngredient
   - GlassSpawner
   - RecipeSheet
+  - DrinkIcon
   layers:
   - Default
   - TransparentFX

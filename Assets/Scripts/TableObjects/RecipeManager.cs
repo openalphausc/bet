@@ -10,7 +10,7 @@ public class RecipeManager : MonoBehaviour
     public TextAsset colorsFile;
 
     // public data
-    public SortedDictionary<string, Color> ingredientColors = new SortedDictionary<string, Color>();
+    public Dictionary<string, Color> ingredientColors = new Dictionary<string, Color>();
     public List<Drink> recipes = new List<Drink>();
 
     // Start is called before the first frame update
@@ -25,11 +25,23 @@ public class RecipeManager : MonoBehaviour
     	SetIngredientGlows();
     }
 
+    public Drink GetDrinkByName(string drinkName) {
+    	Drink nameToSearch = new Drink();
+        nameToSearch.name = drinkName;
+        int index = recipes.BinarySearch(nameToSearch, new Drink.DrinkComp());
+        return recipes[index];
+    }
+
     // set all ingredients' 2D lights to the associated color
     void SetIngredientGlows() {
     	GameObject[] ingredients = GameObject.FindGameObjectsWithTag("Ingredient");
     	foreach(GameObject ingredient in ingredients) {
-    		Color lightColor = ingredientColors[ingredient.name]/255.0f;
+    		Color lightColor = ingredientColors[ingredient.name];
+            // zombie flesh has special dark green glow because black glow = no light
+            if(ingredient.name == "zombie flesh") {
+                lightColor = new Color(8.0f, 145.0f, 0.0f, 1.0f);
+            }
+            lightColor /= 255.0f;
     		ingredient.GetComponent<Light2D>().color = lightColor;
     	}
     }
