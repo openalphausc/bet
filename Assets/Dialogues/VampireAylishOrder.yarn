@@ -8,8 +8,8 @@ position:
 	Hey, how’s it going? I’ll have one Bloodier. (Press SPACEBAR to continue)
 <<else>>
 	Hey, love the bar. Great aesthetic. (Press SPACEBAR to continue)
-	I’ll have one Bloodier. Never had it, but my friend says it’s killer. (Press SPACEBAR to continue)
-	She says you make it by pouring blood, then adding some syrup. (Press SPACEBAR to continue)
+	I’ll have one Bloodier. Never had it, but my friend says it’s killer. (SPACEBAR)
+	She says you make it by pouring blood, kick flip some tentacles in there, and something sickly sweet. (SPACEBAR)
 <<endif>>
 Awesome! I’ll be over here, thinking about skateboards.
 ===

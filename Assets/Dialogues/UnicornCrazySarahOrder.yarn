@@ -7,9 +7,10 @@ position:
 <<if visited("UnicornCrazySarahOrder") is true>>
 	Give me one of those Pumpkin Sours. (Press SPACEBAR to continue)
 <<else>>
-	You have a lot of sharp objects… They’re so pointy. So dangerous. (Press SPACEBAR to continue)
-	Oh, I was daydreaming again. My order? How about a Pumpkin Sour? Customers like those... (Press SPACEBAR to continue)
-	Just add some pumpkin juice, then some blood. I do like blood. (Press SPACEBAR to continue)
+	You have a lot of sharp objects... They’re so pointy. So dangerous. (Press SPACEBAR to continue)
+	Oh, I was daydreaming again. My order? How about a Pumpkin Sour? Customers like those... (SPACEBAR)
+	Just add some of that pumpkin juice, then some blood. Then something... magical. (SPACEBAR)
 <<endif>>
-...where’s my knife... shit.
+...where'd my knife go?... (SPACEBAR)
+shit.
 ===
