@@ -10,7 +10,7 @@ public class RecipeManager : MonoBehaviour
     public TextAsset colorsFile;
 
     // public data
-    public SortedDictionary<string, Color> ingredientColors = new SortedDictionary<string, Color>();
+    public Dictionary<string, Color> ingredientColors = new Dictionary<string, Color>();
     public List<Drink> recipes = new List<Drink>();
 
     // Start is called before the first frame update
