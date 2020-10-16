@@ -975,6 +975,7 @@ GameObject:
   - component: {fileID: 444279229}
   - component: {fileID: 444279228}
   - component: {fileID: 444279230}
+  - component: {fileID: 444279231}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -1056,11 +1057,107 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 49e5cfbac9c7948e6ab23ae8ef8b9b86, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 476baf1e9061e4962ad3f00a9b455a12, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.12
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &444279231
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444279227}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a994ca68893194eb5a21a5ae667c52aa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2601,6 +2698,7 @@ GameObject:
   - component: {fileID: 1091579444}
   - component: {fileID: 1091579443}
   - component: {fileID: 1091579445}
+  - component: {fileID: 1091579446}
   m_Layer: 0
   m_Name: Mood Light 1
   m_TagString: Untagged
@@ -2676,6 +2774,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+--- !u!114 &1091579446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091579442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5fbc0ff2cf94483a927842914e24ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxIntensity: 1
 --- !u!1 &1102533640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,6 +2973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140409327}
   - component: {fileID: 1140409326}
+  - component: {fileID: 1140409328}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -2924,6 +3036,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1140409328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140409325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5fbc0ff2cf94483a927842914e24ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxIntensity: 0.6
 --- !u!1 &1276274645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,6 +4641,7 @@ GameObject:
   - component: {fileID: 1963682487}
   - component: {fileID: 1963682486}
   - component: {fileID: 1963682488}
+  - component: {fileID: 1963682489}
   m_Layer: 0
   m_Name: Mood Light 2
   m_TagString: Untagged
@@ -4591,6 +4717,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+--- !u!114 &1963682489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963682485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5fbc0ff2cf94483a927842914e24ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxIntensity: 1
 --- !u!1 &1969349048
 GameObject:
   m_ObjectHideFlags: 0
