@@ -7,7 +7,7 @@ public class LightFadeUp : MonoBehaviour
 {
     private Light2D light;
 
-    public float maxIntensity; // set by each individual light
+    private float maxIntensity; // set by each individual light
 
     private float fadeUpTime = 3.0f;
     private float timer;
@@ -16,6 +16,7 @@ public class LightFadeUp : MonoBehaviour
     void Start()
     {
         light = GetComponent<Light2D>();
+        maxIntensity = light.intensity;
         timer = 0.0f;
     }
 
