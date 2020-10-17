@@ -5,11 +5,11 @@ colorID:
 position:
 ---
 <<if visited("UnicornEdgySarahOrder") is true>>
-	Make me a Gin & Toenail. Yeah, it’s a weird drink. I know. (Press SPACEBAR to continue)
+	Make me a Gin and Toenail. Yeah, it’s a weird drink. I know. (Press SPACEBAR to continue)
 <<else>>
-	I bet you haven’t seen me before. I try to stay in the shadows  (Press SPACEBAR to continue)
-	Make me a Gin & Toenail. (Press SPACEBAR to continue)
-	It’s gin, then a pixie, then a giant’s toe. I know it’s an uncommon drink, but I have uncommon taste. (Press SPACEBAR to continue)
+	I bet you haven’t seen me before. I try to stay in the shadows. (Press SPACEBAR to continue)
+	Make me a Gin and Toenail. (SPACEBAR)
+	It’s gin, pretty oozy, then there's a giant’s toe. I know it’s an uncommon drink, but I have uncommon taste. (SPACEBAR)
 <<endif>>
-If anyone copies my order, tell me. I have plans for such an occasion.
+If anyone copies my order, tell me. I know how to deal with them.
 ===

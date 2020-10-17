@@ -99,6 +99,10 @@ MonoBehaviour:
   readyToLeave: 0
   dialogueToStart: UnicornAylishOrder
   drinkOrder: Spooky Margarita
+  prefab: {fileID: 0}
+  happiness: 0
+  drinkIconPrefab: {fileID: 3430023029609515746, guid: 384b4e3a9895044e990cd782bac04b32,
+    type: 3}
 --- !u!61 &2816868035591867175
 BoxCollider2D:
   m_ObjectHideFlags: 0

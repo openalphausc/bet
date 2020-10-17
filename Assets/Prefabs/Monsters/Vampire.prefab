@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8879039643753111776}
   - component: {fileID: 3534611185494281461}
   m_Layer: 0
-  m_Name: Birdperson
+  m_Name: Vampire
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2914981590723852871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 1.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: -1505601185
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91ea59c2bf2e64848a85597120f1d5e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 847b9732c1a4c4f328e1c3e002e7209e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,8 +97,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
-  dialogueToStart: BirdpersonOrder
-  drinkOrder: 8 Ball
+  dialogueToStart: VampireOrder
+  drinkOrder: Bloody Mary
+  prefab: {fileID: 0}
+  happiness: 0
 --- !u!61 &3534611185494281461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -112,16 +114,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 11.996193}
+  m_Offset: {x: -0.07196641, y: 7.038215}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.58, y: 36.477848}
+    oldSize: {x: 5.94, y: 20.48}
     newSize: {x: 10.58, y: 36.477848}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.58, y: 12.485462}
+  m_Size: {x: 5.4461083, y: 7.900647}
   m_EdgeRadius: 0

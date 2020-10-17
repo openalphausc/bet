@@ -101,6 +101,8 @@ MonoBehaviour:
   drinkOrder: Pumpkin Sour
   prefab: {fileID: 0}
   happiness: 0
+  drinkIconPrefab: {fileID: 3430023029609515746, guid: 384b4e3a9895044e990cd782bac04b32,
+    type: 3}
 --- !u!61 &904005084864500644
 BoxCollider2D:
   m_ObjectHideFlags: 0

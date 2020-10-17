@@ -5,14 +5,13 @@ using TMPro;
 
 public class RecipeSheet : MonoBehaviour
 {
-    private List<Drink> recipesStored = new List<Drink>();
+    private List<string> drinkNamesStored = new List<string>();
+    private List<List<string>> recipesStored = new List<List<string>>();
 
     public RecipeManager recipeManager;
 
     public GameObject recipeSheetWindow;
     public TextMeshProUGUI recipeText;
-
-    private SortedDictionary<string, string> ingredientNames;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +23,7 @@ public class RecipeSheet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PopulateIngredientNames();
+
     }
 
     public void OnMouseUp() {
@@ -33,48 +32,42 @@ public class RecipeSheet : MonoBehaviour
 
     public void AddRecipeToSheet(string drinkName) {
         // if already stored, do nothing
-        Drink alreadyContains = recipesStored.Find(item => item.name == drinkName);
-        if (alreadyContains != null) return;
+        bool alreadyContains = drinkNamesStored.Contains(drinkName);
+        if (alreadyContains) return;
 
-        // find recipe and add to recipesStored
-        List<Drink> allRecipes = recipeManager.recipes;
-        Drink drink = allRecipes.Find(item => item.name == drinkName);
-        recipesStored.Add(drink);
+        // find Drink object in recipes
+        Drink drink = recipeManager.recipes.Find(item => item.name == drinkName);
+
+        // add drink name
+        drinkNamesStored.Add(drink.name);
+
+        // use a hash set to remove duplicates and add list of ingredients
+        HashSet<string> ingredientsToAdd = new HashSet<string>();
+        foreach(string ingredient in drink.ingredients) {
+            ingredientsToAdd.Add(ingredient);
+        }
+        List<string> recipe = new List<string>();
+        foreach(string ingredientToAdd in ingredientsToAdd) {
+            recipe.Add(ingredientToAdd);
+        }
+        recipesStored.Add(recipe);
     }
 
     void ShowRecipes() {
         recipeSheetWindow.SetActive(true);
         string temp = "";
-        foreach (Drink drink in recipesStored)
+        
+        for(int i = 0; i < drinkNamesStored.Count; i++)
         {
             //Debug.Log(drink.ToString());
-            temp += drink.name + ": ";
-            for(int i = 0; i < drink.ingredients.Count; i++)
+            temp += drinkNamesStored[i] + ": ";
+            for(int j = 0; j < recipesStored[i].Count; j++)
             {
-                string ingredientCode = drink.ingredients[i];
-                temp += ingredientNames[ingredientCode];
-                if (i < drink.ingredients.Count - 1) temp += ", ";
+                temp += recipesStored[i][j];
+                if (j < recipesStored[i].Count - 1) temp += ", ";
             }
             temp += "\n";
         }
         recipeText.text = temp;
-    }
-
-    
-    // populate the map with ingredient codes that refer to names
-    private void PopulateIngredientNames()
-    {
-        ingredientNames = new SortedDictionary<string, string>();
-        ingredientNames.Add("ginBottle", "gin");
-        ingredientNames.Add("krakenTentacles", "kraken tentacles");
-        ingredientNames.Add("vodkaBottle", "vodka");
-        ingredientNames.Add("whiskeyBottle", "whiskey");
-        ingredientNames.Add("pixieBottle", "pixie dust");
-        ingredientNames.Add("angelTears", "angel tears");
-        ingredientNames.Add("simpleSyrup", "simple syrup");
-        ingredientNames.Add("pumpkinJuice", "pumpkin juice");
-        ingredientNames.Add("vialOfBlood", "blood");
-        ingredientNames.Add("giantsToe", "a giant's toe");
-        ingredientNames.Add("zombieFlesh", "zombie flesh");
     }
 }
