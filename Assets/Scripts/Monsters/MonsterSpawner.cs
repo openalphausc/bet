@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MonsterSpawner : MonoBehaviour
 {
     public List<Monster> monstersToSpawn = new List<Monster>();
     public List<Monster> monstersOnScreen = new List<Monster>();
+    private int spawnerCount = 0;
+    public int maxSpawn = 2;
 
     private float spawnerTimer = 0.0f;
 
@@ -14,7 +17,7 @@ public class MonsterSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        spawnerCount = 0;
     }
 
     // Update is called once per frame
@@ -31,7 +34,12 @@ public class MonsterSpawner : MonoBehaviour
                 monstersOnScreen.RemoveAt(i);
                 i--;
                 Destroy(monster.gameObject);
-
+                spawnerCount++;
+                if(spawnerCount >= maxSpawn)
+                {
+                    SceneManager.LoadScene("AfterHours");
+                    return;
+                }
                 readyToSpawn = true;
                 spawnerTimer = 0.0f;
             }
