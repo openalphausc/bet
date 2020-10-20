@@ -10,7 +10,7 @@ public class RecipeManager : MonoBehaviour
     public TextAsset colorsFile;
 
     // public data
-    public SortedDictionary<string, Color> ingredientColors = new SortedDictionary<string, Color>();
+    public Dictionary<string, Color> ingredientColors = new Dictionary<string, Color>();
     public List<Drink> recipes = new List<Drink>();
 
     // Start is called before the first frame update
@@ -104,7 +104,10 @@ public class RecipeManager : MonoBehaviour
             // Get the drink name and all the ingredients. Put them into an ArrayList
             string[] individualIngredients = stringRecipes[i].Split(',');
             List<string> recipe = new List<string>();
-            recipe.AddRange(individualIngredients);
+            for (int j = 0; j < individualIngredients.Length; ++j)
+            {
+                recipe.Add(individualIngredients[j].Trim());
+            }
 
             // last one is blank
             if (i == stringRecipes.Length - 1)
