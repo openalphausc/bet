@@ -13,4 +13,10 @@ position:
 	Vodka, then a bit of this liquid, I saw it in another bar once - it's blueish and salty. Then some kraken's tentacles. (SPACEBAR)
 <<endif>>
 Please hurry. I might fall asleep on the counter.
+*Do you want to invite them to stay after hours?*
+<<stayAfter GhostSarah>>
+-> Yes
+	Sure! I'd love to.
+-> No
+	
 ===

@@ -13,4 +13,10 @@ position:
 	Can you tell I just made it up? (SPACEBAR)
 <<endif>>
 Next time I’ll be more ready to order. 
+*Do you want to invite them to stay after hours?*
+<<stayAfter Mummy>>
+-> Yes
+	Sure! I'd love to.
+-> No
+	
 ===

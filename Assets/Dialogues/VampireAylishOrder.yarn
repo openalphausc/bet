@@ -12,4 +12,10 @@ position:
 	She says you make it by pouring blood, kick flip some tentacles in there, and something sickly sweet. (SPACEBAR)
 <<endif>>
 Awesome! I’ll be over here, thinking about skateboards.
+*Do you want to invite them to stay after hours?*
+<<stayAfter VampireAylish>>
+-> Yes
+	Sure! I'd love to.
+-> No
+	
 ===

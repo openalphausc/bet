@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs:
   - GhostSarahOrder-GhostSarahOrder-0
   - GhostSarahOrder-GhostSarahOrder-1
@@ -16,9 +16,9 @@ ScriptedImporter:
   - GhostSarahOrder-GhostSarahOrder-3
   - GhostSarahOrder-GhostSarahOrder-4
   - GhostSarahOrder-GhostSarahOrder-5
-  - GhostSarahOrder-GhostSarahOrder-6
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: c16047ae78ff54af496240bea2f830a5,
+    type: 3}
   localizations: []

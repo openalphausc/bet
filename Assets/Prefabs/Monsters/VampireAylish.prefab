@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8015646323003965052}
   - component: {fileID: 8015646323003965053}
   - component: {fileID: 8015646323003965054}
+  - component: {fileID: -8078834491396254367}
   m_Layer: 0
   m_Name: VampireAylish
   m_TagString: Monster
@@ -101,8 +102,6 @@ MonoBehaviour:
   drinkOrder: Bloodier
   prefab: {fileID: 0}
   happiness: 0
-  drinkIconPrefab: {fileID: 3430023029609515746, guid: 384b4e3a9895044e990cd782bac04b32,
-    type: 3}
 --- !u!61 &8015646323003965054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129,3 +128,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.935193, y: 8.8250675}
   m_EdgeRadius: 0
+--- !u!114 &-8078834491396254367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8015646323003965055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91b0a73e59c04845ad69b3f06e0f364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,4 +12,10 @@ position:
 	Pour the blood, then some syrup, then flesh and some slimey stuff. And I’m warning you, if I see you try to pull anything funny.. (SPACEBAR)
 <<endif>>
 Hurry up. I think I’m being followed...
+*Do you want to invite them to stay after hours?*
+<<stayAfter UnicornNoirSarah>>
+-> Yes
+	Sure! I'd love to.
+-> No
+	
 ===

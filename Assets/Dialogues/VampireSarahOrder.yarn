@@ -12,4 +12,10 @@ position:
 	Pour the tears, plenty of zombie flesh, then some sweet thing. I can't be bothered to remember the name. (SPACEBAR)
 <<endif>>
 Haven't changed my drink order in a century. Zombie flesh never gets old, does it?
+*Do you want to invite them to stay after hours?*
+<<stayAfter VampireSarah>>
+-> Yes
+	Sure! I'd love to.
+-> No
+	
 ===
