@@ -14,8 +14,8 @@ position:
 <<endif>>
 Thank you so much, I appreciate it. (SPACEBAR)
 *Do you want to invite them to stay after hours?*
-<<stayAfter GhostAylish>>
 -> Yes
+	<<inviteToAfterHours GhostAylish>>
 	Sure! I'd love to.
 -> No
 	

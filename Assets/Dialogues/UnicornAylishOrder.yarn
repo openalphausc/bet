@@ -14,8 +14,8 @@ position:
 <<endif>>
 And for the toe, make sure rigor mortis hasn’t set in. I don’t like chewy.
 *Do you want to invite them to stay after hours?*
-<<stayAfter UnicornAylish>>
 -> Yes
+	<<inviteToAfterHours UnicornAylish>>
 	Sure! I'd love to.
 -> No
 	

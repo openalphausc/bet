@@ -14,8 +14,8 @@ position:
 <<endif>>
 Please hurry. I might fall asleep on the counter.
 *Do you want to invite them to stay after hours?*
-<<stayAfter GhostSarah>>
 -> Yes
+	<<inviteToAfterHours GhostSarah>>
 	Sure! I'd love to.
 -> No
 	

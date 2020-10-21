@@ -13,8 +13,8 @@ position:
 <<endif>>
 Awesome! I’ll be over here, thinking about skateboards.
 *Do you want to invite them to stay after hours?*
-<<stayAfter VampireAylish>>
 -> Yes
+	<<inviteToAfterHours VampireAylish>>
 	Sure! I'd love to.
 -> No
 	

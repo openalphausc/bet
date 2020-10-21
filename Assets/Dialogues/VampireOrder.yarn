@@ -13,8 +13,8 @@ position:
 <<endif>>
 And use fresh blood, please.
 *Do you want to invite them to stay after hours?*
-<<stayAfter Vampire>>
 -> Yes
+	<<inviteToAfterHours Vampire>>
 	Sure! I'd love to.
 -> No
 	

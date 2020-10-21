@@ -13,8 +13,8 @@ position:
 <<endif>>
 Hurry up. I think I’m being followed...
 *Do you want to invite them to stay after hours?*
-<<stayAfter UnicornNoirSarah>>
 -> Yes
+	<<inviteToAfterHours UnicornNoirSarah>>
 	Sure! I'd love to.
 -> No
 	

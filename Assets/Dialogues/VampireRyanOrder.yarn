@@ -13,8 +13,8 @@ position:
 <<endif>>
 Between doing tax returns and finding viable victims, I do often forget to have some... what do they call it... "me time"? It’s been a pleasure.
 *Do you want to invite them to stay after hours?*
-<<stayAfter VampireRyan>>
 -> Yes
+	<<inviteToAfterHours VampireRyan>>
 	Sure! I'd love to.
 -> No
 	

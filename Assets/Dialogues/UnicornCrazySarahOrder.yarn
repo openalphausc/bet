@@ -14,8 +14,8 @@ position:
 ...where'd my knife go?... (SPACEBAR)
 shit. (SPACEBAR)
 *Do you want to invite them to stay after hours?*
-<<stayAfter UnicornCrazySarah>>
 -> Yes
+	<<inviteToAfterHours UnicornCrazySarah>>
 	Sure! I'd love to.
 -> No
 	

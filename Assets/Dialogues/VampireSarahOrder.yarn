@@ -13,8 +13,8 @@ position:
 <<endif>>
 Haven't changed my drink order in a century. Zombie flesh never gets old, does it?
 *Do you want to invite them to stay after hours?*
-<<stayAfter VampireSarah>>
 -> Yes
+	<<inviteToAfterHours VampireSarah>>
 	Sure! I'd love to.
 -> No
 	
