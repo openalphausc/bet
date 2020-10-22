@@ -19,3 +19,14 @@ And use fresh blood, please.
 -> No
 	
 ===
+
+title: VampireAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith Vampire>>
+	Bye!
+===

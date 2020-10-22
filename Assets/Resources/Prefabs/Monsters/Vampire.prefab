@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1233223414349641336
+--- !u!1 &2914981590723852871
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1233223414349641340}
-  - component: {fileID: 1233223414349641341}
-  - component: {fileID: 1233223414349641342}
-  - component: {fileID: 1233223414349641343}
-  - component: {fileID: -8325683703193965341}
+  - component: {fileID: 2914981590723852869}
+  - component: {fileID: 2914981590723852868}
+  - component: {fileID: 8879039643753111776}
+  - component: {fileID: 3534611185494281461}
+  - component: {fileID: 2079287094062858286}
+  - component: {fileID: 1190588112610924812}
   m_Layer: 0
-  m_Name: VampireSarah
+  m_Name: Vampire
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1233223414349641340
+--- !u!4 &2914981590723852869
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233223414349641336}
+  m_GameObject: {fileID: 2914981590723852871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 1.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1233223414349641341
+--- !u!212 &2914981590723852868
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233223414349641336}
+  m_GameObject: {fileID: 2914981590723852871}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,24 +74,24 @@ SpriteRenderer:
   m_SortingLayerID: -1505601185
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 63b4a2d05179d43fea65acb2cf8fd6b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 847b9732c1a4c4f328e1c3e002e7209e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.18, y: 15}
+  m_Size: {x: 10.58, y: 36.477848}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1233223414349641342
+--- !u!114 &8879039643753111776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233223414349641336}
+  m_GameObject: {fileID: 2914981590723852871}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b46aab9085d9748e290a6d168c97b4c2, type: 3}
@@ -98,45 +99,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
-  dialogueToStart: VampireSarahOrder
-  drinkOrder: French 75
+  dialogueToStart: VampireOrder
+  drinkOrder: Bloody Mary
   prefab: {fileID: 0}
   happiness: 0
---- !u!61 &1233223414349641343
+--- !u!61 &3534611185494281461
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233223414349641336}
+  m_GameObject: {fileID: 2914981590723852871}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15396214, y: 9.169251}
+  m_Offset: {x: -0.07196641, y: 7.038215}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.88086, y: 30.000002}
-    newSize: {x: 10.18, y: 15}
+    oldSize: {x: 5.94, y: 20.48}
+    newSize: {x: 10.58, y: 36.477848}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.7812233, y: 12.058401}
+  m_Size: {x: 5.4461083, y: 7.900647}
   m_EdgeRadius: 0
---- !u!114 &-8325683703193965341
+--- !u!114 &2079287094062858286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233223414349641336}
+  m_GameObject: {fileID: 2914981590723852871}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c91b0a73e59c04845ad69b3f06e0f364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1190588112610924812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2914981590723852871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d53a84b7180da64cb26c9143652d1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

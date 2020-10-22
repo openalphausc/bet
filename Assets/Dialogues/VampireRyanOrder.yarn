@@ -19,3 +19,14 @@ Between doing tax returns and finding viable victims, I do often forget to have 
 -> No
 	
 ===
+
+title: VampireRyanAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith VampireRyan>>
+	Bye!
+===
