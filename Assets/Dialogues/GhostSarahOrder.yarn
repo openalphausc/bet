@@ -20,3 +20,14 @@ Please hurry. I might fall asleep on the counter.
 -> No
 	
 ===
+
+title: GhostSarahAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith GhostSarah>>
+	Bye!
+===

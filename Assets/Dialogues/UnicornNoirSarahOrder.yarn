@@ -19,3 +19,14 @@ Hurry up. I think I’m being followed...
 -> No
 	
 ===
+
+title: UnicornNoirSarahAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith UnicornNoirSarah>>
+	Bye!
+===

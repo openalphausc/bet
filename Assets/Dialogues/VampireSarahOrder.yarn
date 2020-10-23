@@ -19,3 +19,14 @@ Haven't changed my drink order in a century. Zombie flesh never gets old, does i
 -> No
 	
 ===
+
+title: VampireSarahAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith VampireSarah>>
+	Bye!
+===

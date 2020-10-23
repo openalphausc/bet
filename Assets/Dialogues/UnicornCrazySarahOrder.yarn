@@ -20,3 +20,14 @@ shit. (SPACEBAR)
 -> No
 	
 ===
+
+title: UnicornCrazySarahAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith UnicornCrazySarah>>
+	Bye!
+===

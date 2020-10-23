@@ -19,3 +19,14 @@ Awesome! I’ll be over here, thinking about skateboards.
 -> No
 	
 ===
+
+title: VampireAylishAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith VampireAylish>>
+	Bye!
+===

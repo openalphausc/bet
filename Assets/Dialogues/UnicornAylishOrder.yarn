@@ -20,3 +20,14 @@ And for the toe, make sure rigor mortis hasn’t set in. I don’t like chewy.
 -> No
 	
 ===
+
+title: UnicornAylishAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith UnicornAylish>>
+	Bye!
+===

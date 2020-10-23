@@ -20,3 +20,14 @@ Thank you so much, I appreciate it. (SPACEBAR)
 -> No
 	
 ===
+
+title: GhostAylishAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith GhostAylish>>
+	Bye!
+===

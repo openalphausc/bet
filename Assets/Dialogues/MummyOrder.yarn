@@ -20,3 +20,14 @@ Next time I’ll be more ready to order.
 -> No
 	
 ===
+
+title: MummyAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith Mummy>>
+	Bye!
+===

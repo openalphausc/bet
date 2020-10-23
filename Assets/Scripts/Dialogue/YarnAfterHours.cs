@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class YarnAfterHours : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    [YarnCommand("finishedTalkingWith")]
+    public void deleteMonster()
     {
-        
+        // Next monster gets loaded in in the AfterHoursMonsterSpawner
+        gameObject.SetActive(false);
+        AfterHoursMonsterSpawner.currentMonster = null;
+        SceneManager.LoadScene("BarTendingScene");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
