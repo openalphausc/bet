@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class YarnAfterHours : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class YarnAfterHours : MonoBehaviour
         // Next monster gets loaded in in the AfterHoursMonsterSpawner
         gameObject.SetActive(false);
         AfterHoursMonsterSpawner.currentMonster = null;
+        SceneManager.LoadScene("BarTendingScene");
     }
 
 }

@@ -15,7 +15,6 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(dataStorage.stayingMonsters.Count);
         monsterList = dataStorage.stayingMonsters;
     }
 
@@ -41,7 +40,9 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
             dRunner.StartDialogue(monsterName + "AH");
 
             // Instantiate it
-            return Instantiate(Resources.Load<GameObject>("Prefabs/Monsters/" + monsterName), monsterLocation, Quaternion.identity);
+            GameObject afterHoursMonster = Instantiate(Resources.Load<GameObject>("Prefabs/Monsters/" + monsterName), monsterLocation, Quaternion.identity);
+            afterHoursMonster.name = monsterName;
+            return afterHoursMonster;
         }
 
         return null;
