@@ -36,12 +36,18 @@ public class Monster : MonoBehaviour
 
     [NonSerializedAttribute] public Boolean inAfterHours = false;
 
+    // members for moving to seats
+    private Seat seat; // the seat the monster is occupying / will occupy
+    private Vector3 exit = new Vector3(0,0,0); // chooses a side to which the monster will move to exit
+    private Boolean alreadyClickedOn = false;
+
     // Start is called before the first frame update
     void Start()
     {
         if (!inAfterHours)
         {
-            transform.position = new Vector3(-50, transform.position.y, 0);
+            chooseSeat();
+            transform.position = getRandomSide();
 
             GameObject recipeSheetObject = GameObject.FindWithTag("RecipeSheet");
             recipeSheet = recipeSheetObject.GetComponent<RecipeSheet>();
@@ -53,6 +59,9 @@ public class Monster : MonoBehaviour
     //Checks if it has encountered the drink, if it has, then it is ready to leave
     void OnTriggerEnter2D(Collider2D collisionInfo)
     {
+        // check if the monster is moving. if it's moving, then don't allow it to take the glass
+        if (currentSpeed != 0 && state != MonsterState.center)
+            return;
         if (collisionInfo.gameObject.tag == "Glass")
         {
             readyToLeave = true;
@@ -64,39 +73,34 @@ public class Monster : MonoBehaviour
     {
         if (!inAfterHours)
         {
-            transform.position = new Vector3(transform.position.x + Time.deltaTime * currentSpeed, transform.position.y, transform.position.z);
-
             // slide in to the right
-            if (state == MonsterState.slidingOn) currentSpeed = slidingSpeed;
+            if (state == MonsterState.slidingOn) slideTo(seat.seatLocation);
 
-            // stop in the center
-            if (state == MonsterState.slidingOn && transform.position.x >= 0)
+            // governs how large the snapping to the bar seat will be
+            int epsilon = 1;
+
+            // stop at the bar seat, with a little bit of leeway (equal to 2 * epsilon)
+            if (state == MonsterState.slidingOn && transform.position.x >= seat.seatLocation.x - epsilon && transform.position.x <= seat.seatLocation.x + epsilon)
             {
                 // stop moving
-                transform.position = new Vector3(0, transform.position.y, transform.position.z);
+                transform.position = new Vector3(seat.seatLocation.x, transform.position.y, transform.position.z);
                 currentSpeed = 0.0f;
                 state = MonsterState.center;
 
-                // if there is a dialogue for the monster, load it
-                if (dialogueToStart != "")
-                {
-                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart);
-                }
-
-                // show a picture of the drink they want
-                drinkIcon.transform.GetChild(0).gameObject.SetActive(true);
-                GameObject liquidIcon = drinkIcon.transform.GetChild(1).gameObject;
-                liquidIcon.SetActive(true);
-                liquidIcon.GetComponent<Image>().color = recipeManager.GetDrinkByName(drinkOrder).GetDisplayColor();
-
-                // add recipe to the recipe sheet
-                recipeSheet.AddRecipeToSheet(drinkOrder);
+                // TODO: ONCLICK
             }
 
             // slide off when ready
             if (state == MonsterState.center && readyToLeave)
             {
                 state = MonsterState.slidingOff;
+                // if an exit isn't already set, set an exit
+                if (exit.x == 0 && exit.y == 0 && exit.z == 0)
+                {
+                    exit = getRandomSide();
+                    exit.x = exit.x * 2;
+                }
+                slideTo(exit);
                 // stop dialogue
                 FindObjectOfType<Yarn.Unity.DialogueUI>().DialogueComplete();
                 FindObjectOfType<NodeVisitedTracker>().NodeComplete(dialogueToStart);
@@ -104,14 +108,17 @@ public class Monster : MonoBehaviour
                 drinkIcon.transform.GetChild(0).gameObject.SetActive(false);
                 drinkIcon.transform.GetChild(1).gameObject.SetActive(false);
             }
+
             if (state == MonsterState.slidingOff)
             {
-                currentSpeed = slidingSpeed;
+                //Debug.Log("Sliding to exit");
+                slideTo(exit);
             }
 
             // set state to offscreen (ready to be despawned) if offscreen
-            float offscreenX = 80.0f;
-            if (state == MonsterState.slidingOff && transform.position.x > offscreenX)
+            float offscreenXRight = 80.0f;
+            float offscreenXLeft = -80.0f;
+            if (state == MonsterState.slidingOff && (transform.position.x > offscreenXRight || transform.position.x < offscreenXLeft))
             {
                 state = MonsterState.offscreen;
             }
@@ -126,5 +133,76 @@ public class Monster : MonoBehaviour
         Debug.Log("correctness = " + correctness + ", change = " + change);
         happiness += change; 
         prefab.GetComponent<Monster>().happiness = happiness; // update the prefab's data
+
+        // add recipe to the recipe sheet
+        recipeSheet.AddRecipeToSheet(drinkOrder);
+        state = MonsterState.slidingOff;
+    }
+
+    public void OnMouseDown()
+    {
+        if (alreadyClickedOn)
+            return;
+        alreadyClickedOn = true;
+        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart);
+
+        // show a picture of the drink they want
+        drinkIcon.transform.GetChild(0).gameObject.SetActive(true);
+        GameObject liquidIcon = drinkIcon.transform.GetChild(1).gameObject;
+        liquidIcon.SetActive(true);
+        liquidIcon.GetComponent<Image>().color = recipeManager.GetDrinkByName(drinkOrder).GetDisplayColor();
+    }
+
+    // Slides the monster towards a location
+    void slideTo(Vector3 loc)
+    {
+        // if the monster is to the left of the target, set the speed to the right. otherwise, set the speed to the left
+        if (transform.position.x < loc.x)
+            currentSpeed = slidingSpeed;
+        else
+            currentSpeed = -slidingSpeed;
+        transform.position = new Vector3(transform.position.x + Time.deltaTime * currentSpeed, transform.position.y, transform.position.z);
+    }
+
+    // Reserves a seat for the monster
+    void chooseSeat()
+    {
+        // First, check if there's an available seat
+        Boolean availableSeat = false;
+        foreach (Seat seat in MonsterSpawner.barSeats)
+        {
+            if (seat.occupied == false)
+                availableSeat = true;
+        }
+        // if there's no available seat, teleport offscreen and get evaporated by MonsterSpawner
+        if (availableSeat == false)
+        {
+            Debug.Log("A monster attempted to spawn, but there were no seats available");
+            transform.position = new Vector3(10000, 0, 0);
+        }
+
+        // now keep randomly selecting seats until you find an empty one
+        Seat targetSeat = null;
+        while (targetSeat == null)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, MonsterSpawner.barSeats.Count);
+            // if that seat is occupied, just try again
+            if (MonsterSpawner.barSeats[randomIndex].occupied)
+                continue;
+            // otherwise, that's the target seat
+            MonsterSpawner.barSeats[randomIndex].setOccupancy(true);
+            targetSeat = MonsterSpawner.barSeats[randomIndex];
+        }
+        seat = targetSeat;
+    }
+
+    // Returns either the left side or the right side randomly
+    Vector3 getRandomSide()
+    {
+        int randomIndex = UnityEngine.Random.Range(0, 2);
+        if (randomIndex == 1)
+            return new Vector3(70, transform.position.y, 0);
+        else
+            return new Vector3(-70, transform.position.y, 0);
     }
 }
