@@ -9,7 +9,7 @@ public class MonsterSpawner : MonoBehaviour
     public List<Monster> monstersToSpawn = new List<Monster>();
     public List<Monster> monstersOnScreen = new List<Monster>();
     private int spawnerCount = 0;
-    public int maxSpawn = 3;
+    public int maxSpawn = 10;
     public int maxMonstersOnScreen;
 
     private float spawnerTimer = 0.0f;
@@ -18,6 +18,7 @@ public class MonsterSpawner : MonoBehaviour
 
     public static List<Seat> barSeats;
     private float timeSinceLastSpawn = 0.0f;
+    private int nextSpawn = -1; // will be set randomly
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +60,7 @@ public class MonsterSpawner : MonoBehaviour
             else
                 currentlyOnScreen++;
         }
-        if (currentlyOnScreen < maxMonstersOnScreen && timeSinceLastSpawn > 2.0f)
+        if (currentlyOnScreen < maxMonstersOnScreen && timeSinceLastSpawn > (int) nextSpawn && spawnerCount < maxSpawn)
             readyToSpawn = true;
             
 
@@ -74,21 +75,21 @@ public class MonsterSpawner : MonoBehaviour
             instantiatedMonster.prefab = monstersToSpawn[randomIndex];
             readyToSpawn = false;
             timeSinceLastSpawn = 0;
+            
+            nextSpawn = 2 * UnityEngine.Random.Range(1, 5);
 
             // monstersToSpawn.RemoveAt(randomIndex);
             monstersOnScreen.Add(instantiatedMonster);
         }
-
-
     }
 
     // Creates the locations of the bar seats
     void createBarSeats()
     {
         barSeats = new List<Seat>();
-        Vector3 leftSeat = new Vector3(-35, 0, 0);
+        Vector3 leftSeat = new Vector3(-30, 0, 0);
         Vector3 middleSeat = new Vector3(0, 0, 0);
-        Vector3 rightSeat = new Vector3(35, 0, 0);
+        Vector3 rightSeat = new Vector3(30, 0, 0);
 
         barSeats.Add(new Seat(leftSeat, false));
         barSeats.Add(new Seat(middleSeat, false));
@@ -96,6 +97,7 @@ public class MonsterSpawner : MonoBehaviour
     }
 }
 
+// Just encompasses a seat location and whether or not it's occupied
 public class Seat
 {
     public Vector3 seatLocation;

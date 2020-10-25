@@ -38,8 +38,16 @@ public class Monster : MonoBehaviour
 
     // members for moving to seats
     private Seat seat; // the seat the monster is occupying / will occupy
-    private Vector3 exit = new Vector3(0,0,0); // chooses a side to which the monster will move to exit
+    private Vector3 entrance = new Vector3(0,0,0); // chooses a side from which the monster will enter
+    private Vector3 exit = new Vector3(0,0,0); // will be the opposite of entrance
+    private const float entranceExitX = 70.0f; // indicates how far to the side the monsters will spawn
     private Boolean alreadyClickedOn = false;
+    [NonSerializedAttribute] public Boolean alreadyOrdered = false;
+    [NonSerializedAttribute] public static Boolean currentlyOrdering = false; // only one monster can order at once.
+    [NonSerializedAttribute] public static Monster currentlyOrderingMonster = null; // to access the currently ordering monster,
+                                                                                    // do Monster.currentlyOrderingMonster
+    private float transparency = 1.0f;
+    private float decreaseTransparencyRate;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +55,9 @@ public class Monster : MonoBehaviour
         if (!inAfterHours)
         {
             chooseSeat();
-            transform.position = getRandomSide();
+            entrance = getRandomSide();
+            transform.position = entrance;
+            exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
 
             GameObject recipeSheetObject = GameObject.FindWithTag("RecipeSheet");
             recipeSheet = recipeSheetObject.GetComponent<RecipeSheet>();
@@ -60,7 +70,7 @@ public class Monster : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collisionInfo)
     {
         // check if the monster is moving. if it's moving, then don't allow it to take the glass
-        if (currentSpeed != 0 && state != MonsterState.center)
+        if (currentSpeed != 0 || state != MonsterState.center || !alreadyClickedOn)
             return;
         if (collisionInfo.gameObject.tag == "Glass")
         {
@@ -86,14 +96,19 @@ public class Monster : MonoBehaviour
                 transform.position = new Vector3(seat.seatLocation.x, transform.position.y, transform.position.z);
                 currentSpeed = 0.0f;
                 state = MonsterState.center;
-
-                // TODO: ONCLICK
             }
 
             // slide off when ready
             if (state == MonsterState.center && readyToLeave)
             {
+                Monster.currentlyOrdering = false;
+                Monster.currentlyOrderingMonster = null;
+                recipeSheet.AddRecipeToSheet(drinkOrder);
                 state = MonsterState.slidingOff;
+                // math
+                decreaseTransparencyRate = 2 * slidingSpeed / (exit.x - transform.position.x);
+                if (decreaseTransparencyRate < 0)
+                    decreaseTransparencyRate = -decreaseTransparencyRate;
                 // if an exit isn't already set, set an exit
                 if (exit.x == 0 && exit.y == 0 && exit.z == 0)
                 {
@@ -135,15 +150,16 @@ public class Monster : MonoBehaviour
         prefab.GetComponent<Monster>().happiness = happiness; // update the prefab's data
 
         // add recipe to the recipe sheet
-        recipeSheet.AddRecipeToSheet(drinkOrder);
         state = MonsterState.slidingOff;
     }
 
     public void OnMouseDown()
     {
-        if (alreadyClickedOn)
+        if (alreadyClickedOn || Monster.currentlyOrdering)
             return;
         alreadyClickedOn = true;
+        Monster.currentlyOrdering = true;
+        Monster.currentlyOrderingMonster = this;
         FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart);
 
         // show a picture of the drink they want
@@ -162,6 +178,16 @@ public class Monster : MonoBehaviour
         else
             currentSpeed = -slidingSpeed;
         transform.position = new Vector3(transform.position.x + Time.deltaTime * currentSpeed, transform.position.y, transform.position.z);
+
+        // if exiting, then decrease opacity
+        if (state == MonsterState.slidingOff)
+        {
+            transparency -= Time.deltaTime * decreaseTransparencyRate;
+
+            // set transparency
+            Color color = gameObject.GetComponent<SpriteRenderer>().color;
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, transparency);
+        }
     }
 
     // Reserves a seat for the monster
@@ -201,8 +227,8 @@ public class Monster : MonoBehaviour
     {
         int randomIndex = UnityEngine.Random.Range(0, 2);
         if (randomIndex == 1)
-            return new Vector3(70, transform.position.y, 0);
+            return new Vector3(entranceExitX, transform.position.y, 0);
         else
-            return new Vector3(-70, transform.position.y, 0);
+            return new Vector3(-entranceExitX, transform.position.y, 0);
     }
 }
