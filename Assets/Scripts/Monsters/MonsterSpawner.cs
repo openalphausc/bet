@@ -8,83 +8,91 @@ public class MonsterSpawner : MonoBehaviour
 {
     public List<Monster> monstersToSpawn = new List<Monster>();
     public List<Monster> monstersOnScreen = new List<Monster>();
-    private int spawnerCount = 0;
-    public int maxSpawn = 10;
+    public int totalMonstersSpawned = 0;
+    public int maxTotalMonsters = 10;
     public int maxMonstersOnScreen;
 
-    private float spawnerTimer = 0.0f;
-
-    private bool readyToSpawn = true;
-
     public static List<Seat> barSeats;
-    private float timeSinceLastSpawn = 0.0f;
-    private int nextSpawn = -1; // will be set randomly
+    public float timeUntilNextSpawn = -1; // will be set randomly
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnerCount = 0;
-        createBarSeats();
-        maxMonstersOnScreen = barSeats.Count;
-
-        // SET maxMonstersOnScreen HERE. Make sure it's less than or equal to 3.
-        maxMonstersOnScreen = 2;
+        CreateBarSeats();
     }
 
     // Update is called once per frame
     void Update()
     {
-        spawnerTimer += Time.deltaTime;
-        timeSinceLastSpawn += Time.deltaTime;
+        // increment time until next monster spawn
+        if (monstersOnScreen.Count < maxMonstersOnScreen && totalMonstersSpawned < maxTotalMonsters)
+        {
+            if (timeUntilNextSpawn > Time.deltaTime)
+            {
+                timeUntilNextSpawn -= Time.deltaTime;
+                Debug.Log("decremented time ");
+            }
+            else
+            {
+                Debug.Log("time reached 0, gonna spawn a monster");
+                SpawnMonster();
+                timeUntilNextSpawn = GetSpawnTime();
+            }
+        }
 
         // cycle through on screen monsters and despawn them if they're offscreen
         // also count how many are on screen
-        int currentlyOnScreen = 0;
         for (int i = 0; i < monstersOnScreen.Count; i++)
         {
             Monster monster = monstersOnScreen[i];
             if (monster.state == Monster.MonsterState.offscreen)
             {
+                // remove monster
                 monstersOnScreen.RemoveAt(i);
                 i--;
                 Destroy(monster.gameObject);
-                spawnerCount++;
-                if (spawnerCount >= maxSpawn)
+                // start spawn timer for next monster
+                timeUntilNextSpawn = GetSpawnTime();
+                
+                // if already served all monsters, go to after hours
+                if (totalMonstersSpawned >= maxTotalMonsters)
                 {
                     SceneManager.LoadScene("AfterHours");
                     return;
                 }
-                readyToSpawn = true;
-                spawnerTimer = 0.0f;
             }
-            else
-                currentlyOnScreen++;
-        }
-        if (currentlyOnScreen < maxMonstersOnScreen && timeSinceLastSpawn > (int) nextSpawn && spawnerCount < maxSpawn)
-            readyToSpawn = true;
-            
-
-        // spawn monsters after certain amount of time
-        if (spawnerTimer >= 1.0f && readyToSpawn && monstersToSpawn.Count > 0)
-        {
-            // pick a random monster to spawn
-            int randomIndex = UnityEngine.Random.Range(0, monstersToSpawn.Count);
-            // randomIndex = 10; // TEMP REMOVE
-            Monster instantiatedMonster = Instantiate(monstersToSpawn[randomIndex]);
-            instantiatedMonster.name = monstersToSpawn[randomIndex].name;
-            instantiatedMonster.prefab = monstersToSpawn[randomIndex];
-            readyToSpawn = false;
-            timeSinceLastSpawn = 0;
-            
-            nextSpawn = 2 * UnityEngine.Random.Range(1, 5);
-
-            // monstersToSpawn.RemoveAt(randomIndex);
-            monstersOnScreen.Add(instantiatedMonster);
         }
     }
 
+    float GetSpawnTime()
+    {
+        return 2 * UnityEngine.Random.Range(1, 5);
+    }
+
+    void SpawnMonster()
+    {
+        Debug.Log("started SpawnMonster()");
+        if (monstersToSpawn.Count == 0)
+        {
+            Debug.Log("Tried to spawn a monster, but there isn't a monster in the list to spawn.");
+            return;
+        }
+
+        Debug.Log("SPAWNED A MONSTER " + timeUntilNextSpawn);
+        // pick a random monster to spawn
+        int randomIndex = UnityEngine.Random.Range(0, monstersToSpawn.Count);
+        // randomIndex = 10; // TEMP REMOVE
+        Monster instantiatedMonster = Instantiate(monstersToSpawn[randomIndex]);
+        instantiatedMonster.name = monstersToSpawn[randomIndex].name;
+        instantiatedMonster.prefab = monstersToSpawn[randomIndex];
+
+        // monstersToSpawn.RemoveAt(randomIndex);
+        monstersOnScreen.Add(instantiatedMonster);
+        totalMonstersSpawned++;
+    }
+
     // Creates the locations of the bar seats
-    void createBarSeats()
+    void CreateBarSeats()
     {
         barSeats = new List<Seat>();
         Vector3 leftSeat = new Vector3(-30, 0, 0);
@@ -109,12 +117,12 @@ public class Seat
         occupied = occ;
     }
 
-    public void setOccupancy(Boolean occ)
+    public void SetOccupancy(Boolean occ)
     {
         occupied = occ;
     }
 
-    public Boolean getOccupancy()
+    public Boolean GetOccupancy()
     {
         return occupied;
     }

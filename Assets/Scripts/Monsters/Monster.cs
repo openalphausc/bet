@@ -54,8 +54,8 @@ public class Monster : MonoBehaviour
     {
         if (!inAfterHours)
         {
-            chooseSeat();
-            entrance = getRandomSide();
+            ChooseSeat();
+            entrance = GetRandomSide();
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
 
@@ -83,12 +83,11 @@ public class Monster : MonoBehaviour
     {
         if (!inAfterHours)
         {
-            // slide in to the right
-            if (state == MonsterState.slidingOn) slideTo(seat.seatLocation);
+            // slide in to correct seat
+            if (state == MonsterState.slidingOn) SlideTo(seat.seatLocation);
 
             // governs how large the snapping to the bar seat will be
             int epsilon = 1;
-
             // stop at the bar seat, with a little bit of leeway (equal to 2 * epsilon)
             if (state == MonsterState.slidingOn && transform.position.x >= seat.seatLocation.x - epsilon && transform.position.x <= seat.seatLocation.x + epsilon)
             {
@@ -112,10 +111,9 @@ public class Monster : MonoBehaviour
                 // if an exit isn't already set, set an exit
                 if (exit.x == 0 && exit.y == 0 && exit.z == 0)
                 {
-                    exit = getRandomSide();
+                    exit = GetRandomSide();
                     exit.x = exit.x * 2;
                 }
-                slideTo(exit);
                 // stop dialogue
                 FindObjectOfType<Yarn.Unity.DialogueUI>().DialogueComplete();
                 FindObjectOfType<NodeVisitedTracker>().NodeComplete(dialogueToStart);
@@ -127,7 +125,7 @@ public class Monster : MonoBehaviour
             if (state == MonsterState.slidingOff)
             {
                 //Debug.Log("Sliding to exit");
-                slideTo(exit);
+                SlideTo(exit);
             }
 
             // set state to offscreen (ready to be despawned) if offscreen
@@ -170,7 +168,7 @@ public class Monster : MonoBehaviour
     }
 
     // Slides the monster towards a location
-    void slideTo(Vector3 loc)
+    void SlideTo(Vector3 loc)
     {
         // if the monster is to the left of the target, set the speed to the right. otherwise, set the speed to the left
         if (transform.position.x < loc.x)
@@ -191,14 +189,17 @@ public class Monster : MonoBehaviour
     }
 
     // Reserves a seat for the monster
-    void chooseSeat()
+    void ChooseSeat()
     {
         // First, check if there's an available seat
-        Boolean availableSeat = false;
+        bool availableSeat = false;
         foreach (Seat seat in MonsterSpawner.barSeats)
         {
             if (seat.occupied == false)
+            {
                 availableSeat = true;
+                break;
+            }
         }
         // if there's no available seat, teleport offscreen and get evaporated by MonsterSpawner
         if (availableSeat == false)
@@ -213,17 +214,16 @@ public class Monster : MonoBehaviour
         {
             int randomIndex = UnityEngine.Random.Range(0, MonsterSpawner.barSeats.Count);
             // if that seat is occupied, just try again
-            if (MonsterSpawner.barSeats[randomIndex].occupied)
-                continue;
+            if (MonsterSpawner.barSeats[randomIndex].occupied) continue;
             // otherwise, that's the target seat
-            MonsterSpawner.barSeats[randomIndex].setOccupancy(true);
+            MonsterSpawner.barSeats[randomIndex].SetOccupancy(true);
             targetSeat = MonsterSpawner.barSeats[randomIndex];
         }
         seat = targetSeat;
     }
 
     // Returns either the left side or the right side randomly
-    Vector3 getRandomSide()
+    Vector3 GetRandomSide()
     {
         int randomIndex = UnityEngine.Random.Range(0, 2);
         if (randomIndex == 1)
