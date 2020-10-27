@@ -104,6 +104,7 @@ public class Monster : MonoBehaviour
                 Monster.currentlyOrderingMonster = null;
                 recipeSheet.AddRecipeToSheet(drinkOrder);
                 state = MonsterState.slidingOff;
+                seat.SetOccupancy(false);
                 // math
                 decreaseTransparencyRate = 2 * slidingSpeed / (exit.x - transform.position.x);
                 if (decreaseTransparencyRate < 0)
