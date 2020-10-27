@@ -37,7 +37,7 @@ public class Monster : MonoBehaviour
     [NonSerializedAttribute] public Boolean inAfterHours = false;
 
     // members for moving to seats
-    private Seat seat; // the seat the monster is occupying / will occupy
+    public Seat seat = null; // the seat the monster is occupying / will occupy
     private Vector3 entrance = new Vector3(0,0,0); // chooses a side from which the monster will enter
     private Vector3 exit = new Vector3(0,0,0); // will be the opposite of entrance
     private const float entranceExitX = 70.0f; // indicates how far to the side the monsters will spawn
@@ -54,7 +54,6 @@ public class Monster : MonoBehaviour
     {
         if (!inAfterHours)
         {
-            ChooseSeat();
             entrance = GetRandomSide();
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
@@ -187,40 +186,6 @@ public class Monster : MonoBehaviour
             Color color = gameObject.GetComponent<SpriteRenderer>().color;
             gameObject.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, transparency);
         }
-    }
-
-    // Reserves a seat for the monster
-    void ChooseSeat()
-    {
-        // First, check if there's an available seat
-        bool availableSeat = false;
-        foreach (Seat seat in MonsterSpawner.barSeats)
-        {
-            if (seat.occupied == false)
-            {
-                availableSeat = true;
-                break;
-            }
-        }
-        // if there's no available seat, teleport offscreen and get evaporated by MonsterSpawner
-        if (availableSeat == false)
-        {
-            Debug.Log("A monster attempted to spawn, but there were no seats available");
-            transform.position = new Vector3(10000, 0, 0);
-        }
-
-        // now keep randomly selecting seats until you find an empty one
-        Seat targetSeat = null;
-        while (targetSeat == null)
-        {
-            int randomIndex = UnityEngine.Random.Range(0, MonsterSpawner.barSeats.Count);
-            // if that seat is occupied, just try again
-            if (MonsterSpawner.barSeats[randomIndex].occupied) continue;
-            // otherwise, that's the target seat
-            MonsterSpawner.barSeats[randomIndex].SetOccupancy(true);
-            targetSeat = MonsterSpawner.barSeats[randomIndex];
-        }
-        seat = targetSeat;
     }
 
     // Returns either the left side or the right side randomly

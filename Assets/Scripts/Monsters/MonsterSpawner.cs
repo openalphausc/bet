@@ -30,11 +30,9 @@ public class MonsterSpawner : MonoBehaviour
             if (timeUntilNextSpawn > Time.deltaTime)
             {
                 timeUntilNextSpawn -= Time.deltaTime;
-                Debug.Log("decremented time ");
             }
             else
             {
-                Debug.Log("time reached 0, gonna spawn a monster");
                 SpawnMonster();
                 timeUntilNextSpawn = GetSpawnTime();
             }
@@ -71,20 +69,28 @@ public class MonsterSpawner : MonoBehaviour
 
     void SpawnMonster()
     {
-        Debug.Log("started SpawnMonster()");
+        // no monsters to spawn
         if (monstersToSpawn.Count == 0)
         {
             Debug.Log("Tried to spawn a monster, but there isn't a monster in the list to spawn.");
             return;
         }
 
-        Debug.Log("SPAWNED A MONSTER " + timeUntilNextSpawn);
+        // no available seats
+        if (GetAvailableSeat() == null)
+        {
+            Debug.Log("No available seat to spawn monster, restarting spawn timer.");
+            timeUntilNextSpawn = GetSpawnTime();
+            return;
+        }
+
         // pick a random monster to spawn
         int randomIndex = UnityEngine.Random.Range(0, monstersToSpawn.Count);
         // randomIndex = 10; // TEMP REMOVE
         Monster instantiatedMonster = Instantiate(monstersToSpawn[randomIndex]);
         instantiatedMonster.name = monstersToSpawn[randomIndex].name;
         instantiatedMonster.prefab = monstersToSpawn[randomIndex];
+        instantiatedMonster.seat = GetAvailableSeat();
 
         // monstersToSpawn.RemoveAt(randomIndex);
         monstersOnScreen.Add(instantiatedMonster);
@@ -102,6 +108,32 @@ public class MonsterSpawner : MonoBehaviour
         barSeats.Add(new Seat(leftSeat, false));
         barSeats.Add(new Seat(middleSeat, false));
         barSeats.Add(new Seat(rightSeat, false));
+    }
+
+    Seat GetAvailableSeat()
+    {
+        // First, check if there's an available seat
+        bool availableSeat = false;
+        foreach (Seat seat in barSeats)
+        {
+            if (seat.occupied == false)
+            {
+                availableSeat = true;
+                break;
+            }
+        }
+        // if there's no available seat, return null
+        if (availableSeat == false) return null;
+
+        // now keep randomly selecting seats until you find an empty one
+        while (true)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, barSeats.Count);
+            // if that seat is occupied, just try again
+            if (barSeats[randomIndex].occupied) continue;
+            // otherwise, that's the target seat
+            return MonsterSpawner.barSeats[randomIndex];
+        }
     }
 }
 
