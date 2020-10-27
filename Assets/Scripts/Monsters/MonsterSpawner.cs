@@ -91,6 +91,7 @@ public class MonsterSpawner : MonoBehaviour
         instantiatedMonster.name = monstersToSpawn[randomIndex].name;
         instantiatedMonster.prefab = monstersToSpawn[randomIndex];
         instantiatedMonster.seat = GetAvailableSeat();
+        instantiatedMonster.seat.SetOccupancy(true);
 
         // monstersToSpawn.RemoveAt(randomIndex);
         monstersOnScreen.Add(instantiatedMonster);

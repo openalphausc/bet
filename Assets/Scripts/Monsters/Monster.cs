@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Monster : MonoBehaviour
 {
@@ -153,12 +154,15 @@ public class Monster : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (alreadyClickedOn || Monster.currentlyOrdering)
-            return;
+        if (alreadyClickedOn || Monster.currentlyOrdering) return;
         alreadyClickedOn = true;
         Monster.currentlyOrdering = true;
         Monster.currentlyOrderingMonster = this;
         FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart);
+        
+        // remove hover highlight
+        Destroy(GetComponent<HoverHighlight>());
+        Destroy(GetComponent<Light2D>());
 
         // show a picture of the drink they want
         drinkIcon.transform.GetChild(0).gameObject.SetActive(true);

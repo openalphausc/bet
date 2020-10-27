@@ -2745,7 +2745,7 @@ MonoBehaviour:
   monstersOnScreen: []
   totalMonstersSpawned: 0
   maxTotalMonsters: 10
-  maxMonstersOnScreen: 2
+  maxMonstersOnScreen: 3
   timeUntilNextSpawn: -1
 --- !u!1 &1091579442
 GameObject:
