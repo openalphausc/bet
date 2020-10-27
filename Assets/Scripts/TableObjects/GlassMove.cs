@@ -34,8 +34,9 @@ public class GlassMove : MonoBehaviour
         transform.rotation = Quaternion.identity;
 
         // if offscreen, delete object
-        float offscreenX = 80.0f;
-        if (transform.position.x > offscreenX)
+        float offscreenXright = 80.0f;
+        float offscreenXleft = -80.0f;
+        if (transform.position.x > offscreenXright || transform.position.x < offscreenXleft)
         {
             Destroy(gameObject);
         }

@@ -47,9 +47,9 @@ public class GlassFill : MonoBehaviour
     void Update()
     {
         // if current monster's order has changed, re-get the target drink
-        GameObject currentMonster = GameObject.FindWithTag("Monster");
+        Monster currentMonster = Monster.currentlyOrderingMonster;
         if(currentMonster != null) {
-            string newDrinkName = currentMonster.GetComponent<Monster>().drinkOrder;
+            string newDrinkName = currentMonster.drinkOrder;
             if (newDrinkName.CompareTo(targetDrink.name) != 0)
             {
                 targetDrink = recipeManager.GetDrinkByName(newDrinkName);
@@ -67,7 +67,7 @@ public class GlassFill : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collisionInfo)
     {
-        if (collisionInfo.gameObject.tag == "Monster" && !purchased)
+        if (collisionInfo.gameObject.tag == "Monster" && !purchased && Monster.currentlyOrderingMonster != null && collisionInfo.gameObject.GetComponent<Monster>() == Monster.currentlyOrderingMonster)
         {
             Debug.Log("currentDrink.color = " + currentDrink.color.ToString() + ", targetDrink.color = " + targetDrink.color.ToString());
 
@@ -91,7 +91,7 @@ public class GlassFill : MonoBehaviour
                     Debug.Log("Drink is wrong.");
                 }
             }
-            face.transform.parent = GameObject.FindWithTag("Monster").transform;
+            face.transform.parent = Monster.currentlyOrderingMonster.transform;
 
             // attach drink to monster so they carry it offscreen
             gameObject.transform.parent = collisionInfo.gameObject.transform;
