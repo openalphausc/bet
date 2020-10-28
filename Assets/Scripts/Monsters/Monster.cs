@@ -50,6 +50,8 @@ public class Monster : MonoBehaviour
     private float transparency = 1.0f;
     private float decreaseTransparencyRate;
 
+    private float seatTimer = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,6 +97,15 @@ public class Monster : MonoBehaviour
                 transform.position = new Vector3(seat.seatLocation.x, transform.position.y, transform.position.z);
                 currentSpeed = 0.0f;
                 state = MonsterState.center;
+            }
+
+            // Timer update
+            if (state == MonsterState.center && seatTimer < 45.0f)
+            {
+                seatTimer += Time.deltaTime;
+                // Debug.Log(seatTimer);
+
+                if (seatTimer >= 45.0f) { happiness -= 1; Debug.Log("decreased happiness"); }
             }
 
             // slide off when ready
@@ -169,6 +180,10 @@ public class Monster : MonoBehaviour
         GameObject liquidIcon = drinkIcon.transform.GetChild(1).gameObject;
         liquidIcon.SetActive(true);
         liquidIcon.GetComponent<Image>().color = recipeManager.GetDrinkByName(drinkOrder).GetDisplayColor();
+
+        // Increase happiness if clicked within first 15 s of sitting down
+        if (seatTimer <= 15.0f) { happiness += 1; Debug.Log("Increased happiness"); }
+
     }
 
     // Slides the monster towards a location
