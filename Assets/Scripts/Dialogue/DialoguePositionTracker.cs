@@ -2,12 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class DialoguePositionTracker : MonoBehaviour
 {
     public RectTransform dialogueContainer;
 
     public RectTransform drinkIcon;
+
+    public Light2D backgroundLight;
+    public Light2D leftMonsterLight;
+    public Light2D rightMonsterLight;
+    public Light2D centerMonsterLight;
+
+    private float maxBackgroundIntensity;
+    private float originalMonsterLightIntensity;
     
     // Start is called before the first frame update
     void Start()
@@ -25,23 +34,41 @@ public class DialoguePositionTracker : MonoBehaviour
     public void SetDialoguePosition(string positionName)
     {
         float left = 0, right = 0, posY = 0;
+        maxBackgroundIntensity = backgroundLight.intensity;
+        backgroundLight.intensity = 0.05f;
+        float soloIntensity = 0.7f;
         if (positionName == "centerSeat")
         {
             left = 744;
             right = 218;
             posY = -42;
+            leftMonsterLight.enabled = false;
+            rightMonsterLight.enabled = false;
+            centerMonsterLight.enabled = true;
+            originalMonsterLightIntensity = centerMonsterLight.intensity;
+            centerMonsterLight.intensity = soloIntensity;
         }
         else if (positionName == "leftSeat")
         {
             left = 366;
             right = 599;
             posY = -42;
+            leftMonsterLight.enabled = true;
+            rightMonsterLight.enabled = false;
+            centerMonsterLight.enabled = false;
+            originalMonsterLightIntensity = leftMonsterLight.intensity;
+            leftMonsterLight.intensity = soloIntensity;
         }
         else if (positionName == "rightSeat")
         {
             left = 599;
             right = 363;
             posY = -42;
+            leftMonsterLight.enabled = false;
+            rightMonsterLight.enabled = true;
+            centerMonsterLight.enabled = false;
+            originalMonsterLightIntensity = rightMonsterLight.intensity;
+            rightMonsterLight.intensity = soloIntensity;
         }
 
         dialogueContainer.offsetMin = new Vector2(left, dialogueContainer.offsetMin.y);
@@ -53,14 +80,25 @@ public class DialoguePositionTracker : MonoBehaviour
         }
     }
 
-    public void HideDrinkIcon()
+    public void HideDialogueSystem()
     {
-        Debug.Log("Setting dialogue system to invisible.");
         if (drinkIcon != null)
         {
             // hide the drink icon
             drinkIcon.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             drinkIcon.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        }
+
+        if (leftMonsterLight != null)
+        {
+            Debug.Log("helakdn");
+            backgroundLight.intensity = maxBackgroundIntensity;
+            leftMonsterLight.enabled = true;
+            leftMonsterLight.intensity = originalMonsterLightIntensity;
+            rightMonsterLight.enabled = true;
+            rightMonsterLight.intensity = originalMonsterLightIntensity;
+            centerMonsterLight.enabled = true;
+            centerMonsterLight.intensity = originalMonsterLightIntensity;
         }
     }
 

@@ -632,7 +632,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1612951460627785675}
-        m_MethodName: HideDrinkIcon
+        m_MethodName: HideDialogueSystem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -980,6 +980,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 5639802912702675923}
   drinkIcon: {fileID: 0}
+  backgroundLight: {fileID: 0}
+  leftMonsterLight: {fileID: 0}
+  rightMonsterLight: {fileID: 0}
+  centerMonsterLight: {fileID: 0}
 --- !u!1 &5639802912702675884
 GameObject:
   m_ObjectHideFlags: 0
