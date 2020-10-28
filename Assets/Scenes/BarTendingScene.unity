@@ -3027,6 +3027,7 @@ MonoBehaviour:
   maxTotalMonsters: 10
   maxMonstersOnScreen: 3
   timeUntilNextSpawn: -1
+  fadeUpScript: {fileID: 1204714789}
 --- !u!1 &1091579442
 GameObject:
   m_ObjectHideFlags: 0

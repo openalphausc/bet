@@ -15,6 +15,8 @@ public class MonsterSpawner : MonoBehaviour
     public static List<Seat> barSeats;
     public float timeUntilNextSpawn = -1; // will be set randomly
 
+    public LightFadeUp fadeUpScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,7 @@ public class MonsterSpawner : MonoBehaviour
             {
                 timeUntilNextSpawn -= Time.deltaTime;
             }
-            else
+            else if(fadeUpScript.DoneFadingUp())
             {
                 SpawnMonster();
                 timeUntilNextSpawn = GetSpawnTime();

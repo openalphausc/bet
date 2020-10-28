@@ -91,7 +91,6 @@ public class DialoguePositionTracker : MonoBehaviour
 
         if (leftMonsterLight != null)
         {
-            Debug.Log("helakdn");
             backgroundLight.intensity = maxBackgroundIntensity;
             leftMonsterLight.enabled = true;
             leftMonsterLight.intensity = originalMonsterLightIntensity;
