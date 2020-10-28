@@ -5616,6 +5616,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1612951460627785675, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: drinkIcon
+      value: 
+      objectReference: {fileID: 713684056}
     - target: {fileID: 5639802912138406250, guid: 8ba6525bd9f78416a86b05e5d5916665,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -5644,11 +5649,6 @@ PrefabInstance:
     - target: {fileID: 5639802912138406250, guid: 8ba6525bd9f78416a86b05e5d5916665,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
-        type: 3}
-      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,

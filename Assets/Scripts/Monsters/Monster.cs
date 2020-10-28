@@ -159,6 +159,9 @@ public class Monster : MonoBehaviour
         happiness += change; 
         prefab.GetComponent<Monster>().happiness = happiness; // update the prefab's data
 
+		// hide the drink icon
+		GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDrinkIcon();
+
         // add recipe to the recipe sheet
         state = MonsterState.slidingOff;
     }
@@ -175,11 +178,14 @@ public class Monster : MonoBehaviour
         Destroy(GetComponent<HoverHighlight>());
         Destroy(GetComponent<Light2D>());
 
-        // show a picture of the drink they want
-        drinkIcon.transform.GetChild(0).gameObject.SetActive(true);
-        GameObject liquidIcon = drinkIcon.transform.GetChild(1).gameObject;
-        liquidIcon.SetActive(true);
-        liquidIcon.GetComponent<Image>().color = recipeManager.GetDrinkByName(drinkOrder).GetDisplayColor();
+		// activate dialogue system
+		string currentSeatName = "";
+		if(seat.seatLocation.x < 0) currentSeatName = "leftSeat";
+		else if(seat.seatLocation.x > 0) currentSeatName = "rightSeat";
+		else if(seat.seatLocation.x == 0) currentSeatName = "centerSeat";
+		DialoguePositionTracker dialogueSystem = GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>();
+		dialogueSystem.SetDialoguePosition(currentSeatName);
+		dialogueSystem.SetDrinkIconColor(recipeManager.GetDrinkByName(drinkOrder).GetDisplayColor());
 
         // Increase happiness if clicked within first 15 s of sitting down
         if (seatTimer <= 15.0f) { happiness += 1; Debug.Log("Increased happiness"); }
