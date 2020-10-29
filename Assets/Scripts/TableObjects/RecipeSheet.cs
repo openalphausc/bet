@@ -5,10 +5,8 @@ using TMPro;
 
 public class RecipeSheet : MonoBehaviour
 {
-    private List<string> drinkNamesStored = new List<string>();
-    private List<List<string>> recipesStored = new List<List<string>>();
-
-    public RecipeManager recipeManager;
+    private string currentDrinkName;
+    private string currentNotes;
 
     public GameObject recipeSheetWindow;
     public TextMeshProUGUI recipeText;
@@ -16,58 +14,42 @@ public class RecipeSheet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentDrinkName = "";
+        currentNotes = "";
         recipeText.text = "";
-        recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void OnMouseUp() {
-        if(!recipeSheetWindow.activeSelf) ShowRecipes();
+        if(!recipeSheetWindow.activeSelf) ShowOrder();
     }
 
-    public void AddRecipeToSheet(string drinkName) {
-        // if already stored, do nothing
-        bool alreadyContains = drinkNamesStored.Contains(drinkName);
-        if (alreadyContains) return;
-
-        // find Drink object in recipes
-        Drink drink = recipeManager.recipes.Find(item => item.name == drinkName);
-
-        // add drink name
-        drinkNamesStored.Add(drink.name);
-
-        // use a hash set to remove duplicates and add list of ingredients
-        HashSet<string> ingredientsToAdd = new HashSet<string>();
-        foreach(string ingredient in drink.ingredients) {
-            ingredientsToAdd.Add(ingredient);
-        }
-        List<string> recipe = new List<string>();
-        foreach(string ingredientToAdd in ingredientsToAdd) {
-            recipe.Add(ingredientToAdd);
-        }
-        recipesStored.Add(recipe);
+    public void AddOrderNotes(string drinkName, string orderNotes)
+    {
+        currentDrinkName = drinkName;
+        currentNotes = orderNotes;
     }
 
-    void ShowRecipes() {
+    public void ClearOrderNotes()
+    {
+        currentDrinkName = "";
+        currentNotes = "";
+    }
+
+    void ShowOrder() {
         recipeSheetWindow.SetActive(true);
-        string temp = "";
-        
-        for(int i = 0; i < drinkNamesStored.Count; i++)
+        if (currentDrinkName == "")
         {
-            //Debug.Log(drink.ToString());
-            temp += drinkNamesStored[i] + ": ";
-            for(int j = 0; j < recipesStored[i].Count; j++)
-            {
-                temp += recipesStored[i][j];
-                if (j < recipesStored[i].Count - 1) temp += ", ";
-            }
-            temp += "\n";
+            recipeText.text = "";
         }
-        recipeText.text = temp;
+        else
+        {
+            recipeText.text = currentDrinkName + ": " + currentNotes;
+        }
     }
 }

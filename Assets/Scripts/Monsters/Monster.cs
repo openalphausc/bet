@@ -25,6 +25,7 @@ public class Monster : MonoBehaviour
     public string dialogueToStart = "";
 
     public string drinkOrder = "";
+	public string orderNotes;
 
     public Monster prefab;
 
@@ -113,8 +114,8 @@ public class Monster : MonoBehaviour
             {
                 Monster.currentlyOrdering = false;
                 Monster.currentlyOrderingMonster = null;
-                recipeSheet.AddRecipeToSheet(drinkOrder);
                 state = MonsterState.slidingOff;
+				recipeSheet.ClearOrderNotes(); // clear order notes
                 seat.SetOccupancy(false);
                 // math
                 decreaseTransparencyRate = 2 * slidingSpeed / (exit.x - transform.position.x);
@@ -186,6 +187,9 @@ public class Monster : MonoBehaviour
 		DialoguePositionTracker dialogueSystem = GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>();
 		dialogueSystem.SetDialoguePosition(currentSeatName);
 		dialogueSystem.SetDrinkIconColor(recipeManager.GetDrinkByName(drinkOrder).GetDisplayColor());
+
+		// update order notes
+		recipeSheet.AddOrderNotes(drinkOrder, orderNotes);
 
         // Increase happiness if clicked within first 15 s of sitting down
         if (seatTimer <= 15.0f) { happiness += 1; Debug.Log("Increased happiness"); }
