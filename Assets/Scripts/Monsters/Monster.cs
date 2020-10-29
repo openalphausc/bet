@@ -24,8 +24,9 @@ public class Monster : MonoBehaviour
 
     public string dialogueToStart = "";
 
-    public string drinkOrder = "";
-	public string orderNotes;
+	public TextAsset ordersFile;
+    [NonSerializedAttribute] public string drinkOrder = "";
+	private string orderNotes;
 
     public Monster prefab;
 
@@ -58,6 +59,7 @@ public class Monster : MonoBehaviour
     {
         if (!inAfterHours)
         {
+            GetOrdersFromFile();
             entrance = GetRandomSide();
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
@@ -226,4 +228,38 @@ public class Monster : MonoBehaviour
         else
             return new Vector3(-entranceExitX, transform.position.y, 0);
     }
+
+	void GetOrdersFromFile() {
+		string[] lines = ordersFile.text.Split('\n');
+        // first row is the header 
+        List<List<string>> allOrders = new List<List<string>>();
+        for (int i = 1; i < lines.Length; ++i)
+        {
+            string[] elements = lines[i].Split(',');
+            List<string> order = new List<string>();
+            for (int j = 0; j < elements.Length; ++j)
+            {
+                order.Add(elements[j].Trim());
+            }
+
+            // last one is blank
+            if (i == lines.Length - 1)
+                order.RemoveAt(order.Count - 1);
+
+            // put this ArrayList into recipes
+            allOrders.Add(order);
+        }
+
+        // string temp = "";
+        // foreach(List<string> order in allOrders) {
+        //     foreach(string element in order) {
+        //         temp += element + " ";
+        //     }
+        //     temp += "\n";
+        // }
+        // Debug.Log(temp);
+
+        drinkOrder = allOrders[0][0];
+        orderNotes = allOrders[0][1];
+	}
 }

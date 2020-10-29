@@ -102,7 +102,9 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: VampireOrder
+  ordersFile: {fileID: 4900000, guid: 3258d61fa95474d44bfe7734fef363fe, type: 3}
   drinkOrder: Bloody Mary
+  orderNotes: 
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &3534611185494281461
