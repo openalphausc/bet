@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: GhostAylishOrder
-  drinkOrder: Bee's Knees
+  ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &6951447267345982375

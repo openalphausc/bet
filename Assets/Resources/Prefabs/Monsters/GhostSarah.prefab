@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: GhostSarahOrder
-  drinkOrder: Corpse Reviver
+  ordersFile: {fileID: 4900000, guid: 956d4a582cc134862904b4391bec9b9a, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &7932031498631005744

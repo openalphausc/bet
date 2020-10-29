@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: VampireRyanOrder
-  drinkOrder: Big Toe Manhattan
+  ordersFile: {fileID: 4900000, guid: 28cd9904396dd49aab0e328a2dd32bcb, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &3983289426414166677

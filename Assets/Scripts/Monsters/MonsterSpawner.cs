@@ -86,7 +86,7 @@ public class MonsterSpawner : MonoBehaviour
 
         // pick a random monster to spawn
         int randomIndex = UnityEngine.Random.Range(0, monstersToSpawn.Count);
-        // randomIndex = 10; // TEMP REMOVE
+        // randomIndex = 1; // TEMP REMOVE
         Monster instantiatedMonster = Instantiate(monstersToSpawn[randomIndex]);
         instantiatedMonster.name = monstersToSpawn[randomIndex].name;
         instantiatedMonster.prefab = monstersToSpawn[randomIndex];

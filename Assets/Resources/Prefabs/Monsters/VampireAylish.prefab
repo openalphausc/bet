@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: VampireAylishOrder
-  drinkOrder: Bloodier
+  ordersFile: {fileID: 4900000, guid: 69c6e53922f61420e9ee25ec5986fa54, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &8015646323003965054

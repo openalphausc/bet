@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: MummyOrder
-  drinkOrder: Dead Vodka
+  ordersFile: {fileID: 4900000, guid: 26bf20bf75b5c47a9b163e07d0a67bce, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &112965291309479922
