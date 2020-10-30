@@ -3010,7 +3010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monstersToSpawn:
-  - {fileID: 8943422311513737393, guid: 79d2e72f325fc4417b9a6c7293e7dd68, type: 3}
+  - {fileID: 7625226208971749566, guid: 13e0db5673f8b4261b055cbb73422fe4, type: 3}
   - {fileID: 6951447267345982372, guid: 05b41244c4d8e416e8767f8cc2a1efec, type: 3}
   - {fileID: 7932031498631005745, guid: 0c11ea181f17c435585ba1d96c22c894, type: 3}
   - {fileID: 112965291309479921, guid: 2853d56b72b8643ec9047a469cd40028, type: 3}
@@ -3019,7 +3019,7 @@ MonoBehaviour:
   - {fileID: 7173060465039907910, guid: 20b2c3a7822644af5a7da64ca2af400d, type: 3}
   - {fileID: 8378166787048322939, guid: 0de5d91056a1545e98241612d9dec359, type: 3}
   - {fileID: 8015646323003965053, guid: 95060810f7de4460888c76128e97b613, type: 3}
-  - {fileID: 3983289426414166682, guid: 25e284553ab7943f4b27e7aa5d9b6231, type: 3}
+  - {fileID: 8943422311513737393, guid: 79d2e72f325fc4417b9a6c7293e7dd68, type: 3}
   monstersOnScreen: []
   totalMonstersSpawned: 0
   maxTotalMonsters: 10
