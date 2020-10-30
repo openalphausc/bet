@@ -2894,7 +2894,7 @@ SpriteRenderer:
   m_SortingLayerID: 1767314061
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af699a7ab65c941c7b52e72efa6d380a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8be2a39724d83a1439d9cf83da437b10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2913,8 +2913,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102533640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.8, y: -14.2, z: 0}
-  m_LocalScale: {x: 0.78580725, y: 0.646078, z: 1}
+  m_LocalPosition: {x: 21.29, y: -15.81, z: 0}
+  m_LocalScale: {x: 2.184761, y: 1.633989, z: 1}
   m_Children: []
   m_Father: {fileID: 393045337}
   m_RootOrder: 9
@@ -2944,18 +2944,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019977093, y: -0.18013763}
+  m_Offset: {x: -0.13926375, y: -0.19613695}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.8, y: 12.8}
+    oldSize: {x: 5, y: 6.5}
     newSize: {x: 3.93, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.4057217, y: 13.79945}
+  m_Size: {x: 1.6286454, y: 3.1007748}
   m_EdgeRadius: 0
 --- !u!114 &1102533645
 MonoBehaviour:
@@ -2984,7 +2984,7 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.9669846
+  m_PointLightInnerRadius: 4.1247854
   m_PointLightOuterRadius: 6
   m_PointLightDistance: 3
   m_PointLightQuality: 1
