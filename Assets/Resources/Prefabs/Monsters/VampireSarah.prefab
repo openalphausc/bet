@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: VampireSarahOrder
-  drinkOrder: French 75
+  ordersFile: {fileID: 4900000, guid: 9be106065565d47ba82d9b83bc43dd26, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &1233223414349641343

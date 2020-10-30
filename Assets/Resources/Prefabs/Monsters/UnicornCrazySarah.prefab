@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: UnicornCrazySarahOrder
-  drinkOrder: Pumpkin Sour
+  ordersFile: {fileID: 4900000, guid: b6f883b6db2784ccdb1c417abc95fadd, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &904005084864500644

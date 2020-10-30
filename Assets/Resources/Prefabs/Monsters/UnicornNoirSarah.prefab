@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: UnicornNoirSarahOrder
-  drinkOrder: Undead and Stormy
+  ordersFile: {fileID: 4900000, guid: 145ba9359f91341d298186754483328c, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &8378166787048322938
