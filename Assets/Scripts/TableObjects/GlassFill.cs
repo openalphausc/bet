@@ -92,6 +92,9 @@ public class GlassFill : MonoBehaviour
                 }
             }
             face.transform.parent = Monster.currentlyOrderingMonster.transform;
+            
+            // update monster's happiness
+            Monster.currentlyOrderingMonster.GivenDrink(currentDrink.Matches(targetDrink) ? 1 : 0);
 
             // attach drink to monster so they carry it offscreen
             gameObject.transform.parent = collisionInfo.gameObject.transform;

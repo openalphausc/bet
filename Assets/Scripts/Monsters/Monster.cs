@@ -160,10 +160,7 @@ public class Monster : MonoBehaviour
         prefab.GetComponent<Monster>().happiness = happiness; // update the prefab's data
 
 		// hide the drink icon
-		GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDrinkIcon();
-
-        // add recipe to the recipe sheet
-        state = MonsterState.slidingOff;
+		GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDialogueSystem();
     }
 
     public void OnMouseDown()

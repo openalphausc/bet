@@ -30,4 +30,9 @@ public class LightFadeUp : MonoBehaviour
             light.intensity = Mathf.Lerp(0, maxIntensity, timer / fadeUpTime);
         }
     }
+
+    public bool DoneFadingUp()
+    {
+        return (timer >= fadeUpTime);
+    }
 }
