@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: 6ec34c8892e234ca7b376b287eebed13
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - KateTheCockatrice-KatetheCockatriceOrder-0
+  - KateTheCockatrice-KatetheCockatriceOrder-1
+  - KateTheCockatrice-KatetheCockatriceOrder-2
+  - KateTheCockatrice-KatetheCockatriceOrder-3
+  - KateTheCockatrice-KatetheCockatriceOrder-4
+  - KateTheCockatrice-KatetheCockatriceOrder-5
+  - KateTheCockatrice-KatetheCockatriceOrder-6
+  - KateTheCockatrice-KatetheCockatriceOrder-7
+  - KateTheCockatrice-KatetheCockatriceOrder-8
+  - KateTheCockatrice-KatetheCockatriceAH1-9
+  - KateTheCockatrice-KatetheCockatriceAH1-10
+  - KateTheCockatrice-KatetheCockatriceAH1-11
+  - KateTheCockatrice-KatetheCockatriceAH1-12
+  - KateTheCockatrice-KatetheCockatriceAH1-13
+  - KateTheCockatrice-KatetheCockatriceAH1-14
+  - KateTheCockatrice-KatetheCockatriceAH1-15
+  - KateTheCockatrice-KatetheCockatriceAH1-16
+  - KateTheCockatrice-KatetheCockatriceAH1-17
+  - KateTheCockatrice-KatetheCockatriceAH1-18
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 6ec34c8892e234ca7b376b287eebed13,
+    type: 3}
+  localizations: []

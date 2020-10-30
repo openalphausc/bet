@@ -1,0 +1,61 @@
+
+title: KatetheCockatriceOrder
+tags:
+colorID:
+position:
+
+---
+
+<<if visited("KatetheCockatriceOrder") is true>>
+	I'll have the Golden Summer, please. It was lovely last time. 
+<<else>>
+	Hello, is this where I order? I have trouble finding things sometimes.
+	Can I have the Golden Summer? I always hear that summer is beautiful, so it should taste great.
+	It's some cornpagne and something sweet and pink. Then add some golden dust on top!
+<<endif>>
+	I'm not picky about how it looks, as long as it tastes delicious!
+
+*Do you want to invite them to stay after hours?*
+--> Yes
+	<<inviteToAfterHours KatetheCockatrice>>
+	I would love to! I have to run some errands, but I'll be back at closing time!
+--> No
+===
+
+
+title: KatetheCockatriceAH1
+tags:
+colorID:
+position:
+---
+
+Phew, it’s cold outside. Thanks for letting me relax in here for a bit. My name’s Kate. I don’t have a last name, so most monsters just call me Kate the Cockatrice. 
+
+I was worried I wouldn’t be able to find my way here! It can be rough, I don’t have a good sense of smell, like Jeff, or hearing, like Brazlrosk the Bloodthirsty. I’m not complaining, wearing this is far better than the alternative. Plus, my boss loves it. I’m a secretary at BBC, they say it helps me avoid distractions. I got employee of the month once from working for twenty hours straight!
+
+->Twenty hours without distractions? Sounds horrible. 
+	I was really tired after, but hey! It’s a job. I’m a glass half full kind of monster. And it’s not like I could take off my mask and talk to my co-workers because I would, well, turn them to stone. 
+
+-> What’s the mask for? 
+	It’s uh, a precaution. When I look at anyone, they *kind of* turn to stone... And by kind of I mean, well, yeah they turn to stone. 
+
+I know what you’re thinking, but it’s not so bad! Either I wear the mask, or monsters die… Probably the easiest choice I’ll ever have to make. It does get a bit lonely, though. It makes it hard to know someone, knowing you could look into their eyes but just can’t. Hells, I haven’t been on a date in... ever. My boss at BBC says it’s a good thing that I get to stay focused on work. I know they’re probably right. But some nights it just hurts. Looking in the mirror and realizing that no one will ever get to love the face looking back. 
+
+-> Start small. Get a dating app like Monstr. Go on a date, just one. Give it a chance. They’ll love you, eye mask and all. 
+
+->Your stone-vision can’t work on everyone, can it? Find another Cockatrice. Someone that it doesn’t work on!
+
+Maybe you’re right. Ha, I’m already nervous! But thanks, really. Oh, and please wish me luck. I’ll need it. 
+===
+
+
+
+
+
+
+
+
+
+
+
+
