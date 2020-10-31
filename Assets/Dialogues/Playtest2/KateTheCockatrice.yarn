@@ -1,12 +1,10 @@
 
-title: KatetheCockatriceOrder
+title: KateTheCockatriceOrder
 tags:
 colorID:
 position:
-
 ---
-
-<<if visited("KatetheCockatriceOrder") is true>>
+<<if visited("KateTheCockatriceOrder") is true>>
 	I'll have the Golden Summer, please. It was lovely last time. 
 <<else>>
 	Hello, is this where I order? I have trouble finding things sometimes.
@@ -23,12 +21,11 @@ position:
 ===
 
 
-title: KatetheCockatriceAH1
+title: KateTheCockatriceAH1
 tags:
 colorID:
 position:
 ---
-
 Phew, it’s cold outside. Thanks for letting me relax in here for a bit. My name’s Kate. I don’t have a last name, so most monsters just call me Kate the Cockatrice. 
 
 I was worried I wouldn’t be able to find my way here! It can be rough, I don’t have a good sense of smell, like Jeff, or hearing, like Brazlrosk the Bloodthirsty. I’m not complaining, wearing this is far better than the alternative. Plus, my boss loves it. I’m a secretary at BBC, they say it helps me avoid distractions. I got employee of the month once from working for twenty hours straight!
