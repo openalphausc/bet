@@ -14,10 +14,10 @@ position:
 	Thanks loads. I don't know what it is, I'm just, like, such a fan of this drink.
 
 *Do you want to invite them to stay after hours?*
---> Yes
+-> Yes
 	<<inviteToAfterHours Zombie>>
 	Sure, sounds rad!
---> No
+-> No
 ===
 
 

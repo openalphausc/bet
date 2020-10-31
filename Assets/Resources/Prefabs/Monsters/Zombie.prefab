@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -825216489940562599}
   - component: {fileID: -4611773167373881363}
   m_Layer: 0
-  m_Name: VampireAylish
+  m_Name: Zombie
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
-  dialogueToStart: VampireAylishOrder
+  dialogueToStart: ZombieOrder
   ordersFile: {fileID: 4900000, guid: 69c6e53922f61420e9ee25ec5986fa54, type: 3}
   prefab: {fileID: 0}
   happiness: 0
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.84684134, y: 3.0874662}
+  m_Offset: {x: -0.23804045, y: 3.4933324}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.935193, y: 8.8250675}
+  m_Size: {x: 9.732608, y: 9.86873}
   m_EdgeRadius: 0
 --- !u!114 &-8078834491396254367
 MonoBehaviour:

@@ -3010,9 +3010,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monstersToSpawn:
-  - {fileID: 5101717015907723882, guid: 916334b436d6c4edaa25f340811239d2, type: 3}
   - {fileID: 8015646323003965053, guid: 95060810f7de4460888c76128e97b613, type: 3}
-  - {fileID: 7932031498631005745, guid: 0c11ea181f17c435585ba1d96c22c894, type: 3}
+  - {fileID: 7173060465039907910, guid: 20b2c3a7822644af5a7da64ca2af400d, type: 3}
+  - {fileID: 5101717015907723882, guid: 916334b436d6c4edaa25f340811239d2, type: 3}
   - {fileID: 6938775252450162206, guid: 3ca02827a675549aaab09b64af47609f, type: 3}
   - {fileID: 6951447267345982372, guid: 05b41244c4d8e416e8767f8cc2a1efec, type: 3}
   - {fileID: 1839809940294750954, guid: e83bcccaf502a48d4bf065ba4373b5f9, type: 3}
