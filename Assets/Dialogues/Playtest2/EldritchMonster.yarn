@@ -6,7 +6,8 @@ position:
 <<if visited("EldritchMonsterOrder") is true>>
 	Another <Null and Void>, if you could. 
 <<else>>
-	Good evening. Don't mind the <eye>, it's just a little sore. Luckily, this bar isn't an <eyesore>, haha... Anyway, I'll take the Null and Void; make it like they do in <the Far Realm>. Vodka, some dead meat, Nightmare Fuel, and Trippy Mushrooms, all <blended> together. 
+	Good evening. Don't mind the <eye>, it's just a little sore. Luckily, this bar isn't an <eyesore>, haha... 
+	Anyway, I'll take the Null and Void; make it like they do in <the Far Realm>. Vodka, some dead meat, Nightmare Fuel, and Trippy Mushrooms, all <blended> together. 
 <<endif>>
 	I've noticed that jokes don't land if you haven't got <an eye> for the language.
 
