@@ -710,7 +710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163259944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.5, y: -12.5, z: 0}
+  m_LocalPosition: {x: 32.5, y: -12.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2381,7 +2381,7 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
+  m_PointLightInnerRadius: 1.4463391
   m_PointLightOuterRadius: 3.8364444
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -2753,7 +2753,7 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
+  m_PointLightInnerRadius: 0.93978846
   m_PointLightOuterRadius: 3.100263
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -2948,7 +2948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monstersToSpawn:
   - {fileID: 8015646323003965053, guid: 95060810f7de4460888c76128e97b613, type: 3}
-  - {fileID: 7173060465039907910, guid: 20b2c3a7822644af5a7da64ca2af400d, type: 3}
+  - {fileID: 8943422311513737393, guid: 79d2e72f325fc4417b9a6c7293e7dd68, type: 3}
   - {fileID: 5101717015907723882, guid: 916334b436d6c4edaa25f340811239d2, type: 3}
   - {fileID: 6938775252450162206, guid: 3ca02827a675549aaab09b64af47609f, type: 3}
   - {fileID: 6951447267345982372, guid: 05b41244c4d8e416e8767f8cc2a1efec, type: 3}
@@ -2956,7 +2956,6 @@ MonoBehaviour:
   - {fileID: 9080916782879359249, guid: 9345f562a41b64db68982668e33dc132, type: 3}
   - {fileID: 1259076654242521848, guid: 5523fa9fef0064cf5b7cfc717ff5b27b, type: 3}
   - {fileID: 7625226208971749566, guid: 13e0db5673f8b4261b055cbb73422fe4, type: 3}
-  - {fileID: 8943422311513737393, guid: 79d2e72f325fc4417b9a6c7293e7dd68, type: 3}
   monstersOnScreen: []
   totalMonstersSpawned: 0
   maxTotalMonsters: 10
@@ -4712,7 +4711,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676303255}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -23.7, y: -7.7, z: 0}
   m_LocalScale: {x: 1.2206146, y: 1.4398686, z: 1}
   m_Children: []
@@ -4758,8 +4757,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.44073972
-  m_PointLightOuterRadius: 4.040806
+  m_PointLightInnerRadius: 2.5447214
+  m_PointLightOuterRadius: 4.5987926
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -5516,7 +5515,7 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
+  m_PointLightInnerRadius: 2.3828342
   m_PointLightOuterRadius: 3.902979
   m_PointLightDistance: 3
   m_PointLightQuality: 1

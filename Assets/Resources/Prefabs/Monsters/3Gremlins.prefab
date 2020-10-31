@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: 3GremlinsOrder
-  ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
+  ordersFile: {fileID: 4900000, guid: 5c547f317a2eee345a64b8ecd7b52e80, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &8943422311513737394
