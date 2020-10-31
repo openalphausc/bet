@@ -1,0 +1,57 @@
+title: 3GremlinsOrder
+tags:
+colorID:
+position:
+---
+<<if visited("3GremlinsOrder") is true>>
+	Some choccy milk please, my siblings overruled me on this one.
+<<else>>
+	*Are these gremlins old enough to have a drink?*
+	-> Yes
+		Score! All right barkeep, I'll take a Kidney Failure.
+		You've never heard of a Kidney Failure? Wow, you must be the young one, not us.
+		Mix together some poison apple juice, vodka, whiskey, cornpagne, cheery blossom sake, and something that'll make us trip. 
+	-> No
+		Gosh dangit! Mom told me that wouldn't work...
+		Fine, I guess I'll get some Choccy Milk.
+		Choccy Milk is my favoritest drink ever, it's got Poison Apple Juice, blood, graveyard mud, zombie flesh, death shade, and something shimmery on top, I can't seem to remember.
+<<endif>>
+Make sure you get the flesh, blood, mud, and death shade directly from the graveyard.
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours 3Gremlins>>
+	Totally! We'd love to, but we'll have to clear it with mom.
+-> No
+	I don't think mom will let us hang out with a stranger anyway, especially past 9pm curfew!
+===
+title: 3GremlinsAH1
+tags:
+colorID:
+position:
+---
+
+Toe: Hey barkeep! You got a nice place here, except for the fact that everything's too tall. You're making it really hard for us gremlins you know.
+Toe: Let me introduce ourselves. I'm Toe, in the middle is Moe, and on the bottom is Low.
+Low: Howdy! I'm Low.
+Moe: ...hello there.
+Player: Are you sure you're allowed to be at a bar? Are you old enough?
+Toe: HEY! Never ask a lady her age, it's RUDE!
+-> I'm sorry, I shouldn't assume that you're too young.
+	Toe: That's right.
+-> You're a woman?
+	Toe: Yes, the name Toe has been passed down from mother to daughter for generations!
+
+Toe: But, if you must know, we three triplets are actually 100 years old. Our birthday is this Friday.
+Toe: Actually, maybe you could settle a dispute between the three of us. I want to throw a huge celebration at my favorite boiled flesh restaurant downtown, but Low and Moe want something different.
+Low: We want a simple game night at home, with bobbing for eyeballs and a pinata with an assortment of guts inside.
+Moe: So, um, what do you think?
+-> Well, it is two against one. I think you should do the game night.
+	Toe: Dangit, I was really looking forward to the delicious scent of boiled skin. But I get it, majority rules.
+-> Maybe you could come to a compromise? You could go eat the flesh at the restaurant and then go home and play games.
+	Toe: You're right, a compromise is always the best option.
+	Low: I call first pick at the eyeballs!
+	Moe: But you always pick the best ones.
+
+Toe: Thanks for all your help, I never know how to deal with the ideas my siblings have.
+Player: I'm here to help. And before I forget, happy birthday! Let me know how the party goes.
+===

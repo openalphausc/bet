@@ -1,0 +1,55 @@
+fileFormatVersion: 2
+guid: 2a9d9044c600243169022492387334c2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - 3Gremlins-3GremlinsOrder-0
+  - 3Gremlins-3GremlinsOrder-1
+  - 3Gremlins-3GremlinsOrder-2
+  - 3Gremlins-3GremlinsOrder-3
+  - 3Gremlins-3GremlinsOrder-4
+  - 3Gremlins-3GremlinsOrder-5
+  - 3Gremlins-3GremlinsOrder-6
+  - 3Gremlins-3GremlinsOrder-7
+  - 3Gremlins-3GremlinsOrder-8
+  - 3Gremlins-3GremlinsOrder-9
+  - 3Gremlins-3GremlinsOrder-10
+  - 3Gremlins-3GremlinsOrder-11
+  - 3Gremlins-3GremlinsOrder-12
+  - 3Gremlins-3GremlinsOrder-13
+  - 3Gremlins-3GremlinsOrder-14
+  - 3Gremlins-3GremlinsOrder-15
+  - 3Gremlins-3GremlinsAH1-16
+  - 3Gremlins-3GremlinsAH1-17
+  - 3Gremlins-3GremlinsAH1-18
+  - 3Gremlins-3GremlinsAH1-19
+  - 3Gremlins-3GremlinsAH1-20
+  - 3Gremlins-3GremlinsAH1-21
+  - 3Gremlins-3GremlinsAH1-22
+  - 3Gremlins-3GremlinsAH1-23
+  - 3Gremlins-3GremlinsAH1-24
+  - 3Gremlins-3GremlinsAH1-25
+  - 3Gremlins-3GremlinsAH1-26
+  - 3Gremlins-3GremlinsAH1-27
+  - 3Gremlins-3GremlinsAH1-28
+  - 3Gremlins-3GremlinsAH1-29
+  - 3Gremlins-3GremlinsAH1-30
+  - 3Gremlins-3GremlinsAH1-31
+  - 3Gremlins-3GremlinsAH1-32
+  - 3Gremlins-3GremlinsAH1-33
+  - 3Gremlins-3GremlinsAH1-34
+  - 3Gremlins-3GremlinsAH1-35
+  - 3Gremlins-3GremlinsAH1-36
+  - 3Gremlins-3GremlinsAH1-37
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

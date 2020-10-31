@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 6d10ce879f5fd42f49cb365ee574e175
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Zombie-ZombieOrder-0
+  - Zombie-ZombieOrder-1
+  - Zombie-ZombieOrder-2
+  - Zombie-ZombieOrder-3
+  - Zombie-ZombieOrder-4
+  - Zombie-ZombieOrder-5
+  - Zombie-ZombieOrder-6
+  - Zombie-ZombieOrder-7
+  - Zombie-ZombieOrder-8
+  - Zombie-ZombieAH1-9
+  - Zombie-ZombieAH1-10
+  - Zombie-ZombieAH1-11
+  - Zombie-ZombieAH1-12
+  - Zombie-ZombieAH1-13
+  - Zombie-ZombieAH1-14
+  - Zombie-ZombieAH1-15
+  - Zombie-ZombieAH1-16
+  - Zombie-ZombieAH1-17
+  - Zombie-ZombieAH1-18
+  - Zombie-ZombieAH1-19
+  - Zombie-ZombieAH1-20
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

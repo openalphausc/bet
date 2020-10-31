@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 5e567567ae3024a04b7e85a7f1be8c4a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - CowboyAlien-CowboyAlienOrder-0
+  - CowboyAlien-CowboyAlienOrder-1
+  - CowboyAlien-CowboyAlienOrder-2
+  - CowboyAlien-CowboyAlienOrder-3
+  - CowboyAlien-CowboyAlienOrder-4
+  - CowboyAlien-CowboyAlienOrder-5
+  - CowboyAlien-CowboyAlienOrder-6
+  - CowboyAlien-CowboyAlienOrder-7
+  - CowboyAlien-CowboyAlienOrder-8
+  - CowboyAlien-CowboyAlienOrder-9
+  - CowboyAlien-CowboyAlienOrder-10
+  - CowboyAlien-CowboyAlienOrder-11
+  - CowboyAlien-CowboyAlienAH1-12
+  - CowboyAlien-CowboyAlienAH1-13
+  - CowboyAlien-CowboyAlienAH1-14
+  - CowboyAlien-CowboyAlienAH1-15
+  - CowboyAlien-CowboyAlienAH1-16
+  - CowboyAlien-CowboyAlienAH1-17
+  - CowboyAlien-CowboyAlienAH1-18
+  - CowboyAlien-CowboyAlienAH1-19
+  - CowboyAlien-CowboyAlienAH1-20
+  - CowboyAlien-CowboyAlienAH1-21
+  - CowboyAlien-CowboyAlienAH1-22
+  - CowboyAlien-CowboyAlienAH1-23
+  - CowboyAlien-CowboyAlienAH1-24
+  - CowboyAlien-CowboyAlienAH1-25
+  - CowboyAlien-CowboyAlienAH1-26
+  - CowboyAlien-CowboyAlienAH1-27
+  - CowboyAlien-CowboyAlienAH1-28
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
