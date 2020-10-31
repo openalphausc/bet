@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5983917884819821110}
   - component: {fileID: 4423375310882021378}
   m_Layer: 0
-  m_Name: GhostAylish
+  m_Name: Ghost
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
-  dialogueToStart: GhostAylishOrder
+  dialogueToStart: GhostOrder
   ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
   prefab: {fileID: 0}
   happiness: 0
