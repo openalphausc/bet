@@ -5,12 +5,12 @@ using UnityEngine;
 public class dataStorage : MonoBehaviour
 {
     //List of monsters asked to stay afterHours
-    public static ArrayList stayingMonsters;
+    public static string stayingMonster;
 
     // Start is called before the first frame update
     void Start()
     {
-        stayingMonsters = new ArrayList();
+
     }
 
     // Update is called once per frame

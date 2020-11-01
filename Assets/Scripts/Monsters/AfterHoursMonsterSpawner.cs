@@ -6,7 +6,7 @@ using Yarn.Unity;
 public class AfterHoursMonsterSpawner : MonoBehaviour
 {
 
-    private static ArrayList monsterList;
+    private static string monsterStay;
     private static Vector3 monsterLocation = new Vector3(-25f, -5f, 0f);
 
     public static GameObject currentMonster = null;
@@ -15,37 +15,32 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        monsterList = dataStorage.stayingMonsters;
+        monsterStay = dataStorage.stayingMonster;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentMonster == null)
+        if (currentMonster != null)
         {
             currentMonster = GetFirstMonster();
             currentMonster.GetComponent<Monster>().inAfterHours = true;
+            currentMonster = null;
         }
     }
 
     GameObject GetFirstMonster()
     {
         // Get monster name
-        if (monsterList.Count > 0)
-        {
-            string monsterName = monsterList[0] as string;
-            monsterList.RemoveAt(0);
+        string monsterName = monsterStay;
 
-            // Set node to the current monster's
-            dRunner.StartDialogue(monsterName + "AH1");
+        // Set node to the current monster's
+        dRunner.StartDialogue(monsterName + "AH1");
 
-            // Instantiate it
-            GameObject afterHoursMonster = Instantiate(Resources.Load<GameObject>("Prefabs/Monsters/" + monsterName), monsterLocation, Quaternion.identity);
-            afterHoursMonster.name = monsterName;
-            return afterHoursMonster;
-        }
-
-        return null;
+        // Instantiate it
+        GameObject afterHoursMonster = Instantiate(Resources.Load<GameObject>("Prefabs/Monsters/" + monsterName), monsterLocation, Quaternion.identity);
+        afterHoursMonster.name = monsterName;
+        return afterHoursMonster;
 
     }
 

@@ -20,15 +20,15 @@ public class YarnBarTending : MonoBehaviour
         // Add the current monster to the stayingMonsters list
         // NOTE: Adding a clone since the original gets despawned/destroyed
 
-        if (gameObject.GetComponent<Monster>().happiness >= 0)
-        {
-            dataStorage.stayingMonsters.Add(gameObject.name);
+       // if (gameObject.GetComponent<Monster>().happiness >= 0)
+        //{
+            dataStorage.stayingMonster = gameObject.name;
             Debug.Log(gameObject.name + " invited to after hours.");
-        }
+       /* }
         else
         {
             Debug.Log(gameObject + " does not have a positive happiness.");
-        }
+        }*/
     }
 
 }
