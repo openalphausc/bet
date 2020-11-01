@@ -102,9 +102,9 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: UtsuroOrder
-  ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
+  ordersFile: {fileID: 4900000, guid: 425ca36cc3e409548930db2bc2fb6d99, type: 3}
   prefab: {fileID: 0}
-  happiness: -1
+  happiness: -3
 --- !u!61 &6938775252450162205
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -88,13 +88,14 @@ public class MonsterSpawner : MonoBehaviour
 
         // pick a random monster to spawn
         int randomIndex = UnityEngine.Random.Range(0, monstersToSpawn.Count);
+        // randomIndex = 1; TEMP
         Monster instantiatedMonster = Instantiate(monstersToSpawn[randomIndex]);
         instantiatedMonster.name = monstersToSpawn[randomIndex].name;
         instantiatedMonster.prefab = monstersToSpawn[randomIndex];
         instantiatedMonster.seat = GetAvailableSeat();
         instantiatedMonster.seat.SetOccupancy(true);
 
-        // monstersToSpawn.RemoveAt(randomIndex);
+        monstersToSpawn.RemoveAt(randomIndex);
         monstersOnScreen.Add(instantiatedMonster);
         totalMonstersSpawned++;
     }

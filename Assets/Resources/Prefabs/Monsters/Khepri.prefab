@@ -102,9 +102,9 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: KhepriOrder
-  ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
+  ordersFile: {fileID: 4900000, guid: 22fbe7654c45a56458f8e0933c3838f7, type: 3}
   prefab: {fileID: 0}
-  happiness: -1
+  happiness: -4
 --- !u!61 &1839809940294750953
 BoxCollider2D:
   m_ObjectHideFlags: 0

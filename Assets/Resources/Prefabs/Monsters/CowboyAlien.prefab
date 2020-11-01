@@ -102,9 +102,9 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: CowboyAlienOrder
-  ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
+  ordersFile: {fileID: 4900000, guid: 60423b85ab5a36c469043418cc11093d, type: 3}
   prefab: {fileID: 0}
-  happiness: -1
+  happiness: -3
 --- !u!61 &7625226208971749565
 BoxCollider2D:
   m_ObjectHideFlags: 0

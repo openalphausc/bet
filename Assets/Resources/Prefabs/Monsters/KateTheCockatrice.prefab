@@ -102,9 +102,9 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: KateTheCockatriceOrder
-  ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
+  ordersFile: {fileID: 4900000, guid: a570548977da69c4aa910f9e1eb6ec04, type: 3}
   prefab: {fileID: 0}
-  happiness: -1
+  happiness: -2
 --- !u!61 &9080916782879359250
 BoxCollider2D:
   m_ObjectHideFlags: 0

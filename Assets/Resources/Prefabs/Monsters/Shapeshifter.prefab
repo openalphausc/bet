@@ -102,9 +102,9 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: ShapeshifterOrder
-  ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
+  ordersFile: {fileID: 4900000, guid: b3f25e263bf2d8b46a75815271620c02, type: 3}
   prefab: {fileID: 0}
-  happiness: -1
+  happiness: -2
 --- !u!61 &5101717015907723881
 BoxCollider2D:
   m_ObjectHideFlags: 0

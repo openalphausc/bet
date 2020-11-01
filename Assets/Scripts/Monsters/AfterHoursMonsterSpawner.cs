@@ -37,7 +37,7 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
             monsterList.RemoveAt(0);
 
             // Set node to the current monster's
-            dRunner.StartDialogue(monsterName + "AH");
+            dRunner.StartDialogue(monsterName + "AH1");
 
             // Instantiate it
             GameObject afterHoursMonster = Instantiate(Resources.Load<GameObject>("Prefabs/Monsters/" + monsterName), monsterLocation, Quaternion.identity);

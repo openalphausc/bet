@@ -102,9 +102,9 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: GhostOrder
-  ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
+  ordersFile: {fileID: 4900000, guid: 10de1d8c7c599bb4794e3921bdd8a5d0, type: 3}
   prefab: {fileID: 0}
-  happiness: 0
+  happiness: -1
 --- !u!61 &6951447267345982375
 BoxCollider2D:
   m_ObjectHideFlags: 0
