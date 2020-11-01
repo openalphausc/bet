@@ -8,8 +8,8 @@ position:
 <<else>>
 	*Are these gremlins old enough to have a drink?*
 	-> Yes
-		Score! All right barkeep, I'll take a Kidney Failure.
-		You've never heard of a Kidney Failure? Wow, you must be the young one, not us.
+		Score! All right barkeep, I'll take a Liver Failure.
+		You've never heard of a Liver Failure? Wow, you must be the young one, not us.
 		Mix together some poison apple juice, vodka, whiskey, cornpagne, cheery blossom sake, and something that'll make us trip. 
 	-> No
 		Gosh dangit! Mom told me that wouldn't work...
