@@ -13,4 +13,21 @@ position:
 	Fine. Gin, then that absolutely delicious red liquid. And a giant’s toe, for flavor. (SPACEBAR)
 <<endif>>
 And for the toe, make sure rigor mortis hasn’t set in. I don’t like chewy.
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours UnicornAylish>>
+	Sure! I'd love to.
+-> No
+	
+===
+
+title: UnicornAylishAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith UnicornAylish>>
+	Bye!
 ===

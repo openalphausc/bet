@@ -12,5 +12,22 @@ position:
 	It's goblin whiskey, and I don't remember what's next. (SPACEBAR)
 	It was my favorite, orange, for Halloween. (SPACEBAR)
 <<endif>>
-Thank you so much, I appreciate it.
+Thank you so much, I appreciate it. (SPACEBAR)
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours GhostAylish>>
+	Sure! I'd love to.
+-> No
+	
+===
+
+title: GhostAylishAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith GhostAylish>>
+	Bye!
 ===

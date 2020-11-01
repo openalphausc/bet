@@ -13,4 +13,21 @@ position:
 	Can you tell I just made it up? (SPACEBAR)
 <<endif>>
 Next time I’ll be more ready to order. 
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours Mummy>>
+	Sure! I'd love to.
+-> No
+	
+===
+
+title: MummyAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith Mummy>>
+	Bye!
 ===

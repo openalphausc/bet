@@ -1,0 +1,19 @@
+title: GhostOrder
+tags:
+colorID:
+position:
+---
+<<if visited("GhostOrder") is true>>
+	Hello again! Hopefully you remember how to make Happy Death!
+<<else>>
+	Nice to meet you! I'd like to have a Happy Death, if you please.
+	Just put one part Cheery Blossom, two parts Angel Tears, and one part Death Shade Berries.
+	Then hand over the drink to me when you're ready.
+<<endif>>
+Take your time, a ghost like me has nothing better to do.
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours Ghost>>
+	Oh, sure! Can't wait to see you!
+-> No
+===

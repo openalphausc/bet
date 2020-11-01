@@ -12,4 +12,21 @@ position:
     You vill put ze blood of Mary, zen something Russian. (SPACEBAR)
 <<endif>>
 And use fresh blood, please.
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours Vampire>>
+	Sure! I'd love to.
+-> No
+	
+===
+
+title: VampireAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith Vampire>>
+	Bye!
 ===

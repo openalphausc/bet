@@ -8,15 +8,17 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs:
   - UnicornCrazySarahOrder-UnicornCrazySarahOrder-0
   - UnicornCrazySarahOrder-UnicornCrazySarahOrder-1
   - UnicornCrazySarahOrder-UnicornCrazySarahOrder-2
   - UnicornCrazySarahOrder-UnicornCrazySarahOrder-3
   - UnicornCrazySarahOrder-UnicornCrazySarahOrder-4
+  - UnicornCrazySarahOrder-UnicornCrazySarahOrder-5
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 777acc576a2f941f4b866563ea88d8b0,
+    type: 3}
   localizations: []

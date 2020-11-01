@@ -12,5 +12,22 @@ position:
 	Just add some of that pumpkin juice, then some blood. Then something... magical. (SPACEBAR)
 <<endif>>
 ...where'd my knife go?... (SPACEBAR)
-shit.
+shit. (SPACEBAR)
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours UnicornCrazySarah>>
+	Sure! I'd love to.
+-> No
+	
+===
+
+title: UnicornCrazySarahAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith UnicornCrazySarah>>
+	Bye!
 ===

@@ -12,4 +12,21 @@ position:
 	It’s gin, pretty oozy, then there's a giant’s toe. I know it’s an uncommon drink, but I have uncommon taste. (SPACEBAR)
 <<endif>>
 If anyone copies my order, tell me. I know how to deal with them.
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours UnicornEdgySarah>>
+	Sure! I'd love to.
+-> No
+	
+===
+
+title: UnicornEdgySarahAH
+tags: 
+colorID:
+position:
+---
+What's up!
+-> Goodbye
+	<<finishedTalkingWith UnicornEdgySarah>>
+	Bye!
 ===

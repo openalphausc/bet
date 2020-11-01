@@ -7,7 +7,7 @@ public class LightFadeUp : MonoBehaviour
 {
     private Light2D light;
 
-    public float maxIntensity; // set by each individual light
+    private float maxIntensity; // set by each individual light
 
     private float fadeUpTime = 3.0f;
     private float timer;
@@ -16,6 +16,7 @@ public class LightFadeUp : MonoBehaviour
     void Start()
     {
         light = GetComponent<Light2D>();
+        maxIntensity = light.intensity;
         timer = 0.0f;
     }
 
@@ -28,5 +29,10 @@ public class LightFadeUp : MonoBehaviour
             // intensity of light fades up, proportional with the time it takes
             light.intensity = Mathf.Lerp(0, maxIntensity, timer / fadeUpTime);
         }
+    }
+
+    public bool DoneFadingUp()
+    {
+        return (timer >= fadeUpTime);
     }
 }

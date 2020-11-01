@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 86c7566058d6b448ba72bc1182773060
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Utsuro-UtsuroOrder-0
+  - Utsuro-UtsuroOrder-1
+  - Utsuro-UtsuroOrder-2
+  - Utsuro-UtsuroOrder-3
+  - Utsuro-UtsuroOrder-4
+  - Utsuro-UtsuroOrder-5
+  - Utsuro-UtsuroOrder-6
+  - Utsuro-UtsuroOrder-7
+  - Utsuro-UtsuroOrder-8
+  - Utsuro-UtsuroOrder-9
+  - Utsuro-UtsuroOrder-10
+  - Utsuro-UtsuroOrder-11
+  - Utsuro-UtsuroAH1-12
+  - Utsuro-UtsuroAH1-13
+  - Utsuro-UtsuroAH1-14
+  - Utsuro-UtsuroAH1-15
+  - Utsuro-UtsuroAH1-16
+  - Utsuro-UtsuroAH1-17
+  - Utsuro-UtsuroAH1-18
+  - Utsuro-UtsuroAH1-19
+  - Utsuro-UtsuroAH1-20
+  - Utsuro-UtsuroAH1-21
+  - Utsuro-UtsuroAH1-22
+  - Utsuro-UtsuroAH1-23
+  - Utsuro-UtsuroAH1-24
+  - Utsuro-UtsuroAH1-25
+  - Utsuro-UtsuroAH1-26
+  - Utsuro-UtsuroAH1-27
+  - Utsuro-UtsuroAH1-28
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
