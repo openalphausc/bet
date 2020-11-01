@@ -95,7 +95,7 @@ public class MonsterSpawner : MonoBehaviour
         instantiatedMonster.seat = GetAvailableSeat();
         instantiatedMonster.seat.SetOccupancy(true);
 
-        // monstersToSpawn.RemoveAt(randomIndex);
+        monstersToSpawn.RemoveAt(randomIndex);
         monstersOnScreen.Add(instantiatedMonster);
         totalMonstersSpawned++;
     }

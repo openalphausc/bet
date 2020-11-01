@@ -102,9 +102,9 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: EldritchMonsterOrder
-  ordersFile: {fileID: 4900000, guid: 9be303a60748b4ac882c55e550908da0, type: 3}
+  ordersFile: {fileID: 4900000, guid: e33187e2e9860fc4fb0f26ce6e2ee921, type: 3}
   prefab: {fileID: 0}
-  happiness: -1
+  happiness: -2
 --- !u!61 &1259076654242521851
 BoxCollider2D:
   m_ObjectHideFlags: 0

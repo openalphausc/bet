@@ -2958,7 +2958,7 @@ MonoBehaviour:
   - {fileID: 7625226208971749566, guid: 13e0db5673f8b4261b055cbb73422fe4, type: 3}
   monstersOnScreen: []
   totalMonstersSpawned: 0
-  maxTotalMonsters: 10
+  maxTotalMonsters: 9
   maxMonstersOnScreen: 3
   timeUntilNextSpawn: -1
   fadeUpScript: {fileID: 1204714789}

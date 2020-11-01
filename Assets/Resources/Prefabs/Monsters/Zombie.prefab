@@ -102,9 +102,9 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   dialogueToStart: ZombieOrder
-  ordersFile: {fileID: 4900000, guid: 69c6e53922f61420e9ee25ec5986fa54, type: 3}
+  ordersFile: {fileID: 4900000, guid: 1cb4533f9e2ebc74a9c29ab20a2745a6, type: 3}
   prefab: {fileID: 0}
-  happiness: 0
+  happiness: -1
 --- !u!61 &8015646323003965054
 BoxCollider2D:
   m_ObjectHideFlags: 0

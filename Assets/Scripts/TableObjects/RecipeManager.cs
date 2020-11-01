@@ -29,9 +29,9 @@ public class RecipeManager : MonoBehaviour
     	Drink nameToSearch = new Drink();
         nameToSearch.name = drinkName;
         int index = recipes.BinarySearch(nameToSearch, new Drink.DrinkComp());
-        foreach(Drink drink in recipes) {
-            Debug.Log(drink.name);
-        }
+        // foreach(Drink drink in recipes) {
+        //     Debug.Log(drink.name);
+        // }
         return recipes[index];
     }
 
