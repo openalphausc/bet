@@ -116,9 +116,17 @@ public class GlassFill : MonoBehaviour
         // add ingredient to current drink
         currentDrink.AddIngredient(ingredient.name);
 
+        // update drink sprite
+        UpdateDrinkSprite();
+
+        // play pouring sound
+        pourDrink.Play();
+    }
+
+    public void UpdateDrinkSprite()
+    {
         //changes the sprite of the glass to the number of ingredients
         //TODO: change the fullSprite to different sprites
-        Debug.Log("number of liquids = " + currentDrink.liquids.Count);
         switch (currentDrink.liquids.Count)
         {
             case 0:
@@ -149,9 +157,6 @@ public class GlassFill : MonoBehaviour
 
         // set color of liquid to appropriate color
         if(currentDrink.liquids.Count > 0) liquidSprite.color = currentDrink.GetDisplayColor();
-
-        // play pouring sound
-        pourDrink.Play();
     }
 
     void GlassIsFullAlert()

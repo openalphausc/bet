@@ -87,6 +87,7 @@ public class RecipeManager : MonoBehaviour
                 }
             }
 
+            currentDrink.BlendToppings();
             recipes.Add(currentDrink);
         }
         recipes.Sort(new Drink.DrinkComp());

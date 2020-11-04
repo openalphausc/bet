@@ -94,22 +94,35 @@ public class Drink
             return;
         }
 
-        Debug.Log(" is liquid? " + isLiquid);
-
         // add to ingredients list
         if (isLiquid) liquids.Add(newIngredient);
         else toppings.Add(newIngredient);
 
         // re-calculate color if liquid is added
-        if (isLiquid)
+        if (isLiquid) CalculateColor();
+    }
+
+    public void BlendToppings()
+    {
+        // make all toppings into liquids
+        foreach (string topping in toppings)
         {
-            if(recipeManager == null) recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
-            color = new Color(0, 0, 0);
-            foreach(string liquid in liquids) {
-                color += recipeManager.ingredientColors[liquid];
-            }
-            color /= liquids.Count;
+            liquids.Add(topping);
         }
+        toppings.Clear();
+        
+        // recalculate color
+        CalculateColor();
+    }
+
+    private void CalculateColor()
+    {
+        if(recipeManager == null) recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
+        color = new Color(0, 0, 0);
+        foreach(string liquid in liquids) {
+            color += recipeManager.ingredientColors[liquid];
+        }
+        color /= liquids.Count;
     }
 
     public Color GetDisplayColor() {

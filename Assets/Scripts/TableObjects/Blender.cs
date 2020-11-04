@@ -60,7 +60,11 @@ public class Blender : MonoBehaviour
         // teleport cup back to center
         glassMove.gameObject.transform.position = new Vector3(0, glassYPosition, 0);
         
-        // ingredient color stuff
+        // blend drink
+        glassFill.currentDrink.BlendToppings();
+        
+        // update sprite
+        glassFill.UpdateDrinkSprite();
     }
 
     public void OnMouseUp()
