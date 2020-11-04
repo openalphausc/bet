@@ -28,6 +28,8 @@ public class GlassFill : MonoBehaviour
     public Sprite fourSixthSprite;
     public Sprite fiveSixthSprite;
     public Sprite sixSixthSprite;
+    private Color targetColor;
+    private float maxMixTime = 1.0f;
 
     // sound
     public AudioSource pourDrink;
@@ -54,6 +56,22 @@ public class GlassFill : MonoBehaviour
                 targetDrink = recipeManager.GetDrinkByName(newDrinkName);
             }
         }
+    }
+
+    IEnumerator LerpDrinkColor()
+    {
+        Color startColor = liquidSprite.color;
+        float mixTimer = 0;
+
+        while (mixTimer < maxMixTime)
+        {
+            liquidSprite.color = Color.Lerp(startColor, targetColor, mixTimer / maxMixTime);
+            mixTimer += Time.deltaTime;
+
+            yield return null;
+        }
+
+        liquidSprite.color = targetColor;
     }
 
     public void OnMouseUp()
@@ -156,7 +174,15 @@ public class GlassFill : MonoBehaviour
         }
 
         // set color of liquid to appropriate color
-        if(currentDrink.liquids.Count > 0) liquidSprite.color = currentDrink.GetDisplayColor();
+        if (currentDrink.liquids.Count > 1)
+        {
+            targetColor = currentDrink.GetDisplayColor();
+            StartCoroutine(LerpDrinkColor());
+        }
+        else if (currentDrink.liquids.Count == 1)
+        {
+            liquidSprite.color = currentDrink.GetDisplayColor();
+        }
     }
 
     void GlassIsFullAlert()
