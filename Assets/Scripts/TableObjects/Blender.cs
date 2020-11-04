@@ -4,30 +4,72 @@ using UnityEngine;
 
 public class Blender : MonoBehaviour
 {
+    private GameObject glass;
     private GlassMove glassMove;
+    private GlassFill glassFill;
 
     private bool blending;
+    private float blendTimer;
+    private float maxBlendTime = 3.0f;
+
+    private float glassYPosition = -11.2f;
     
     // Start is called before the first frame update
     void Start()
     {
         blending = false;
+        blendTimer = 0.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        glassMove = GameObject.FindWithTag("Glass").GetComponent<GlassMove>();
+        glass = GameObject.FindWithTag("Glass");
+        if (glass != null)
+        {
+            glassMove = glass.GetComponent<GlassMove>();
+            glassFill = glass.GetComponent<GlassFill>();
+        }
+
+        // check if currently blending
+        if (blending)
+        {
+            blendTimer += Time.deltaTime;
+            if (blendTimer >= maxBlendTime)
+            {
+                StopBlending();
+            }
+        }
+    }
+
+    private void StartBlending()
+    {
+        // start blend timer
+        blending = true;
+        blendTimer = 0.0f;
+        Debug.Log("Start blending!");
+        
+        // disappear the glass by teleporting it way offscreen lol
+        glassMove.gameObject.transform.position = new Vector3(0, 10000, 0);
+    }
+
+    private void StopBlending()
+    {
+        blending = false;
+        
+        // teleport cup back to center
+        glassMove.gameObject.transform.position = new Vector3(0, glassYPosition, 0);
+        
+        // ingredient color stuff
     }
 
     public void OnMouseUp()
     {
-        if (glassMove.holding)
+        if (glassMove.holding && glassFill.currentDrink.ingredients.Count > 0)
         {
             glassMove.holding = false;
-            // disappear the glass
-            blending = true;
-            Debug.Log("Start blending!");
+            StartBlending();
         }
+        else Debug.Log("Can't be blended!");
     }
 }

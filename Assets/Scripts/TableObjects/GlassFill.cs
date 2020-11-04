@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GlassFill : MonoBehaviour
 {
     private Drink targetDrink = new Drink();
-    private Drink currentDrink = new Drink();
+    [NonSerializedAttribute] public Drink currentDrink = new Drink();
 
     public bool purchased = false;
 
