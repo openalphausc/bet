@@ -65,7 +65,7 @@ public class Blender : MonoBehaviour
 
     public void OnMouseUp()
     {
-        if (glassMove.holding && glassFill.currentDrink.ingredients.Count > 0)
+        if (glassMove.holding && glassFill.currentDrink.GetAmount() > 0)
         {
             glassMove.holding = false;
             StartBlending();

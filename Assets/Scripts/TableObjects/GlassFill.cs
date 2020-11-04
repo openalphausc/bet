@@ -22,7 +22,6 @@ public class GlassFill : MonoBehaviour
 
     // sprite stuff
     public SpriteRenderer liquidSprite;
-    // public Sprite emptySprite;
     public Sprite oneSixthSprite;
     public Sprite twoSixthSprite;
     public Sprite threeSixthSprite;
@@ -109,7 +108,7 @@ public class GlassFill : MonoBehaviour
     void AddIngredient(GameObject ingredient)
     {
         // if 6 ingredients already in the drink, don't do anything
-        if(currentDrink.ingredients.Count >= 6) {
+        if(currentDrink.GetAmount() >= 6) {
             GlassIsFullAlert(); //alert that tells the user the glass is full
             return;
         }
@@ -119,8 +118,11 @@ public class GlassFill : MonoBehaviour
 
         //changes the sprite of the glass to the number of ingredients
         //TODO: change the fullSprite to different sprites
-        switch (currentDrink.ingredients.Count)
+        Debug.Log("number of liquids = " + currentDrink.liquids.Count);
+        switch (currentDrink.liquids.Count)
         {
+            case 0:
+                break;
             case 1:
                 liquidSprite.sprite = oneSixthSprite;
                 break;
@@ -146,7 +148,7 @@ public class GlassFill : MonoBehaviour
         }
 
         // set color of liquid to appropriate color
-        liquidSprite.color = currentDrink.GetDisplayColor();
+        if(currentDrink.liquids.Count > 0) liquidSprite.color = currentDrink.GetDisplayColor();
 
         // play pouring sound
         pourDrink.Play();

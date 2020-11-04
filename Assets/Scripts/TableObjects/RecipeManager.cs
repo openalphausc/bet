@@ -73,7 +73,6 @@ public class RecipeManager : MonoBehaviour
         for (int i = 0; i < csvResults.Count; i++)
         {
         	Drink currentDrink = new Drink();
-            List<string> ingredients = new List<string>();
             for (int j = 0; j < csvResults[i].Count; j++)
             {
                 if (j == 0)
@@ -84,14 +83,10 @@ public class RecipeManager : MonoBehaviour
                 else
                 {
                     // Ingredient
-                    ingredients.Add(csvResults[i][j]);
+                    currentDrink.AddIngredient(csvResults[i][j]);
                 }
             }
 
-            currentDrink.ingredients = ingredients;
-            foreach(string ingredient in currentDrink.ingredients) {
-            	currentDrink.color += ingredientColors[ingredient]/currentDrink.ingredients.Count;
-            }
             recipes.Add(currentDrink);
         }
         recipes.Sort(new Drink.DrinkComp());
