@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GlassFill : MonoBehaviour
 {
     private Drink targetDrink = new Drink();
-    private Drink currentDrink = new Drink();
+    [NonSerializedAttribute] public Drink currentDrink = new Drink();
 
     public bool purchased = false;
 
@@ -22,13 +22,14 @@ public class GlassFill : MonoBehaviour
 
     // sprite stuff
     public SpriteRenderer liquidSprite;
-    // public Sprite emptySprite;
     public Sprite oneSixthSprite;
     public Sprite twoSixthSprite;
     public Sprite threeSixthSprite;
     public Sprite fourSixthSprite;
     public Sprite fiveSixthSprite;
     public Sprite sixSixthSprite;
+    private Color targetColor;
+    private float maxMixTime = 1.0f;
 
     // sound
     public AudioSource pourDrink;
@@ -55,6 +56,22 @@ public class GlassFill : MonoBehaviour
                 targetDrink = recipeManager.GetDrinkByName(newDrinkName);
             }
         }
+    }
+
+    IEnumerator LerpDrinkColor()
+    {
+        Color startColor = liquidSprite.color;
+        float mixTimer = 0;
+
+        while (mixTimer < maxMixTime)
+        {
+            liquidSprite.color = Color.Lerp(startColor, targetColor, mixTimer / maxMixTime);
+            mixTimer += Time.deltaTime;
+
+            yield return null;
+        }
+
+        liquidSprite.color = targetColor;
     }
 
     public void OnMouseUp()
@@ -109,7 +126,7 @@ public class GlassFill : MonoBehaviour
     void AddIngredient(GameObject ingredient)
     {
         // if 6 ingredients already in the drink, don't do anything
-        if(currentDrink.ingredients.Count >= 6) {
+        if(currentDrink.GetAmount() >= 6) {
             GlassIsFullAlert(); //alert that tells the user the glass is full
             return;
         }
@@ -117,10 +134,21 @@ public class GlassFill : MonoBehaviour
         // add ingredient to current drink
         currentDrink.AddIngredient(ingredient.name);
 
+        // update drink sprite
+        UpdateDrinkSprite();
+
+        // play pouring sound
+        pourDrink.Play();
+    }
+
+    public void UpdateDrinkSprite()
+    {
         //changes the sprite of the glass to the number of ingredients
         //TODO: change the fullSprite to different sprites
-        switch (currentDrink.ingredients.Count)
+        switch (currentDrink.liquids.Count)
         {
+            case 0:
+                break;
             case 1:
                 liquidSprite.sprite = oneSixthSprite;
                 break;
@@ -146,10 +174,15 @@ public class GlassFill : MonoBehaviour
         }
 
         // set color of liquid to appropriate color
-        liquidSprite.color = currentDrink.GetDisplayColor();
-
-        // play pouring sound
-        pourDrink.Play();
+        if (currentDrink.liquids.Count > 1)
+        {
+            targetColor = currentDrink.GetDisplayColor();
+            StartCoroutine(LerpDrinkColor());
+        }
+        else if (currentDrink.liquids.Count == 1)
+        {
+            liquidSprite.color = currentDrink.GetDisplayColor();
+        }
     }
 
     void GlassIsFullAlert()

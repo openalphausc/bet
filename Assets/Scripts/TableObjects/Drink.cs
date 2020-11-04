@@ -9,20 +9,31 @@ public class Drink
     // drinkName like "Bloody Mary" or "Oktoberfest"
     public string name;
 
-    // the order of ingredients required to make this drink
-    public List<string> ingredients;
+    // lists of current ingredients, split up by type
+    public List<string> liquids;
+    public List<string> toppings;
 
     // the current color of the drink
     public Color color;
 
     // reference to the RecipeManager
     private RecipeManager recipeManager = null;
+    
+    // static lists
+    private static List<string> allLiquids;
+    private static List<string> allToppings;
 
     public Drink()
     {
         name = "";
-        ingredients = new List<string>();
-        color = new Color(0.0f, 0.0f, 0.0f);
+        liquids = new List<string>();
+        toppings = new List<string>();
+        color = new Color(255.0f, 255.0f, 255.0f);
+        // initialize static lists
+        allLiquids = new List<string>(new string[]
+            {"blood", "vodka", "whiskey", "angelTears", "cornpagne", "appleJuice", "cherryBlossom"});
+        allToppings = new List<string>(new string[]
+            {"zombieFlesh", "nightshade", "mud", "nightmareFuel", "goldenDust", "mushrooms"});
     }
 
     // returns whether two drinks match
@@ -38,13 +49,19 @@ public class Drink
     // returns whether two drinks have the same ingredients
     public bool HasSameIngredients(Drink otherDrink) {
         // check this drink
-        foreach(string ingredient in this.ingredients) {
-            if(!otherDrink.ingredients.Contains(ingredient)) return false;
+        foreach(string liquid in this.liquids) {
+            if(!otherDrink.liquids.Contains(liquid)) return false;
+        }
+        foreach(string topping in this.toppings) {
+            if(!otherDrink.toppings.Contains(topping)) return false;
         }
 
         // check other drink
-        foreach(string ingredient in otherDrink.ingredients) {
-            if(!this.ingredients.Contains(ingredient)) return false;
+        foreach(string liquid in otherDrink.liquids) {
+            if(!this.liquids.Contains(liquid)) return false;
+        }
+        foreach(string topping in otherDrink.toppings) {
+            if(!this.toppings.Contains(topping)) return false;
         }
 
         return true;
@@ -54,45 +71,69 @@ public class Drink
     public override string ToString()
     {
         string output = name + "; ";
-        foreach(string ingredient in ingredients)
+        foreach(string liquid in liquids)
         {
-            output += ingredient + ", ";
+            output += liquid + ", ";
+        }
+        output += " with toppings: ";
+        foreach (string topping in toppings)
+        {
+            output += topping + ", ";
         }
         return output;
     }
 
     public void AddIngredient(string newIngredient) {
-        // add to ingredients list
-        ingredients.Add(newIngredient);
+        // check if liquid or topping
+        bool isLiquid = allLiquids.Contains(newIngredient);
+        bool isTopping = allToppings.Contains(newIngredient);
+        if (isLiquid == isTopping)
+        {
+            Debug.Log(
+                "AH BIG ERROR; TRIED TO ADD AN INGREDIENT TO THE DRINK AND IT WAS NOT PROPERLY ASSIGNED AS A LIQUID OR A TOPPING!");
+            return;
+        }
 
-        // re-calculate color
+        // add to ingredients list
+        if (isLiquid) liquids.Add(newIngredient);
+        else toppings.Add(newIngredient);
+
+        // re-calculate color if liquid is added
+        if (isLiquid) CalculateColor();
+    }
+
+    public void BlendToppings()
+    {
+        // make all toppings into liquids
+        foreach (string topping in toppings)
+        {
+            liquids.Add(topping);
+        }
+        toppings.Clear();
+        
+        // recalculate color
+        CalculateColor();
+    }
+
+    private void CalculateColor()
+    {
         if(recipeManager == null) recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
         color = new Color(0, 0, 0);
-        foreach(string ingredient in ingredients) {
-            color += recipeManager.ingredientColors[ingredient];
+        foreach(string liquid in liquids) {
+            color += recipeManager.ingredientColors[liquid];
         }
-        color /= ingredients.Count;
- 
-        // look for a recipe that current drink conforms to, then change the name
-        // bool matchesWithRecipe = false;
-        // foreach(Drink recipe in recipes) {
-        //     if(currentDrink.matches(recipe)) {
-        //         // if found, store name of recipe
-        //         currentDrink.name = recipe.name;
-        //         matchesWithRecipe = true;
-        //         break;
-        //     }
-        // }
-        // // if nothing found
-        // if(!matchesWithRecipe) {
-        //     currentDrink.name = "";
-        // }
+        color /= liquids.Count;
     }
 
     public Color GetDisplayColor() {
         Color displayColor = color / 255.0f;
         displayColor.a *= 255.0f;
         return displayColor;
+    }
+
+    public int GetAmount()
+    {
+        return liquids.Count + toppings.Count;
     }
 
     public class DrinkComp : IComparer<Drink>
