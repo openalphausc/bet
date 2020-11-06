@@ -31,8 +31,9 @@ public class GlassFill : MonoBehaviour
     private Color targetColor;
     private float maxMixTime = 1.0f;
 
-    // sound
-    public AudioSource pourDrink;
+    // sounds
+    public AudioSource addLiquid;
+    public AudioSource addTopping;
 
     private RecipeManager recipeManager;
 
@@ -132,13 +133,14 @@ public class GlassFill : MonoBehaviour
         }
 
         // add ingredient to current drink
-        currentDrink.AddIngredient(ingredient.name);
+        bool isLiquid = currentDrink.AddIngredient(ingredient.name);
 
         // update drink sprite
         UpdateDrinkSprite();
 
         // play pouring sound
-        pourDrink.Play();
+        if (isLiquid) addLiquid.Play();
+        else addTopping.Play();
     }
 
     public void UpdateDrinkSprite()

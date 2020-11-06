@@ -83,7 +83,7 @@ public class Drink
         return output;
     }
 
-    public void AddIngredient(string newIngredient) {
+    public bool AddIngredient(string newIngredient) {
         // check if liquid or topping
         bool isLiquid = allLiquids.Contains(newIngredient);
         bool isTopping = allToppings.Contains(newIngredient);
@@ -91,7 +91,7 @@ public class Drink
         {
             Debug.Log(
                 "AH BIG ERROR; TRIED TO ADD AN INGREDIENT TO THE DRINK AND IT WAS NOT PROPERLY ASSIGNED AS A LIQUID OR A TOPPING!");
-            return;
+            return false;
         }
 
         // add to ingredients list
@@ -100,6 +100,8 @@ public class Drink
 
         // re-calculate color if liquid is added
         if (isLiquid) CalculateColor();
+
+        return isLiquid;
     }
 
     public void BlendToppings()
