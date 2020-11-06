@@ -34,6 +34,9 @@ public class GlassFill : MonoBehaviour
     // sounds
     public AudioSource addLiquid;
     public AudioSource addTopping;
+    public AudioSource wellDone; // perfect drink
+    public AudioSource notBad; // color is off, but correct ingredients
+    public AudioSource ew; // wrong
 
     private RecipeManager recipeManager;
 
@@ -95,17 +98,20 @@ public class GlassFill : MonoBehaviour
             {
                 // if drink matches color, happy face
                 face = Instantiate(happyFace);
+                wellDone.Play();
                 Debug.Log("Drink matches color");
             }
             else {
                 // if doesn't match color, but has same ingredients, neutral face
                 if(currentDrink.HasSameIngredients(targetDrink)) {
                     face = Instantiate(neutralFace);
+                    notBad.Play();
                     Debug.Log("Drink matches ingredients, not color.");
                 }
                 // if totally wrong, frown face
                 else {
                     face = Instantiate(frownFace);
+                    ew.Play();
                     Debug.Log("Drink is wrong.");
                 }
             }
