@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,7 @@ public class MonsterSpawner : MonoBehaviour
     public List<Monster> monstersToSpawn = new List<Monster>();
     public List<Monster> monstersOnScreen = new List<Monster>();
     public int totalMonstersSpawned = 0;
-    public int maxTotalMonsters = 10;
+    public int maxTotalMonsters = 2;
     public int maxMonstersOnScreen;
 
     public static List<Seat> barSeats;
@@ -97,6 +98,7 @@ public class MonsterSpawner : MonoBehaviour
         monstersToSpawn.RemoveAt(randomIndex);
         monstersOnScreen.Add(instantiatedMonster);
         totalMonstersSpawned++;
+        //Debug.Log(totalMonstersSpawned);
     }
 
     // Creates the locations of the bar seats
