@@ -9,7 +9,7 @@ public class MonsterSpawner : MonoBehaviour
     public List<Monster> monstersToSpawn = new List<Monster>();
     public List<Monster> monstersOnScreen = new List<Monster>();
     public int totalMonstersSpawned = 0;
-    public int maxTotalMonsters = 10;
+    public const int maxTotalMonsters = 5;
     public int maxMonstersOnScreen;
 
     public static List<Seat> barSeats;
