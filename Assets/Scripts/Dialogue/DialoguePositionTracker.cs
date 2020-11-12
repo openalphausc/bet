@@ -86,7 +86,6 @@ public class DialoguePositionTracker : MonoBehaviour
         {
             // hide the drink icon
             drinkIcon.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            drinkIcon.gameObject.transform.GetChild(1).gameObject.SetActive(false);
         }
 
         if (leftMonsterLight != null)
@@ -106,8 +105,7 @@ public class DialoguePositionTracker : MonoBehaviour
         if (drinkIcon != null)
         {
             // show the drink icon
-            drinkIcon.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            GameObject liquidIcon = drinkIcon.gameObject.transform.GetChild(1).gameObject;
+            GameObject liquidIcon = drinkIcon.gameObject.transform.GetChild(0).gameObject;
             liquidIcon.SetActive(true);
             liquidIcon.GetComponent<Image>().color = color;
         }
