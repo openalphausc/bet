@@ -1,0 +1,50 @@
+fileFormatVersion: 2
+guid: 3a437b18fc9aaa64b9538d058956ac55
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - tutorialghost-TutorialGhostDay1-0
+  - tutorialghost-TutorialGhostDay1-1
+  - tutorialghost-TutorialGhostDay1-2
+  - tutorialghost-TutorialGhostDay1-3
+  - tutorialghost-TutorialGhostDay1-4
+  - tutorialghost-TutorialGhostDay1-5
+  - tutorialghost-TutorialGhostDay1-6
+  - tutorialghost-TutorialGhostDay1-7
+  - tutorialghost-TutorialGhostDay1-8
+  - tutorialghost-TutorialGhostDay1-9
+  - tutorialghost-TutorialGhostDay1-10
+  - tutorialghost-TutorialGhostDay1-11
+  - tutorialghost-TutorialGhostDay1-12
+  - tutorialghost-TutorialGhostDay1-13
+  - tutorialghost-TutorialGhostDay1-14
+  - tutorialghost-TutorialGhostDay1-15
+  - tutorialghost-TutorialGhostDay1-16
+  - tutorialghost-TutorialGhostDay1-17
+  - tutorialghost-TutorialGhostDay1-18
+  - tutorialghost-TutorialGhostDay1-19
+  - tutorialghost-TutorialGhostDay1-20
+  - tutorialghost-TutorialGhostDay1-21
+  - tutorialghost-TutorialGhostDay1-22
+  - tutorialghost-TutorialGhostDay1-23
+  - tutorialghost-TutorialGhostDay1-24
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: "Error on line 11 at position 411:\nmismatched input ']'
+    expecting FORMAT_FUNCTION_EXPRESSION_START\r\nSilly me, you don\u2019t know how
+    this works yet! You look so nervous, but I promise there isn\u2019t anything
+    to worry about. They can get annoyed if you ignore them, but otherwise monsters
+    around here are pretty understanding. They don\u2019t even care about how long
+    you take, if the drink is what they ordered and they enjoy your company enough.
+    Nothing like a good conversation to de-stress after a long night. [continue]\r\n                                                                                                                                                                                                                                                                                                                                                                                                                         
+    ^"
+  baseLanguage: {fileID: 7128917941130120860, guid: 3a437b18fc9aaa64b9538d058956ac55,
+    type: 3}
+  localizations: []
