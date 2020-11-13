@@ -44,7 +44,7 @@ public class GlassMove : MonoBehaviour
 
     public void OnMouseDown()
     {
-        mouseDown = true;
+        if (!MonsterSpawner.inTutorial) mouseDown = true;
     }
 
     public void OnMouseExit()

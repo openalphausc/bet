@@ -54,7 +54,7 @@ public class RecipeManager : MonoBehaviour
     {
         // For each line in the CSV, set the drink name and the ingredients
         List<List<string>> csvResults = ReadCSV(colorsFile);
-        for (int i = 0; i < csvResults.Count; i++)
+        for (int i = 0; i < csvResults.Count - 1; i++)
         {
             Drink currentDrink = new Drink();
             List<string> ingredients = new List<string>();

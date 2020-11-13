@@ -79,6 +79,14 @@ public class GlassFill : MonoBehaviour
         if (equipIngredient.equippedObject != null)
         {
             AddIngredient(equipIngredient.equippedObject);
+            
+            if (MonsterSpawner.inTutorial)
+            {
+                equipIngredient.equippedObject.GetComponent<HoverHighlight>().isEnabled = false;
+                equipIngredient.equippedObject.GetComponent<ClickIngredient>().isEnabled = false;
+                equipIngredient.ClickOnObject(equipIngredient.equippedObject);
+                YarnBarTending.EnableDialogueFunctions();
+            }
         }
     }
 

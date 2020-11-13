@@ -8,6 +8,8 @@ public class HoverHighlight : MonoBehaviour
     private EquipIngredient equipIngredient;
     private Light2D light;
 
+    public bool isEnabled = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,7 @@ public class HoverHighlight : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (equipIngredient.equippedObject != gameObject && !PauseMenu.isPaused) light.enabled = true;
+        if (equipIngredient.equippedObject != gameObject && !PauseMenu.isPaused && isEnabled) light.enabled = true;
     }
 
     void OnMouseExit()
