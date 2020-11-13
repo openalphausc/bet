@@ -112,7 +112,7 @@ public class Monster : MonoBehaviour
             }
 
             // slide off when ready
-            if (state == MonsterState.center && readyToLeave)
+            if (state == MonsterState.center && readyToLeave && !MonsterSpawner.inTutorial)
             {
                 Monster.currentlyOrdering = false;
                 Monster.currentlyOrderingMonster = null;
@@ -164,6 +164,10 @@ public class Monster : MonoBehaviour
 
 		// hide the drink icon
 		GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDialogueSystem();
+
+		if (MonsterSpawner.inTutorial) {
+			YarnBarTending.EnableDialogueFunctions();
+		}
     }
 
     public void OnMouseDown()

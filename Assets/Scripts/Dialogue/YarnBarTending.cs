@@ -8,6 +8,8 @@ using Yarn.Unity;
 public class YarnBarTending : MonoBehaviour
 {	
 
+	public static bool multipleIngredients = false;
+
     [YarnCommand("inviteToAfterHours")]
     public void StayAfter()
     {
@@ -30,11 +32,63 @@ public class YarnBarTending : MonoBehaviour
     [YarnCommand("tutorialUseIngredient")]
     public void TutorialUseIngredient(string ingredient)
     {
+		
         GameObject.Find(ingredient).GetComponent<HoverHighlight>().isEnabled = true;
         GameObject.Find(ingredient).GetComponent<ClickIngredient>().isEnabled = true;
 		
 		YarnBarTending.DisableDialogueFunctions();
     }
+
+	[YarnCommand("tutorialEnableClearButton")]
+	public void TutorialEnableClearButton()
+    {
+		YarnBarTending.DisableDialogueFunctions();
+		GameObject.Find("ClearGlassButton").GetComponent<Button>().interactable = true;
+		
+	}
+
+	[YarnCommand("tutorialEnableIngredient")]
+	public void TutorialEnableIngredient(string ingredient)
+    {
+		
+        GameObject.Find(ingredient).GetComponent<HoverHighlight>().isEnabled = true;
+        GameObject.Find(ingredient).GetComponent<ClickIngredient>().isEnabled = true;
+
+		YarnBarTending.DisableDialogueFunctions();
+		
+		YarnBarTending.multipleIngredients = true;
+	}
+
+	[YarnCommand("tutorialEnableCup")]
+	public void TutorialEnableCup()
+    {
+		GlassMove.cupCanMove = true;
+		YarnBarTending.DisableDialogueFunctions();
+	}
+
+	[YarnCommand("endTutorial")]
+	public void EndTutorial()
+    {
+		MonsterSpawner.inTutorial = false;
+		
+        GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
+		
+		// ingredients
+        foreach (Transform ingredient in GameObject.Find("Ingredients").transform)
+        {
+            ingredient.GetComponent<HoverHighlight>().isEnabled = true; // Disable hover highlighting
+            ingredient.GetComponent<ClickIngredient>().isEnabled = true; // Disable clicking
+        }
+        
+        // toppings
+        // GameObject.Find("nightmareFuel").SetActive(true);
+        // GameObject.Find("goldenDust").SetActive(true);
+        // GameObject.Find("mud").SetActive(true);
+        // GameObject.Find("zombieFlesh").SetActive(true);
+        
+        // misc
+        // GameObject.Find("Blender").SetActive(true);
+	}
 
 	public static void DisableDialogueFunctions() {
 		GameObject.Find("Click to Continue").GetComponent<Button>().interactable = false;

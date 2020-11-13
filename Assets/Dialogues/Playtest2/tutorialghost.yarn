@@ -38,6 +38,7 @@ We’re ready to start! Click on the cheery blossom sake to equip it. Then hover
 You’re doing great! Now add some blood. 
 
 //spotlight clear
+<<tutorialEnableClearButton Ghost>>
 Sorry, I set you up for that one. See how it’s the wrong color? That means that you added the wrong ingredient or mixed the wrong ingredient ratios. Not a problem— as Bobby likes to say, mistakes are just lessons we haven’t learned yet! But now we’ve learned. So go clear the drink and we can start over!
 
 //spotlight cheery blossom, then glass
@@ -49,10 +50,11 @@ Second try! Let’s add the wonderful cheery blossom sake again.
 And now for the angel tears!
 
 //spotlight angel tears, then glass
-<<tutorialUseIngredient Ghost angelTears>>
+<<tutorialEnableIngredient Ghost angelTears>>
 The color still isn’t quite as I imagined. Try adding more angel tears until the color matches. 
 
 //arrow appears from glass to monster
+<<tutorialEnableCup Ghost>>
 It looks perfect! Now just click on it to equip  and then click on me to give me the finished drink. 
 
 //smiling ghost sprite
@@ -69,5 +71,7 @@ I think having a toddler for the last century is beginning to get to me.
 Oh, and don’t worry if you forget to invite anyone! If that happens then the monster you last served will decide to stay over. 
 
 Fantastic. I’ll be back later. If you wanted I could even show some of Boothany’s baby pictures… In the meantime, best of luck with bartending! It looks like you already have some new customers… 
+
+<<endTutorial Ghost>>
 ===
 

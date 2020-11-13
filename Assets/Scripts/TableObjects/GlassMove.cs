@@ -14,6 +14,8 @@ public class GlassMove : MonoBehaviour
     // sound
     public AudioSource setDown;
 
+    public static bool cupCanMove = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +46,7 @@ public class GlassMove : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (!MonsterSpawner.inTutorial) mouseDown = true;
+        if (GlassMove.cupCanMove) mouseDown = true;
     }
 
     public void OnMouseExit()
@@ -54,6 +56,7 @@ public class GlassMove : MonoBehaviour
 
     public void OnMouseUp()
     {
+        Debug.Log(mouseDown + ", " + equipIngredient.equippedObject);
         // only let the player hold the glass if they aren't already holding an ingredient AND if the game isn't paused
         if (!PauseMenu.isPaused && equipIngredient.equippedObject == null && mouseDown && !holding && !glassFill.purchased)
         {

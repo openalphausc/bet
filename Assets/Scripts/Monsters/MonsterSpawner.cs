@@ -19,18 +19,13 @@ public class MonsterSpawner : MonoBehaviour
     public LightFadeUp fadeUpScript;
     
     public static bool inTutorial = true;
-    private GameObject continueButton;
 
     // Start is called before the first frame update
     void Start()
     {
         CreateBarSeats();
         
-        if (inTutorial)
-        {
-            RunTutorial();
-            continueButton = GameObject.FindWithTag("ContinueButton");
-        }
+        if (inTutorial) RunTutorial();
     }
 
     // Update is called once per frame
@@ -177,10 +172,13 @@ public class MonsterSpawner : MonoBehaviour
 
     private void RunTutorial()
     {
+        // Disable cup movement
+        GlassMove.cupCanMove = false;
+        
         // Disabling items
         // buttons
-        GameObject.Find("ClearGlassButton").SetActive(false);
-        GameObject.Find("CloseBarButton").SetActive(false);
+        GameObject.Find("ClearGlassButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = false;
         
         // ingredients
         foreach (Transform ingredient in GameObject.Find("Ingredients").transform)
