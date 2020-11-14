@@ -194,7 +194,7 @@ public class MonsterSpawner : MonoBehaviour
         GameObject.Find("zombieFlesh").SetActive(false);
         
         // misc
-        GameObject.Find("Blender").SetActive(false);
+        GameObject.Find("Blender").SetActive(true); // TEMP SET BACK TO FALSE
 
         // Spawn ghost in
         SpawnMonster();
