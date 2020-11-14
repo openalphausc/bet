@@ -45,9 +45,7 @@ You’re doing great! Now add some blood.
 
 //spotlight clear
 <<tutorialEnableClearButton Ghost>>
-Sorry, I set you up for that one. See how it’s the wrong color? That means that you added the wrong ingredient or mixed the wrong ingredient ratios. 
-
-Not a problem— as Bobby likes to say, mistakes are just lessons we haven’t learned yet! But now we’ve learned. So go clear the drink and we can start over!
+Sorry, I set you up for that one. See how it’s the wrong color? That means that you added the wrong ingredient or mixed the wrong ingredient ratios. So go clear the drink and we can start over!
 
 //spotlight cheery blossom, then glass
 <<tutorialUseIngredient Ghost cheeryBlossom>>
