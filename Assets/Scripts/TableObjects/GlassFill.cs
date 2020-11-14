@@ -79,6 +79,15 @@ public class GlassFill : MonoBehaviour
         if (equipIngredient.equippedObject != null)
         {
             AddIngredient(equipIngredient.equippedObject);
+            
+            if (MonsterSpawner.inTutorial && (!YarnBarTending.multipleIngredients || currentDrink.GetAmount() == 4))
+            {
+                equipIngredient.equippedObject.GetComponent<HoverHighlight>().isEnabled = false;
+                equipIngredient.equippedObject.GetComponent<ClickIngredient>().isEnabled = false;
+                equipIngredient.ClickOnObject(equipIngredient.equippedObject);
+                YarnBarTending.EnableDialogueFunctions();
+				YarnBarTending.multipleIngredients = false;
+            }
         }
     }
 
@@ -138,7 +147,7 @@ public class GlassFill : MonoBehaviour
         UpdateDrinkSprite();
 
         // play pouring sound
-        pourDrink.Play();
+        pourDrink.Play();	
     }
 
     public void UpdateDrinkSprite()

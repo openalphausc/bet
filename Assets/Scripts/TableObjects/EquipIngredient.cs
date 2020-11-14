@@ -35,7 +35,8 @@ public class EquipIngredient : MonoBehaviour
 
     public void ClickOnObject(GameObject clicked) {
         // if equippedObject == object, put it down on an empty space
-        if(equippedObject == clicked) {
+        if(equippedObject == clicked)
+        {
             equippedObject.transform.position = objOriginalPosition;
             equippedObject = null;
             objOriginalPosition = new Vector3(0,0,-1); // if any ingredients pop behind the screen, it's because of this

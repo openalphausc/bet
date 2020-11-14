@@ -31,7 +31,7 @@ public class Drink
         color = new Color(255.0f, 255.0f, 255.0f);
         // initialize static lists
         allLiquids = new List<string>(new string[]
-            {"blood", "vodka", "whiskey", "angelTears", "cornpagne", "appleJuice", "cherryBlossom"});
+            {"blood", "vodka", "whiskey", "angelTears", "cornpagne", "appleJuice", "cheeryBlossom"});
         allToppings = new List<string>(new string[]
             {"zombieFlesh", "nightshade", "mud", "nightmareFuel", "goldenDust", "mushrooms"});
     }
@@ -84,6 +84,9 @@ public class Drink
     }
 
     public void AddIngredient(string newIngredient) {
+        
+        if (newIngredient == "") return;
+        
         // check if liquid or topping
         bool isLiquid = allLiquids.Contains(newIngredient);
         bool isTopping = allToppings.Contains(newIngredient);
@@ -91,6 +94,7 @@ public class Drink
         {
             Debug.Log(
                 "AH BIG ERROR; TRIED TO ADD AN INGREDIENT TO THE DRINK AND IT WAS NOT PROPERLY ASSIGNED AS A LIQUID OR A TOPPING!");
+            Debug.Log(newIngredient + ", " + isLiquid);
             return;
         }
 

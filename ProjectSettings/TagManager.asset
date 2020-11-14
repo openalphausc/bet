@@ -11,6 +11,7 @@ TagManager:
   - GlassSpawner
   - RecipeSheet
   - DrinkIcon
+  - ContinueButton
   layers:
   - Default
   - TransparentFX

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
-  dialogueToStart: GhostOrder
+  dialogueToStart: TutorialGhostDay1
   ordersFile: {fileID: 4900000, guid: 10de1d8c7c599bb4794e3921bdd8a5d0, type: 3}
   prefab: {fileID: 0}
   happiness: -1

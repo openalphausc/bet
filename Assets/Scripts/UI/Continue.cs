@@ -6,18 +6,14 @@ public class Continue : MonoBehaviour
 {
     public Yarn.Unity.DialogueUI dialogueUI;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public static bool isEnabled = true;
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyUp(KeyCode.Space))
         {
-            dialogueUI.MarkLineComplete();
+             if (Continue.isEnabled) dialogueUI.MarkLineComplete();
         }
     }
 }
