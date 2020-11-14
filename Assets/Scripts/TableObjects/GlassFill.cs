@@ -31,8 +31,12 @@ public class GlassFill : MonoBehaviour
     private Color targetColor;
     private float maxMixTime = 1.0f;
 
-    // sound
-    public AudioSource pourDrink;
+    // sounds
+    public AudioSource addLiquid;
+    public AudioSource addTopping;
+    public AudioSource wellDone; // perfect drink
+    public AudioSource notBad; // color is off, but correct ingredients
+    public AudioSource ew; // wrong
 
     private RecipeManager recipeManager;
 
@@ -103,17 +107,20 @@ public class GlassFill : MonoBehaviour
             {
                 // if drink matches color, happy face
                 face = Instantiate(happyFace);
+                wellDone.Play();
                 Debug.Log("Drink matches color");
             }
             else {
                 // if doesn't match color, but has same ingredients, neutral face
                 if(currentDrink.HasSameIngredients(targetDrink)) {
                     face = Instantiate(neutralFace);
+                    notBad.Play();
                     Debug.Log("Drink matches ingredients, not color.");
                 }
                 // if totally wrong, frown face
                 else {
                     face = Instantiate(frownFace);
+                    ew.Play();
                     Debug.Log("Drink is wrong.");
                 }
             }
@@ -141,16 +148,17 @@ public class GlassFill : MonoBehaviour
         }
 
         // add ingredient to current drink
-        currentDrink.AddIngredient(ingredient.name);
+        bool isLiquid = currentDrink.AddIngredient(ingredient.name);
 
         // update drink sprite
         UpdateDrinkSprite();
 
         // play pouring sound
-        pourDrink.Play();	
+        if (isLiquid) addLiquid.Play();
+        else addTopping.Play();
     }
 
-    public void UpdateDrinkSprite()
+    public void UpdateDrinkSprite(bool lerp = true)
     {
         //changes the sprite of the glass to the number of ingredients
         //TODO: change the fullSprite to different sprites
@@ -183,14 +191,21 @@ public class GlassFill : MonoBehaviour
         }
 
         // set color of liquid to appropriate color
-        if (currentDrink.liquids.Count > 1)
-        {
-            targetColor = currentDrink.GetDisplayColor();
-            StartCoroutine(LerpDrinkColor());
-        }
-        else if (currentDrink.liquids.Count == 1)
+        if (!lerp)
         {
             liquidSprite.color = currentDrink.GetDisplayColor();
+        }
+        else
+        {
+            if (currentDrink.liquids.Count > 1)
+            {
+                targetColor = currentDrink.GetDisplayColor();
+                StartCoroutine(LerpDrinkColor());
+            }
+            else if (currentDrink.liquids.Count == 1)
+            {
+                liquidSprite.color = currentDrink.GetDisplayColor();
+            }
         }
     }
 
