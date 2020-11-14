@@ -5,11 +5,15 @@ position:
 ---
 
 //ghost enters
-Hello, my name is Bob! I was on my way to pick up my daughter from Undead Daycare but I spotted your lovely bar. I just had to float by. I’m always two hours early anyways— I just don’t want to be late to get Boothany from daycare! Besides, their secretary skeleton is an excellent conversationalist. 
+Hello, my name is Bob! I was on my way to pick up my daughter from Undead Daycare but I spotted your lovely bar. I just had to float by. I’m always two hours early anyways— I just don’t want to be late to get Boothany from daycare! 
+
+Besides, their secretary skeleton is an excellent conversationalist. 
 
 Sorry, I was babbling! I should go ahead and order, shouldn’t I? 
 
-Silly me, you don’t know how this works yet! You look so nervous, but I promise there isn’t anything to worry about. They can get annoyed if you ignore them, but otherwise monsters around here are pretty understanding. They don’t even care about how long you take, if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to de-stress after a long night.
+Silly me, you don’t know how this works yet! You look so nervous, but I promise there isn’t anything to worry about. They can get annoyed if you ignore them, but otherwise monsters around here are pretty understanding. 
+
+They don’t even care about how long you take, if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to de-stress after a long night.
 
 Monsters will come here and sit down, just like me! If you select us then we’ll tell you our order. Sometimes it can get quite lengthy, so make sure—
 
@@ -24,7 +28,9 @@ Wonderful, I think that’s it. Let’s get drink-making!
 
 I would like a Happy Death, please. It’s pretty simple, just some cheery blossom sake and angel tears. 
 
-It’s my husband’s favorite drink, I make it for him on our anniversary every year! Bobby absolutely loves cheery blossom sake. Boothany keeps wanting to drink some, we’re waiting until her 150th birthday to let her have a sip. Oh, look at me, talking on and on again! 
+It’s my husband’s favorite drink, I make it for him on our anniversary every year! Bobby absolutely loves cheery blossom sake. Boothany keeps wanting to drink some, we’re waiting until her 150th birthday to let her have a sip. 
+
+Oh, look at me, talking on and on again! 
 
 //highlight order log
 Don’t worry! If someone talks so much that you forget the ingredients they mentioned, you can look at the order log. It has all the instructions they mentioned to you. 
@@ -39,7 +45,9 @@ You’re doing great! Now add some blood.
 
 //spotlight clear
 <<tutorialEnableClearButton Ghost>>
-Sorry, I set you up for that one. See how it’s the wrong color? That means that you added the wrong ingredient or mixed the wrong ingredient ratios. Not a problem— as Bobby likes to say, mistakes are just lessons we haven’t learned yet! But now we’ve learned. So go clear the drink and we can start over!
+Sorry, I set you up for that one. See how it’s the wrong color? That means that you added the wrong ingredient or mixed the wrong ingredient ratios. 
+
+Not a problem— as Bobby likes to say, mistakes are just lessons we haven’t learned yet! But now we’ve learned. So go clear the drink and we can start over!
 
 //spotlight cheery blossom, then glass
 <<tutorialUseIngredient Ghost cheeryBlossom>>
@@ -58,7 +66,9 @@ The color still isn’t quite as I imagined. Try adding more angel tears until t
 It looks perfect! Now just click on it to equip  and then click on me to give me the finished drink. 
 
 //smiling ghost sprite
-Beautiful. That was a mouthful, but now you know how to run your bar! Don’t worry, other monsters shouldn’t talk for as long as I did. They still might mention a thing or two about their own lives. Make sure to listen— bartending is about the connection as much as it is about making drinks. 
+Beautiful. That was a mouthful, but now you know how to run your bar! Don’t worry, other monsters shouldn’t talk for as long as I did. 
+
+They still might mention a thing or two about their own lives. Make sure to listen— bartending is about the connection as much as it is about making drinks. 
 
 Anyways, I’d best be off to pick up Boothany. I have to take her back to our graveyard and then we have family charades scheduled! Very exciting.
  
