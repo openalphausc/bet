@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class YarnBarTending : MonoBehaviour
 {	
@@ -90,6 +91,8 @@ public class YarnBarTending : MonoBehaviour
         // GameObject.Find("Blender").SetActive(true);
 	}
 
+    
+
 	public static void DisableDialogueFunctions() {
 		GameObject.Find("Click to Continue").GetComponent<Button>().interactable = false;
 		Continue.isEnabled = false;
@@ -99,5 +102,16 @@ public class YarnBarTending : MonoBehaviour
 		GameObject.Find("Click to Continue").GetComponent<Button>().interactable = true;
 		Continue.isEnabled = true;
 	}
+
+
+    //light stuff
+
+    [YarnCommand("tutorialLightCues")]
+    public void TutorialLightCues(string thing)
+    {
+        Debug.Log("good job kiddo");
+        TutorialSpotlight.spot.enabled = true;
+		TutorialSpotlight.spot.transform.position = new Vector3(0, 0, 0);
+    }
 
 }
