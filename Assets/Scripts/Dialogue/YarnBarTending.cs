@@ -110,6 +110,7 @@ public class YarnBarTending : MonoBehaviour
     public void TutorialLightCues(string thing)
     {
         TutorialSpotlight.spot.enabled = true;
+        TutorialSpotlight.spot.transform.position = new Vector3(GameObject.Find(thing).transform.position.x, GameObject.Find(thing).transform.position.y, 0);
     }
 
 }
