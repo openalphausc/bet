@@ -11,6 +11,7 @@ public class TutorialSpotlight : MonoBehaviour
     void Start()
     {
         spot = GetComponent<Light2D>();
+        spot.enabled = false;
     }
 
     // Update is called once per frame

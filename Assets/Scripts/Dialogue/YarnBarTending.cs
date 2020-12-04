@@ -109,9 +109,7 @@ public class YarnBarTending : MonoBehaviour
     [YarnCommand("tutorialLightCues")]
     public void TutorialLightCues(string thing)
     {
-        Debug.Log("good job kiddo");
         TutorialSpotlight.spot.enabled = true;
-		TutorialSpotlight.spot.transform.position = new Vector3(0, 0, 0);
     }
 
 }

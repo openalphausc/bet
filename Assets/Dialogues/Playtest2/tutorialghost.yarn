@@ -24,6 +24,7 @@ I think I’ll have a Happy Death today, please. It’s my husband’s favorite 
 Don’t worry if you forgot! Remember, you’ve got your order log here, it has all the instructions a customer mentions to you. 
 
 //spotlight cheery blossom, then glass
+<<tutorialLightCues Ghost cheeryBlossom>>
 <<tutorialUseIngredient Ghost cheeryBlossom>>
 We’re ready to start! Click on the cheery blossom sake to equip it. Then hover over the drink glass and click to pour!
 
