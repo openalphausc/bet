@@ -6,7 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class YarnAfterHours : MonoBehaviour
 {
-    
+    void Start()
+    {
+        //if (SceneManager.GetActiveScene().name == "AfterHours")
+        //{
+            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH1");
+        //}
+    }
     [YarnCommand("finishedTalkingWith")]
     public void deleteMonster()
     {

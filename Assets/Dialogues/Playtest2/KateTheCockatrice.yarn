@@ -14,10 +14,10 @@ position:
 	I'm not picky about how it looks, as long as it tastes delicious!
 
 *Do you want to invite them to stay after hours?*
---> Yes
-	<<inviteToAfterHours KatetheCockatrice>>
+-> Yes
+	<<inviteToAfterHours KateTheCockatrice>>
 	I would love to! I have to run some errands, but I'll be back at closing time!
---> No
+-> No
 ===
 
 
