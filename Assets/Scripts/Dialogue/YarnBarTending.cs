@@ -23,7 +23,6 @@ public class YarnBarTending : MonoBehaviour
        // if (gameObject.GetComponent<Monster>().happiness >= 0)
         //{
             dataStorage.stayingMonster = gameObject.name;
-            Debug.Log(gameObject.name + " invited to after hours.");
        /* }
         else
         {

@@ -21,7 +21,7 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentMonster != null)
+        if (currentMonster == null)
         {
             currentMonster = GetFirstMonster();
             currentMonster.GetComponent<Monster>().inAfterHours = true;
