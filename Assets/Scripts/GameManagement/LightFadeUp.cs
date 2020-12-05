@@ -23,11 +23,16 @@ public class LightFadeUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer < fadeUpTime)
+        if (timer < fadeUpTime && MonsterSpawner.inTutorial)
         {
             timer += Time.deltaTime;
             // intensity of light fades up, proportional with the time it takes
-            light.intensity = Mathf.Lerp(0, maxIntensity, timer / fadeUpTime);
+            light.intensity = Mathf.Lerp(0, maxIntensity/2, timer / fadeUpTime);
+        }
+        else if (!MonsterSpawner.inTutorial)
+        {
+            timer += Time.deltaTime;
+            light.intensity = Mathf.Lerp(maxIntensity/2, maxIntensity, timer / fadeUpTime);
         }
     }
 
