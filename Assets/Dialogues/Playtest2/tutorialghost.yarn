@@ -13,7 +13,6 @@ They won’t even care about how long you take, if the drink is what they ordere
 
 Sorry, I was babbling! I should go ahead and order, shouldn’t I? I’ll help you out a bit, I know you’ve got lots on your mind...
 
-//reference drink highlight
 See the color here? Monsters will explain their orders to you, but we aren't perfect. This color shows what we’re thinking, so you can figure out what we want even if we left it out. Now for my drink… hmm...
 
 I think I’ll have a Happy Death today, please. It’s my husband’s favorite drink, Bobby absolutely loves it. It’s pretty simple, just some cheery blossom sake and angel tears. 
@@ -21,45 +20,46 @@ I think I’ll have a Happy Death today, please. It’s my husband’s favorite 
 Oh, look at me, talking on and on again! 
 
 //highlight order log
-<<tutorialLightCues Ghost RecipeSheet>>
+<<tutorialLightCues Ghost RecipeSheet _>>
 Don’t worry if you forgot! Remember, you’ve got your order log here, it has all the instructions a customer mentions to you. 
 
 //spotlight cheery blossom, then glass
-<<tutorialLightCues Ghost cheeryBlossom>>
+<<tutorialLightCues Ghost cheeryBlossom Glass>>
 <<tutorialUseIngredient Ghost cheeryBlossom>>
 We’re ready to start! Click on the cheery blossom sake to equip it. Then hover over the drink glass and click to pour!
 
 //spotlight on blood, then glass 
-<<tutorialLightCues Ghost blood>>
+<<tutorialLightCues Ghost blood Glass>>
 <<tutorialUseIngredient Ghost blood>>
 Now for some blood... 
 
 //spotlight clear button
-<<tutorialLightCues Ghost ClearGlassButton>>
+<<tutorialLightCues Ghost ClearGlassButton _>>
 <<tutorialEnableClearButton Ghost>>
 Ack, so sorry, even my mind is a bit fuzzy today! It’s the wrong color, but not a problem— as Bobby always says, mistakes are just lessons we haven’t learned yet! Let's clear this drink, we can start over.
 
 //spotlight cheery blossom, then glass
-<<tutorialLightCues Ghost cheeryBlossom>>
+<<tutorialLightCues Ghost cheeryBlossom Glass>>
 <<tutorialUseIngredient Ghost cheeryBlossom>>
 Second try! Let’s add the wonderful cheery blossom sake again. 
 
 //spotlight angel tears, then glass
-<<tutorialLightCues Ghost angelTears>>
+<<tutorialLightCues Ghost angelTears Glass>>
 <<tutorialUseIngredient Ghost angelTears>>
 And now for the angel tears!
 
 //spotlight angel tears, then glass
-<<tutorialLightCues Ghost angelTears>>
+<<tutorialLightCues Ghost angelTears Glass>>
 <<tutorialEnableIngredient Ghost angelTears>>
 The color still isn’t quite right, just try adding more angel tears until the color matches! 
 
 //arrow appears from glass to monster
-<<tutorialLightCues Ghost Glass>>
+<<tutorialLightCues Ghost Glass _>>
 <<tutorialEnableCup Ghost>>
 It looks perfect! Now just click on it to equip and then click on me to give me the finished drink. 
 
 //smiling ghost sprite
+<<tutorialLightCues Ghost _ _>>
 Beautiful. See? You still got that bartending touch. Don’t worry about the BBC, it’ll all work out in the end. 
 
 Make sure to listen to the other customers too, they might mention a thing or two about their own lives. 

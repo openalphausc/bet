@@ -107,10 +107,30 @@ public class YarnBarTending : MonoBehaviour
     //light stuff
 
     [YarnCommand("tutorialLightCues")]
-    public void TutorialLightCues(string thing)
+    public void TutorialLightCues(string firstItem, string secondItem)
     {
-        TutorialSpotlight.spot.enabled = true;
-        TutorialSpotlight.spot.transform.position = new Vector3(GameObject.Find(thing).transform.position.x, GameObject.Find(thing).transform.position.y, 0);
+        TutorialSpotlight.spot1.enabled = true;
+        if (secondItem != "_")
+        {
+            TutorialSpotlight.spot2.enabled = true;
+            TutorialSpotlight.spot2.transform.position = new Vector3(GameObject.Find(secondItem).transform.position.x, GameObject.Find(secondItem).transform.position.y, 0);
+        }
+        else
+        {
+            TutorialSpotlight.spot2.enabled = false;
+        }
+        if (firstItem == "ClearGlassButton")
+        {
+            TutorialSpotlight.spot1.transform.position = new Vector3(0, -17.2f, 0);
+        }
+        else if (firstItem == "_")
+        {
+            TutorialSpotlight.spot1.enabled = false;
+        }
+        else
+        {
+            TutorialSpotlight.spot1.transform.position = new Vector3(GameObject.Find(firstItem).transform.position.x, GameObject.Find(firstItem).transform.position.y, 0);
+        }
     }
 
 }
