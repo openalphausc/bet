@@ -36,7 +36,7 @@ public class YarnBarTending : MonoBehaviour
 		
         GameObject.Find(ingredient).GetComponent<HoverHighlight>().isEnabled = true;
         GameObject.Find(ingredient).GetComponent<ClickIngredient>().isEnabled = true;
-		
+
 		YarnBarTending.DisableDialogueFunctions();
     }
 
