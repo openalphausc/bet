@@ -11,11 +11,13 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
 
     public static GameObject currentMonster = null;
     public DialogueRunner dRunner;  // DialogueRunner
+    public static bool active = false;
 
     // Start is called before the first frame update
     void Start()
     {
         monsterStay = dataStorage.stayingMonster;
+        active = true;
     }
 
     // Update is called once per frame
@@ -25,7 +27,6 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
         {
             currentMonster = GetFirstMonster();
             currentMonster.GetComponent<Monster>().inAfterHours = true;
-            currentMonster = null;
         }
     }
 
