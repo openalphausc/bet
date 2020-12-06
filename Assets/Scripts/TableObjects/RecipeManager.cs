@@ -68,28 +68,68 @@ public class RecipeManager : MonoBehaviour
     // Gets the drink recipes from a CSV, stores in recipes List
     void GetRecipes()
     {
-        // For each line in the CSV, set the drink name and the ingredients
-        List<List<string>> csvResults = ReadCSV(recipeFile);
-        for (int i = 0; i < csvResults.Count; i++)
+        // get csv data
+        string[] stringRecipes = recipeFile.text.Split('\n');
+        
+        // iterate through each line, char by char
+        for (int i = 1; i < stringRecipes.Length; ++i)
         {
-        	Drink currentDrink = new Drink();
-            for (int j = 0; j < csvResults[i].Count; j++)
+            bool addingToName = true;
+            bool addingToLiquids = true;
+            string currentIngredient = "";
+
+            Drink drink = new Drink();
+            for (int c = 0; c < stringRecipes[i].Length; c++)
             {
-                if (j == 0)
+                char currentChar = stringRecipes[i][c];
+
+                // if character is comma (,) add to temp ingredients list
+                if (currentChar == ',')
                 {
-                    // Recipe name
-                    currentDrink.name = csvResults[i][j];
+                    if (addingToName)
+                    {
+                        drink.name = currentIngredient;
+                        addingToName = false;
+                    }
+                    else
+                    {
+                        drink.AddIngredient(currentIngredient);
+                    }
+                    
+                    currentIngredient = "";
                 }
+                // if character is semicolon (;) add temp list to liquids then start adding to toppings
+                else if (currentChar == ';')
+                {
+                    drink.AddIngredient(currentIngredient);
+                    currentIngredient = "";
+                    drink.BlendToppings();
+                    addingToLiquids = false;
+                }
+                // if character is letter, add it to string
                 else
                 {
-                    // Ingredient
-                    currentDrink.AddIngredient(csvResults[i][j]);
+                    currentIngredient += currentChar;
                 }
             }
 
-            currentDrink.BlendToppings();
-            recipes.Add(currentDrink);
+            // add last ingredient to drink
+            // Debug.Log(currentIngredient);
+            if (!string.IsNullOrEmpty(currentIngredient))
+            {
+                drink.AddIngredient(currentIngredient);
+                if (addingToLiquids)
+                {
+                    drink.BlendToppings();
+                }
+            }
+
+            // add to recipes
+            recipes.Add(drink);
+
+            Debug.Log(drink);
         }
+        // sort recipes list
         recipes.Sort(new Drink.DrinkComp());
     }
 
