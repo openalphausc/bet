@@ -54,4 +54,6 @@ Moe: So, um, what do you think?
 
 Toe: Thanks for all your help, I never know how to deal with the ideas my siblings have.
 Player: I'm here to help. And before I forget, happy birthday! Let me know how the party goes.
+
+<<finishedTalkingWith 3Gremlins>>
 ===

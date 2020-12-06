@@ -49,4 +49,6 @@ Mummy: Thank you, you've given me a lot to think about.
 Mummy: I'll admit you've surprised me bartender. I expected you to just get me drunk.
 Player: Just trying to give as many folks comfort in these times Miss.
 Mummy: I appreciate it. Also, the name's Khepri.
+
+<<finishedTalkingWith Khepri>>
 ===

@@ -89,6 +89,8 @@ public class Drink
         bool isTopping = allToppings.Contains(newIngredient);
         if (isLiquid == isTopping)
         {
+            if (newIngredient == "") return false;
+            
             Debug.Log(
                 "AH BIG ERROR; TRIED TO ADD AN INGREDIENT TO THE DRINK AND IT WAS NOT PROPERLY ASSIGNED AS A LIQUID OR A TOPPING!");
 
@@ -122,7 +124,8 @@ public class Drink
     {
         if(recipeManager == null) recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
         color = new Color(0, 0, 0);
-        foreach(string liquid in liquids) {
+        foreach(string liquid in liquids)
+        {
             color += recipeManager.ingredientColors[liquid];
         }
         color /= liquids.Count;

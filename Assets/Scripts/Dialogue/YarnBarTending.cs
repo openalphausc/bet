@@ -9,6 +9,12 @@ public class YarnBarTending : MonoBehaviour
 {	
 
 	public static bool multipleIngredients = false;
+	public static YarnBarTending instance = null;
+
+	void Start()
+	{
+		if (instance == null) instance = this;
+	}
 
     [YarnCommand("inviteToAfterHours")]
     public void StayAfter()
@@ -95,9 +101,26 @@ public class YarnBarTending : MonoBehaviour
 		Continue.isEnabled = false;
 	}
 
-	public static void EnableDialogueFunctions() {
-		GameObject.Find("Click to Continue").GetComponent<Button>().interactable = true;
+	public static void EnableDialogueFunctions()
+	{
+		// Start a new thread that waits for the continue button to appear (must be called on an instance)
+		instance.StartCoroutine(EnableContinueButton());
 		Continue.isEnabled = true;
+	}
+
+	static IEnumerator EnableContinueButton()
+	{
+		while (true)
+		{
+			var button = GameObject.Find("Click to Continue");
+			if (button)
+			{
+				button.GetComponent<Button>().interactable = true;
+				break;
+			}
+
+			yield return null;
+		}
 	}
 
 }
