@@ -11,13 +11,16 @@ position:
 	I'll have the xXSicarusXx. Sweet name, right?
 	You pour a bit of angel tears, a bit of vodka. Then you blend something else in— something cool and trippy. 
 <<endif>>
-	Thanks loads. I don't know what it is, I'm just, like, such a fan of this drink.
+Thanks loads. I don't know what it is, I'm just, like, such a fan of this drink.
 
-*Do you want to invite them to stay after hours?*
--> Yes
-	<<inviteToAfterHours Zombie>>
-	Sure, sounds rad!
--> No
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Zombie>>
+		<<set $invitedAMonster to true>> 
+		Sure, sounds rad!
+	-> No
+<<endif>>
 ===
 
 
@@ -44,6 +47,7 @@ Anyway, what do you think? Are POVs too mainstream now?
 
 What! Wait...That’s actually...a really good idea. You know what, you’re not so bad. I’ll tell all of my TrickTok followers to stop by here but, like, in a cool understated way. 
 
+<<set $invitedAMonster to false>>
 <<finishedTalkingWith Zombie>>
 ===
 

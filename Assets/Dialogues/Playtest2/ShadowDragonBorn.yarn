@@ -9,12 +9,16 @@ position:
 <<else>>
 	Ahem, I would like a Tempestuous Torment. I believe it calls for some whiskey, blood, deathshade berries, and oh yes! How could I forget, something dark that will send scares through the drink. 
 <<endif>>
-    Much thanks.
-*Do you want to invite them to stay after hours?*
--> yes
-	<<inviteToAfterHours ShadowDragonBorn>>
-	Okay then, we shall meet again.
--> No
+Much thanks.
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> yes
+		<<inviteToAfterHours ShadowDragonBorn>>
+		<<set $invitedAMonster to true>>
+		Okay then, we shall meet again.
+	-> No
+<<endif>>
 ===
 
 
@@ -41,5 +45,6 @@ Can’t help feelin’ guilty about this shitshow. I’m workin’ for ‘em, kn
 
 Hell, you’re right. I’ll give it some time and see how it goes. Keep an eye out, yeah? I’ll see ya around soon.
 
+<<set $invitedAMonster to false>>
 <<finishedTalkingWith ShadowDragonBorn>>
 ===

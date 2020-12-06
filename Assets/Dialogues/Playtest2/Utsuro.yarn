@@ -15,11 +15,15 @@ position:
 	But I thought there was something that made it was redder than that...
 <<endif>>
 ...Thank you... sorry... I'm kinda nervous talking to new people..
-*Do you want to invite them to stay after hours?*
--> yes
-	<<inviteToAfterHours Utsuro>>
-	S-s-sure... see you there!
--> No
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> yes
+		<<inviteToAfterHours Utsuro>>
+		<<set $invitedAMonster to true>>
+		S-s-sure... see you there!
+	-> No
+<<endif>>
 ===
 
 
@@ -46,6 +50,7 @@ I wish I were friends with these people... or these kind of people. Telemarketin
 -> Well, maybe give it some time. You could get better at talking if you worked on it. It's all about confidence and having an enthusiastic tone of voice!
 Hm... uh... alright... I'm gonna go to sleep now... see you.
 
+<<set $invitedAMonster to false>>
 <<finishedTalkingWith Utsoro>>
 ===
 

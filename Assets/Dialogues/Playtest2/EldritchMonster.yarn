@@ -11,11 +11,14 @@ position:
 <<endif>>
 	I've noticed that jokes don't land if you haven't got <an eye> for the language.
 
-*Do you want to invite them to stay after hours?*
--> Yes
-	<<inviteToAfterHours EldritchMonster>>
-	That would be great. It'll give me an excuse to practice my jokes. An eye for an eye, right?
--> No
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours EldritchMonster>>
+		<<set $invitedAMonster to true>>
+		That would be great. It'll give me an excuse to practice my jokes. An eye for an eye, right?
+	-> No
+<<endif>>
 ===
 
 
@@ -57,5 +60,6 @@ But <this thing is> SO ITCHY.
 
 Thanks for the tip, bartender. I’ll <see> you <around again> soon.
 
+<<set $invitedAMonster to false>>
 <<finishedTalkingWith EldritchMonster>>
 ===
