@@ -112,7 +112,7 @@ public class Monster : MonoBehaviour
             }
 
             // slide off when ready
-            if (state == MonsterState.center && readyToLeave)
+            if (state == MonsterState.center && readyToLeave && !MonsterSpawner.inTutorial)
             {
                 Monster.currentlyOrdering = false;
                 Monster.currentlyOrderingMonster = null;
@@ -133,8 +133,7 @@ public class Monster : MonoBehaviour
                 FindObjectOfType<Yarn.Unity.DialogueUI>().DialogueComplete();
                 FindObjectOfType<NodeVisitedTracker>().NodeComplete(dialogueToStart);
                 // hide the drink icon
-                drinkIcon.transform.GetChild(0).gameObject.SetActive(false);
-                drinkIcon.transform.GetChild(1).gameObject.SetActive(false);
+                GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDialogueSystem();
             }
 
             if (state == MonsterState.slidingOff)
@@ -164,6 +163,10 @@ public class Monster : MonoBehaviour
 
 		// hide the drink icon
 		GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDialogueSystem();
+
+		if (MonsterSpawner.inTutorial) {
+			YarnBarTending.EnableDialogueFunctions();
+		}
     }
 
     public void OnMouseDown()

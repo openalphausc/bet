@@ -1193,7 +1193,7 @@ GameObject:
   - component: {fileID: 5639802913115681769}
   m_Layer: 0
   m_Name: Click to Continue
-  m_TagString: Untagged
+  m_TagString: ContinueButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

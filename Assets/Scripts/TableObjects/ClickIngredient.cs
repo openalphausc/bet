@@ -7,6 +7,8 @@ public class ClickIngredient : MonoBehaviour
     private EquipIngredient equipIngredient;
     
     private bool mouseDown = false;
+    
+    public bool isEnabled = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,7 @@ public class ClickIngredient : MonoBehaviour
 
     void OnMouseDown()
     {
-        mouseDown = true;
+        if (isEnabled) mouseDown = true;
     }
 
     void OnMouseExit()

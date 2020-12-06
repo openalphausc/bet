@@ -1,0 +1,85 @@
+title: TutorialGhostDay1
+tags:
+colorID:
+position:
+---
+
+//ghost enters
+Hello, my name is Bob! I was on my way to pick up my daughter from Undead Daycare but I spotted your lovely bar. I just had to float by. I’m always two hours early anyways— I just don’t want to be late to get Boothany from daycare! 
+
+Besides, their secretary skeleton is an excellent conversationalist. 
+
+Sorry, I was babbling! I should go ahead and order, shouldn’t I? 
+
+Silly me, you don’t know how this works yet! You look so nervous, but I promise there isn’t anything to worry about. They can get annoyed if you ignore them, but otherwise monsters around here are pretty understanding. 
+
+They don’t even care about how long you take, if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to de-stress after a long night.
+
+Monsters will come here and sit down, just like me! If you select us then we’ll tell you our order. Sometimes it can get quite lengthy, so make sure—
+
+—to read the whole thing. See what I did there!? If it doesn’t have a pun, it doesn’t count as a dad joke, right? Or is every joke a dad makes a dad joke? Huh...
+
+//reference drink highlight
+As we order, you can see this little reference color hover above us. Spooky, right? Don’t worry, it’s not haunted. It’s a hint, just for you! No one else can see it. In fact, after this tutorial I’m going to pretend I don’t see it! What can I say, I’m a fan of consistency. 
+
+Monsters will explain their orders to you, but our memories aren’t always perfect. This reference color shows what we’re thinking about, so that you can piece together the ingredients even if we left something out. 
+
+Wonderful, I think that’s it. Let’s get drink-making!
+
+I would like a Happy Death, please. It’s pretty simple, just some cheery blossom sake and angel tears. 
+
+It’s my husband’s favorite drink, I make it for him on our anniversary every year! Bobby absolutely loves cheery blossom sake. Boothany keeps wanting to drink some, we’re waiting until her 150th birthday to let her have a sip. 
+
+Oh, look at me, talking on and on again! 
+
+//highlight order log
+Don’t worry! If someone talks so much that you forget the ingredients they mentioned, you can look at the order log. It has all the instructions they mentioned to you. 
+
+//spotlight cheery blossom, then glass
+<<tutorialUseIngredient Ghost cheeryBlossom>>
+We’re ready to start! Click on the cheery blossom sake to equip it. Then hover over the drink glass and click to pour!
+
+//spotlight on blood, then glass 
+<<tutorialUseIngredient Ghost blood>>
+You’re doing great! Now add some blood. 
+
+//spotlight clear
+<<tutorialEnableClearButton Ghost>>
+Sorry, I set you up for that one. See how it’s the wrong color? That means that you added the wrong ingredient or mixed the wrong ingredient ratios. So go clear the drink and we can start over!
+
+//spotlight cheery blossom, then glass
+<<tutorialUseIngredient Ghost cheeryBlossom>>
+Second try! Let’s add the wonderful cheery blossom sake again. 
+
+//spotlight angel tears, then glass
+<<tutorialUseIngredient Ghost angelTears>>
+And now for the angel tears!
+
+//spotlight angel tears, then glass
+<<tutorialEnableIngredient Ghost angelTears>>
+The color still isn’t quite as I imagined. Try adding more angel tears until the color matches. 
+
+//arrow appears from glass to monster
+<<tutorialEnableCup Ghost>>
+It looks perfect! Now just click on it to equip  and then click on me to give me the finished drink. 
+
+//smiling ghost sprite
+Beautiful. That was a mouthful, but now you know how to run your bar! Don’t worry, other monsters shouldn’t talk for as long as I did. 
+
+They still might mention a thing or two about their own lives. Make sure to listen— bartending is about the connection as much as it is about making drinks. 
+
+Anyways, I’d best be off to pick up Boothany. I have to take her back to our graveyard and then we have family charades scheduled! Very exciting.
+ 
+You should have time to invite a monster back for a chat after the bar closes. Isn’t that lovely? Only one monster a day, though, since you do close on the later side. 
+
+Tonight’s a slight exception— I think I’ll stop by quickly to see how things are doing as the bar closes. Then you can talk to the monster you invited, start making friends! Friends are great. Teamwork makes the dream work, as they say… 
+
+I think having a toddler for the last century is beginning to get to me. 
+
+Oh, and don’t worry if you forget to invite anyone! If that happens then the monster you last served will decide to stay over. 
+
+Fantastic. I’ll be back later. If you wanted I could even show some of Boothany’s baby pictures… In the meantime, best of luck with bartending! It looks like you already have some new customers… 
+
+<<endTutorial Ghost>>
+===
+
