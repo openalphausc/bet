@@ -55,8 +55,8 @@ public class Monster : MonoBehaviour
     private float seatTimer = 0.0f;
 
     // Points for keeping track how well a player is serving a monster
-    public int pointsEarned = 0;
-    public int totalPoints = 0;
+    public int pointsEarned;
+    public int totalPoints;
 
     // Start is called before the first frame update
     void Start()
