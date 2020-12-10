@@ -1,0 +1,9 @@
+BobTheGhost
+GeneralMonster1, KhepriTheMummy
+BobTheGhost
+SkaterEBoy, KnifeUnicorn, GeneralMonster2, KateTheCockatrice, CowboyAlien
+BobTheGhost
+3Gremlins, GeneralMonster3, GalahadTheDragonBorn, GeneralMonster4, EldritchMonster, Utsuro, GeneralMonster5, Shapeshifter
+GeneralMonster6, KhepriTheMummy, GeneralMonster7, SkaterEBoy, KnifeUnicorn, GeneralMonster8, GeneralMonster9, GeneralMonster10, KateTheCockatrice, GeneralMonster11, CowboyAlien
+3Gremlins, GeneralMonster12, GeneralMonster13, GalahadTheDragonborn, EldritchMonster, GeneralMonster14, GeneralMonster15, GeneralMonster16, GeneralMonster17, Utsuro, GeneralMonster18, Shapeshifter, GeneralMonster19, GeneralMonster20
+SkaterEBoy, Utsuro, EldritchMonster, Shapeshifter, BobTheGhost, 3Gremlins, KnifeUnicorn, CowboyAlien, KateTheCockatrice, GalahadTheDragonborn, KhepriTheMummy
