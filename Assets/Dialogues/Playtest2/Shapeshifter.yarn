@@ -13,11 +13,15 @@ position:
 	Alright, you got me. I'm a shapeshifter, angel tears make me sick, yada yada. But I can explain!
 <<endif>>
 Also, I gotta get home soon to do homework- I mean, intense hero training.
-*Do you want to invite them to stay after hours?*
--> Yes
-	<<inviteToAfterHours Shapeshifter>>
-	Thanks, bartender. We have a lot to talk about.
--> No
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Shapeshifter>>
+		<<set $invitedAMonster to true>> 
+		Thanks, bartender. We have a lot to talk about.
+	-> No
+<<endif>>
 ===
 
 
@@ -54,4 +58,7 @@ So, will you help me?
 -> Sounds legit. Come back another day and I’ll have your angel tears.
 
 Wait, seriously? That’s awesome, okay! See you soon, bartender!
+
+<<set $invitedAMonster to false>>
+<<finishedTalkingWith Shapeshifter>>
 ===

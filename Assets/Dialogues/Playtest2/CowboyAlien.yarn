@@ -14,12 +14,15 @@ position:
 <<endif>>
 Just take your time, I'd rather have a good drink than a rushed drink ya'hear?
 
-*Do you want to invite them to stay after hours?*
--> Yes
-	<<inviteToAfterHours CowboyAlien>>
-	Well of course! I'd be happy to chat!
--> No
-	Sorry, but that's a no-can-do pardner.
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours CowboyAlien>>
+		<<set $invitedAMonster to true>>
+		Well of course! I'd be happy to chat!
+	-> No
+		Sorry, but that's a no-can-do pardner.
+<<endif>>
 ===
 
 title: CowboyAlienAH1
@@ -47,4 +50,7 @@ CA: I know this town’s got its problems too, but do you think they’d be will
 	CA: You raise a good point, does seem like I might be a hair more attached than I’d like to admit doesn’t it?
 
 CA: Anyway, time to retire to that velvet couch back on the ship, I’ll be seein’ you around!
+
+<<set $invitedAMonster to false>>
+<<finishedTalkingWith CowboyAlien>>
 ===

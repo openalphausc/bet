@@ -17,12 +17,16 @@ position:
 		Choccy Milk is my favoritest drink ever, it's got Poison Apple Juice, blood, graveyard mud, zombie flesh, death shade, and something shimmery on top, I can't seem to remember.
 <<endif>>
 Make sure you get the flesh, blood, mud, and death shade directly from the graveyard.
-*Do you want to invite them to stay after hours?*
--> Yes
-	<<inviteToAfterHours 3Gremlins>>
-	Totally! We'd love to, but we'll have to clear it with mom.
--> No
-	I don't think mom will let us hang out with a stranger anyway, especially past 9pm curfew!
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours 3Gremlins>>
+		<<set $invitedAMonster to true>>
+		Totally! We'd love to, but we'll have to clear it with mom.
+	-> No
+		I don't think mom will let us hang out with a stranger anyway, especially past 9pm curfew!
+<<endif>>
 ===
 title: 3GremlinsAH1
 tags:
@@ -54,4 +58,7 @@ Moe: So, um, what do you think?
 
 Toe: Thanks for all your help, I never know how to deal with the ideas my siblings have.
 Player: I'm here to help. And before I forget, happy birthday! Let me know how the party goes.
+
+<<set $invitedAMonster to false>>
+<<finishedTalkingWith 3Gremlins>>
 ===
