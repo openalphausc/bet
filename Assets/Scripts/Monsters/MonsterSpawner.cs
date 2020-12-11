@@ -188,13 +188,13 @@ public class MonsterSpawner : MonoBehaviour
         }
         
         // toppings
-        GameObject.Find("nightmareFuel").SetActive(false);
-        GameObject.Find("goldenDust").SetActive(false);
-        GameObject.Find("mud").SetActive(false);
-        GameObject.Find("zombieFlesh").SetActive(false);
+        GameObject.Find("nightmareFuel").SetActive(true);
+        GameObject.Find("goldenDust").SetActive(true);
+        GameObject.Find("mud").SetActive(true);
+        GameObject.Find("zombieFlesh").SetActive(true);
         
         // misc
-        GameObject.Find("Blender").SetActive(false);
+        GameObject.Find("Blender").SetActive(true); // TEMP SET BACK TO FALSE
 
         // Spawn ghost in
         SpawnMonster();

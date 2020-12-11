@@ -13,6 +13,8 @@ public class Blender : MonoBehaviour
     private float maxBlendTime = 3.0f;
 
     private float glassYPosition = -11.2f;
+
+    public AudioSource mixSound;
     
     // Start is called before the first frame update
     void Start()
@@ -51,6 +53,9 @@ public class Blender : MonoBehaviour
         
         // disappear the glass by teleporting it way offscreen lol
         glassMove.gameObject.transform.position = new Vector3(0, 10000, 0);
+        
+        // start sound
+        mixSound.Play();
     }
 
     private void StopBlending()
@@ -64,7 +69,10 @@ public class Blender : MonoBehaviour
         glassFill.currentDrink.BlendToppings();
         
         // update sprite
-        glassFill.UpdateDrinkSprite();
+        glassFill.UpdateDrinkSprite(false);
+        
+        // stop sound
+        mixSound.Stop();
     }
 
     public void OnMouseUp()
