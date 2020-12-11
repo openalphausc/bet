@@ -104,7 +104,7 @@ MonoBehaviour:
   dialogueToStart: KhepriOrder
   ordersFile: {fileID: 4900000, guid: 22fbe7654c45a56458f8e0933c3838f7, type: 3}
   prefab: {fileID: 0}
-  happiness: -4
+  happiness: -6
 --- !u!61 &1839809940294750953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,18 +118,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11759281, y: 2.7342815}
+  m_Offset: {x: -0.11759281, y: 4.842786}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.98, y: 15.86}
+    oldSize: {x: 7, y: 16.06}
     newSize: {x: 7, y: 16.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.15271, y: 11.66029}
+  m_Size: {x: 8.15271, y: 7.443281}
   m_EdgeRadius: 0
 --- !u!114 &2591666752899558129
 MonoBehaviour:
