@@ -40,7 +40,7 @@ public class MonsterSpawner : MonoBehaviour
         {
             Debug.Log(monstersToSpawn[i]);
         }*/
-        //if (inTutorial) RunTutorial();
+        //if (inTutorial) RunTutorial(); 
     }
 
     // Update is called once per frame
