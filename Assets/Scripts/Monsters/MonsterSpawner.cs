@@ -12,10 +12,8 @@ public class MonsterSpawner : MonoBehaviour
     public List<Monster> monstersToSpawn = new List<Monster>();
     public List<Monster> monstersOnScreen = new List<Monster>();
     public int totalMonstersSpawned = 0;
-    public Queue<Monster>[] MonsterQueue = new Queue<Monster>[9];
-    public Queue<Monster> MonstersOfTheDay = new Queue<Monster>();
-    public Queue<string>[] MonsterQueueS = new Queue<string>[9];
-    public Queue<string> MonstersOfTheDayS = new Queue<string>();
+    public Queue<string>[] monsterQueue = new Queue<string>[6];
+    public Queue<string> monstersOfTheDay = new Queue<string>();
     public int maxTotalMonsters = 10;
     public int maxMonstersOnScreen;
 
@@ -32,22 +30,15 @@ public class MonsterSpawner : MonoBehaviour
     void Start()
     {
         CreateMonsterQueue();
-        MonstersOfTheDay = MonsterQueue[currDay];
-        MonstersOfTheDayS = MonsterQueueS[currDay];
+        monstersOfTheDay = monsterQueue[currDay];
 
         CreateBarSeats();
-        /*for(int i = 0; i < monstersToSpawn.Count; ++i)
-        {
-            Debug.Log(monstersToSpawn[i]);
-        }*/
-        //if (inTutorial) RunTutorial(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currDay);
-        if ((currDay == 0/* || currDay == 1 || currDay == 2*/) && !tutorialHasRun)
+        if ((currDay >= 0 && currDay <= 2) && !tutorialHasRun)
         {
             inTutorial = true;
             RunTutorial();
@@ -58,7 +49,7 @@ public class MonsterSpawner : MonoBehaviour
         if (!inTutorial)
         {
             // increment time until next monster spawn
-            if (monstersOnScreen.Count < maxMonstersOnScreen /*&& totalMonstersSpawned < maxTotalMonsters*/)
+            if (monstersOnScreen.Count < maxMonstersOnScreen)
             {
                 if (timeUntilNextSpawn > Time.deltaTime)
                 {
@@ -86,13 +77,12 @@ public class MonsterSpawner : MonoBehaviour
                     timeUntilNextSpawn = GetSpawnTime();
 
                     // if already served all monsters, go to after hours
-                    Debug.Log(MonstersOfTheDayS.Count);
-                    if (MonstersOfTheDayS.Count == 0 && monstersOnScreen.Count == 0)//totalMonstersSpawned >= maxTotalMonsters)
+                    if (monstersOfTheDay.Count == 0 && monstersOnScreen.Count == 0)
                     {
                         Debug.Log("GoingtoAfterHours");
                         SceneManager.LoadScene("AfterHours");
                         currDay++;
-                        MonstersOfTheDayS = MonsterQueueS[currDay];
+                        monstersOfTheDay = monsterQueue[currDay];
                         tutorialHasRun = false;
 
                         return;
@@ -110,11 +100,12 @@ public class MonsterSpawner : MonoBehaviour
 
     void SpawnMonster()
     {
-        if (MonstersOfTheDayS.Count == 0)
+        if (monstersOfTheDay.Count == 0)
         {
             Debug.Log("Tried to spawn a monster, but there isn't a monster in the list to spawn.");
             return;
         }
+
         // no available seats
         if (GetAvailableSeat() == null)
         {
@@ -123,23 +114,33 @@ public class MonsterSpawner : MonoBehaviour
             return;
         }
 
-        if (MonstersOfTheDayS.Count != 0)
+        if (monstersOfTheDay.Count != 0)
         {
-            string currMonster = MonstersOfTheDayS.Dequeue();
-            Debug.Log(currMonster);
-            Debug.Log(currDay);
-            Monster instantiatedMonster = Instantiate(findMonster(currMonster));
-            instantiatedMonster.name = findMonster(currMonster).name;
-            instantiatedMonster.prefab = findMonster(currMonster);
+            string currMonster = monstersOfTheDay.Dequeue();
+
+            int monsterIndex = -1;
+
+            for (int i = 0; i < monstersToSpawn.Count; ++i)
+            {
+                if (monstersToSpawn[i].name.Equals(currMonster) == true)
+                {
+                    monsterIndex = i;
+                    break;
+                }
+            }
+
+            if (monsterIndex == -1)
+            {
+                Debug.Log("Monster couldn't be found.");
+                return;
+            }
+
+            Monster instantiatedMonster = Instantiate(monstersToSpawn[monsterIndex]);
+            instantiatedMonster.name = monstersToSpawn[monsterIndex].name;
+            instantiatedMonster.prefab = monstersToSpawn[monsterIndex];
             instantiatedMonster.seat = GetAvailableSeat();
-            /*
-            Monster instantiatedMonster = Instantiate(findMonster(currMonster)); //(Monster) Instantiate(Resources.Load("Assets/Resources/Prefabs/" + currMonster + ".prefab"));
-            instantiatedMonster.name = Resources.Load("Assets/Resources/Prefabs/" + currMonster).name;
-            instantiatedMonster.prefab = (Monster) Resources.Load("Assets/Resources/Prefabs/" + currMonster);
-            instantiatedMonster.seat = GetAvailableSeat();*/
             instantiatedMonster.seat.SetOccupancy(true);
 
-            //monstersToSpawn.RemoveAt(randomIndex);
             monstersOnScreen.Add(instantiatedMonster);
         }
 
@@ -225,7 +226,6 @@ public class MonsterSpawner : MonoBehaviour
 
     private void CreateMonsterQueue()
     {
-
         string path = "Assets/Text/MonsterOrderNoGenerals.txt";
 
         StreamReader reader = new StreamReader(path);
@@ -233,41 +233,21 @@ public class MonsterSpawner : MonoBehaviour
 
         while (!reader.EndOfStream)
         {
-            Queue<Monster> currMonsters = new Queue<Monster>();
-            Queue<string> currMonstersS = new Queue<string>();
+            Queue<string> currMonsters = new Queue<string>();
             string line = reader.ReadLine();
 
             string[] monsters = line.Split(',');
 
             for (int i = 0; i < monsters.Length; ++i)
             {
-                Debug.Log(currIndex + " adding: " + monsters[i]);
-
-                currMonstersS.Enqueue(monsters[i]);
-                Monster adding = findMonster(monsters[i]);
-                currMonsters.Enqueue(adding);
+                currMonsters.Enqueue(monsters[i]);
             }
 
-            MonsterQueue[currIndex] = currMonsters;
-            MonsterQueueS[currIndex] = currMonstersS;
+            monsterQueue[currIndex] = currMonsters;
             currIndex++;
         }
 
         reader.Close();
-    }
-
-    private Monster findMonster(string name)
-    {
-        for (int i = 0; i < monstersToSpawn.Count; ++i)
-        {
-            if (monstersToSpawn[i].name == name)
-            {
-                return monstersToSpawn[i];
-            }
-        }
-
-        Debug.Log("Couldn't find monster.");
-        return null;
     }
 
 }
