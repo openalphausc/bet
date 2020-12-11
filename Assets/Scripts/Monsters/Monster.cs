@@ -140,6 +140,7 @@ public class Monster : MonoBehaviour
             {
                 //Debug.Log("Sliding to exit");
                 SlideTo(exit);
+				GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
             }
 
             // set state to offscreen (ready to be despawned) if offscreen
@@ -196,6 +197,7 @@ public class Monster : MonoBehaviour
         // Increase happiness if clicked within first 15 s of sitting down
         if (seatTimer <= 15.0f) { happiness += 1; Debug.Log("Increased happiness"); }
 
+		GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = false;
     }
 
     // Slides the monster towards a location

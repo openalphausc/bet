@@ -17,6 +17,7 @@ public class YarnAfterHours : MonoBehaviour
     public void deleteMonster()
     {
         gameObject.SetActive(false);
+        AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>().inAfterHours = false;
         AfterHoursMonsterSpawner.currentMonster = null;
         AfterHoursMonsterSpawner.active = false;
         SceneManager.LoadScene("BarTendingScene");
