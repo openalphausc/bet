@@ -75,8 +75,8 @@ public class DialoguePositionTracker : MonoBehaviour
         dialogueContainer.offsetMax = new Vector2(-right, posY);
         if (drinkIcon != null)
         {
-            drinkIcon.offsetMin = new Vector2(left + 287, drinkIcon.offsetMin.y);
-            drinkIcon.offsetMax = new Vector2(-(right - 69), -93);
+            drinkIcon.offsetMin = new Vector2(744 + 287, drinkIcon.offsetMin.y);
+            drinkIcon.offsetMax = new Vector2(-(218 - 69), -93);
         }
     }
 
