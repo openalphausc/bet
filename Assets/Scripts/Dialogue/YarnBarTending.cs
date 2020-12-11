@@ -76,6 +76,7 @@ public class YarnBarTending : MonoBehaviour
 	public void EndTutorial()
     {
 		MonsterSpawner.inTutorial = false;
+		MonsterSpawner.tutorialHasRun = true;
 		
         GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
 		

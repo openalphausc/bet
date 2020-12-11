@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
+using System.IO;
 using UnityEngine.SceneManagement;
 
 public class MonsterSpawner : MonoBehaviour
@@ -10,6 +12,10 @@ public class MonsterSpawner : MonoBehaviour
     public List<Monster> monstersToSpawn = new List<Monster>();
     public List<Monster> monstersOnScreen = new List<Monster>();
     public int totalMonstersSpawned = 0;
+    public Queue<Monster>[] MonsterQueue = new Queue<Monster>[9];
+    public Queue<Monster> MonstersOfTheDay = new Queue<Monster>();
+    public Queue<string>[] MonsterQueueS = new Queue<string>[9];
+    public Queue<string> MonstersOfTheDayS = new Queue<string>();
     public int maxTotalMonsters = 10;
     public int maxMonstersOnScreen;
 
@@ -17,37 +23,54 @@ public class MonsterSpawner : MonoBehaviour
     public float timeUntilNextSpawn = -1; // will be set randomly
 
     public LightFadeUp fadeUpScript;
-    
+
     public static bool inTutorial = true;
+    public static int currDay = 0;
+    public static bool tutorialHasRun = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        CreateMonsterQueue();
+        MonstersOfTheDay = MonsterQueue[currDay];
+        MonstersOfTheDayS = MonsterQueueS[currDay];
+
         CreateBarSeats();
-        
-        if (inTutorial) RunTutorial();
+        /*for(int i = 0; i < monstersToSpawn.Count; ++i)
+        {
+            Debug.Log(monstersToSpawn[i]);
+        }*/
+        //if (inTutorial) RunTutorial();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(currDay);
+        if ((currDay == 0/* || currDay == 1 || currDay == 2*/) && !tutorialHasRun)
+        {
+            inTutorial = true;
+            RunTutorial();
+            SpawnMonster();
+            tutorialHasRun = true;
+        }
 
         if (!inTutorial)
         {
             // increment time until next monster spawn
-            if (monstersOnScreen.Count < maxMonstersOnScreen && totalMonstersSpawned < maxTotalMonsters)
+            if (monstersOnScreen.Count < maxMonstersOnScreen /*&& totalMonstersSpawned < maxTotalMonsters*/)
             {
                 if (timeUntilNextSpawn > Time.deltaTime)
                 {
                     timeUntilNextSpawn -= Time.deltaTime;
                 }
-                else if(fadeUpScript.DoneFadingUp())
+                else if (fadeUpScript.DoneFadingUp())
                 {
                     SpawnMonster();
                     timeUntilNextSpawn = GetSpawnTime();
                 }
             }
-    
+
             // cycle through on screen monsters and despawn them if they're offscreen
             // also count how many are on screen
             for (int i = 0; i < monstersOnScreen.Count; i++)
@@ -61,17 +84,23 @@ public class MonsterSpawner : MonoBehaviour
                     Destroy(monster.gameObject);
                     // start spawn timer for next monster
                     timeUntilNextSpawn = GetSpawnTime();
-                    
+
                     // if already served all monsters, go to after hours
-                    if (totalMonstersSpawned >= maxTotalMonsters)
+                    Debug.Log(MonstersOfTheDayS.Count);
+                    if (MonstersOfTheDayS.Count == 0 && monstersOnScreen.Count == 0)//totalMonstersSpawned >= maxTotalMonsters)
                     {
+                        Debug.Log("GoingtoAfterHours");
                         SceneManager.LoadScene("AfterHours");
+                        currDay++;
+                        MonstersOfTheDayS = MonsterQueueS[currDay];
+                        tutorialHasRun = false;
+
                         return;
                     }
                 }
             }
         }
-        
+
     }
 
     float GetSpawnTime()
@@ -81,45 +110,39 @@ public class MonsterSpawner : MonoBehaviour
 
     void SpawnMonster()
     {
+        if (MonstersOfTheDayS.Count == 0)
+        {
+            Debug.Log("Tried to spawn a monster, but there isn't a monster in the list to spawn.");
+            return;
+        }
+        // no available seats
+        if (GetAvailableSeat() == null)
+        {
+            Debug.Log("No available seat to spawn monster, restarting spawn timer.");
+            timeUntilNextSpawn = GetSpawnTime();
+            return;
+        }
 
-        if (inTutorial)
+        if (MonstersOfTheDayS.Count != 0)
         {
-            Monster instantiatedMonster = Instantiate(monstersToSpawn[4]);  // Ghost is at index 4
-            instantiatedMonster.name = monstersToSpawn[4].name;
-            instantiatedMonster.prefab = monstersToSpawn[4];
+            string currMonster = MonstersOfTheDayS.Dequeue();
+            Debug.Log(currMonster);
+            Debug.Log(currDay);
+            Monster instantiatedMonster = Instantiate(findMonster(currMonster));
+            instantiatedMonster.name = findMonster(currMonster).name;
+            instantiatedMonster.prefab = findMonster(currMonster);
             instantiatedMonster.seat = GetAvailableSeat();
+            /*
+            Monster instantiatedMonster = Instantiate(findMonster(currMonster)); //(Monster) Instantiate(Resources.Load("Assets/Resources/Prefabs/" + currMonster + ".prefab"));
+            instantiatedMonster.name = Resources.Load("Assets/Resources/Prefabs/" + currMonster).name;
+            instantiatedMonster.prefab = (Monster) Resources.Load("Assets/Resources/Prefabs/" + currMonster);
+            instantiatedMonster.seat = GetAvailableSeat();*/
             instantiatedMonster.seat.SetOccupancy(true);
-        }
-        else
-        {
-            // no monsters to spawn
-            if (monstersToSpawn.Count == 0)
-            {
-                Debug.Log("Tried to spawn a monster, but there isn't a monster in the list to spawn.");
-                return;
-            }
-    
-            // no available seats
-            if (GetAvailableSeat() == null)
-            {
-                Debug.Log("No available seat to spawn monster, restarting spawn timer.");
-                timeUntilNextSpawn = GetSpawnTime();
-                return;
-            }
-    
-            // pick a random monster to spawn
-            int randomIndex = UnityEngine.Random.Range(0, monstersToSpawn.Count);
-            Monster instantiatedMonster = Instantiate(monstersToSpawn[randomIndex]);
-            instantiatedMonster.name = monstersToSpawn[randomIndex].name;
-            instantiatedMonster.prefab = monstersToSpawn[randomIndex];
-            instantiatedMonster.seat = GetAvailableSeat();
-            instantiatedMonster.seat.SetOccupancy(true);
-    
-            monstersToSpawn.RemoveAt(randomIndex);
+
+            //monstersToSpawn.RemoveAt(randomIndex);
             monstersOnScreen.Add(instantiatedMonster);
-            totalMonstersSpawned++;
         }
-        
+
     }
 
     // Creates the locations of the bar seats
@@ -156,7 +179,7 @@ public class MonsterSpawner : MonoBehaviour
             }
             // if there's no available seat, return null
             if (availableSeat == false) return null;
-    
+
             // now keep randomly selecting seats until you find an empty one
             while (true)
             {
@@ -167,39 +190,86 @@ public class MonsterSpawner : MonoBehaviour
                 return MonsterSpawner.barSeats[randomIndex];
             }
         }
-        
+
     }
 
     private void RunTutorial()
     {
         // Disable cup movement
         GlassMove.cupCanMove = false;
-        
+
         // Disabling items
         // buttons
         GameObject.Find("ClearGlassButton").GetComponent<Button>().interactable = false;
         GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = false;
-        
+
         // ingredients
         foreach (Transform ingredient in GameObject.Find("Ingredients").transform)
         {
             ingredient.GetComponent<HoverHighlight>().isEnabled = false; // Disable hover highlighting
             ingredient.GetComponent<ClickIngredient>().isEnabled = false; // Disable clicking
         }
-        
+
         // toppings
         GameObject.Find("nightmareFuel").SetActive(true);
         GameObject.Find("goldenDust").SetActive(true);
         GameObject.Find("mud").SetActive(true);
         GameObject.Find("zombieFlesh").SetActive(true);
-        
+
         // misc
         GameObject.Find("Blender").SetActive(true); // TEMP SET BACK TO FALSE
 
         // Spawn ghost in
-        SpawnMonster();
+        //SpawnMonster();
     }
-    
+
+    private void CreateMonsterQueue()
+    {
+
+        string path = "Assets/Text/MonsterOrderNoGenerals.txt";
+
+        StreamReader reader = new StreamReader(path);
+        int currIndex = 0;
+
+        while (!reader.EndOfStream)
+        {
+            Queue<Monster> currMonsters = new Queue<Monster>();
+            Queue<string> currMonstersS = new Queue<string>();
+            string line = reader.ReadLine();
+
+            string[] monsters = line.Split(',');
+
+            for (int i = 0; i < monsters.Length; ++i)
+            {
+                Debug.Log(currIndex + " adding: " + monsters[i]);
+
+                currMonstersS.Enqueue(monsters[i]);
+                Monster adding = findMonster(monsters[i]);
+                currMonsters.Enqueue(adding);
+            }
+
+            MonsterQueue[currIndex] = currMonsters;
+            MonsterQueueS[currIndex] = currMonstersS;
+            currIndex++;
+        }
+
+        reader.Close();
+    }
+
+    private Monster findMonster(string name)
+    {
+        for (int i = 0; i < monstersToSpawn.Count; ++i)
+        {
+            if (monstersToSpawn[i].name == name)
+            {
+                return monstersToSpawn[i];
+            }
+        }
+
+        Debug.Log("Couldn't find monster.");
+        return null;
+    }
+
 }
 
 // Just encompasses a seat location and whether or not it's occupied
