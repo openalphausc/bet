@@ -110,10 +110,13 @@ public class Monster : MonoBehaviour
 
                 if (seatTimer >= 45.0f) { happiness -= 1; Debug.Log("decreased happiness"); }
             }
-
+            //Debug.Log("Please show up");
             // slide off when ready
-            if (state == MonsterState.center && readyToLeave && !MonsterSpawner.inTutorial)
+            Debug.Log(state);
+            Debug.Log(readyToLeave);
+            if (state == MonsterState.center && readyToLeave)// && !MonsterSpawner.inTutorial)
             {
+                Debug.Log("Please show up");
                 Monster.currentlyOrdering = false;
                 Monster.currentlyOrderingMonster = null;
                 state = MonsterState.slidingOff;
@@ -198,6 +201,11 @@ public class Monster : MonoBehaviour
         if (seatTimer <= 15.0f) { happiness += 1; Debug.Log("Increased happiness"); }
 
 		GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = false;
+
+        if(MonsterSpawner.inTutorial)
+        {
+            MonsterSpawner.SkipTutorialButton.SetActive(true);
+        }
     }
 
     // Slides the monster towards a location

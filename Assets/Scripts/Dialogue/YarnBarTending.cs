@@ -79,6 +79,7 @@ public class YarnBarTending : MonoBehaviour
 		MonsterSpawner.tutorialHasRun = true;
 		
         GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
+		MonsterSpawner.SkipTutorialButton.SetActive(false);
 		
 		// ingredients
         foreach (Transform ingredient in GameObject.Find("Ingredients").transform)
@@ -86,15 +87,24 @@ public class YarnBarTending : MonoBehaviour
             ingredient.GetComponent<HoverHighlight>().isEnabled = true; // Disable hover highlighting
             ingredient.GetComponent<ClickIngredient>().isEnabled = true; // Disable clicking
         }
-        
-        // toppings
-        // GameObject.Find("nightmareFuel").SetActive(true);
-        // GameObject.Find("goldenDust").SetActive(true);
-        // GameObject.Find("mud").SetActive(true);
-        // GameObject.Find("zombieFlesh").SetActive(true);
-        
-        // misc
-        // GameObject.Find("Blender").SetActive(true);
+
+		GlassMove.cupCanMove = true;
+
+		// toppings
+		// GameObject.Find("nightmareFuel").SetActive(true);
+		// GameObject.Find("goldenDust").SetActive(true);
+		// GameObject.Find("mud").SetActive(true);
+		// GameObject.Find("zombieFlesh").SetActive(true);
+
+		// misc
+		// GameObject.Find("Blender").SetActive(true);
+	}
+
+	public void SkipTutorial()
+	{
+		MonsterSpawner.bob.readyToLeave = true;
+		MonsterSpawner.timeUntilNextSpawn = 2.0f;
+		EndTutorial();
 	}
 
 	public static void DisableDialogueFunctions() {

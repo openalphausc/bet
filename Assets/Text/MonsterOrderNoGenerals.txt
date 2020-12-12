@@ -1,6 +1,6 @@
 Ghost,Khepri
 Ghost,Zombie,KnifeUnicorn,KateTheCockatrice,CowboyAlien
-Ghost,3Gremlins,EldritchMonster,Utsuro,Shapeshifter
+Ghost,3Gremlins,EldritchMonster,Utsuro,Shapeshifter,CowboyAlien
 Khepri,Zombie,KnifeUnicorn,KateTheCockatrice,CowboyAlien
-3Gremlins,EldritchMonster,Utsuro,Shapeshifter
+3Gremlins,EldritchMonster,Utsuro,Shapeshifter,CowboyAlien
 Zombie,Utsuro,EldritchMonster,Shapeshifter,Ghost,3Gremlins,KnifeUnicorn,CowboyAlien,KateTheCockatrice,Khepri

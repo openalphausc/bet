@@ -18,13 +18,15 @@ public class MonsterSpawner : MonoBehaviour
     public int maxMonstersOnScreen;
 
     public static List<Seat> barSeats;
-    public float timeUntilNextSpawn = -1; // will be set randomly
+    public static float timeUntilNextSpawn = -1; // will be set randomly
 
     public LightFadeUp fadeUpScript;
 
     public static bool inTutorial = true;
     public static int currDay = 0;
     public static bool tutorialHasRun = false;
+    public static GameObject SkipTutorialButton;
+    public static Monster bob = null;
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +35,15 @@ public class MonsterSpawner : MonoBehaviour
         monstersOfTheDay = monsterQueue[currDay];
 
         CreateBarSeats();
+        //GameObject.Find("SkipTutorialButton").SetActive(false);
+        SkipTutorialButton = GameObject.Find("SkipTutorialButton");
+        SkipTutorialButton.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if ((currDay >= 0 && currDay <= 2) && !tutorialHasRun)
         {
             inTutorial = true;
@@ -93,7 +99,7 @@ public class MonsterSpawner : MonoBehaviour
 
     }
 
-    float GetSpawnTime()
+    public static float GetSpawnTime()
     {
         return 2 * UnityEngine.Random.Range(1, 5);
     }
@@ -141,6 +147,14 @@ public class MonsterSpawner : MonoBehaviour
             instantiatedMonster.seat = GetAvailableSeat();
             instantiatedMonster.seat.SetOccupancy(true);
 
+            if(inTutorial)
+            {
+                bob = instantiatedMonster;
+            }
+            else
+            {
+                bob = null;
+            }
             monstersOnScreen.Add(instantiatedMonster);
         }
 
@@ -219,9 +233,6 @@ public class MonsterSpawner : MonoBehaviour
 
         // misc
         GameObject.Find("Blender").SetActive(true); // TEMP SET BACK TO FALSE
-
-        // Spawn ghost in
-        //SpawnMonster();
     }
 
     private void CreateMonsterQueue()
