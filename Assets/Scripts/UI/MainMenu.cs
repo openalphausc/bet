@@ -17,7 +17,6 @@ public class MainMenu : MonoBehaviour
         versionText.text = "v" + Application.version;
     }
 
-    // TODO: Don't hardcode load scene. Create some sort of global variable
     public void Play()
     {
         if (LoadPlaytestingContext)

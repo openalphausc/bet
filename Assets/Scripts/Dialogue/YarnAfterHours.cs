@@ -20,7 +20,7 @@ public class YarnAfterHours : MonoBehaviour
         AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>().inAfterHours = false;
         AfterHoursMonsterSpawner.currentMonster = null;
         AfterHoursMonsterSpawner.active = false;
-        SceneManager.LoadScene("BarTendingScene");
+        SceneManager.LoadScene("Tabsheet");
     }
 
 }
