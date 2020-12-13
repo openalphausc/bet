@@ -40,6 +40,8 @@ public class GlassFill : MonoBehaviour
 
     private RecipeManager recipeManager;
 
+	public List<GameObject> toppings = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -160,9 +162,10 @@ public class GlassFill : MonoBehaviour
 
     public void UpdateDrinkSprite(bool lerp = true)
     {
+        int total = currentDrink.liquids.Count + currentDrink.toppings.Count;
         //changes the sprite of the glass to the number of ingredients
         //TODO: change the fullSprite to different sprites
-        switch (currentDrink.liquids.Count)
+        switch (total)
         {
             case 0:
                 break;
@@ -207,11 +210,46 @@ public class GlassFill : MonoBehaviour
                 liquidSprite.color = currentDrink.GetDisplayColor();
             }
         }
+        
+        // Remove old toppings
+		foreach (GameObject t in toppings) {
+			Destroy(t);
+		}
+		toppings.Clear();
+		
+		// Variables for adding toppings
+        string layerName = "", topping = "";
+		GameObject layer = null;
+		Vector3 position = gameObject.transform.position, offset = new Vector3(0,0,0);
+		float layerHeight = gameObject.GetComponent<BoxCollider2D>().bounds.size.y / 9.0f,
+			  minY = gameObject.GetComponent<BoxCollider2D>().bounds.min.y + layerHeight / 2.0f;
+
+        for (int curLevel = currentDrink.liquids.Count; curLevel < total; curLevel++)
+        {
+			// Reset position to cup position and get topping name from current drink
+			position = gameObject.transform.position;
+			topping = currentDrink.toppings[curLevel - currentDrink.liquids.Count];
+
+			// Adjust variables per topping type
+            if (topping == "goldenDust") { layerName = "OA GoldDustTop0"; offset.y = 5.02f; offset.x = -.5f; }
+            else if (topping == "mud") { layerName = "OA_GraveyardMudTop0"; offset.y = 5f; offset.x = -0.3f; }
+			else if (topping == "zombieFlesh") { layerName = "OA ZombieFleshTop1"; offset.y = 2.4f; offset.x = -.5f; }
+			else if (topping == "nightmareFuel") { layerName = "OA NightmareTop0"; offset.y = 3.3f; offset.x = -.5f; }
+			
+			// Calculate position to place object
+			position.y = minY + curLevel * layerHeight;
+			position += offset;
+
+			// Instantiate topping at position and add it to the toppings list
+			layer = Instantiate(Resources.Load<GameObject>("Prefabs/CupToppings/" + layerName), position, Quaternion.identity);
+			layer.transform.SetParent(gameObject.transform);
+			toppings.Add(layer);
+		}
     }
 
     void GlassIsFullAlert()
     {
-        //TODO Charlie and Helen
+        Debug.Log("Cup is full");
     }
 
     // Clears the drink of ingredients and resets its sprite
