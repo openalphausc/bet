@@ -215,8 +215,8 @@ public class Monster : MonoBehaviour
             dataStorage.monsters.Add(prefab.GetComponent<Monster>());
             dataStorage.monsters.Sort(nameComp);
         }
-        foreach (Monster m in dataStorage.monsters)
-            Debug.Log(m.name);
+        //foreach (Monster m in dataStorage.monsters)
+        //    Debug.Log(m.name);
     }
 
     public void OnMouseDown()
