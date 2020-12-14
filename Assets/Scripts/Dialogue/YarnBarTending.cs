@@ -20,20 +20,7 @@ public class YarnBarTending : MonoBehaviour
     [YarnCommand("inviteToAfterHours")]
     public void StayAfter()
     {
-
-        // Add the current monster to the stayingMonsters list
-        // NOTE: Adding a clone since the original gets despawned/destroyed
-
-        // if (gameObject.GetComponent<Monster>().happiness >= 0)
-        // {
-            dataStorage.stayingMonster = gameObject.name;
-            Debug.Log(gameObject.name + " invited to after hours.");
-        // }
-        // else
-        // {
-        //     Debug.Log(gameObject + " does not have a positive happiness.");
-        // }
-        
+		dataStorage.stayingMonster = gameObject.name;
     }
 
     [YarnCommand("tutorialUseIngredient")]
@@ -90,6 +77,8 @@ public class YarnBarTending : MonoBehaviour
         }
 
 		GlassMove.cupCanMove = true;
+
+		dataStorage.stayingMonster = "Ghost";
 
 		// toppings
 		// GameObject.Find("nightmareFuel").SetActive(true);
