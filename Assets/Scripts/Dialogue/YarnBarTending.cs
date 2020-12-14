@@ -65,8 +65,11 @@ public class YarnBarTending : MonoBehaviour
     {
 		MonsterSpawner.inTutorial = false;
 		MonsterSpawner.tutorialHasRun = true;
-		
-        GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
+
+		//this is to activate the requirement for the monster to go off screen
+		GameObject.Find("Ghost").GetComponent<Monster>().leaving = true;
+
+		GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
 		MonsterSpawner.SkipTutorialButton.SetActive(false);
 		
 		// ingredients
@@ -111,10 +114,17 @@ public class YarnBarTending : MonoBehaviour
 		Continue.isEnabled = true;
 	}
 
+	[YarnCommand("goodbye")]
+	public void DialogueEnd()
+	{
+		//this is called when the afterhours invite has concluded
+		gameObject.GetComponent<Monster>().leaving = true;
+	}
 
-    //light stuff
 
-    [YarnCommand("tutorialLightCues")]
+	//light stuff
+
+	[YarnCommand("tutorialLightCues")]
     public void TutorialLightCues(string firstItem, string secondItem)
     {
         TutorialSpotlight.spot1.enabled = true;

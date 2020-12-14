@@ -12,15 +12,6 @@ position:
 <<endif>>
 Thank you.
 
-<<if $invitedAMonster is false>>
-	*Do you want to invite them to stay after hours?*
-	-> Yes
-		<<inviteToAfterHours Khepri>>
-		<<set $invitedAMonster to true>>
-		You know what? Sure, why not?
-	-> No
-		In your dreams. Goodbye.
-<<endif>>
 ===
 
 title: KhepriAH1
@@ -55,4 +46,22 @@ Mummy: I appreciate it. Also, the name's Khepri.
 
 <<set $invitedAMonster to false>>
 <<finishedTalkingWith Khepri>>
+
+===
+
+title: KhepriInvite
+tags: 
+colorID: 1
+position:
+---
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Khepri>>
+		<<set $invitedAMonster to true>>
+		You know what? Sure, why not?
+	-> No
+		In your dreams. Goodbye.
+<<endif>>
+<<goodbye Khepri>>
 ===

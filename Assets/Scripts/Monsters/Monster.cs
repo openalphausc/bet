@@ -21,6 +21,7 @@ public class Monster : MonoBehaviour
     private float slidingSpeed = 30.0f;
     private float currentSpeed;
     public bool readyToLeave = false;
+    public bool leaving = false;
 
     public string dialogueToStart = "";
 
@@ -110,11 +111,8 @@ public class Monster : MonoBehaviour
 
                 if (seatTimer >= 45.0f) { happiness -= 1; Debug.Log("decreased happiness"); }
             }
-            //Debug.Log("Please show up");
-            // slide off when ready
-            Debug.Log(state);
-            Debug.Log(readyToLeave);
-            if ((state == MonsterState.center && readyToLeave) && !MonsterSpawner.inTutorial)
+            
+            if ((state == MonsterState.center && readyToLeave) && (!MonsterSpawner.inTutorial && leaving))
             {
                 Debug.Log("Please show up");
                 Monster.currentlyOrdering = false;
@@ -171,6 +169,11 @@ public class Monster : MonoBehaviour
 		if (MonsterSpawner.inTutorial) {
 			YarnBarTending.EnableDialogueFunctions();
 		}
+        //runs the afterhours if statement 
+        if (!MonsterSpawner.inTutorial)
+        {
+            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "Invite");
+        }
     }
 
     public void OnMouseDown()
