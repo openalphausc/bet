@@ -7,7 +7,7 @@ public class TabsheetGroupMonsters : MonoBehaviour
 {
     // set these from Unity editor. It's ok if unused monsters are there.
     // A Monster with 0 / 0 points will just be ignored.
-    public List<Monster> allMonsters = new List<Monster>();
+    public List<Monster> allMonsters = dataStorage.monsters;
 
     public List<Monster> oneStarMonsters = new List<Monster>();
     public List<Monster> twoStarMonsters = new List<Monster>();
@@ -23,7 +23,7 @@ public class TabsheetGroupMonsters : MonoBehaviour
             // If the total points are 0, then the monster never ordered
             if (monster.totalPoints == 0)
                 continue;
-
+            Debug.Log(monster.name);
             // One star condition. < 60%
             if ((monster.pointsEarned + 0.0) / monster.totalPoints < 0.6)
                 oneStarMonsters.Add(monster);
@@ -92,6 +92,14 @@ public class TabsheetGroupMonsters : MonoBehaviour
                 yPercent = (y.pointsEarned + 0.0) / y.totalPoints;
             }
             return xPercent.CompareTo(yPercent);
+        }
+    }
+
+    public class NameComp : IComparer<Monster>
+    {
+        public int Compare(Monster x, Monster y)
+        {
+            return x.name.CompareTo(y.name);
         }
     }
 
