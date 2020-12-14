@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class YarnBarTending : MonoBehaviour
 {	
@@ -41,7 +42,7 @@ public class YarnBarTending : MonoBehaviour
 		
         GameObject.Find(ingredient).GetComponent<HoverHighlight>().isEnabled = true;
         GameObject.Find(ingredient).GetComponent<ClickIngredient>().isEnabled = true;
-		
+
 		YarnBarTending.DisableDialogueFunctions();
     }
 
@@ -107,6 +108,8 @@ public class YarnBarTending : MonoBehaviour
 		EndTutorial();
 	}
 
+    
+
 	public static void DisableDialogueFunctions() {
 		GameObject.Find("Click to Continue").GetComponent<Button>().interactable = false;
 		Continue.isEnabled = false;
@@ -118,6 +121,36 @@ public class YarnBarTending : MonoBehaviour
 		instance.StartCoroutine(EnableContinueButton());
 		Continue.isEnabled = true;
 	}
+
+
+    //light stuff
+
+    [YarnCommand("tutorialLightCues")]
+    public void TutorialLightCues(string firstItem, string secondItem)
+    {
+        TutorialSpotlight.spot1.enabled = true;
+        if (secondItem != "_")
+        {
+            TutorialSpotlight.spot2.enabled = true;
+            TutorialSpotlight.spot2.transform.position = new Vector3(GameObject.Find(secondItem).transform.position.x, GameObject.Find(secondItem).transform.position.y, 0);
+        }
+        else
+        {
+            TutorialSpotlight.spot2.enabled = false;
+        }
+        if (firstItem == "ClearGlassButton")
+        {
+            TutorialSpotlight.spot1.transform.position = new Vector3(0, -17.2f, 0);
+        }
+        else if (firstItem == "_")
+        {
+            TutorialSpotlight.spot1.enabled = false;
+        }
+        else
+        {
+            TutorialSpotlight.spot1.transform.position = new Vector3(GameObject.Find(firstItem).transform.position.x, GameObject.Find(firstItem).transform.position.y, 0);
+        }
+    }
 
 	static IEnumerator EnableContinueButton()
 	{
