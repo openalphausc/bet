@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 public class TabsheetGroupMonsters : MonoBehaviour
 {
@@ -14,6 +14,10 @@ public class TabsheetGroupMonsters : MonoBehaviour
     public List<Monster> threeStarMonsters = new List<Monster>();
 
     private List<Monster> tempTwoThreeStarMonsters = new List<Monster>();
+
+    public TextMeshProUGUI threeStarMonstersText;
+    public TextMeshProUGUI twoStarMonstersText;
+    public TextMeshProUGUI oneStarMonstersText;
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +40,8 @@ public class TabsheetGroupMonsters : MonoBehaviour
         int numTwoStar = (int) Mathf.Ceil(tempTwoThreeStarMonsters.Count / 2.0f);
         int numThreeStar = (int) Mathf.Floor(tempTwoThreeStarMonsters.Count / 2.0f);
 
-        Debug.Log("Num two star: " + numTwoStar);
-        Debug.Log("Num three star: " + numThreeStar);
+        //Debug.Log("Num two star: " + numTwoStar);
+        //Debug.Log("Num three star: " + numThreeStar);
 
         PointsComp comp = new PointsComp();
         tempTwoThreeStarMonsters.Sort(comp);
@@ -57,13 +61,11 @@ public class TabsheetGroupMonsters : MonoBehaviour
         twoStarMonsters.Sort(comp);
         threeStarMonsters.Sort(comp);
 
-        // We would add a display here, but I'm just going to Debug.Log for now
-        Debug.Log("One star monsters:");
-        printList(oneStarMonsters);
-        Debug.Log("Two star monsters:");
-        printList(twoStarMonsters);
-        Debug.Log("Three star monsters:");
-        printList(threeStarMonsters);
+        // Display monsters text
+        oneStarMonstersText.text = ListToString(oneStarMonsters);
+        twoStarMonstersText.text = ListToString(twoStarMonsters);
+        threeStarMonstersText.text = ListToString(threeStarMonsters);
+
     }
 
     // A comparer for sorting the monsters arrays by percentage of points earned
@@ -110,5 +112,18 @@ public class TabsheetGroupMonsters : MonoBehaviour
         {
             Debug.Log(m.name);
         }
+    }
+
+    // function that converts a list into a string like this: Element 1, Element 2, Element 3...
+    string ListToString(List<Monster> monsters)
+    {
+        string s = "";
+        foreach (Monster m in monsters)
+        {
+            s = s + m.name + ", ";
+        }
+        if (s.Length > 0)
+            s = s.Substring(0, s.Length - 2); // remove the last ,
+        return s;
     }
 }
