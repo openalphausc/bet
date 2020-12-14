@@ -8,16 +8,21 @@ public class HoverHighlight : MonoBehaviour
     private EquipIngredient equipIngredient;
     private Light2D light;
 
+    public bool isEnabled = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
-        light = GetComponent<Light2D>();
+        if (!AfterHoursMonsterSpawner.active)
+        {
+            equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
+            light = GetComponent<Light2D>();
+        }
     }
 
     void OnMouseOver()
     {
-        if (equipIngredient.equippedObject != gameObject && !PauseMenu.isPaused) light.enabled = true;
+        if (equipIngredient.equippedObject != gameObject && !PauseMenu.isPaused && isEnabled) light.enabled = true;
     }
 
     void OnMouseExit()

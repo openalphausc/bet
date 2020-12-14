@@ -1,0 +1,76 @@
+title: TutorialGhostDay1
+tags:
+colorID:
+position:
+---
+
+//ghost enters
+Hello, it’s Bob! I was on my way to get my daughter, Boothany, from Undead Daycare but I’d heard the news about your bar. I just had to say goodbye y’know? 
+
+Looking a bit down huh? Silly me, of course you are. I promise, everyone is pretty understanding about what’s going on.
+
+They won’t even care about how long you take, if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to de-stress after a long night.
+
+Sorry, I was babbling! I should go ahead and order, shouldn’t I? I’ll help you out a bit, I know you’ve got lots on your mind...
+
+See the color here? Monsters will explain their orders to you, but we aren't perfect. This color shows what we’re thinking, so you can figure out what we want even if we left it out. Now for my drink… hmm...
+
+I think I’ll have a Happy Death today, please. It’s my husband’s favorite drink, Bobby absolutely loves it. It’s pretty simple, just some cheery blossom sake and angel tears. 
+
+Oh, look at me, talking on and on again! 
+
+//highlight order log
+<<tutorialLightCues Ghost RecipeSheet _>>
+Don’t worry if you forgot! Remember, you’ve got your order log here, it has all the instructions a customer mentions to you. 
+
+//spotlight cheery blossom, then glass
+<<tutorialLightCues Ghost cheeryBlossom Glass>>
+<<tutorialUseIngredient Ghost cheeryBlossom>>
+We’re ready to start! Click on the cheery blossom sake to equip it. Then hover over the drink glass and click to pour!
+
+//spotlight on blood, then glass 
+<<tutorialLightCues Ghost blood Glass>>
+<<tutorialUseIngredient Ghost blood>>
+Now for some blood... 
+
+//spotlight clear button
+<<tutorialLightCues Ghost ClearGlassButton _>>
+<<tutorialEnableClearButton Ghost>>
+Ack, so sorry, even my mind is a bit fuzzy today! It’s the wrong color, but not a problem— as Bobby always says, mistakes are just lessons we haven’t learned yet! Let's clear this drink, we can start over.
+
+//spotlight cheery blossom, then glass
+<<tutorialLightCues Ghost cheeryBlossom Glass>>
+<<tutorialUseIngredient Ghost cheeryBlossom>>
+Second try! Let’s add the wonderful cheery blossom sake again. 
+
+//spotlight angel tears, then glass
+<<tutorialLightCues Ghost angelTears Glass>>
+<<tutorialUseIngredient Ghost angelTears>>
+And now for the angel tears!
+
+//spotlight angel tears, then glass
+<<tutorialLightCues Ghost angelTears Glass>>
+<<tutorialEnableIngredient Ghost angelTears>>
+The color still isn’t quite right, just try adding more angel tears until the color matches! 
+
+//arrow appears from glass to monster
+<<tutorialLightCues Ghost Glass _>>
+<<tutorialEnableCup Ghost>>
+It looks perfect! Now just click on it to equip and then click on me to give me the finished drink. 
+
+//smiling ghost sprite
+<<tutorialLightCues Ghost _ _>>
+Beautiful. See? You still got that bartending touch. Don’t worry about the BBC, it’ll all work out in the end. 
+
+Make sure to listen to the other customers too, they might mention a thing or two about their own lives. 
+
+Bartending is as much about the connections as it is about making drinks, you’ll realize you aren’t alone in this, we’ve got your back. You can even invite one monster back each night to chat after the bar closes!
+
+Oh, tonight’s a slight exception though, I think I’ll come back just to check up on you. I usually can’t come (parental duties await!) but I just want to make sure you’re doing alright. 
+
+Anyways, I’d best be off to pick up Boothany, we have family charades scheduled! Very exciting… looks like some other monsters are already here. Keep your head up, I’ll be seeing you later!
+
+
+<<endTutorial Ghost>>
+===
+

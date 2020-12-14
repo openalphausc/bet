@@ -110,10 +110,13 @@ public class Monster : MonoBehaviour
 
                 if (seatTimer >= 45.0f) { happiness -= 1; Debug.Log("decreased happiness"); }
             }
-
+            //Debug.Log("Please show up");
             // slide off when ready
-            if (state == MonsterState.center && readyToLeave)
+            Debug.Log(state);
+            Debug.Log(readyToLeave);
+            if ((state == MonsterState.center && readyToLeave) && !MonsterSpawner.inTutorial)
             {
+                Debug.Log("Please show up");
                 Monster.currentlyOrdering = false;
                 Monster.currentlyOrderingMonster = null;
                 state = MonsterState.slidingOff;
@@ -133,14 +136,14 @@ public class Monster : MonoBehaviour
                 FindObjectOfType<Yarn.Unity.DialogueUI>().DialogueComplete();
                 FindObjectOfType<NodeVisitedTracker>().NodeComplete(dialogueToStart);
                 // hide the drink icon
-                drinkIcon.transform.GetChild(0).gameObject.SetActive(false);
-                drinkIcon.transform.GetChild(1).gameObject.SetActive(false);
+                GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDialogueSystem();
             }
 
             if (state == MonsterState.slidingOff)
             {
                 //Debug.Log("Sliding to exit");
                 SlideTo(exit);
+				GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
             }
 
             // set state to offscreen (ready to be despawned) if offscreen
@@ -164,6 +167,10 @@ public class Monster : MonoBehaviour
 
 		// hide the drink icon
 		GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDialogueSystem();
+
+		if (MonsterSpawner.inTutorial) {
+			YarnBarTending.EnableDialogueFunctions();
+		}
     }
 
     public void OnMouseDown()
@@ -193,6 +200,12 @@ public class Monster : MonoBehaviour
         // Increase happiness if clicked within first 15 s of sitting down
         if (seatTimer <= 15.0f) { happiness += 1; Debug.Log("Increased happiness"); }
 
+		GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = false;
+
+        if(MonsterSpawner.inTutorial)
+        {
+            MonsterSpawner.SkipTutorialButton.SetActive(true);
+        }
     }
 
     // Slides the monster towards a location

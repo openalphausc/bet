@@ -31,7 +31,7 @@ public class Drink
         color = new Color(255.0f, 255.0f, 255.0f);
         // initialize static lists
         allLiquids = new List<string>(new string[]
-            {"blood", "vodka", "whiskey", "angelTears", "cornpagne", "appleJuice", "cherryBlossom"});
+            {"blood", "vodka", "whiskey", "angelTears", "cornpagne", "appleJuice", "cheeryBlossom"});
         allToppings = new List<string>(new string[]
             {"zombieFlesh", "nightshade", "mud", "nightmareFuel", "goldenDust", "mushrooms"});
     }
@@ -83,15 +83,18 @@ public class Drink
         return output;
     }
 
-    public void AddIngredient(string newIngredient) {
+    public bool AddIngredient(string newIngredient) {
         // check if liquid or topping
         bool isLiquid = allLiquids.Contains(newIngredient);
         bool isTopping = allToppings.Contains(newIngredient);
         if (isLiquid == isTopping)
         {
+            if (newIngredient == "") return false;
+            
             Debug.Log(
                 "AH BIG ERROR; TRIED TO ADD AN INGREDIENT TO THE DRINK AND IT WAS NOT PROPERLY ASSIGNED AS A LIQUID OR A TOPPING!");
-            return;
+
+            return false;
         }
 
         // add to ingredients list
@@ -100,6 +103,8 @@ public class Drink
 
         // re-calculate color if liquid is added
         if (isLiquid) CalculateColor();
+
+        return isLiquid;
     }
 
     public void BlendToppings()
@@ -119,7 +124,8 @@ public class Drink
     {
         if(recipeManager == null) recipeManager = GameObject.FindWithTag("RecipeSheet").GetComponent<RecipeManager>();
         color = new Color(0, 0, 0);
-        foreach(string liquid in liquids) {
+        foreach(string liquid in liquids)
+        {
             color += recipeManager.ingredientColors[liquid];
         }
         color /= liquids.Count;

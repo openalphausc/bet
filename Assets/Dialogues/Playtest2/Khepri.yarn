@@ -12,12 +12,15 @@ position:
 <<endif>>
 Thank you.
 
-*Do you want to invite them to stay after hours?*
--> Yes
-	<<inviteToAfterHours Khepri>>
-	You know what? Sure, why not?
--> No
-	In your dreams. Goodbye.
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Khepri>>
+		<<set $invitedAMonster to true>>
+		You know what? Sure, why not?
+	-> No
+		In your dreams. Goodbye.
+<<endif>>
 ===
 
 title: KhepriAH1
@@ -49,4 +52,7 @@ Mummy: Thank you, you've given me a lot to think about.
 Mummy: I'll admit you've surprised me bartender. I expected you to just get me drunk.
 Player: Just trying to give as many folks comfort in these times Miss.
 Mummy: I appreciate it. Also, the name's Khepri.
+
+<<set $invitedAMonster to false>>
+<<finishedTalkingWith Khepri>>
 ===

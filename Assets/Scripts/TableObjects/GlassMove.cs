@@ -14,6 +14,8 @@ public class GlassMove : MonoBehaviour
     // sound
     public AudioSource setDown;
 
+    public static bool cupCanMove = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +46,7 @@ public class GlassMove : MonoBehaviour
 
     public void OnMouseDown()
     {
-        mouseDown = true;
+        if (GlassMove.cupCanMove) mouseDown = true;
     }
 
     public void OnMouseExit()
