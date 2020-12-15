@@ -20,20 +20,7 @@ public class YarnBarTending : MonoBehaviour
     [YarnCommand("inviteToAfterHours")]
     public void StayAfter()
     {
-
-        // Add the current monster to the stayingMonsters list
-        // NOTE: Adding a clone since the original gets despawned/destroyed
-
-        // if (gameObject.GetComponent<Monster>().happiness >= 0)
-        // {
-            dataStorage.stayingMonster = gameObject.name;
-            Debug.Log(gameObject.name + " invited to after hours.");
-        // }
-        // else
-        // {
-        //     Debug.Log(gameObject + " does not have a positive happiness.");
-        // }
-        
+		dataStorage.stayingMonster = gameObject.name;
     }
 
     [YarnCommand("tutorialUseIngredient")]
@@ -77,8 +64,10 @@ public class YarnBarTending : MonoBehaviour
 	public void EndTutorial()
     {
 		MonsterSpawner.inTutorial = false;
+		MonsterSpawner.tutorialHasRun = true;
 		
         GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
+		MonsterSpawner.SkipTutorialButton.SetActive(false);
 		
 		// ingredients
         foreach (Transform ingredient in GameObject.Find("Ingredients").transform)
@@ -86,15 +75,26 @@ public class YarnBarTending : MonoBehaviour
             ingredient.GetComponent<HoverHighlight>().isEnabled = true; // Disable hover highlighting
             ingredient.GetComponent<ClickIngredient>().isEnabled = true; // Disable clicking
         }
-        
-        // toppings
-        // GameObject.Find("nightmareFuel").SetActive(true);
-        // GameObject.Find("goldenDust").SetActive(true);
-        // GameObject.Find("mud").SetActive(true);
-        // GameObject.Find("zombieFlesh").SetActive(true);
-        
-        // misc
-        // GameObject.Find("Blender").SetActive(true);
+
+		GlassMove.cupCanMove = true;
+
+		dataStorage.stayingMonster = "Ghost";
+
+		// toppings
+		// GameObject.Find("nightmareFuel").SetActive(true);
+		// GameObject.Find("goldenDust").SetActive(true);
+		// GameObject.Find("mud").SetActive(true);
+		// GameObject.Find("zombieFlesh").SetActive(true);
+
+		// misc
+		// GameObject.Find("Blender").SetActive(true);
+	}
+
+	public void SkipTutorial()
+	{
+		MonsterSpawner.bob.readyToLeave = true;
+		MonsterSpawner.timeUntilNextSpawn = 2.0f;
+		EndTutorial();
 	}
 
     
