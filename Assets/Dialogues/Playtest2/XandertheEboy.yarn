@@ -1,0 +1,237 @@
+title: XandartheEboyAH1
+tags:
+colorID:
+position:
+---
+Sup - Name’s Xandar. You’ve got a cool spot - it’s, like, super underground. Mind if I take some pics for my TrickTok?
+
+I’ve been trying to find a spot with decent lighting. I love your vibes here but I’m more of a neon green guy. Still, nice place.
+
+<<changeEmotion XandartheEboy happy>>
+
+Speaking of, you have an account? I’ve been trying to find another body to make a killer vid with, but the ones I’ve been digging up just fall apart before I can even hit record. 
+
+-> Isn’t TrickTok for kids?
+
+	<<changeEmotion XandartheEboy angry>>
+	Hey! TrickTok is a creative platform for all ages! You just don’t appreciate art.
+
+-> You should try bodies that haven’t been buried yet.
+
+	<<changeEmotion XandartheEboy surprised>>
+	That’s a good idea. I wonder if there’s some fresh meat around here...
+
+<<changeEmotion XandartheEboy sad>>
+I’ve been thinking a lot about how I should change up my content. POVs just aren’t fun anymore... you can only pretend to be an ancient eldritch being and destroy so many minds before it gets boring.
+
+Plus, I don’t even get to eat the imaginary minds I destroy! Totally lame. Now I’m hungry...
+
+<<changeEmotion XandartheEboy neutral>>
+
+Anyway, what do you think? Are POVs too mainstream now?
+
+-> Definitely make more POVs, but this time pretend that you’re a little baby and just make baby noises the whole time.
+
+-> Stop the POVs. Start doing *ANTI*-POVs where you are the audience watching your own videos. It’s totally avante-garde. 
+
+<<changeEmotion XandartheEboy happy>>
+
+What! Wait... That’s actually... a really good idea. You know what, you’re not so bad. I’ll tell all of my TrickTok followers to stop by here but, like, in a cool understated way. 
+
+===
+title: XandartheEboyAH2ChoiceA
+tags:
+colorID:
+position:
+
+What's up, fellow radical being?
+
+Remember how you told me to make POV TrickToks but, like, as a baby or whatever? 
+
+<<changeEmotion XandartheEboy surprised>>
+I totally did it. I got on the floor and looked into my camera's soul... Dude, it was so deep. I crawled around on the floor too. Did some super lowkey screaming. 
+
+I even ate baby food straight out of the jar. I hear it's called method acting. 
+
+<<changeEmotion XandartheEboy happy>>
+Get this... It kinda worked! I started gaining a lot of followers.. like a lot. I got to 420 followers after my first post and now it's in the thousands.
+
+<<changeEmotion XandartheEboy sad>>
+I knew it was too good to be true... 
+
+The comments were wack. Super bad spelling, and I'm not talking keyboard smashes and XD reactions. Someone asked to share my jar of baby food...  
+
+<<changeEmotion XandartheEboy surprised>>
+Yeah. Turns out, all my new followers are babies. Like, literally. 
+
+<<changeEmotion XandartheEboy neutral>>
+I think my baby POV TrickTok summoned them. I'm kinda bummed, but it happens. Plus, I get it. I was really convincing baby.
+
+I've decided to leave it all behind. I love it when things get strange as much as the next monster, but leading a baby cult was never a dream of mine. And trust me, weird dreams are my specialty. 
+
+-> So what's in the future for you?
+
+-> I'm sorry about that. 
+	Nah, it's whatever. All good. 
+
+I'm gonna try my luck with BooTube. I hear that's where all the chill monsters are at. I could become a diestyle vlogger or get into fashion. I do have a great funeral wardrobe... 
+
+<<changeEmotion XandartheEboy happy>>
+Gotta peace out, start brainstorming cool new vid ideas.
+
+<<changeEmotion XandartheEboy neutral>>
+Oh, and a word of advice. Cults are totally rad, but if you ever start one... make sure babies aren't your target audience. 
+
+===
+title: XandartheEboyAH2ChoiceB
+tags:
+colorID:
+position:
+
+What's up, fellow radical being?
+
+Remember how you told me to make POV TrickToks but, like, anti-POV or whatever?
+
+I totally did it. I pretended to be the audience and watch my own videos. And guess what?
+
+<<changeEmotion XandartheEboy happy>>
+EVERYONE LOVED IT!!!!
+
+I have, like, a bazillion new followers. It's hella awesome. Anti-POV's are totally the next big thing. Like you said, avante-guarde. 
+
+I've already seen ten anti-POV TrickToks today! Everyone loved my idea.
+
+Wait a minute...
+
+<<changeEmotion XandartheEboy surprised>>
+Does that mean I'm mainstream? 
+
+<<changeEmotion XandartheEboy sad>>
+No... This can't be happening. Dude, I'm freaking out. I can't be mainstream, it totally ruins my vibe!
+
+<<changeEmotion XandartheEboy neutral>>
+I think it's time for me to quit TrickTok. It's, like, just too normalized. I need something else, something fresh. I gotta make my own path. Gotta be be my own monster, you feel?
+
+<<changeEmotion XandartheEboy happy>>
+I know! I'll make my own app. It'll be hella cool and, like, super niche. If I ever get too popular again, I can just delete the whole thing!
+
+-> sounds rad.
+-> sounds like a horrible idea.
+
+<<changeEmotion XandartheEboy surprised>>
+Right?! I love it. It's totally radical. 
+
+<<changeEmotion XandartheEboy neutral>>
+Gotta peace out, start brainstorming app concepts. Gotta get my gamer buddies on this! It's gonna be the next big thing, just you wait.
+
+<<changeEmotion XandartheEboy happy>>
+Thanks for the help, dude. And hey, don't forget to stay loose. 
+
+===
+title: XandartheEboyOrder1
+tags:
+colorID:
+position:
+
+Sup, dude! How's it hanging?
+
+<<changeEmotion XandartheEboy happy>>
+
+I'll have the xXSicarusXx. Sweet name, right?
+
+<<changeEmotion XandartheEboy neutral>>
+You pour a some angel tears, some vodka. Then you put something on top... something cool and trippy, if you catch my drift. 
+
+<<changeEmotion XandartheEboy happy>>
+I don't know what it is, I'm just, like, such a fan of this drink.
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours XandartheEboy>>
+
+	<<changeEmotion XandartheEboy surprised>>
+	Sure, sounds rad!
+
+-> No
+
+===
+
+title: XandartheEboyOrder2
+tags:
+colorID:
+position:
+
+How's it hanging?
+
+<<changeEmotion XandartheEboy sad>>
+I meant it more spirtitually, you feel me? Cuz, like, on a physical level it sucks that the bar is closing. 
+
+<<changeEmotion XandartheEboy neutral>>
+It would be hella rad if I could have a x2XSicarusX2x tonight. That's angel tears, Baba Yaga's vodka, shrooms, and something else— something fruity and deadly, I think. All that mixed together. 
+
+I hope it's a cool color. I love staring at cool colors... 
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours XandartheEboy>>
+
+	<<changeEmotion XandartheEboy surprised>>
+	Woah. That would be totally sick. 
+
+-> No
+
+===
+
+title: XandartheEboyOrder3
+tags:
+colorID:
+position:
+
+<<changeEmotion XandartheEboy sad>>
+Hey, dude. Sorry about tomorrow. Gotta say, the bar closing is totally killer on the sweet atmosphere. 
+
+<<changeEmotion XandartheEboy neutral>>
+Since this is the last drink you'll make me, I want it to be hella out there. Just totally wack. So I'll have the xXSicarusXDx.
+
+That's, like, Baba Yaga's vodka and some nightmare fuel and another cool and salty third ingredient. All those blended together. And then, you guessed it... 
+
+<<changeEmotion XandartheEboy happy>>
+Trippy shrooms on top! I can't ditch the shrooms now. It's, like, my thing, you know?
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours XandartheEboy>>
+
+	<<changeEmotion XandartheEboy surprised>>
+	Hell yeah, dude!
+
+-> No
+
+===
+
+title: XandartheEboyFeedbackGreat
+tags:
+colorID:
+position:
+
+<<changeEmotion XandartheEboy happy>>
+Dude... Dudeeeeee. This is, like, my favorite thing ever
+===
+title: XandartheEboyFeedbackRatios
+tags:
+colorID:
+position:
+
+<<changeEmotion XandartheEboy sad>>
+This drink is wack. Like, you totally poured the wrong amounts. Gross. 
+
+===
+title: XandartheEboyFeedbackIngredients
+tags:
+colorID:
+position:
+
+<<changeEmotion XandartheEboy angry>>
+Urg. This has the wrong stuff. Not cool at all, dude. 
+===
+

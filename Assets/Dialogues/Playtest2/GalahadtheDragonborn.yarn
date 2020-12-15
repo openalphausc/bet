@@ -1,0 +1,220 @@
+title: GalahadTheDragonbornAH1
+tags:
+colorID:
+position:
+---
+Didn’t think I’d be your first choice in company, but Hell if I’m one to judge.  
+
+<<changeEmotion GalahadTheDragonborn angry>>
+You’re closin’ down, too, ain’t you? A damn shame. The world needs more places like this one. Shit, if it were up to me, this wouldn’t hafta happen. 
+
+<<changeEmotion GalahadTheDragonborn sad>>
+Not everyone has a choice, though. We all need the money these days. Even if they’ve got ya doin’ dirty work for it… 
+
+-> Yeah, it’s pretty heartbreaking to see everyone be driven out of business. Wish I could do something more about it, but company’s all I’ve got to offer.
+	We all do, kid. Least you’ve got the good sense to keep things runnin’ till the very end. That’s grit.
+
+-> Well, all good things must come to an end, even if we don’t want them to. This might be a good way to start searching for new beginnings.
+	<<changeEmotion GalahadTheDragonborn angry>>
+	Pisspoor way to go, but sure. Can’t stop ya from seein’ it that way.
+
+<<changeEmotion GalahadTheDragonborn sad>>
+Can’t help feelin’ guilty about this shitshow. I’m workin’ for ‘em, know that? 
+
+<<changeEmotion GalahadTheDragonborn surprised>>
+Goin’ around ta every business in the neighborhood and wittlin’ down their spirits ‘til they’re too scared to fight back. I’m a mean son of a bitch. The hell am I supposed to do about it, though? 
+
+<<changeEmotion GalahadTheDragonborn sad>>
+Got a little sister at home to look after and uh… a Pixie I’ve been seein’ for a while now. He’s a pain in my snout, but I really… 
+
+I care for ‘im, and it kills me to know I’m takin’ part in tearin’ down a city that’s been his home all his life.
+
+-> It might be time to pull back, then. There’re plenty of places to find work; I’m sure a guy like you can put his talents to use elsewhere. You’ve got family to get home to, after all. 
+
+-> You look like a strong dude, how hard would it be to take them on from the inside? You’re in deep enough already, anyway. They wouldn’t see you coming.
+
+<<changeEmotion GalahadTheDragonborn happy>>
+Hell, you’re right. I’ll give it some time and see how it goes. Keep an eye out, yeah? I’ll see ya around soon.
+
+
+===
+title: GalahadTheDragonbornOrder1
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion GalahadTheDragonborn surprised>>
+Evenin'. Hear the BBC's nailin' down everyone in the area, so I couldn't miss out on this gem, even if there're less seats than I was expectin'... 
+
+<<changeEmotion GalahadTheDragonborn neutral>>
+Might as well have ya make me a Tempestuous Torment. Ain't all that common 'round here, so I'll let you know how it's made. The Whiskey's a given, 's in every recipe. 
+
+The next ingredient changes from monster ta monster but Dragonborn usually like somethin' that's thicker than water, tastes like a fine metal. 
+
+Once that's done, just add a bit of Nightmare Fuel to top it off.  
+
+<<changeEmotion GalahadTheDragonborn happy>> 
+It's my sister's favorite.
+
+<<changeEmotion GalahadTheDragonborn neutral>>
+Keep your head up, kid. Can't look ahead if you're too busy lookin' at your own feet instead.
+
+*Do you want to invite them to stay After Hours?*
+-> Yes
+	<<inviteToAfterHours GalahadTheDragonborn>>
+
+	<<changeEmotion GalahadTheDragonborn surprised>>
+	Hell, why not? Need some downtime every now 'n again. Won't get in your way 'till you're done.
+
+-> No
+
+===
+title: GalahadTheDragonbornOrder2
+tags:
+colorID:
+position:
+---
+<<changeEmotion GalahadTheDragonborn neutral>>
+
+Hope you've been havin' a good night, kid. 
+
+<<changeEmotion GalahadTheDragonborn happy>>
+The BBC can give ya shit for it, but the community's got heart; the bar looks nice like this, full of monsters wantin' to offer ya a few more good memories. 
+
+<<changeEmotion GalahadTheDragonborn neutral>>
+Alright, kid, impress me. A Tempestuous Torment, yeah? Whiskey, a liquid with a metalic tang, and some nightmare fuel. Give it a nice blend this time, though.
+
+I appreciate ya givin' it your all, like always.
+
+*Do you want to invite them to stay After Hours?*
+-> Yes
+	<<inviteToAfterHours GalahadTheDragonborn>>
+
+	<<changeEmotion GalahadTheDragonborn happy>>
+	Yeah, I've been meanin' to make some time for ya. See ya tonight, we'll talk then.
+
+-> No 
+
+===
+title: GalahadTheDragonbornOrder3
+tags:
+colorID:
+position:
+---
+Tomorrow's the day, huh? I'd ask how you're doin' but the look on your face tells me enough. Shit like this is enough to rattle anyone's scales, but don't let it get to you. 
+
+<<changeEmotion GalahadTheDragonborn angry>>
+Fight it with all ya got. There's always a chance, yeah? Let's end this shit strong, though, if it's gotta end. Make me the best damn Tempestuous Torment I'll ever taste. 
+
+<<changeEmotion GalahadTheDragonborn neutral>>
+Add the usual: whiskey, blood, and somethin' terrifyin' enough to make even the BBC look like a freshly-shaven werewolf's keyster. 
+
+After ya blend all that together, spice it up somethin' rotten. Missed the taste of meat in my mouth.
+
+<<<<changeEmotion GalahadTheDragonborn happy>>
+It was fun while it lasted, kid. Don't stop movin' forward; overcome everythin' in your way. You'll get where you wanna be.
+
+*Do you want to invite them to stay After Hours?*
+-> Yes
+	<<inviteToAfterHours GalahadTheDragonborn>>
+
+	<<changeEmotion GalahadTheDragonborn happy>>
+	Damn straight I’ll keep ya company; difficult times. Keep an eye on the shadows.
+
+-> No 
+
+
+===
+title: GalahadTheDragonbornFeedbackGreat
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion GalahadTheDragonborn happy>>
+This hits the spot, kid. Couldn't have made it better even if you'd tried. Reminds of home.
+
+===
+title: GalahadTheDragonbornFeedbackRatios
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion GalahadTheDragonborn surprised>>
+You're supposed to be the expert, kid. Gotta give me the amount I'm lookin' for, huh? Patch that up for the next time.
+
+===
+title: GalahadTheDragonbornFeedbackIngredients
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion GalahadTheDragonborn neutral>>
+It's a strange recipe, but it ain't that difficult to follow. Give it a few more shots before servin' me again, though, an' you'll get it right eventually.
+
+===
+title: GalahadTheDragonbornAH2ChoiceA
+tags:
+colorID:
+position:
+---
+It's good to see ya again, kid. Might be the last time we see one another in this bar, huh? Crazy to think about how the world moves, even if it moves without ya. 
+
+<<changeEmotion GalahadTheDragonborn angry>>
+Thanks to your advice, though, I've decided not to let the BBC dictate what I do— and don't do. 
+
+-> Oh, yeah. No more terrorizing local businesses, then? Sounds like a step up.
+	<<changeEmotion GalahadTheDragonborn happy>>
+	I decided to use my looks for good rather than evil, heh. Unfortunately, this ugly mug ain't enough to drive away the BBC completely. 
+
+-> Does that mean you quit? What did your boyfriend think about everything?
+	<<changeEmotion GalahadTheDragonborn happy>>
+	No way in Hell I wasn't gonna quit eventually; thanks for speedin' along the process. 
+
+	Well, he wasn't angry, 'specially when I told 'im I wanted an out. He had his suspicions. Shrewd thing, ain't he? Can't help but love 'im.
+
+<<changeEmotion GalahadTheDragonborn angry>>
+Anyway, my boyfriend and I are lookin' for a fresh start. We're thinkin' of startin' a family business; maybe we'll find our footin' kickin' BBC's ass.
+
+We're sure as hell not bendin' at the knee, and we know a lot of other monsters feel the same way. That bein' said, I'm gonna stick this shitshow through with you, kid, for better or worse.
+
+Don't wait up tonight. Get a good night's rest an' remember... if you keep movin' forward, eventually you'll find your footin'. 
+
+<<changeEmotion GalahadTheDragonborn happy>>
+Night, kid.
+
+===
+title: GalahadTheDragonbornAH2ChoiceB
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion GalahadTheDragonborn sad>>
+It's good to see ya again, kid. Unfortunately, I can't stay for long; BBC's right on my tail and I've got my sister and partner waitin' outside. 
+
+We're clearin' out of the city tomorrow, plannin' on keepin' our heads low for a while, so it might be a long time before we meet again. Hopin' that's a good thing... for me an' you both.
+
+-> Whoa, what happened? Is everyone alright?
+	<<changeEmotion GalahadTheDragonborn angry>>
+	Yeah... somewhat. When I told my boyfriend 'bout what you'd said, we made a last ditch effort to cripple 'em from the inside, but they were quick to catch on. Crafty bastards. 
+
+	Can't let them touch my family, so we're leavin' tomorrow, after everythin's said 'n done.
+
+-> I'm sorry... I shouldn't have opened my mouth.
+	<<changeEmotion GalahadTheDragon happy>>
+	Don't dwell on the past, kid. It's still a new opportunity, no matter the fact it was won through a loss. 
+
+	My sister's in safe hands and my boyfriend is ready to make a name for himself elsewhere, too. Jus' a matter of perspective.
+
+<<changeEmotion GalahadTheDragon angry>>
+Anyway, we're all lookin' for a fresh start, but I'm gonna stick this shitshow through with you, kid, for better or worse. 
+
+Don't wait up tonight. Get a good night's rest an' remember... if you keep movin' forward, eventually you'll find your footin'. 
+
+<<changeEmotion GalahadTheDragonborn happy>>
+Night, kid.
+

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1172717805517708666}
   - component: {fileID: 6120572165352308545}
   m_Layer: 0
-  m_Name: VampireRyan
+  m_Name: GalahadtheDragonborn
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -1505601185
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ff6264fd04b7547b58b864127039923c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 321ddab674fa27d4785ebc6fc3e0a860, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.35, y: 16}
+    oldSize: {x: 10, y: 10}
     newSize: {x: 10.18, y: 15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -208,3 +208,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58151950f439f4e20a64729408bc2e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnabled: 0

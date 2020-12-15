@@ -1,63 +1,268 @@
-
-title: KateTheCockatriceOrder
-tags:
-colorID:
-position:
----
-<<if visited("KateTheCockatriceOrder") is true>>
-	I'll have the Golden Summer, please. It was lovely last time. 
-<<else>>
-	Hello, is this where I order? I have trouble finding things sometimes.
-	Can I have the Golden Summer? I always hear that summer is beautiful, so it should taste great.
-	It's some whiskey and something sweet and pink. Then add some golden dust on top!
-<<endif>>
-	I'm not picky about how it looks, as long as it tastes delicious!
-
-<<if $invitedAMonster is false>>
-	*Do you want to invite them to stay after hours?*
-	-> Yes
-		<<inviteToAfterHours KateTheCockatrice>>
-		<<set $invitedAMonster to true>>
-		I would love to! I have to run some errands, but I'll be back at closing time!
-	-> No
-<<endif>>
 ===
-
-
-title: KateTheCockatriceAH1
+title: KatetheCockatriceAH1
 tags:
 colorID:
 position:
 ---
+
 Phew, it’s cold outside. Thanks for letting me relax in here for a bit. My name’s Kate. I don’t have a last name, so most monsters just call me Kate the Cockatrice. 
 
-I was worried I wouldn’t be able to find my way here! It can be rough, I don’t have a good sense of smell, like Jeff, or hearing, like Brazlrosk the Bloodthirsty. I’m not complaining, wearing this is far better than the alternative. Plus, my boss loves it. I’m a secretary at BBC, they say it helps me avoid distractions. I got employee of the month once from working for twenty hours straight!
+<<changeEmotion KatetheCockatrice happy>>
 
-->Twenty hours without distractions? Sounds horrible. 
-	I was really tired after, but hey! It’s a job. I’m a glass half full kind of monster. And it’s not like I could take off my mask and talk to my co-workers because I would, well, turn them to stone. 
+I was worried I wouldn’t be able to find my way here! It can be rough, I don’t have a good sense of smell like Jeff— or hearing, like Brazlrosk the Bloodthirsty. 
+
+I’m not complaining, wearing this mask is far better than the alternative.
+
+<<changeEmotion KatetheCockatrice neutral>>
+
+Plus, my boss loves it. I’m a secretary at BBC, they say it helps me avoid distractions. I got employee of the month once from working for twenty hours straight!
+
+->Twenty hours without distractions? Sounds horrible.
+	
+	<<changeEmotion KatetheCockatrice sad>>
+
+	I was exhausted. I got home and slept for two days... until my next shift. 
+
+	<<changeEmotion KatetheCockatrice happy>>
+	But hey! At least it's a job. I’m a glass half full kind of monster. And it’s not like I could take off my mask and talk to my co-workers because I would, well, turn them to stone. 
 
 -> What’s the mask for? 
-	It’s uh, a precaution. When I look at anyone, they *kind of* turn to stone... And by kind of I mean, well, yeah they turn to stone. 
 
-I know what you’re thinking, but it’s not so bad! Either I wear the mask, or monsters die… Probably the easiest choice I’ll ever have to make. It does get a bit lonely, though. It makes it hard to know someone, knowing you could look into their eyes but just can’t. Hells, I haven’t been on a date in... ever. My boss at BBC says it’s a good thing that I get to stay focused on work. I know they’re probably right. But some nights it just hurts. Looking in the mirror and realizing that no one will ever get to love the face looking back. 
+	<<changeEmotion KatetheCockatrice sad>>
+	It’s, uh, a precaution. When I look at anyone, they *kind of* turn to stone... And by kind of I mean, well, yeah they turn to stone. 
 
--> Start small. Get a dating app like Monstr. Go on a date, just one. Give it a chance. They’ll love you, eye mask and all. 
+<<changeEmotion KatetheCockatrice neutral>>
 
-->Your stone-vision can’t work on everyone, can it? Find another Cockatrice. Someone that it doesn’t work on!
+I know what you’re thinking, but it’s not so bad! Either I wear the mask, or monsters die… Probably the easiest choice I’ll ever have to make.
 
-Maybe you’re right. Ha, I’m already nervous! But thanks, really. Oh, and please wish me luck. I’ll need it. 
+It does get a bit lonely, though. It makes it hard to know someone, knowing you could look into their eyes but just can’t. 
 
-<<set $invitedAMonster to false>>
-<<finishedTalkingWith KateTheCockatrice>>
+Hells, I haven’t been on a date in... ever. My boss at BBC says it’s a good thing that I get to stay focused on work. I know they’re probably right.
+
+<<changeEmotion KatetheCockatrice sad>>
+
+But some nights it just hurts. Looking in the mirror and realizing that no one will ever get to love the face looking back. 
+
+-> How about you start small? Get an app like Monstr. Go on a date, just one! They’ll love you, eye mask and all. 
+
+-> Well, your stone-vision can’t work on everyone, can it? Find another cockatrice. Someone that it doesn’t work on!
+
+<<changeEmotion KatetheCockatrice surprised>>
+Maybe you’re right. Ha, I’m already nervous! But thanks, really. Wish me luck- I’ll need it. 
+
+===
+title: KatetheCockatriceAH2ChoiceA
+tags:
+colorID:
+position:
+---
+
+It's so nice to be back. Walking through the door and hearing all those voices... It feels like a second home. I told Lilith all about this place. It's thanks to you that we met, after all!
+
+<<changeEmotion KatetheCockatrice happy>>
+Oh, silly me- I haven't told you about Lilith yet! I took your advice and tried putting myself out there. 
+
+Normally I get too nervous and overthink and then suddenly I've realized I've added an exclamation mark after every sentence! But then I met Lilith on Monstr and we started messaging.
+
+She's a sphinx, works as a waiter. And she lives really close- only four hours away! 
+
+<<changeEmotion KatetheCockatrice happy>>
+With her, everything just... works. 
+
+She took me on our first date last night. We climbed into the sewers and befriended all the rats. It was wonderful, even if I had to take a day off of work. 
+
+<<changeEmotion KatetheCockatrice sad>>
+My boss at BBC yelled at me for using one of my vacation days. Lilith said she would eat him if he did anything like that again.
+
+-> It sounds like the two of you are really happy
+	We really are...
+
+-> I remember you were worried about what someone would think about your eye mask...
+
+<<changeEmotion KatetheCockatrice neutral>> 
+The best part is, Lilith doesn't mind that I have to wear this eye mask. She says loving is a new kind of seeing, really. Maybe even a better kind. 
+
+<<changeEmotion KatetheCockatrice surprise>> 
+Wait, does that means she loves me? Oh gosh... I should go get some roses. If I leave now, I can tell her I love her back before the sun rises!
+
+Maybe we can even move in together! Too soon? Too soon. 
+
+<<changeEmotion KatetheCockatrice happy>> 
+
+Goodnight— oh, and thank you! Thank you for everything.
+
+
+===
+title: KatetheCockatriceAH2ChoiceB
+tags:
+colorID:
+position:
+---
+
+It's so nice to be back. I love what you've done with the place. Walking through the door and hearing all those voices... It feels like a second home. 
+
+<<changeEmotion KatetheCockatrice surprise>> 
+I took your advice. I went online, did some searching... there's actually a couple monsters with my problem. Did you know that basilisks also freeze anyone they look at?
+
+I started talking to someone and then we agreed to meet up. His name's Billy, he's a basilisk and works as a sculptor. Makes great, realistic statues. 
+
+<<changeEmotion KatetheCockatrice happy>> 
+I'll admit I went into it hoping to find love— but spending time with Billy, being best friends just fit better. 
+
+We both text each other late at night and he makes great conversation with the deadly vipers living in my apartment plumbing. 
+
+<<changeEmotion KatetheCockatrice sad>> 
+We were still worried we would turn each other to stone. All my feathers were on end when we tested it out! It worked, thankfully. Turns out we can't be turned to stone. 
+
+<<changeEmotion KatetheCockatrice happy>> 
+When we spend time together, we can look at each other! I don't have to wear my mask anymore. 
+
+It's nice, being who I am with someone else. I've always wondered what that felt like. 
+
+-> So you're happy, then?
+	I think so. 
+
+-> Billy sounds great. 
+	He really is. 
+
+<<changeEmotion KatetheCockatrice neutral>> 
+Work can still be difficult, but it's nice knowing I have someone to talk to afterwards. Makes the rest of it feel better, I think. 
+
+<<changeEmotion KatetheCockatrice happy>> 
+Look at the time! I have to pick up groceries before I meet Billy later tonight. He promised that if I bought the ingredients, he'd finally make the kidney casserole he's been bragging about. 
+
+<<changeEmotion KatetheCockatrice surprised>> 
+Is it kidney as in the beans, or the organ? I should ask. 
+
+<<changeEmotion KatetheCockatrice happy>> 
+Goodnight— oh, and thank you! Thank you for everything.
+
+
+===
+title: KatetheCockatriceOrder1
+tags:
+colorID:
+position:
+---
+
+Hello, is this where I order? I have trouble finding things sometimes.
+
+<<changeEmotion KatetheCockatrice happy>>
+
+Can I have the Golden Summer? I always hear that summer is beautiful, so it should taste great.
+
+<<changeEmotion KatetheCockatrice neutral>>
+
+It's some sleepy hollow whiskey and something sweet and pink. Then add some golden dust.
+
+<<changeEmotion KatetheCockatrice happy>>
+
+I'm not picky about much, as long as it's delicious!
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours KatetheCockatrice>>
+
+	<<changeEmotion KatetheCockatrice happy>>
+
+	I would love to. I have to run some errands, but I'll be back at closing time!
+
+-> No
+
 ===
 
+title: KatetheCockatriceOrder2
+tags:
+colorID:
+position:
+---
+
+I'll have the Golden Hour Summer, please. Like last time, but even tastier! 
+
+<<changeEmotion KatetheCockatrice happy>>
+
+I figured I'd treat myself to some sleepy hollow whiskey. There's another ingredient too— I'm sorry, it seems to have slipped my mind. Oh, and mix in some golden dust!
+
+<<changeEmotion KatetheCockatrice surprised>>
+
+I think that's all the ingredients. Just those three things!
 
 
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours KatetheCockatrice>>
+
+	<<changeEmotion KatetheCockatrice happy>>
+
+	I'd be absolutely delighted. 
+-> No
+
+===
+
+title: KatetheCockatriceOrder3
+tags:
+colorID:
+position:
+---
+Hello. I, uh, I hope you're doing well...
+
+<<changeEmotion KatetheCockatrice sad>>
+
+I don't know quite how to phrase this. I heard about how this is your last day. I'm so sorry. You shouldn't have to close the bar.
+
+I guess I just wanted to tell you that you're a good bartender. If anyone can make it work, it's you. I know it.
+
+<<changeEmotion KatetheCockatrice neutral>>
+
+For my order, may I please have the Sideways Sunset? It's angel tears, poison apple juice, and something else I don't remember. I think it was blended in? Oh, and then golden dust on top! 
 
 
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours KatetheCockatrice>>
+
+	<<changeEmotion KatetheCockatrice happy>>
+
+	Yes, I really would love to stop by. See you then! 
+-> No
 
 
+===
+title: KatetheCockatriceFeedbackGreat
+tags:
+colorID:
+position:
+---
 
+<<changeEmotion KatetheCockatrice happy>>
+
+Wow... this is absolutely perfect!
+
+===
+title: KatetheCockatriceFeedbackRatios
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion KatetheCockatrice sad>>
+
+
+It tastes strange... I think the ingredient ratios aren't quite right?
+
+===
+title: KatetheCockatriceFeedbackIngredients
+tags:
+colorID:
+position:
+
+---
+
+<<changeEmotion KatetheCockatrice surprised>>
+
+Great as always but if you don't mind me saying... I think the ingredients aren't quite what they're supposed to be.
+
+===
 
 
 

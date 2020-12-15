@@ -1,32 +1,3 @@
-title: 3GremlinsOrder
-tags:
-colorID:
-position:
----
-<<if visited("3GremlinsOrder") is true>>
-	Some choccy milk please, my siblings overruled me on this one.
-<<else>>
-	*Are these gremlins old enough to have a drink?*
-	-> Yes
-		Score! All right barkeep, I'll take a Liver Failure.
-		You've never heard of a Liver Failure? Wow, you must be the young one, not us.
-		Mix together some poison apple juice, vodka, whiskey, cornpagne, cheery blossom sake, and something that'll make us trip. 
-	-> No
-		Gosh dangit! Mom told me that wouldn't work...
-		Fine, I guess I'll get some Choccy Milk.
-		Choccy Milk is my favoritest drink ever, it's got Poison Apple Juice, blood, graveyard mud, zombie flesh, death shade, and something shimmery on top, I can't seem to remember.
-<<endif>>
-Make sure you get the flesh, blood, mud, and death shade directly from the graveyard.
-
-<<if $invitedAMonster is false>>
-	*Do you want to invite them to stay after hours?*
-	-> Yes
-		<<inviteToAfterHours 3Gremlins>>
-		<<set $invitedAMonster to true>>
-		Totally! We'd love to, but we'll have to clear it with mom.
-	-> No
-		I don't think mom will let us hang out with a stranger anyway, especially past 9pm curfew!
-<<endif>>
 ===
 title: 3GremlinsAH1
 tags:
@@ -35,30 +6,222 @@ position:
 ---
 
 Toe: Hey barkeep! You got a nice place here, except for the fact that everything's too tall. You're making it really hard for us gremlins you know.
+
 Toe: Let me introduce ourselves. I'm Toe, in the middle is Moe, and on the bottom is Low.
+
 Low: Howdy! I'm Low.
+
 Moe: ...hello there.
-Player: Are you sure you're allowed to be at a bar? Are you old enough?
+
+-> Are you sure you're allowed to be at a bar? Are you old enough?
+
+<<changeEmotion 3Gremlins angry>>
 Toe: HEY! Never ask a lady her age, it's RUDE!
+
 -> I'm sorry, I shouldn't assume that you're too young.
 	Toe: That's right.
+
 -> You're a woman?
 	Toe: Yes, the name Toe has been passed down from mother to daughter for generations!
 
+<<changeEmotion 3Gremlins neutral>>
 Toe: But, if you must know, we three triplets are actually 100 years old. Our birthday is this Friday.
+
 Toe: Actually, maybe you could settle a dispute between the three of us. I want to throw a huge celebration at my favorite boiled flesh restaurant downtown, but Low and Moe want something different.
+
 Low: We want a simple game night at home, with bobbing for eyeballs and a pinata with an assortment of guts inside.
+
 Moe: So, um, what do you think?
+
 -> Well, it is two against one. I think you should do the game night.
 	Toe: Dangit, I was really looking forward to the delicious scent of boiled skin. But I get it, majority rules.
--> Maybe you could come to a compromise? You could go eat the flesh at the restaurant and then go home and play games.
+
+-> Maybe you could come to a compromise? You could go eat at the flesh restaurant and then go home and play games.
 	Toe: You're right, a compromise is always the best option.
 	Low: I call first pick at the eyeballs!
-	Moe: But you always pick the best ones.
+	Moe: But you always pick the best ones...
 
 Toe: Thanks for all your help, I never know how to deal with the ideas my siblings have.
-Player: I'm here to help. And before I forget, happy birthday! Let me know how the party goes.
 
-<<set $invitedAMonster to false>>
-<<finishedTalkingWith 3Gremlins>>
+-> I'm here to help. And before I forget, happy birthday! Let me know how the party goes.
+
 ===
+title: 3GremlinsAH2ChoiceA
+tags:
+colorID:
+position:
+---
+
+Toe: You seem to have more and more monsters visiting your bar every day!
+
+Low: Yeah! We love it here, despite the fact that Mom has no idea where we sneak off to.
+
+Moe: ... uh huh ... yeah ...
+
+<<changeEmotion 3Gremlins happy>>
+Low: And our birthday party was great! Moe and I loved playing limbo, especially since we could always knock Toe off of the top position.
+
+Moe: ... yeah ... great party ...
+
+-> Moe, are you ok?
+
+-> Moe, you don't seem like you had any fun at the party, even though you chose the type of party!
+	Moe: The party isn't why I'm upset...
+
+<<changeEmotion 3Gremlins neutral>>
+Moe: Now that we're 100 years old, Mom wants us to move out, but I think it's too soon.
+
+Moe: Toe and Low are itching to get out of the house, but I've always been the odd one out. I feel like my siblings don't understand...
+
+-> It's ok to be independent, especially since you just turned 100. But you should talk with Toe and Low, they might be able to help more than you think.
+
+<<changeEmotion 3Gremlins surprised>>
+Moe: You're right. And independence does sound kinda nice, I would actually be able to go to the bar and do fun things on my own for once!
+
+-> Glad I was able to help. Hope to see you around soon, maybe without your siblings?
+
+===
+title: 3GremlinsAH2ChoiceB
+tags:
+colorID:
+position:
+---
+
+Toe: You seem to have more and more monsters visiting your bar every day!
+
+Low: Yeah! We love it here, despite the fact that Mom has no idea where we sneak off to.
+
+Moe: ... uh huh ... yeah ...
+
+<<changeEmotion 3Gremlins happy>>
+Toe: And our birthday party was great! I loved going to the boiled flesh restaurant. They even gave us a toenail cake and sang happy birthday!
+
+Moe: ... yeah ... great party ...
+
+-> Moe, are you ok? You seem upset.
+
+-> Moe, you don't seem like you had any fun at the party. Is that because you didn't pick the type of party?
+	Moe: The party isn't why I'm upset...
+
+<<changeEmotion 3Gremlins neutral>>
+Moe: I've been feeling pretty left out of the festivities recently, even though 100 is the age you become an adult gremlin at.
+
+<<changeEmotion 3Gremlins sad>>
+Moe: I don't know if you've noticed, but Mom actually gave me a human name, and I've been feeling pretty left out from my monster family because of it.
+
+-> It's not a bad thing to be different. Actually, I think the name Moe makes you sound very grown up.
+
+Moe: Really? I guess I hadn't thought about that. It is far more serious than Toe or Low...
+
+Moe: Thanks for the advice! I'm gonna go do some adulting... No idea what that means though.
+
+===
+title: 3GremlinsOrder1
+tags:
+colorID:
+position:
+---
+Oh! It looks like you don't have any stools! That's ok, we prefer to be stacked up anyway.
+
+*Are these gremlins old enough to have a drink?*
+-> Yes
+	<<changeEmotion 3Gremlins happy>>
+	Score! All right barkeep, I'll take a Liver Failure.
+	You've never heard of a Liver Failure? Wow, you must be the young one, not us.
+	Blend together some hollow whiskey, cornpagne, a handful of trippy mushrooms, and something Russian... 
+
+-> No
+	<<changeEmotion 3Gremlins sad>>
+	Gosh dangit! Mom told me that wouldn't work...
+	Fine, I guess I'll get some Chokky Milk.
+	Chokky Milk is my favoritest drink ever, it's got poison apple juice, blood, and something that reminds me of dirty dishes blended in, I can't seem to remember.
+
+Make sure you harvest the cemetery ingredients directly from the grave, Mom wants us to eat healthy fresh foods!
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours 3Gremlins>>
+
+	<<changeEmotion 3Gremlins surprised>>
+	Totally! We'd love to, but we'll have to clear it with mom.
+
+-> No
+
+===
+title: 3GremlinsOrder2
+tags:
+colorID:
+position:
+---
+*Are these gremlins old enough to have a drink?*
+-> Yes
+	<<changeEmotion 3Gremlins happy>>
+	Nice! I always knew you were cool, barkeep, even though Mom said otherwise.
+	Instead of a Liver Failure, I'd like a Liver Collapse. This one's got hollow whiskey, cornpagne, trippy shrooms mixed in, and the same Russian thing as last time... Do you remember?
+
+-> No
+	<<changeEmotion 3Gremlins sad>>
+	Diddly darn it! Mom was right, you're a party pooper.
+	That's ok, I'll still get a drink. This time, make it a Hot Chokky.
+	It's got a blend of poison apple juice, blood, nightmare fuel, and the same reminder of dirty dishes... I have a feeling it comes from the local graveyard.
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours 3Gremlins>>
+
+	<<changeEmotion 3Gremlins surprised>>
+	Absolutely! Since we turned 100, Mom has allowed us out past our 9pm curfew!
+
+-> No
+
+===
+title: 3GremlinsOrder3
+tags:
+colorID:
+position:
+---
+We're old enough to legally drink at the bar now!
+
+The three of us are going to split a Boo-tacular, special for our birthday!
+
+It has angel tears, vodka, and nightshade berries piled right on top. Oh! There's also something that blooms in the drink that you need to add...
+
+I'm sorry to see this place go though... We've gotten a lot of really yummy drinks here and some good advice!
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours 3Gremlins>>
+	<<changeEmotion 3Gremlins surprised>>
+	We'd love to hang out with you on your last day of business!
+
+-> No
+
+===
+title: 3GremlinsFeedbackGreat
+tags:
+colorID:
+position:
+---
+<<changeEmotion 3Gremlins happy>>
+Amazing job barkeep! All three of us love the way you made this.
+
+===
+title: 3GremlinsFeedbackRatios
+tags:
+colorID:
+position:
+---
+<<changeEmotion 3Gremlins neutral>>
+This tastes a little off... maybe try different amounts next time?
+
+===
+title: 3GremlinsFeedbackIngredients
+tags:
+colorID:
+position:
+---
+<<changeEmotion 3Gremlins angry>>
+Ooh, I think you might've missed a key ingredient on this one.
+
+===
+

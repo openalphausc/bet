@@ -1,64 +1,202 @@
-title: ShapeshifterOrder
-tags:
-colorID:
-position:
----
-<<if visited("ShapeshifterOrder") is true>>
-	Adventure Ale, please. And I guess you can hold the angel tears... for now.
-<<else>>
-	Hello, bartender. Adventure Ale please. The drink of a true hero.
-	It's a blend of vodka, whiskey, poison apple juice, and that good dust.
-	And angel tears, definitely angel tear—
-	...
-	Alright, you got me. I'm a shapeshifter, angel tears make me sick, yada yada. But I can explain!
-<<endif>>
-Also, I gotta get home soon to do homework- I mean, intense hero training.
-
-<<if $invitedAMonster is false>>
-	*Do you want to invite them to stay after hours?*
-	-> Yes
-		<<inviteToAfterHours Shapeshifter>>
-		<<set $invitedAMonster to true>> 
-		Thanks, bartender. We have a lot to talk about.
-	-> No
-<<endif>>
-===
-
-
-
-
 title: ShapeshifterAH1
 tags:
 colorID:
 position:
 ---
-Yeah hi. So, about the angel tears earlier, I kind of actually have a good reason for needing it if you’ll listen.
+Yeah, hi. So about the angel tears earlier. I kind of actually have a good reason for needing it, if you’ll listen.
 
--> I honestly can’t think of a good reason, and you should stop.
-	Okay, damn. Well, you’ll change your mind soon enough.
+-> I honestly can’t think of a good reason and you should stop.
+	Heh, well you’ll change your mind soon enough.
 -> You realize it could kill you, right?
+	<<changeEmotion Shapeshifter sad>>
 	Hm. That’s the hero’s curse. We do what’s good for society, not what’s good for us.
 
-It all started a few days ago… I was at the library, mindlessly submitting to orders to write a “research paper.”
+<<changeEmotion Shapeshifter sad>>
+It all started a few days ago… I was at the library, mindlessly fulfilling orders to write a “research paper.”
+
 In my hypnotic wanderings down the aisles, I stumbled upon a surprisingly colorful text: “Supershifter Sam.” An extremely personal look into the life of fellow shapeshifter Sam.
-Well, this Sam’s story. It was pretty inspiring. The constant adventure, the triumph of pain, the deliverance of justice. I just couldn’t put this book down!
+
+<<changeEmotion Shapeshifter neutral>>
+Well, this "Sam"’s story... It was pretty inspiring. The constant adventure, the triumph of pain, the deliverance of justice. I just couldn’t put this book down!
+
 It made me realize, to be like Sam… That is my true calling in life.
 
 -> What does this have to do with angel tears?
+	<<changeEmotion Shapeshifter angry>>
 	I’m getting there, bartender. A good story needs more than a few minutes to tell.
 -> Whatever kid, we’ve all got something.
 	Yeah. You know, you kind of sounded like my mom just there. That’s good. I trust her.
 
+<<changeEmotion Shapeshifter neutral>>
 Anyways, the thing about Sam is that he couldn’t do all these amazing things on his own. When he was about my age, he became very ill from drinking his friend’s angel-tear-contaminated backwash.
+
+<<changeEmotion Shapeshifter happy>>
 For days, he suffered through the worst stomach pains imaginable. But one day, he woke up not only as a shapeshifter, but a super-intelligent superhero!
+
 I know it’s dangerous, but if everything goes as planned, I can ascend from meaningless “research papers” and become the hero I was meant to be.
+
 So, will you help me?
 
 -> How about I hook you up with the actual Supershifter Sam? He’s here like… every day.
 -> Sounds legit. Come back another day and I’ll have your angel tears.
 
-Wait, seriously? That’s awesome, okay! See you soon, bartender!
+<<changeEmotion Shapeshifter surprised>>
+Wait, seriously?
 
-<<set $invitedAMonster to false>>
-<<finishedTalkingWith Shapeshifter>>
+<<changeEmotion Shapeshifter happy>>
+That's awesome! See you soon, bartender!
+
+===
+
+title: SampleMonsterAH2ChoiceA
+tags:
+colorID:
+position:
+---
+Hello again, barten-
+
+<<changeEmotion Shapeshifter surprised>>
+Wait a minute. The unkempt hair, the disheveled clothing, the deadpan stare...
+
+It's really you! Supershifter Sam!
+
+<<changeEmotion Shapeshifter happy>>
+Oh Sam, I am your biggest fan. I know everything about you! Except for one thing - what really happened on the night of your fifteenth birthday?
+
+-> Oh nothing. I just stayed home and did my homework, like a good child.
+-> Well, I was a good child. I did my homework, stayed home. Nothing crazy.
+
+<<changeEmotion Shapeshifter surprised>>
+What?!
+
+<<changeEmotion Shapeshifter neutral>>
+I mean - yeah, of course, haha. I like doing homework too. It's not like I've been skipping class to obsess over you or anything.
+
+In fact, it's getting pretty late, and there's this huge research paper I've been working on you see.
+
+<<changeEmotion Shapeshifter happy>>
+But when we meet again, you're gonna hear nothing but what an awesome grade I got on it, heh. Bye now!
+
+===
+title: SampleMonsterAH2ChoiceB
+tags:
+colorID:
+position:
+---
+Hello again, bartender. I can see in your eyes that you notice something different about me.
+
+<<changeEmotion Shapeshifter happy>>
+Ever since we made the agreement, I've spent all my waking hours preparing for the moment I become a superhero like Supershifter Sam.
+
+The body seen before you now is the result of a 48-hour marathon of glute and tricep strengthening bootcamps, along with 2 gallons of unflavored protein shakes!
+
+<<changeEmotion Shapeshifter neutral>>
+I'm... extremely tired, but I'm ready to fulfill the next step. You have the stuff?
+
+-> I hope you know what you're getting into.
+
+-> Yep. Knock yourself out.
+	Wonderful.
+
+<<changeEmotion Shapeshifter sad>>
+...
+<<changeEmotion Shapeshifter surprised>>
+I think it's happening! The throbbing of my skull, the stinging feeling of bile rising in my throat! It's...
+
+<<changeEmotion Shapeshifter sad>>
+Oh no... excuse me bartender, I think I need to go home and, uh... do some homework. Bye now!
+
+===
+
+title: ShapeshifterOrder1
+tags:
+colorID:
+position:
+---
+Hello, bartender. Adventure Ale please. The drink of a true hero.
+
+It's a blend of vodka, whiskey, poison apple juice, and that good dust.
+
+And angel tears, definitely angel tears.
+
+...
+
+<<changeEmotion Shapeshifter angry>>
+Alright, you got me. I'm a shapeshifter, angel tears make me sick, yada yada. But I can explain!
+
+<<changeEmotion Shapeshifter neutral>>
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours Shapeshifter>>
+
+	Thanks, bartender. Your hospitality almost makes up for the lack of seating today... 
+-> No
+===
+
+title: ShapeshifterOrder2
+colorID:
+position:
+---
+
+Hello, bartender. Adventure Ale please. The drink of a true hero.
+
+It's a blend of vodka, golden dust, and something else I forget. I'm getting tired just thinking about it.
+
+After you're done making that, I think I want to add something that reflects my inner soul-searching coming to its final rest...
+
+Oh, and I guess you can hold the angel tears. For now.
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours Shapeshifter>>
+
+	Thanks, bartender. We have a lot to talk about.
+-> No
+===
+
+title: ShapeshifterOrder3
+colorID:
+position:
+---
+<<changeEmotion Shapeshifter sad>>
+Hello, bartender. Might be the last drink I'll have here, so I'm thinking to change it up a bit.
+
+Maybe a blend of blood, whiskey, dust, and some other alcohol to lighten the mood. And a bit more dust to top it off.
+
+Man, I'm not feeling very heroic today...
+
+*Do you want to invite them to stay after hours?*
+-> Yes
+	<<inviteToAfterHours Shapeshifter>>
+	
+	Thanks, bartender. We have a lot to talk about.
+-> No
+===
+
+title: ShapeshifterFeedbackGreat
+tags:
+colorID:
+position:
+---
+<<changeEmotion Shapeshifter happy>>
+Mmm, just how I like it! Thanks, bartender!
+===
+
+title: ShapeshifterFeedbackRatios
+tags:
+colorID:
+position:
+---
+<<changeEmotion Shapeshifter sad>>
+A hero needs a perfectly balanced diet. This drink just isn't it.
+
+===
+title: ShapeshifterFeedbackIngredients
+tags:
+colorID:
+position:
+---
+<<changeEmotion Shapeshifter sad>>
+Hm, something's wrong. And it's not just the lack of angel tears.
 ===
