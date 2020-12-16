@@ -54,6 +54,8 @@ public class Monster : MonoBehaviour
 
     private float seatTimer = 0.0f;
 
+    private bool ghostCenter = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -110,6 +112,27 @@ public class Monster : MonoBehaviour
 
                 if (seatTimer >= 45.0f) { happiness -= 1; Debug.Log("decreased happiness"); }
             }
+
+            if (MonsterSpawner.inTutorial && state == MonsterState.center && ghostCenter && !alreadyClickedOn)
+            {
+                ghostCenter = false;
+                
+                TutorialSpotlight.spot1.enabled = true;
+                TutorialSpotlight.spot2.enabled = false;
+                TutorialSpotlight.spot1.transform.position = new Vector3(0, 8.3f, 0);
+                TutorialSpotlight.spot1.pointLightOuterRadius = 20;
+                TutorialSpotlight.spot1.intensity -= 0.3f;
+            }
+
+            if (MonsterSpawner.inTutorial && state == MonsterState.center && !ghostCenter && alreadyClickedOn)
+            {
+                ghostCenter = true;
+                TutorialSpotlight.spot1.enabled = false;
+                TutorialSpotlight.spot2.enabled = false;
+                TutorialSpotlight.spot1.pointLightOuterRadius = 10;
+                TutorialSpotlight.spot1.intensity += 0.3f;
+            }
+        
 
             // slide off when ready
             if (state == MonsterState.center && readyToLeave && !MonsterSpawner.inTutorial)
