@@ -1,65 +1,241 @@
-title: EldritchMonsterOrder
-tags: 
-colorID:
-position:
----
-<<if visited("EldritchMonsterOrder") is true>>
-	Another <Null and Void>, if you could. 
-<<else>>
-	Good evening. Don't mind the <eye>, it's just a little sore. Luckily, this bar isn't an <eyesore>, haha... 
-	Anyway, I'll take the Null and Void; make it like they do in <the Far Realm>. Vodka, some dead meat, Nightmare Fuel, and Trippy Mushrooms, all <blended> together. 
-<<endif>>
-	I've noticed that jokes don't land if you haven't got <an eye> for the language.
-
-<<if $invitedAMonster is false>>
-	*Do you want to invite them to stay after hours?*
-	-> Yes
-		<<inviteToAfterHours EldritchMonster>>
-		<<set $invitedAMonster to true>>
-		That would be great. It'll give me an excuse to practice my jokes. An eye for an eye, right?
-	-> No
-<<endif>>
-===
-
 
 title: EldritchMonsterAH1
 tags:
 colorID:
 position:
 ---
-
+<<changeEmotion EldritchMonster neutral>>
 
 I’m ṛ̵̪̻̾̓͌̋į̷̺̺̺̠̞̱̮͋͂̏̿̊̏̉̋́̀̔̇͠ċ̷̣̤͉̝̐̌̃͋̂̉ḥ̴̨̭̫̘̫̺͉̈͛͋͛̓̒̌́͌͆̚. Ě̸̳̹̭̥̽̔̆͑̍͗̆́͋͌̚͠l̷̛̘̣̺̺͓̘̰̮͆̀͆̽̓̓̈́͋̍̃͛͜͝d̶̫̫͔̱͈͉̙̤͔̳͈̠͇̈́̍̄͊̄͘  Rich. Mind < if I > sit down?
 
-
 I’m a stand up comedian from <the Far Realm>. I work the club across the street.
+
+<<changeEmotion EldritchMonster happy>>
+
 Moving here has <been> hard though, I feel <like> whenever I try to communicate with people,
 
 They <just> get lost in the depth of the language <that I’m> speaking
+
+<<changeEmotion EldritchMonster sad>>
+
 Like people’s faces go blank and sometimes they just tremble,
+
+<<changeEmotion EldritchMonster surprised>>
 
 Or they stare at me and <their eyes> glaze over. I really can’t figure it out.
 
 Maybe it’s my pronunciation.
+
+<<changeEmotion EldritchMonster neutral>>
+
 -> *exert concentration* Your pronunciation is great, actually
+	<<changeEmotion EldritchMonster happy>>
 	<Thank you>, that means a lot. Thanks for not glazing over your eyes.
+
 -> *allow your eyes to glaze over*
+
+	<<changeEmotion EldritchMonster sad>>
 	Á̸͕̰̗͑̑́͛͗͛g̷̡̭͇͉̩̳̩̯͎̀̎͜͜h̶̨̛̥͓̀̀̋̊̅̐̽̿̾̆͝! <Not> you too!
+
+<<changeEmotion EldritchMonster neutral>>
+
 Well anyway, my <eye> has  <really been> bugging me lately.
 
 Does it look <red> to you <too>?
+
+<<changeEmotion EldritchMonster sad>>
 
 The <last> time I <went into> the doctor’s office, <I told a joke and> someone  <practically> died <laughing>.
 
 But <this thing is> SO ITCHY.
 
 -> Maybe it’s best to stay away from the doctor’s then - try my mom’s home remedy of warm compresses.
+
 	Alright, <I’ll try> that out!
+
 -> Better safe than sorry, it does look a little off to me - have it checked out.
+
 	You’re probably right, if <it> was allergies, it <would’ve affected> these eyes too.
 
-Thanks for the tip, bartender. I’ll <see> you <around again> soon.
+<<changeEmotion EldritchMonster happy>>
 
-<<set $invitedAMonster to false>>
-<<finishedTalkingWith EldritchMonster>>
+Thanks for the advice, bartender. I’ll <see> you <around again> soon.
+
+===
+title: EldritchMonsterAH2ChoiceA
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion EldritchMonster sad>>
+
+Hi bartender. Business <seems> good.
+
+Thanks for the advice, by the way. Unfortunately, I probably <should have> gone to the doctor.
+
+The pinkeye has spread to the rest of my eyes. I quite like it though, it has <given> me great material for my standup sets
+
+<<changeEmotion EldritchMonster happy>>
+
+Your warm compress has been helping me keep the <swelling> and itching down too.
+
+<<changeEmotion EldritchMonster sad>>
+
+-> I’m so sorry about that, but glad my compress could help!
+
+-> Ooh, that looks pretty uncomfortable.
+
+No worries. I visited the doctor yesterday in the end and he <prescribed> me eyedrops.
+
+<<changeEmotion EldritchMonster happy>>
+
+It’s a mess getting them in every eye, but like I said, great for my material.
+
+<<changeEmotion EldritchMonster sad>>
+
+I’ll be heading off then. Got to prepare for a <big gig> I booked for tomorrow.
+
+*muttering to self* Eye drops <eye drops> eye drops
+
+===
+title: EldritchMonsterAH2ChoiceB
+tags:
+colorID:
+position:
+---
+<<changeEmotion EldritchMonster happy>>
+
+Hi bartender. Business <seems> good
+
+Thanks for the advice the other night. A doctor visit couldn’t <have> been better timed.
+
+<<changeEmotion EldritchMonster surprised>>
+
+Turns out I had picked up pinkeye on my <journey> over here. 
+
+Those darn sunsets and their pink <beauty> are simply infectious
+
+-> I’m so sorry about that, but glad my recommendation could help! 
+
+-> Your eyes look great now!
+
+<<changeEmotion EldritchMonster happy>>
+
+Yeah, I got prescribed eyedrops and the <infection> went away pretty fast.
+
+I’m headed over to my next gig right after this. Feeling great.
+
+<<changeEmotion EldritchMonster surprised>>
+
+*blinks at shouting outside* That’s my caller <from> the club. I’ve gotta run now. 
+
+<<changeEmotion EldritchMonster happy>>
+
+Thanks again bartender. 
+
+===
+title: EldritchMonsterOrder1
+tags: 
+colorID:
+position:
+---
+Good evening. Don't mind the <eye>, it's just a little sore. Luckily, this bar isn't an <eyesore>, haha... 
+
+Anyway, I'll take the Null and Void; make it like they do in <the Far Realm>. 
+
+Blood, poison apple juice, and lots of the gas that always gives people the creeps
+
+I've noticed that jokes don't land if you haven't got <an eye> for the language.
+
+===
+title: EldritchMonsterOrder2
+tags:
+colorID:
+position:
+---
+Hi again
+
+<<changeEmotion EldritchMonster happy>>
+
+Tonight I'm <yearning> for a Perpetual Void
+
+Blood, poison apple juice, nightmare fuel, and graveyard mud mixed in.  
+
+<<changeEmotion EldritchMonster neutral>>
+
+===
+title: EldritchMonsterOrder3
+tags:
+colorID:
+position:
+---
+Hello friend.
+
+<<changeEmotion EldritchMonster happy>>
+
+I'll go for <another> Perpetual Void
+
+Same ingredients as last time.
+
+Blood, poison apple juice, and another thing else mixed in. But this time put something mucky on top.
+
+===
+title: EldritchMonsterFeedbackGreat
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion EldritchMonster happy>>
+Tastes like home... infinite <empty> space...
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours EldritchMonster>>
+		That would be great. It'll give me an excuse to practice my jokes. 
+	-> No
+<<endif>>
+<<goodbye EldritchMonster>>
+
+===
+title: EldritchMonsterFeedbackRatios
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion EldritchMonster neutral>>
+Hmm, it feels like the ratios of the Void are off.
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours EldritchMonster>>
+		That would be great. It'll give me an excuse to practice my jokes. 
+	-> No
+<<endif>>
+<<goodbye EldritchMonster>>
+
+
+===
+title: EldritchMonsterFeedbackIngredients
+tags:
+colorID:
+position:
+
+---
+<<changeEmotion EldritchMonster sad>>
+Some ingredient in that drink is not sitting well with my <essence>.
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours EldritchMonster>>
+		That would be great. It'll give me an excuse to practice my jokes. 
+	-> No
+<<endif>>
+<<goodbye EldritchMonster>>
+
 ===

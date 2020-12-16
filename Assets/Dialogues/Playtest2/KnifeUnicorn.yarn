@@ -1,0 +1,267 @@
+
+title: KnifeUnicornAH1
+tags:
+colorID:
+position:
+---
+<<changeEmotion KnifeUnicorn angry>>
+HEY! What’re you lookin’ at, buddy? Think I look funny, do ya? 
+
+<<changeEmotion KnifeUnicorn surprised>>
+What?! ...You wanna know my name? Folks call me Points. On account of my many knives.
+
+Did you notice them? D-do you think they’re cool?
+
+<<changeEmotion KnifeUnicorn neutral>>
+I’m not much of a drinker, I like to keep my senses sharp. Like the… 
+
+<<changeEmotion KnifeUnicorn happy>>
+YEAH, like the knives! You’re catching on quick.
+
+<<changeEmotion KnifeUnicorn neutral>>
+Anyway, I’ve been lookin’ for a place to lay low for a while. Can’t attract too much attention with all the shenanigans I’ve been drawing up. Or, well, carving up.
+ 
+You could say that I’m a painter of sorts... and knives are my brushes. And paint. And muse. I actually carved a lil' doodle on that table in the corner. It’s of a... 
+
+<<changeEmotion KnifeUnicorn surprised>>
+SWORD! 
+
+<<changeEmotion KnifeUnicorn neutral>>
+Betcha didn’t expect that. Good ol’ Points will keep you on your toes.
+
+
+-> Those tables are expensive, you know...
+	<<changeEmotion KnifeUnicorn angry>>
+	WATCH IT! Or you might just get Points to poke you full of holes... 
+
+-> I think your art gives the bar character!
+	<<changeEmotion KnifeUnicorn happy>>
+	I just knew you had taste, buddy.
+
+
+<<changeEmotion KnifeUnicorn neutral>>
+See, I’m anti-corporation. Big time. The BBC is drivin’ up the prices of my delightful daggers and I won’t stand for it no more. 
+
+<<changeEmotion KnifeUnicorn angry>>
+I WON’T STAND FOR IT.
+
+<<changeEmotion KnifeUnicorn sad>>
+I can’t make my art without quality knives… and the term “starving artist” ain’t exactly hyperbole…
+ 
+With prices so high, I’ve had to carve all my SICK ANARCHIST PROPAGANDA with dull daggers and it just doesn’t turn out right! I can’t take it much longer… I might just leave the gig all together.
+
+<<changeEmotion KnifeUnicorn neutral>> 
+You seem like a fella who knows their way around sharp objects… what do you think? Should I pack up my knives for good?
+
+
+-> Start making and selling your own knives as a door-to-door salesman. Capitalism is inevitable and you might as well bow to it.
+
+-> FIGHT THE MAN! DISMANTLE THE ESTABLISHMENT! Forge your own knives from sheer rage and carve your name into the foundation of the BBC!
+
+
+<<changeEmotion KnifeUnicorn happy>>
+You’re on to something, there. I THINK I LIKE YOU, KID. You’ll be seeing more of me.
+
+And my knives. And all of my friends who also love knives. I’m actually very popular.
+
+
+
+===
+title: KnifeUnicornAH2ChoiceA
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion KnifeUnicorn happy>>
+Bartender, it looks like you’ve got yourself a KNIFE establishment here! Get it? Knife? Like my... HAHA yeah... you get it.
+
+<<changeEmotion KnifeUnicorn neutral>> 
+
+Listen, I gotta thank you for your advice. I turned myself around, started sellin’ my own knives and they took off like hotcakes.
+
+It’s beautiful! Little kids... running around with pockets full of knives. I’m thinkin’ of expanding into other cutlery...
+
+<<changeEmotion KnifeUnicorn angry>>
+At this rate, I bet I’ve taken a huge CUT of the BBC’s profits. That’ll show ‘em not to mess with Points!
+
+
+-> Children and knives sound like a good combination to me!
+
+-> So you’re a real entrepreneur now, huh?
+
+
+<<changeEmotion KnifeUnicorn surprised>> 
+You think I should start making spoons? Forks? SPORKS! Oh, just you wait… I’m gonna run that BBC out of business. And then stab ‘em! YEAH!
+
+<<changeEmotion KnifeUnicorn sad>> 
+
+What? It’s not like I stopped stabbing people... that was totally a thing I did this entire time.
+
+<<changeEmotion KnifeUnicorn happy>> 
+Anyway, I gotta blast. I’ve got so many cooks in the kitchen… except the cooks are… YOU GUESSED IT, KNIVES! Monster God, you’re a good friend. See you, buddy!
+
+
+===
+title: KnifeUnicornAH2ChoiceB
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion KnifeUnicorn happy>>
+Bartender, it looks like you’ve got yourself a KNIFE establishment here! Get it? Knife? Like my... HAHA yeah... you get it.
+
+Listen, I gotta thank you for your advice. Turns out knives forged by the rage of the oppressed cut like... well, a hot knife through butter! 
+
+
+<<changeEmotion KnifeUnicorn angry>> 
+We’ve started a FRICKIN’ MOVEMENT, MAN! Told those BBC corporate robots to SHOVE IT. 
+
+<<changeEmotion KnifeUnicorn happy>>
+Folks are carving the streets to their vision and it’s all thanks to you! And me! And my SICK KNIVES!
+
+
+-> Sounds like you’re starting a revolution, comrade.
+
+-> The will of the people will always overpower the will of corporations because we have the one thing they don’t… really, REALLY sharp knives.
+
+
+<<changeEmotion KnifeUnicorn neutral>>
+That’s what I like to hear, my friend! And listen, from this point forward, you’ll have all the knives your little heart wants. Points provides for his people. Points provides for you.
+
+<<changeEmotion KnifeUnicorn happy>>
+Anyway, I gotta blast. I’ve got so many cooks in the kitchen… except the cooks are… YOU GUESSED IT, KNIVES! Monster God, you’re a good friend. See you, buddy!
+
+
+
+===
+
+title: KnifeUnicornOrder1
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion KnifeUnicorn angry>>
+
+HEY YOU! I need something to calm my nerves before I get all... stabby.
+
+Gimme a Yuck Yuck. That's Blood-- and lots of it, Whiskey, and Graveyard Mud.
+
+<<changeEmotion SampleMonster happy>>
+
+And I like my Graveyard Mud with some gravel... so don't mix it too much. GOT IT?
+
+===
+
+title: KnifeUnicornOrder2
+tags:
+colorID:
+position:
+---
+
+Long time no STAB, am I right? Kidding! I wouldn't stab you, buddy. Unless you did somethin' to make me angry, like disenfranchise the working class... 
+
+<<changeEmotion KnifeUnicorn happy>>
+
+Gimme a Yucky Yucky tonight. Kinda like the last drink with blood and whiskey, but swap out the Graveyard Mud for something fleshy.
+
+<<changeEmotion KnifeUnicorn sad>>
+
+Oh! And don't forget to blend this one. Heheh... I hate having to pick meat out of my teeth...
+
+===
+title: KnifeUnicornOrder3
+tags:
+colorID:
+position:
+---
+
+Is that a knife in your pocket or are you just happy to see me? Oh... it IS a knife?! SICK!
+
+<<changeEmotion KnifeUnicorn happy>>
+
+I know things are hard, but tonight is a special night, pal. Let's bust out the big guns... one Super Yuck Yuck to drown our sorrows, eh? 
+
+You got the usual: Blood, Whiskey, Graveyard Mud. Then add in a little somethin' somethin' to make me smile.
+
+<<changeEmotion KnifeUnicorn angry>>
+
+And, HELL, blend it all up! And throw somethin on top that'll scare the BBC more than any of these knives would!
+
+===
+title: KnifeUnicornFeedbackGreat
+tags:
+colorID:
+position:
+---
+<<changeEmotion KnifeUnicorn happy>>
+Not too shabby! Good thing I don't have to break out one of these knives and teach you a lesson...
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours KnifeUnicorn>>
+
+		<<changeEmotion KnifeUnicorn angry>>
+		Huh? You wanna hang out with me? YOU WANNA HANG OUT WITH ME?!
+
+		<<changeEmotion KnifeUnicorn happy>>
+		Yeah. I think I'd like that.
+
+	-> No
+<<endif>>
+<<goodbye KnifeUnicorn>>
+
+
+===
+title: KnifeUnicornFeedbackRatios
+tags:
+colorID:
+position:
+---
+<<changeEmotion KnifeUnicorn angry>>
+You call this a drink? YOU CALL THIS A DRINK?! Listen... you either got too much of one thing in here, or not enough of somethin' else.
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours KnifeUnicorn>>
+
+		<<changeEmotion KnifeUnicorn angry>>
+		Huh? You wanna hang out with me? YOU WANNA HANG OUT WITH ME?!
+
+		<<changeEmotion KnifeUnicorn happy>>
+		Yeah. I think I'd like that.
+
+	-> No
+<<endif>>
+<<goodbye KnifeUnicorn>>
+
+
+===
+title: KnifeUnicornFeedbackIngredients
+tags:
+colorID:
+position:
+
+---
+<<changeEmotion KnifeUnicorn surprised>>
+BLUH! This ain't what I ordered, buddy. You didn't follow the recipe, did ya?
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours KnifeUnicorn>>
+
+		<<changeEmotion KnifeUnicorn angry>>
+		Huh? You wanna hang out with me? YOU WANNA HANG OUT WITH ME?!
+
+		<<changeEmotion KnifeUnicorn happy>>
+		Yeah. I think I'd like that.
+
+	-> No
+<<endif>>
+<<goodbye KnifeUnicorn>>
+===

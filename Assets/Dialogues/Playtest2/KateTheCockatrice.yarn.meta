@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6ec34c8892e234ca7b376b287eebed13
+guid: 5d8f9b553732e0c4a81733239ff4542b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,28 +10,84 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - KateTheCockatrice-KatetheCockatriceOrder-0
-  - KateTheCockatrice-KatetheCockatriceOrder-1
-  - KateTheCockatrice-KatetheCockatriceOrder-2
-  - KateTheCockatrice-KatetheCockatriceOrder-3
-  - KateTheCockatrice-KatetheCockatriceOrder-4
-  - KateTheCockatrice-KatetheCockatriceOrder-5
-  - KateTheCockatrice-KatetheCockatriceOrder-6
-  - KateTheCockatrice-KatetheCockatriceOrder-7
-  - KateTheCockatrice-KatetheCockatriceOrder-8
-  - KateTheCockatrice-KatetheCockatriceAH1-9
-  - KateTheCockatrice-KatetheCockatriceAH1-10
-  - KateTheCockatrice-KatetheCockatriceAH1-11
-  - KateTheCockatrice-KatetheCockatriceAH1-12
-  - KateTheCockatrice-KatetheCockatriceAH1-13
-  - KateTheCockatrice-KatetheCockatriceAH1-14
-  - KateTheCockatrice-KatetheCockatriceAH1-15
-  - KateTheCockatrice-KatetheCockatriceAH1-16
-  - KateTheCockatrice-KatetheCockatriceAH1-17
-  - KateTheCockatrice-KatetheCockatriceAH1-18
+  - KateTheCockatrice 1-KatetheCockatriceAH1-0
+  - KateTheCockatrice 1-KatetheCockatriceAH1-1
+  - KateTheCockatrice 1-KatetheCockatriceAH1-2
+  - KateTheCockatrice 1-KatetheCockatriceAH1-3
+  - KateTheCockatrice 1-KatetheCockatriceAH1-4
+  - KateTheCockatrice 1-KatetheCockatriceAH1-5
+  - KateTheCockatrice 1-KatetheCockatriceAH1-6
+  - KateTheCockatrice 1-KatetheCockatriceAH1-7
+  - KateTheCockatrice 1-KatetheCockatriceAH1-8
+  - KateTheCockatrice 1-KatetheCockatriceAH1-9
+  - KateTheCockatrice 1-KatetheCockatriceAH1-10
+  - KateTheCockatrice 1-KatetheCockatriceAH1-11
+  - KateTheCockatrice 1-KatetheCockatriceAH1-12
+  - KateTheCockatrice 1-KatetheCockatriceAH1-13
+  - KateTheCockatrice 1-KatetheCockatriceAH1-14
+  - KateTheCockatrice 1-KatetheCockatriceAH1-15
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-16
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-17
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-18
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-19
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-20
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-21
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-22
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-23
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-24
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-25
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-26
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-27
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-28
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceA-29
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-30
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-31
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-32
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-33
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-34
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-35
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-36
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-37
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-38
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-39
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-40
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-41
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-42
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-43
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-44
+  - KateTheCockatrice 1-KatetheCockatriceAH2ChoiceB-45
+  - KateTheCockatrice 1-KatetheCockatriceOrder1-46
+  - KateTheCockatrice 1-KatetheCockatriceOrder1-47
+  - KateTheCockatrice 1-KatetheCockatriceOrder1-48
+  - KateTheCockatrice 1-KatetheCockatriceOrder1-49
+  - KateTheCockatrice 1-KatetheCockatriceOrder2-50
+  - KateTheCockatrice 1-KatetheCockatriceOrder2-51
+  - KateTheCockatrice 1-KatetheCockatriceOrder2-52
+  - KateTheCockatrice 1-KatetheCockatriceOrder3-53
+  - KateTheCockatrice 1-KatetheCockatriceOrder3-54
+  - KateTheCockatrice 1-KatetheCockatriceOrder3-55
+  - KateTheCockatrice 1-KatetheCockatriceOrder3-56
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-57
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-58
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-59
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-60
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-61
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-62
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-63
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-64
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-65
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-66
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-67
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-68
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-69
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-70
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-71
   compilationStatus: 1
   isSuccesfullyCompiled: 1
-  compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: 6ec34c8892e234ca7b376b287eebed13,
+  compilationErrorMessage: 'Error on line 1 at position 1:token recognition error
+    at: ''=''
+
+'
+  baseLanguage: {fileID: 7128917941130120860, guid: 5d8f9b553732e0c4a81733239ff4542b,
     type: 3}
   localizations: []

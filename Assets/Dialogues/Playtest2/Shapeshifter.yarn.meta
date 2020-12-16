@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 297e0fbc6eda04819a56f41120d51ab1
+guid: bdbf2ba767404cb4dbfb52e8fb6045af
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,40 +10,78 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - Shapeshifter-ShapeshifterOrder-0
-  - Shapeshifter-ShapeshifterOrder-1
-  - Shapeshifter-ShapeshifterOrder-2
-  - Shapeshifter-ShapeshifterOrder-3
-  - Shapeshifter-ShapeshifterOrder-4
-  - Shapeshifter-ShapeshifterOrder-5
-  - Shapeshifter-ShapeshifterOrder-6
-  - Shapeshifter-ShapeshifterOrder-7
-  - Shapeshifter-ShapeshifterOrder-8
-  - Shapeshifter-ShapeshifterOrder-9
-  - Shapeshifter-ShapeshifterOrder-10
-  - Shapeshifter-ShapeshifterAH1-11
-  - Shapeshifter-ShapeshifterAH1-12
-  - Shapeshifter-ShapeshifterAH1-13
-  - Shapeshifter-ShapeshifterAH1-14
-  - Shapeshifter-ShapeshifterAH1-15
-  - Shapeshifter-ShapeshifterAH1-16
-  - Shapeshifter-ShapeshifterAH1-17
-  - Shapeshifter-ShapeshifterAH1-18
-  - Shapeshifter-ShapeshifterAH1-19
-  - Shapeshifter-ShapeshifterAH1-20
-  - Shapeshifter-ShapeshifterAH1-21
-  - Shapeshifter-ShapeshifterAH1-22
-  - Shapeshifter-ShapeshifterAH1-23
-  - Shapeshifter-ShapeshifterAH1-24
-  - Shapeshifter-ShapeshifterAH1-25
-  - Shapeshifter-ShapeshifterAH1-26
-  - Shapeshifter-ShapeshifterAH1-27
-  - Shapeshifter-ShapeshifterAH1-28
-  - Shapeshifter-ShapeshifterAH1-29
-  - Shapeshifter-ShapeshifterAH1-30
+  - Shapeshifter 1-ShapeshifterAH1-0
+  - Shapeshifter 1-ShapeshifterAH1-1
+  - Shapeshifter 1-ShapeshifterAH1-2
+  - Shapeshifter 1-ShapeshifterAH1-3
+  - Shapeshifter 1-ShapeshifterAH1-4
+  - Shapeshifter 1-ShapeshifterAH1-5
+  - Shapeshifter 1-ShapeshifterAH1-6
+  - Shapeshifter 1-ShapeshifterAH1-7
+  - Shapeshifter 1-ShapeshifterAH1-8
+  - Shapeshifter 1-ShapeshifterAH1-9
+  - Shapeshifter 1-ShapeshifterAH1-10
+  - Shapeshifter 1-ShapeshifterAH1-11
+  - Shapeshifter 1-ShapeshifterAH1-12
+  - Shapeshifter 1-ShapeshifterAH1-13
+  - Shapeshifter 1-ShapeshifterAH1-14
+  - Shapeshifter 1-ShapeshifterAH1-15
+  - Shapeshifter 1-ShapeshifterAH1-16
+  - Shapeshifter 1-ShapeshifterAH1-17
+  - Shapeshifter 1-ShapeshifterAH1-18
+  - Shapeshifter 1-ShapeshifterAH1-19
+  - Shapeshifter 1-ShapeshifterAH1-20
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-21
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-22
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-23
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-24
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-25
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-26
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-27
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-28
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-29
+  - Shapeshifter 1-SampleMonsterAH2ChoiceA-30
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-31
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-32
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-33
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-34
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-35
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-36
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-37
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-38
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-39
+  - Shapeshifter 1-SampleMonsterAH2ChoiceB-40
+  - Shapeshifter 1-ShapeshifterOrder1-41
+  - Shapeshifter 1-ShapeshifterOrder1-42
+  - Shapeshifter 1-ShapeshifterOrder1-43
+  - Shapeshifter 1-ShapeshifterOrder1-44
+  - Shapeshifter 1-ShapeshifterOrder1-45
+  - Shapeshifter 1-ShapeshifterOrder1-46
+  - Shapeshifter 1-ShapeshifterOrder2-47
+  - Shapeshifter 1-ShapeshifterOrder2-48
+  - Shapeshifter 1-ShapeshifterOrder2-49
+  - Shapeshifter 1-ShapeshifterOrder2-50
+  - Shapeshifter 1-ShapeshifterOrder3-51
+  - Shapeshifter 1-ShapeshifterOrder3-52
+  - Shapeshifter 1-ShapeshifterOrder3-53
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-54
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-55
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-56
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-57
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-58
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-59
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-60
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-61
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-62
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-63
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-64
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-65
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-66
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-67
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-68
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: 297e0fbc6eda04819a56f41120d51ab1,
+  baseLanguage: {fileID: 7128917941130120860, guid: bdbf2ba767404cb4dbfb52e8fb6045af,
     type: 3}
   localizations: []

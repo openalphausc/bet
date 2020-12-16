@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5563e338e6e54305837cff075cd0c4e
+guid: eb18cb408a187414fa682e5edaf27102
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,45 +10,75 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - EldritchMonster-EldritchMonsterOrder-0
-  - EldritchMonster-EldritchMonsterOrder-1
-  - EldritchMonster-EldritchMonsterOrder-2
-  - EldritchMonster-EldritchMonsterOrder-3
-  - EldritchMonster-EldritchMonsterOrder-4
-  - EldritchMonster-EldritchMonsterOrder-5
-  - EldritchMonster-EldritchMonsterOrder-6
-  - EldritchMonster-EldritchMonsterAH1-7
-  - EldritchMonster-EldritchMonsterAH1-8
-  - EldritchMonster-EldritchMonsterAH1-9
-  - EldritchMonster-EldritchMonsterAH1-10
-  - EldritchMonster-EldritchMonsterAH1-11
-  - EldritchMonster-EldritchMonsterAH1-12
-  - EldritchMonster-EldritchMonsterAH1-13
-  - EldritchMonster-EldritchMonsterAH1-14
-  - EldritchMonster-EldritchMonsterAH1-15
-  - EldritchMonster-EldritchMonsterAH1-16
-  - EldritchMonster-EldritchMonsterAH1-17
-  - EldritchMonster-EldritchMonsterAH1-18
-  - EldritchMonster-EldritchMonsterAH1-19
-  - EldritchMonster-EldritchMonsterAH1-20
-  - EldritchMonster-EldritchMonsterAH1-21
-  - EldritchMonster-EldritchMonsterAH1-22
-  - EldritchMonster-EldritchMonsterAH1-23
-  - EldritchMonster-EldritchMonsterAH1-24
-  - EldritchMonster-EldritchMonsterAH1-25
-  - EldritchMonster-EldritchMonsterAH1-26
+  - EldritchMonster 1-EldritchMonsterAH1-0
+  - EldritchMonster 1-EldritchMonsterAH1-1
+  - EldritchMonster 1-EldritchMonsterAH1-2
+  - EldritchMonster 1-EldritchMonsterAH1-3
+  - EldritchMonster 1-EldritchMonsterAH1-4
+  - EldritchMonster 1-EldritchMonsterAH1-5
+  - EldritchMonster 1-EldritchMonsterAH1-6
+  - EldritchMonster 1-EldritchMonsterAH1-7
+  - EldritchMonster 1-EldritchMonsterAH1-8
+  - EldritchMonster 1-EldritchMonsterAH1-9
+  - EldritchMonster 1-EldritchMonsterAH1-10
+  - EldritchMonster 1-EldritchMonsterAH1-11
+  - EldritchMonster 1-EldritchMonsterAH1-12
+  - EldritchMonster 1-EldritchMonsterAH1-13
+  - EldritchMonster 1-EldritchMonsterAH1-14
+  - EldritchMonster 1-EldritchMonsterAH1-15
+  - EldritchMonster 1-EldritchMonsterAH1-16
+  - EldritchMonster 1-EldritchMonsterAH1-17
+  - EldritchMonster 1-EldritchMonsterAH1-18
+  - EldritchMonster 1-EldritchMonsterAH1-19
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-20
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-21
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-22
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-23
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-24
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-25
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-26
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-27
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-28
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-29
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-30
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-31
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-32
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-33
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-34
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-35
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-36
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-37
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-38
+  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-39
+  - EldritchMonster 1-EldritchMonsterOrder1-40
+  - EldritchMonster 1-EldritchMonsterOrder1-41
+  - EldritchMonster 1-EldritchMonsterOrder1-42
+  - EldritchMonster 1-EldritchMonsterOrder1-43
+  - EldritchMonster 1-EldritchMonsterOrder2-44
+  - EldritchMonster 1-EldritchMonsterOrder2-45
+  - EldritchMonster 1-EldritchMonsterOrder2-46
+  - EldritchMonster 1-EldritchMonsterOrder3-47
+  - EldritchMonster 1-EldritchMonsterOrder3-48
+  - EldritchMonster 1-EldritchMonsterOrder3-49
+  - EldritchMonster 1-EldritchMonsterOrder3-50
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-51
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-52
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-53
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-54
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-55
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-56
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-57
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-58
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-59
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-60
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-61
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-62
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-63
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-64
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-65
   compilationStatus: 1
   isSuccesfullyCompiled: 1
-  compilationErrorMessage: 'Error on line 18 at position 1:
-
-    mismatched input
-    ''==='' expecting {HASHTAG, BODY_HASHTAG, TEXT_NEWLINE, TEXT_HASHTAG, TEXT_COMMAND_START,
-    TEXT_COMMANDHASHTAG_COMMAND_START, TEXT_COMMANDHASHTAG_HASHTAG, TEXT_COMMANDHASHTAG_NEWLINE,
-    HASHTAG_TAG}
-
-    ===
-
-    ^^^'
-  baseLanguage: {fileID: 7128917941130120860, guid: c5563e338e6e54305837cff075cd0c4e,
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: eb18cb408a187414fa682e5edaf27102,
     type: 3}
   localizations: []

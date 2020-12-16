@@ -1,6 +1,6 @@
-Ghost,Khepri
-Ghost,Zombie,KnifeUnicorn,KateTheCockatrice,CowboyAlien
+Ghost,XandartheEboy,KnifeUnicorn,GalahadTheDragonborn,Khepri,Utsuro,EldritchMonster,Shapeshifter,Ghost,3Gremlins,CowboyAlien,KateTheCockatrice
+Ghost,XandertheEboy,KnifeUnicorn,KateTheCockatrice,CowboyAlien
 Ghost,3Gremlins,EldritchMonster,Utsuro,Shapeshifter,CowboyAlien
-Khepri,Zombie,KnifeUnicorn,KateTheCockatrice,CowboyAlien
+Khepri,XandertheEboy,KnifeUnicorn,KateTheCockatrice,CowboyAlien
 3Gremlins,EldritchMonster,Utsuro,Shapeshifter,CowboyAlien
-Zombie,Utsuro,EldritchMonster,Shapeshifter,Ghost,3Gremlins,KnifeUnicorn,CowboyAlien,KateTheCockatrice,Khepri
+XandertheEboy,Utsuro,EldritchMonster,Shapeshifter,Ghost,3Gremlins,KnifeUnicorn,CowboyAlien,KateTheCockatrice,Khepri

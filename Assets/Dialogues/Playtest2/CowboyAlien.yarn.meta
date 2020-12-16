@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e567567ae3024a04b7e85a7f1be8c4a
+guid: d05c1b72906a3e245af2f583e2d0ab01
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,38 +10,83 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - CowboyAlien-CowboyAlienOrder-0
-  - CowboyAlien-CowboyAlienOrder-1
-  - CowboyAlien-CowboyAlienOrder-2
-  - CowboyAlien-CowboyAlienOrder-3
-  - CowboyAlien-CowboyAlienOrder-4
-  - CowboyAlien-CowboyAlienOrder-5
-  - CowboyAlien-CowboyAlienOrder-6
-  - CowboyAlien-CowboyAlienOrder-7
-  - CowboyAlien-CowboyAlienOrder-8
-  - CowboyAlien-CowboyAlienOrder-9
-  - CowboyAlien-CowboyAlienOrder-10
-  - CowboyAlien-CowboyAlienOrder-11
-  - CowboyAlien-CowboyAlienAH1-12
-  - CowboyAlien-CowboyAlienAH1-13
-  - CowboyAlien-CowboyAlienAH1-14
-  - CowboyAlien-CowboyAlienAH1-15
-  - CowboyAlien-CowboyAlienAH1-16
-  - CowboyAlien-CowboyAlienAH1-17
-  - CowboyAlien-CowboyAlienAH1-18
-  - CowboyAlien-CowboyAlienAH1-19
-  - CowboyAlien-CowboyAlienAH1-20
-  - CowboyAlien-CowboyAlienAH1-21
-  - CowboyAlien-CowboyAlienAH1-22
-  - CowboyAlien-CowboyAlienAH1-23
-  - CowboyAlien-CowboyAlienAH1-24
-  - CowboyAlien-CowboyAlienAH1-25
-  - CowboyAlien-CowboyAlienAH1-26
-  - CowboyAlien-CowboyAlienAH1-27
-  - CowboyAlien-CowboyAlienAH1-28
+  - CowboyAlien 1-CowboyAlienOrder1-0
+  - CowboyAlien 1-CowboyAlienOrder1-1
+  - CowboyAlien 1-CowboyAlienOrder1-2
+  - CowboyAlien 1-CowboyAlienOrder1-3
+  - CowboyAlien 1-CowboyAlienOrder1-4
+  - CowboyAlien 1-CowboyAlienOrder2-5
+  - CowboyAlien 1-CowboyAlienOrder2-6
+  - CowboyAlien 1-CowboyAlienOrder2-7
+  - CowboyAlien 1-CowboyAlienOrder2-8
+  - CowboyAlien 1-CowboyAlienOrder2-9
+  - CowboyAlien 1-CowboyAlienOrder3-10
+  - CowboyAlien 1-CowboyAlienOrder3-11
+  - CowboyAlien 1-CowboyAlienOrder3-12
+  - CowboyAlien 1-CowboyAlienOrder3-13
+  - CowboyAlien 1-CowboyAlienAH1-14
+  - CowboyAlien 1-CowboyAlienAH1-15
+  - CowboyAlien 1-CowboyAlienAH1-16
+  - CowboyAlien 1-CowboyAlienAH1-17
+  - CowboyAlien 1-CowboyAlienAH1-18
+  - CowboyAlien 1-CowboyAlienAH1-19
+  - CowboyAlien 1-CowboyAlienAH1-20
+  - CowboyAlien 1-CowboyAlienAH1-21
+  - CowboyAlien 1-CowboyAlienAH1-22
+  - CowboyAlien 1-CowboyAlienAH1-23
+  - CowboyAlien 1-CowboyAlienAH1-24
+  - CowboyAlien 1-CowboyAlienAH1-25
+  - CowboyAlien 1-CowboyAlienAH1-26
+  - CowboyAlien 1-CowboyAlienAH1-27
+  - CowboyAlien 1-CowboyAlienAH1-28
+  - CowboyAlien 1-CowboyAlienAH1-29
+  - CowboyAlien 1-CowboyAlienAH1-30
+  - CowboyAlien 1-CowboyAlienAH1-31
+  - CowboyAlien 1-CowboyAlienAH1-32
+  - CowboyAlien 1-CowboyAlienAH1-33
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-34
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-35
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-36
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-37
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-38
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-39
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-40
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-41
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-42
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-43
+  - CowboyAlien 1-CowboyAlienAH2ChoiceA-44
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-45
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-46
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-47
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-48
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-49
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-50
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-51
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-52
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-53
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-54
+  - CowboyAlien 1-CowboyAlienAH2ChoiceB-55
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-56
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-57
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-58
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-59
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-60
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-61
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-62
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-63
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-64
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-65
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-66
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-67
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-68
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-69
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-70
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-71
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-72
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-73
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: 5e567567ae3024a04b7e85a7f1be8c4a,
+  baseLanguage: {fileID: 7128917941130120860, guid: d05c1b72906a3e245af2f583e2d0ab01,
     type: 3}
   localizations: []
