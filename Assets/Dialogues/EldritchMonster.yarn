@@ -135,7 +135,7 @@ I’m headed over to my next gig right after this. Feeling great.
 Thanks again bartender. 
 
 ===
-title: EldritchMonsterOrder1
+title: EldritchMonsterOrder3
 tags: 
 colorID:
 position:
@@ -149,7 +149,7 @@ Blood, poison apple juice, and lots of the gas that always gives people the cree
 I've noticed that jokes don't land if you haven't got <an eye> for the language.
 
 ===
-title: EldritchMonsterOrder2
+title: EldritchMonsterOrder5
 tags:
 colorID:
 position:
@@ -165,7 +165,7 @@ Blood, poison apple juice, nightmare fuel, and graveyard mud mixed in.
 <<changeEmotion EldritchMonster neutral>>
 
 ===
-title: EldritchMonsterOrder3
+title: EldritchMonsterOrder6
 tags:
 colorID:
 position:
