@@ -204,18 +204,15 @@ position:
 ---
 
 <<changeEmotion KatetheCockatrice happy>>
-
 Wow... this is absolutely perfect!
 
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours KatetheCockatrice>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion KatetheCockatrice happy>>
-
 		I would love to. I have to run some errands, but I'll be back at closing time!
-
 	-> No
 <<endif>>
 <<goodbye KatetheCockatrice>>
@@ -228,19 +225,15 @@ position:
 ---
 
 <<changeEmotion KatetheCockatrice sad>>
-
-
 It tastes strange... I think the ingredient ratios aren't quite right?
 
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours KatetheCockatrice>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion KatetheCockatrice happy>>
-
 		I would love to. I have to run some errands, but I'll be back at closing time!
-
 	-> No
 <<endif>>
 <<goodbye KatetheCockatrice>>
@@ -254,18 +247,15 @@ position:
 ---
 
 <<changeEmotion KatetheCockatrice surprised>>
-
 Great as always but if you don't mind me saying... I think the ingredients aren't quite what they're supposed to be.
 
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours KatetheCockatrice>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion KatetheCockatrice happy>>
-
 		I would love to. I have to run some errands, but I'll be back at closing time!
-
 	-> No
 <<endif>>
 <<goodbye KatetheCockatrice>>

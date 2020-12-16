@@ -184,7 +184,6 @@ Amazing job barkeep! All three of us love the way you made this.
 	-> Yes
 		<<inviteToAfterHours 3Gremlins>>
 		<<set $invitedAMonster to true>>
-		
 		<<changeEmotion 3Gremlins surprised>>
 		Totally! We'd love to, but we'll have to clear it with mom.
 		<<changeEmotion 3Gremlins neutral>>
@@ -198,15 +197,15 @@ tags:
 colorID:
 position:
 ---
-<<changeEmotion 3Gremlins neutral>>
-This tastes a little off... maybe try different amounts next time?
+<<changeEmotion 3Gremlins angry>>
+This tastes a disgusting!
+Try different amounts next time.
 
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours 3Gremlins>>
 		<<set $invitedAMonster to true>>
-		
 		<<changeEmotion 3Gremlins surprised>>
 		Totally! We'd love to, but we'll have to clear it with mom.
 		<<changeEmotion 3Gremlins neutral>>
@@ -220,15 +219,14 @@ tags:
 colorID:
 position:
 ---
-<<changeEmotion 3Gremlins angry>>
-Ooh, I think you might've missed a key ingredient on this one.
+<<changeEmotion 3Gremlins neutral>>
+Ooh, I think you might've missed a key ingredient on this one, but that's alright.
 
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours 3Gremlins>>
 		<<set $invitedAMonster to true>>
-		
 		<<changeEmotion 3Gremlins surprised>>
 		Totally! We'd love to, but we'll have to clear it with mom.
 		<<changeEmotion 3Gremlins neutral>>

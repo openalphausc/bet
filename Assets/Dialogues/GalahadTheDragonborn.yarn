@@ -111,14 +111,13 @@ This hits the spot, kid. Couldn't have made it better even if you'd tried. Remin
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours GalahadTheDragonborn>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion GalahadTheDragonborn surprised>>
 		Hell, why not? Need some downtime every now 'n again. Won't get in your way 'till you're done.
 		<<changeEmotion GalahadTheDragonborn neutral>>
-
 	-> No
 <<endif>>
-<<goodbye GalahadtheDragonborn>>
+<<goodbye GalahadTheDragonborn>>
 
 ===
 title: GalahadTheDragonbornFeedbackRatios
@@ -134,14 +133,13 @@ You're supposed to be the expert, kid. Gotta give me the amount I'm lookin' for,
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours GalahadTheDragonborn>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion GalahadTheDragonborn surprised>>
 		Hell, why not? Need some downtime every now 'n again. Won't get in your way 'till you're done.
 		<<changeEmotion GalahadTheDragonborn neutral>>
-
 	-> No
 <<endif>>
-<<goodbye GalahadtheDragonborn>>
+<<goodbye GalahadTheDragonborn>>
 
 ===
 title: GalahadTheDragonbornFeedbackIngredients
@@ -150,21 +148,20 @@ colorID:
 position:
 ---
 
-<<changeEmotion GalahadTheDragonborn neutral>>
+<<changeEmotion GalahadTheDragonborn surprised>>
 It's a strange recipe, but it ain't that difficult to follow. Give it a few more shots before servin' me again, though, an' you'll get it right eventually.
 
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours GalahadTheDragonborn>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion GalahadTheDragonborn surprised>>
 		Hell, why not? Need some downtime every now 'n again. Won't get in your way 'till you're done.
 		<<changeEmotion GalahadTheDragonborn neutral>>
-
 	-> No
 <<endif>>
-<<goodbye GalahadtheDragonborn>>
+<<goodbye GalahadTheDragonborn>>
 
 ===
 title: GalahadTheDragonbornAH2ChoiceA

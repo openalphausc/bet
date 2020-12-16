@@ -194,6 +194,7 @@ Tastes like home... infinite <empty> space...
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours EldritchMonster>>
+		<<set $invitedAMonster to true>>
 		That would be great. It'll give me an excuse to practice my jokes. 
 	-> No
 <<endif>>
@@ -206,13 +207,14 @@ colorID:
 position:
 ---
 
-<<changeEmotion EldritchMonster neutral>>
+<<changeEmotion EldritchMonster sad>>
 Hmm, it feels like the ratios of the Void are off.
 
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours EldritchMonster>>
+		<<set $invitedAMonster to true>>
 		That would be great. It'll give me an excuse to practice my jokes. 
 	-> No
 <<endif>>
@@ -226,13 +228,14 @@ colorID:
 position:
 
 ---
-<<changeEmotion EldritchMonster sad>>
+<<changeEmotion EldritchMonster neutral>>
 Some ingredient in that drink is not sitting well with my <essence>.
 
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours EldritchMonster>>
+		<<set $invitedAMonster to true>>
 		That would be great. It'll give me an excuse to practice my jokes. 
 	-> No
 <<endif>>

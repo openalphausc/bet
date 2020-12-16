@@ -186,17 +186,15 @@ position:
 ---
 
 <<changeEmotion CowboyAlien happy>>
-
 Why, this is one mighty fine drink! 
 
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours CowboyAlien>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion CowboyAlien surprised>>
 		Whatcha wanna talk to this ol' buckaroo for? 
-
 		<<changeEmotion CowboyAlien happy>>
 		Well, whatever the the reason, I'll be more than happy to give you some company. See ya later pardner! 
 	-> No
@@ -218,10 +216,9 @@ Hmm... You've almost got it pardner, just a lil' bit off.
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours CowboyAlien>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion CowboyAlien surprised>>
 		Whatcha wanna talk to this ol' buckaroo for? 
-
 		<<changeEmotion CowboyAlien happy>>
 		Well, whatever the the reason, I'll be more than happy to give you some company. See ya later pardner! 
 	-> No
@@ -244,10 +241,9 @@ This is a drink all right, pretty good one, but I don't think it's quite what I 
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours CowboyAlien>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion CowboyAlien surprised>>
 		Whatcha wanna talk to this ol' buckaroo for? 
-
 		<<changeEmotion CowboyAlien happy>>
 		Well, whatever the the reason, I'll be more than happy to give you some company. See ya later pardner! 
 	-> No

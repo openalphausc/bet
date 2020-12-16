@@ -203,17 +203,14 @@ Not too shabby! Good thing I don't have to break out one of these knives and tea
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours KnifeUnicorn>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion KnifeUnicorn angry>>
 		Huh? You wanna hang out with me? YOU WANNA HANG OUT WITH ME?!
-
 		<<changeEmotion KnifeUnicorn happy>>
 		Yeah. I think I'd like that.
-
 	-> No
 <<endif>>
 <<goodbye KnifeUnicorn>>
-
 
 ===
 title: KnifeUnicornFeedbackRatios
@@ -228,13 +225,11 @@ You call this a drink? YOU CALL THIS A DRINK?! Listen... you either got too much
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours KnifeUnicorn>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion KnifeUnicorn angry>>
 		Huh? You wanna hang out with me? YOU WANNA HANG OUT WITH ME?!
-
 		<<changeEmotion KnifeUnicorn happy>>
 		Yeah. I think I'd like that.
-
 	-> No
 <<endif>>
 <<goodbye KnifeUnicorn>>
@@ -254,13 +249,11 @@ BLUH! This ain't what I ordered, buddy. You didn't follow the recipe, did ya?
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours KnifeUnicorn>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion KnifeUnicorn angry>>
 		Huh? You wanna hang out with me? YOU WANNA HANG OUT WITH ME?!
-
 		<<changeEmotion KnifeUnicorn happy>>
 		Yeah. I think I'd like that.
-
 	-> No
 <<endif>>
 <<goodbye KnifeUnicorn>>

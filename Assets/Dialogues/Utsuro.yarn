@@ -187,13 +187,12 @@ t-thank you... this is wonderful...
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours Utsuro>>
+		<<set $invitedAMonster to true>>
 		<<changeEmotion Utsuro happy>>
 		s-s-sure... see you there!
 	-> No
-
 <<endif>>
 <<goodbye Utsuro>>
-
 ===
 title: UtsuroFeedbackRatios
 tags:
@@ -207,10 +206,10 @@ position:
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours Utsuro>>
+		<<set $invitedAMonster to true>>
 		<<changeEmotion Utsuro happy>>
 		s-s-sure... see you there!
 	-> No
-
 <<endif>>
 <<goodbye Utsuro>>
 ===
@@ -229,10 +228,10 @@ this definitely isn't it...
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours Utsuro>>
+		<<set $invitedAMonster to true>>
 		<<changeEmotion Utsuro happy>>
 		s-s-sure... see you there!
 	-> No
-
 <<endif>>
 <<goodbye Utsuro>>
 ===

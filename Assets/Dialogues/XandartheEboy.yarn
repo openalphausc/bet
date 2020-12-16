@@ -190,18 +190,17 @@ position:
 <<changeEmotion XandartheEboy happy>>
 Dude... Dudeeeeee. This is, like, my favorite thing ever
 
+
 <<if $invitedAMonster is false>>
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours XandartheEboy>>
-
-		<<changeEmotion XandartheEboy surprised>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion XandartheEboy happy>>
 		Sure, sounds rad!
-
 	-> No
-
 <<endif>>
-<<goodbye XandertheEboy>>
+<<goodbye XandartheEboy>>
 ===
 title: XandartheEboyFeedbackRatios
 tags:
@@ -215,14 +214,12 @@ This drink is wack. Like, you totally poured the wrong amounts. Gross.
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours XandartheEboy>>
-
-		<<changeEmotion XandartheEboy surprised>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion XandartheEboy happy>>
 		Sure, sounds rad!
-
 	-> No
-
 <<endif>>
-<<goodbye XandertheEboy>>
+<<goodbye XandartheEboy>>
 
 ===
 title: XandartheEboyFeedbackIngredients
@@ -237,13 +234,11 @@ Urg. This has the wrong stuff. Not cool at all, dude.
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours XandartheEboy>>
-
-		<<changeEmotion XandartheEboy surprised>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion XandartheEboy happy>>
 		Sure, sounds rad!
-
 	-> No
-
 <<endif>>
-<<goodbye XandertheEboy>>
+<<goodbye XandartheEboy>>
 ===
 

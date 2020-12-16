@@ -222,10 +222,11 @@ Congratulations, you did well on this one.
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours Khepri>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion Khepri happy>>
 		You know what? Sure, why not?
 	-> No
+		In your dreams. Goodbye.
 <<endif>>
 <<goodbye Khepri>>
 ===
@@ -242,10 +243,11 @@ Well, it's almost there, but the taste isn't right. I think the proportions of t
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours Khepri>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion Khepri happy>>
 		You know what? Sure, why not?
 	-> No
+		In your dreams. Goodbye.
 <<endif>>
 <<goodbye Khepri>>
 ===
@@ -262,10 +264,11 @@ This is insulting. This drink isn't even made correctly. Didn't you listen to wh
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours Khepri>>
-
+		<<set $invitedAMonster to true>>
 		<<changeEmotion Khepri happy>>
 		You know what? Sure, why not?
 	-> No
+		In your dreams. Goodbye.
 <<endif>>
 <<goodbye Khepri>>
 ===

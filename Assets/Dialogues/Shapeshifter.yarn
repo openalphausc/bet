@@ -170,12 +170,13 @@ Mmm, just how I like it! Thanks, bartender!
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours Shapeshifter>>
-
-		Thanks, bartender. We have a lot to talk about.
+		<<set $invitedAMonster to true>>
+		<<changeEmotion Shapeshifter happy>>
+		Okay, bartender. We have a lot to talk about.
 	-> No
-
 <<endif>>
 <<goodbye Shapeshifter>>
+
 ===
 
 title: ShapeshifterFeedbackRatios
@@ -190,10 +191,10 @@ A hero needs a perfectly balanced diet. This drink just isn't it.
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours Shapeshifter>>
-
-		Thanks, bartender. We have a lot to talk about.
+		<<set $invitedAMonster to true>>
+		<<changeEmotion Shapeshifter happy>>
+		Okay, bartender. We have a lot to talk about.
 	-> No
-
 <<endif>>
 <<goodbye Shapeshifter>>
 
@@ -210,10 +211,10 @@ Hm, something's wrong. And it's not just the lack of angel tears.
 	*Do you want to invite them to stay after hours?*
 	-> Yes
 		<<inviteToAfterHours Shapeshifter>>
-
-		Thanks, bartender. We have a lot to talk about.
+		<<set $invitedAMonster to true>>
+		<<changeEmotion Shapeshifter happy>>
+		Okay, bartender. We have a lot to talk about.
 	-> No
-
 <<endif>>
 <<goodbye Shapeshifter>>
 ===
