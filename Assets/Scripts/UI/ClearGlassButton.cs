@@ -11,6 +11,11 @@ public class ClearGlassButton : MonoBehaviour
     {
         GlassFill glass = FindObjectOfType<GlassFill>();
         glass.clearIngredients();
+        
+        foreach (GameObject t in glass.toppings) {
+            Destroy(t);
+        }
+        glass.toppings.Clear();
 
         if (MonsterSpawner.inTutorial && !clearButtonEnabled)
         {
