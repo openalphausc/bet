@@ -28,6 +28,8 @@ public class MonsterSpawner : MonoBehaviour
     public static GameObject SkipTutorialButton;
     public static Monster bob = null;
 
+    public TextAsset ordersFile;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -237,9 +239,17 @@ public class MonsterSpawner : MonoBehaviour
 
     private void CreateMonsterQueue()
     {
-        string path = "Assets/Text/MonsterOrderNoGenerals.txt";
+        //string path = "/Assets/Text/MonsterOrderNoGenerals.txt";
+        string text = ordersFile.text;
 
-        StreamReader reader = new StreamReader(path);
+        // create a stream from the above text
+        var stream = new MemoryStream();
+        var writer = new StreamWriter(stream);
+        writer.Write(text);
+        writer.Flush();
+        stream.Position = 0;
+        
+        StreamReader reader = new StreamReader(stream);
         int currIndex = 0;
 
         while (!reader.EndOfStream)
