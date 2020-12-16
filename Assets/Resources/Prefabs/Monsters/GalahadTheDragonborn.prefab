@@ -103,7 +103,7 @@ MonoBehaviour:
   readyToLeave: 0
   leaving: 0
   dialogueToStart: GalahadTheDragonbornOrder1
-  ordersFile: {fileID: 4900000, guid: 16b65c930c5484fa5b3c141e80474a40, type: 3}
+  ordersFile: {fileID: 4900000, guid: 26bf20bf75b5c47a9b163e07d0a67bce, type: 3}
   prefab: {fileID: 0}
   happiness: 0
 --- !u!61 &7173060465039907911
