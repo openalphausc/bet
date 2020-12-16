@@ -109,12 +109,14 @@ public class Monster : MonoBehaviour
                 seatTimer += Time.deltaTime;
                 // Debug.Log(seatTimer);
 
-                if (seatTimer >= 45.0f) { happiness -= 1; Debug.Log("decreased happiness"); }
+                if (seatTimer >= 45.0f) { 
+                    happiness -= 1;
+                }
             }
-            
+            //Debug.Log(leaving);
             if ((state == MonsterState.center && readyToLeave) && (!MonsterSpawner.inTutorial && leaving))
             {
-                Debug.Log("Please show up");
+                Debug.Log("leaving");
                 Monster.currentlyOrdering = false;
                 Monster.currentlyOrderingMonster = null;
                 state = MonsterState.slidingOff;
@@ -159,7 +161,7 @@ public class Monster : MonoBehaviour
     // correctness is a float from 0.0 to 1.0, where 0.0 is totally wrong and 1.0 is totally correct
     public void GivenDrink(float correctness) {
         int change = (int)Mathf.Round(4 * (correctness - 0.5f));
-        Debug.Log("correctness = " + correctness + ", change = " + change);
+        //Debug.Log("correctness = " + correctness + ", change = " + change);
         happiness += change; 
         prefab.GetComponent<Monster>().happiness = happiness; // update the prefab's data
 
@@ -169,11 +171,6 @@ public class Monster : MonoBehaviour
 		if (MonsterSpawner.inTutorial) {
 			YarnBarTending.EnableDialogueFunctions();
 		}
-        //runs the afterhours if statement 
-        if (!MonsterSpawner.inTutorial)
-        {
-            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "Invite");
-        }
     }
 
     public void OnMouseDown()
@@ -201,7 +198,9 @@ public class Monster : MonoBehaviour
 		recipeSheet.AddOrderNotes(drinkOrder, orderNotes);
 
         // Increase happiness if clicked within first 15 s of sitting down
-        if (seatTimer <= 15.0f) { happiness += 1; Debug.Log("Increased happiness"); }
+        if (seatTimer <= 15.0f) { 
+            happiness += 1; 
+        }
 
 		GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = false;
 

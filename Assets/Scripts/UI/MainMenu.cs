@@ -22,7 +22,6 @@ public class MainMenu : MonoBehaviour
     {
         if (LoadPlaytestingContext)
         {
-            Debug.Log("Loading Playtesting Context Menu");
             SceneManager.LoadScene(PlaytestingContextSceneName);
         }
         else
@@ -33,7 +32,6 @@ public class MainMenu : MonoBehaviour
 
     public void Quit()
     {
-        Debug.Log("Quitting Game");
         Application.Quit();
     }
 }

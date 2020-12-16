@@ -99,32 +99,32 @@ public class GlassFill : MonoBehaviour
     {
         if (collisionInfo.gameObject.tag == "Monster" && !purchased && Monster.currentlyOrderingMonster != null && collisionInfo.gameObject.GetComponent<Monster>() == Monster.currentlyOrderingMonster)
         {
-            Debug.Log("currentDrink.color = " + currentDrink.color.ToString() + ", targetDrink.color = " + targetDrink.color.ToString());
+           // Debug.Log("currentDrink.color = " + currentDrink.color.ToString() + ", targetDrink.color = " + targetDrink.color.ToString());
 
             // check if current drink = target drink
-            GameObject face;
+            //GameObject face;
             if (currentDrink.Matches(targetDrink))
             {
                 // if drink matches color, happy face
-                face = Instantiate(happyFace);
+                //face = Instantiate(happyFace);
+                FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackGreat");
                 wellDone.Play();
-                Debug.Log("Drink matches color");
             }
             else {
                 // if doesn't match color, but has same ingredients, neutral face
                 if(currentDrink.HasSameIngredients(targetDrink)) {
-                    face = Instantiate(neutralFace);
+                    //face = Instantiate(neutralFace);
+                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackIngredients");
                     notBad.Play();
-                    Debug.Log("Drink matches ingredients, not color.");
                 }
                 // if totally wrong, frown face
                 else {
-                    face = Instantiate(frownFace);
+                    //face = Instantiate(frownFace);
+                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackRatios");
                     ew.Play();
-                    Debug.Log("Drink is wrong.");
                 }
             }
-            face.transform.parent = Monster.currentlyOrderingMonster.transform;
+            //face.transform.parent = Monster.currentlyOrderingMonster.transform;
             
             // update monster's happiness
             Monster.currentlyOrderingMonster.GivenDrink(currentDrink.Matches(targetDrink) ? 1 : 0);
