@@ -221,7 +221,7 @@ public class GlassFill : MonoBehaviour
         string layerName = "", topping = "";
 		GameObject layer = null;
 		Vector3 position = gameObject.transform.position, offset = new Vector3(0,0,0);
-		float layerHeight = gameObject.GetComponent<BoxCollider2D>().bounds.size.y / 9.0f,
+		float layerHeight = gameObject.GetComponent<BoxCollider2D>().bounds.size.y / 5.5f,
 			  minY = gameObject.GetComponent<BoxCollider2D>().bounds.min.y + layerHeight / 2.0f;
 
         for (int curLevel = currentDrink.liquids.Count; curLevel < total; curLevel++)
@@ -231,10 +231,10 @@ public class GlassFill : MonoBehaviour
 			topping = currentDrink.toppings[curLevel - currentDrink.liquids.Count];
 
 			// Adjust variables per topping type
-            if (topping == "goldenDust") { layerName = "OA GoldDustTop0"; offset.y = 5.02f; offset.x = -.5f; }
-            else if (topping == "mud") { layerName = "OA_GraveyardMudTop0"; offset.y = 5f; offset.x = -0.3f; }
-			else if (topping == "zombieFlesh") { layerName = "OA ZombieFleshTop1"; offset.y = 2.4f; offset.x = -.5f; }
-			else if (topping == "nightmareFuel") { layerName = "OA NightmareTop0"; offset.y = 3.3f; offset.x = -.5f; }
+            if (topping == "goldenDust") { layerName = "OA GoldDustTop0"; offset.y = 3.5f; offset.x = 0f; }
+            else if (topping == "mud") { layerName = "OA_GraveyardMudTop0"; offset.y = 3.5f; offset.x = 0.2f; }
+			else if (topping == "zombieFlesh") { layerName = "OA ZombieFleshTop1"; offset.y = 1f; offset.x = 0f; }
+			else if (topping == "nightmareFuel") { layerName = "OA NightmareTop0"; offset.y = 2f; offset.x = 0f; }
 			
 			// Calculate position to place object
 			position.y = minY + curLevel * layerHeight;
