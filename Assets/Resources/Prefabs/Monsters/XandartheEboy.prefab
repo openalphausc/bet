@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   leaving: 0
-  dialogueToStart: XandartheEboyOrder1
+  dialogueToStart: XandartheEboyOrder
   ordersFile: {fileID: 4900000, guid: 1cb4533f9e2ebc74a9c29ab20a2745a6, type: 3}
   prefab: {fileID: 0}
   happiness: -1

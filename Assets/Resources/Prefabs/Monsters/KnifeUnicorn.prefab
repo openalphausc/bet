@@ -102,7 +102,7 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   leaving: 0
-  dialogueToStart: KnifeUnicornOrder1
+  dialogueToStart: KnifeUnicornOrder
   ordersFile: {fileID: 4900000, guid: 16b65c930c5484fa5b3c141e80474a40, type: 3}
   prefab: {fileID: 0}
   happiness: 0
