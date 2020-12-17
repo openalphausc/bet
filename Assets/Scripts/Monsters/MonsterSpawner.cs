@@ -22,7 +22,7 @@ public class MonsterSpawner : MonoBehaviour
 
     public LightFadeUp fadeUpScript;
 
-    public static bool inTutorial = true;
+    public static bool inTutorial = false;
     public static bool tutorialHasRun = false;
     public static GameObject SkipTutorialButton;
     public static Monster bob = null;
@@ -67,6 +67,24 @@ public class MonsterSpawner : MonoBehaviour
             SpawnMonster();
             GameObject.Find("Ghost").GetComponent<Monster>().dialogueToStart = "TutorialGhostDay";
             tutorialHasRun = true;
+        }
+        else if (dataStorage.currentDay > 2 && !tutorialHasRun)
+        {
+            tutorialHasRun = true;
+            inTutorial = false;
+
+            GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
+            SkipTutorialButton.SetActive(false);
+		
+            // ingredients
+            foreach (Transform ingredient in GameObject.Find("Ingredients").transform)
+            {
+                ingredient.GetComponent<HoverHighlight>().isEnabled = true; // Disable hover highlighting
+                ingredient.GetComponent<ClickIngredient>().isEnabled = true; // Disable clicking
+            }
+
+            GlassMove.cupCanMove = true;
+            GameObject.Find("ClearGlassButton").GetComponent<Button>().interactable = true;
         }
 
         if (!inTutorial)
