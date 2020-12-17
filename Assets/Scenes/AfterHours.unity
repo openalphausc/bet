@@ -713,6 +713,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5639802912138406254, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: m_PreferredHeight
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
         type: 3}
       propertyPath: yarnScripts.Array.size
@@ -830,6 +835,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5639802912467700142, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: m_PreferredHeight
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 5639802912517308045, guid: 8ba6525bd9f78416a86b05e5d5916665,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -894,6 +904,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639802912702675923, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 397
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639802912702675923, guid: 8ba6525bd9f78416a86b05e5d5916665,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -615
       objectReference: {fileID: 0}
     - target: {fileID: 5639802913333456393, guid: 8ba6525bd9f78416a86b05e5d5916665,
         type: 3}
