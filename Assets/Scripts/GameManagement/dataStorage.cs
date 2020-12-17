@@ -9,13 +9,14 @@ public class dataStorage : MonoBehaviour
     public static int currentDay;
 
     // List of all monsters for tabsheet
-    public static List<Monster> monsters = new List<Monster>();
+    public static List<Monster> monsters;
 
     // Start is called before the first frame update
     void Start()
     {
         if(currentDay == 0)
         {
+            monsters = new List<Monster>();
             monsters.Clear();
         }
     }
