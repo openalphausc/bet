@@ -23,16 +23,18 @@ public class MonsterSpawner : MonoBehaviour
     public LightFadeUp fadeUpScript;
 
     public static bool inTutorial = true;
-    public static int currDay = 0;
     public static bool tutorialHasRun = false;
     public static GameObject SkipTutorialButton;
     public static Monster bob = null;
 
+    public TextAsset ordersFile;
+
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Day: " + dataStorage.currentDay);
         CreateMonsterQueue();
-        monstersOfTheDay = monsterQueue[currDay];
+        monstersOfTheDay = monsterQueue[dataStorage.currentDay];
 
         CreateBarSeats();
         //GameObject.Find("SkipTutorialButton").SetActive(false);
@@ -43,12 +45,27 @@ public class MonsterSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if ((currDay >= 0 && currDay <= 2) && !tutorialHasRun)
+        if (dataStorage.currentDay == 0 && !tutorialHasRun)
         {
             inTutorial = true;
-            RunTutorial();
+            RunTutorial0();
             SpawnMonster();
+            tutorialHasRun = true;
+        }
+        else if (dataStorage.currentDay == 1 && !tutorialHasRun)
+        {
+            inTutorial = true;
+            RunTutorial1();
+            SpawnMonster();
+            GameObject.Find("Ghost").GetComponent<Monster>().dialogueToStart = "TutorialGhostDay";
+            tutorialHasRun = true;
+        }
+        else if (dataStorage.currentDay == 2 && !tutorialHasRun)
+        {
+            inTutorial = true;
+            RunTutorial2();
+            SpawnMonster();
+            GameObject.Find("Ghost").GetComponent<Monster>().dialogueToStart = "TutorialGhostDay";
             tutorialHasRun = true;
         }
 
@@ -83,12 +100,10 @@ public class MonsterSpawner : MonoBehaviour
                     timeUntilNextSpawn = GetSpawnTime();
 
                     // if already served all monsters, go to after hours
-                    if (monstersOfTheDay.Count == 0 && monstersOnScreen.Count == 0)
+                    if ((monstersOfTheDay.Count == 0 && monstersOnScreen.Count == 0))
                     {
-                        Debug.Log("GoingtoAfterHours");
                         SceneManager.LoadScene("AfterHours");
-                        currDay++;
-                        monstersOfTheDay = monsterQueue[currDay];
+                        monstersOfTheDay = monsterQueue[dataStorage.currentDay];
                         tutorialHasRun = false;
 
                         return;
@@ -108,14 +123,13 @@ public class MonsterSpawner : MonoBehaviour
     {
         if (monstersOfTheDay.Count == 0)
         {
-            Debug.Log("Tried to spawn a monster, but there isn't a monster in the list to spawn.");
+            //Debug.Log("Tried to spawn a monster, but there isn't a monster in the list to spawn.");
             return;
         }
 
         // no available seats
         if (GetAvailableSeat() == null)
         {
-            Debug.Log("No available seat to spawn monster, restarting spawn timer.");
             timeUntilNextSpawn = GetSpawnTime();
             return;
         }
@@ -137,7 +151,6 @@ public class MonsterSpawner : MonoBehaviour
 
             if (monsterIndex == -1)
             {
-                Debug.Log("Monster couldn't be found.");
                 return;
             }
 
@@ -208,7 +221,36 @@ public class MonsterSpawner : MonoBehaviour
 
     }
 
-    private void RunTutorial()
+    private void RunTutorial0()
+    {
+        // Disable cup movement
+        GlassMove.cupCanMove = false;
+
+        // Disabling items
+        // buttons
+        GameObject.Find("ClearGlassButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = false;
+
+        // ingredients
+        foreach (Transform ingredient in GameObject.Find("Ingredients").transform)
+        {
+            ingredient.GetComponent<HoverHighlight>().isEnabled = false; // Disable hover highlighting
+            ingredient.GetComponent<ClickIngredient>().isEnabled = false; // Disable clicking
+        }
+
+        // toppings
+        GameObject.Find("nightmareFuel").SetActive(false);
+        GameObject.Find("goldenDust").SetActive(false);
+        GameObject.Find("mud").SetActive(false);
+        GameObject.Find("zombieFlesh").SetActive(false);
+        GameObject.Find("nightshade").SetActive(false);
+        GameObject.Find("mushrooms").SetActive(false);
+
+        // misc
+        GameObject.Find("Blender").SetActive(false); // TEMP SET BACK TO FALSE
+    }
+
+    private void RunTutorial1()
     {
         // Disable cup movement
         GlassMove.cupCanMove = false;
@@ -230,16 +272,54 @@ public class MonsterSpawner : MonoBehaviour
         GameObject.Find("goldenDust").SetActive(true);
         GameObject.Find("mud").SetActive(true);
         GameObject.Find("zombieFlesh").SetActive(true);
+        GameObject.Find("nightshade").SetActive(true);
+        GameObject.Find("mushrooms").SetActive(true);
 
         // misc
-        GameObject.Find("Blender").SetActive(true); // TEMP SET BACK TO FALSE
+        GameObject.Find("Blender").SetActive(false); // TEMP SET BACK TO FALSE
+    }
+
+    private void RunTutorial2()
+    {
+        // Disable cup movement
+        GlassMove.cupCanMove = false;
+
+        // Disabling items
+        // buttons
+        GameObject.Find("ClearGlassButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = false;
+
+        // ingredients
+        foreach (Transform ingredient in GameObject.Find("Ingredients").transform)
+        {
+            ingredient.GetComponent<HoverHighlight>().isEnabled = false; // Disable hover highlighting
+            ingredient.GetComponent<ClickIngredient>().isEnabled = false; // Disable clicking
+        }
+
+        // toppings
+        GameObject.Find("nightmareFuel").SetActive(true);
+        GameObject.Find("goldenDust").SetActive(true);
+        GameObject.Find("mud").SetActive(true);
+        GameObject.Find("zombieFlesh").SetActive(true);
+        GameObject.Find("nightshade").SetActive(true);
+        GameObject.Find("mushrooms").SetActive(true);
+
+        // misc
+        GameObject.Find("Blender").SetActive(true);
     }
 
     private void CreateMonsterQueue()
     {
-        string path = "Assets/Text/MonsterOrderNoGenerals.txt";
+        string text = ordersFile.text;
 
-        StreamReader reader = new StreamReader(path);
+        // create a stream from the above text
+        var stream = new MemoryStream();
+        var writer = new StreamWriter(stream);
+        writer.Write(text);
+        writer.Flush();
+        stream.Position = 0;
+
+        StreamReader reader = new StreamReader(stream);
         int currIndex = 0;
 
         while (!reader.EndOfStream)

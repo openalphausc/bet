@@ -90,10 +90,6 @@ public class Drink
         if (isLiquid == isTopping)
         {
             if (newIngredient == "") return false;
-            
-            Debug.Log(
-                "AH BIG ERROR; TRIED TO ADD AN INGREDIENT TO THE DRINK AND IT WAS NOT PROPERLY ASSIGNED AS A LIQUID OR A TOPPING!");
-
             return false;
         }
 

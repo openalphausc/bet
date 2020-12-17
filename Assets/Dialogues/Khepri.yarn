@@ -1,0 +1,281 @@
+title: KhepriAH1
+tags:
+colorID:
+position:
+---
+<<running Khepri>>
+Well, here I am, willing to chat.
+You have a nice place here. It's a bit more rustic that what I'm used to, but I find value in it.
+
+-> I'm sorry to tell you that it won't be open for very much longer.
+
+<<changeEmotion Khepri happy>>
+I knew that already. I saw what the BBC's doing to your bar. That's actually partly why I came here tonight.
+
+However, I'll amuse you for tonight. You seem to want to meet monsters while you still can. What do you want to know?
+
+-> You seem to know a lot more than I'm being led to believe.
+	<<wrongAnswer Khepri>>
+	Oh? A little cheeky are we?
+
+-> I assume you're looking for some anonymity here?
+	<<rightAnswer Khepri>>
+	I mean, aren't we all in a way?
+
+<<changeEmotion Khepri neutral>>
+Alright, well...since it won't matter if I tell you anyway...
+
+<<changeEmotion Khepri sad>>
+I have been having a rough time recently due to some issues with my work.
+
+I won't divulge the details, but I will say that my financials have been suffering as of lately.
+
+It's just...so hard. Have you ever dealt with high expectations?
+
+-> Of course. I've always doubted my performance at the bar, especially seeing some of the other folks here.
+	<<changeEmotion Khepri happy>>
+	I see. It's a relief to hear I'm not alone.
+
+-> Remember to not let expectations get the better of you. You can never fit the exact expectations of everyone.
+	<<changeEmotion Khepri surprised>>
+	I've never really thought about it that way.
+
+<<changeEmotion Khepri happy>>
+Thank you, you've given me a lot to think about.
+
+I'll admit you've surprised me bartender. I expected you to just get me drunk.
+
+-> Just trying to give as many folks comfort in these times Miss.
+
+I appreciate it. Also, the name's Khepri.
+
+<<finishedTalkingWith Khepri>>
+
+===
+title: KhepriAH2ChoiceA
+tags: 
+colorID:
+position:
+---
+
+<<changeEmotion Khepri happy>>
+Well, here we are again.
+
+I will say that I've taken the advice you've given me to heart.
+
+<<changeEmotion Khepri sad>>
+You see, as you might've guessed, I'm involved in some dangerous business.
+
+My family actually is a very powerful crime family around this town.
+
+<<changeEmotion Khepri angry>>
+Well, it was... The BBC's actually one of the main reasons we've been struggling.
+
+<<changeEmotion Khepri sad>>
+They got most of us, and I inherited a dying dynasty.
+
+-> I'm very sorry to hear that.
+
+-> How was I able to help?
+
+<<changeEmotion Khepri happy>>
+I have to thank you for your words. The high expectations of my family created a lot of pressure for me.
+
+However, you showed me that I'm not alone in my struggle, and that many others also have been affected by the BBC.
+
+<<changeEmotion Khepri sad>>
+I've decided to talk to the family I have left and we've agreed to leave the crime business.
+
+I'll stay in touch with them to make sure my friends still live comfortably, but I'm sure we'll find a way.
+
+<<changeEmotion Khepri happy>>
+It's time to live a simpler life. Even if the BBC takes your bar, we can still keep in touch.
+
+I'll talk to you later, bartender.
+
+<<finishedTalkingWith Khepri>>
+
+===
+title: KhepriAH2ChoiceB
+tags: 
+colorID:
+position:
+---
+
+<<changeEmotion Khepri happy>>
+Here we are again.
+
+I have to thank you for the advice you gave me the last time we talked.
+
+<<changeEmotion Khepri sad>>
+You see, as you might've guessed, I'm involved in some dangerous business.
+
+My family actually is a very powerful crime family around this town.
+
+<<changeEmotion Khepri angry>>
+Well, it was... The BBC's actually one of the main reasons we've been struggling.
+
+<<changeEmotion Khepri sad>>
+They got most of us, and I inherited a dying dynasty.
+
+-> I'm very sorry to hear that.
+
+-> How was I able to help?
+
+<<changeEmotion Khepri happy>>
+Your words actually encouraged me to make my own path for myself.
+
+<<changeEmotion Khepri sad>>
+You see, the reputation of my family created a lot for me to live up to.
+
+<<changeEmotion Khepri happy>>
+You reminded me that I don't need to worry that much about expectations, since it'll be impossible to gain the approval of everyone.
+
+I've talked with who's left of my family, and we've decided to create a new business for the monsters who've been affected by the BBC.
+
+It'll be difficult to start, but I have a good feeling about this endeavor.
+
+Hopefully it'll flourish to become a bright place for monsters to work and fight against the oppression of the BBC.
+
+So, if you ever need another place to work after your bar shuts down, don't be afraid to contact me.
+
+Let's stay in touch, bartender.
+
+<<finishedTalkingWith Khepri>>
+
+===
+title: KhepriOrder1
+tags: 
+colorID:
+position:
+---
+
+Hello. I think I'm feeling a Royal Downfall tonight.
+
+<<changeEmotion Khepri happy>>
+A pretty simple drink if you ask me, but it's one of my favorites.
+
+<<changeEmotion Khepri neutral>>
+It's basically just Whiskey and cornpagne.
+
+Doesn't sound too hard does it?
+
+===
+
+title: KhepriOrder4
+tags: 
+colorID:
+position:
+---
+
+<<changeEmotion Khepri happy>>
+Hello again. I see you're still working hard as usual.
+
+I also notice the new stools.
+
+Looks like you're making a good impression with your customers.
+
+<<changeEmotion Khepri neutral>>
+This time I'll have a Royal Darkness.
+
+<<changeEmotion Khepri sad>>
+It's more bitter, but I'm also feeling kind of the same.
+
+<<changeEmotion Khepri neutral>>
+It involves Whiskey and the Golden Dust.
+
+Make sure to shake that up, then have something thick and muddy on top.
+
+Don't shake all of the toppings on the drink, that ruins the texture.
+
+===
+
+title: KhepriOrder6
+tags: 
+colorID:
+position:
+---
+
+Hello. Getting really close to shutdown are we?
+
+<<changeEmotion Khepri happy>>
+I admire your determination.
+
+<<changeEmotion Khepri neutral>>
+Since it seems like I won't be ordering here again, I'll have the Royal Death.
+
+<<changeEmotion Khepri happy>>
+Quite elaborate, but I think you're up to the challenge.
+
+<<changeEmotion Khepri neutral>>
+It's made with Cornpagne, some other alcohol, and the Golden Dust shaken in.
+
+After that, add some deadly fruit on top, but don't shake it in.
+
+Try your best on this one.
+
+You wouldn't want to disappoint a lady on her last order would you?
+===
+
+title: KhepriFeedbackGreat
+tags:
+colorID:
+position:
+---
+<<changeEmotion Khepri happy>>
+Congratulations, you did well on this one.
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Khepri>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion Khepri happy>>
+		You know what? Sure, why not?
+	-> No
+		In your dreams. Goodbye.
+<<endif>>
+<<goodbye Khepri>>
+===
+
+title: KhepriFeedbackRatios
+tags:
+colorID:
+position:
+---
+<<changeEmotion Khepri neutral>>
+Well, it's almost there, but the taste isn't right. I think the proportions of this drink are off.
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Khepri>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion Khepri happy>>
+		You know what? Sure, why not?
+	-> No
+		In your dreams. Goodbye.
+<<endif>>
+<<goodbye Khepri>>
+===
+
+title: KhepriFeedbackIngredients
+tags:
+colorID:
+position:
+---
+<<changeEmotion Khepri angry>>
+This is insulting. This drink isn't even made correctly. Didn't you listen to what I said?
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Khepri>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion Khepri happy>>
+		You know what? Sure, why not?
+	-> No
+		In your dreams. Goodbye.
+<<endif>>
+<<goodbye Khepri>>
+===

@@ -12,6 +12,8 @@ public class YarnBarTending : MonoBehaviour
 	public static bool multipleIngredients = false;
 	public static YarnBarTending instance = null;
 
+	public static bool readyToBlend = false;
+
 	void Start()
 	{
 		if (instance == null) instance = this;
@@ -60,13 +62,23 @@ public class YarnBarTending : MonoBehaviour
 		YarnBarTending.DisableDialogueFunctions();
 	}
 
-	[YarnCommand("endTutorial")]
+	[YarnCommand("tutorialBlendDrink")]
+	public void TutorialBlendDrink()
+    {
+		GlassMove.cupCanMove = true;
+		YarnBarTending.DisableDialogueFunctions();
+		readyToBlend = true;
+	}
+
 	public void EndTutorial()
     {
 		MonsterSpawner.inTutorial = false;
 		MonsterSpawner.tutorialHasRun = true;
-		
-        GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
+
+		//this is to activate the requirement for the monster to go off screen
+		GameObject.Find("Ghost").GetComponent<Monster>().leaving = true;
+
+		GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
 		MonsterSpawner.SkipTutorialButton.SetActive(false);
 		
 		// ingredients
@@ -77,8 +89,11 @@ public class YarnBarTending : MonoBehaviour
         }
 
 		GlassMove.cupCanMove = true;
+		GameObject.Find("ClearGlassButton").GetComponent<Button>().interactable = true;
 
-		dataStorage.stayingMonster = "Ghost";
+		TutorialLightCues("_", "_");
+
+		//dataStorage.stayingMonster = "Ghost";
 
 		// toppings
 		// GameObject.Find("nightmareFuel").SetActive(true);
@@ -90,6 +105,7 @@ public class YarnBarTending : MonoBehaviour
 		// GameObject.Find("Blender").SetActive(true);
 	}
 
+	[YarnCommand("endTutorial")]
 	public void SkipTutorial()
 	{
 		MonsterSpawner.bob.readyToLeave = true;
@@ -111,13 +127,28 @@ public class YarnBarTending : MonoBehaviour
 		Continue.isEnabled = true;
 	}
 
+	[YarnCommand("goodbye")]
+	public void DialogueEnd()
+	{
+		//this is called when the afterhours invite has concluded
+		gameObject.GetComponent<Monster>().leaving = true;
+	}
 
-    //light stuff
 
-    [YarnCommand("tutorialLightCues")]
+	//light stuff
+
+	[YarnCommand("tutorialLightCues")]
     public void TutorialLightCues(string firstItem, string secondItem)
     {
         TutorialSpotlight.spot1.enabled = true;
+        TutorialSpotlight.spot1.pointLightOuterRadius = 10;
+		if (firstItem == "toppings")
+		{
+			TutorialSpotlight.spot1.transform.position = new Vector3(-29.05f, -11.2f, 0);
+			TutorialSpotlight.spot1.pointLightOuterRadius = 22;
+			TutorialSpotlight.spot2.enabled = false;
+			return;
+		}
         if (secondItem != "_")
         {
             TutorialSpotlight.spot2.enabled = true;
@@ -140,7 +171,7 @@ public class YarnBarTending : MonoBehaviour
             TutorialSpotlight.spot1.transform.position = new Vector3(GameObject.Find(firstItem).transform.position.x, GameObject.Find(firstItem).transform.position.y, 0);
         }
     }
-
+    
 	static IEnumerator EnableContinueButton()
 	{
 		while (true)
