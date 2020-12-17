@@ -39,8 +39,8 @@ public class DialoguePositionTracker : MonoBehaviour
         float soloIntensity = 0.7f;
         if (positionName == "centerSeat")
         {
-            left = 744;
-            right = 218;
+            left = 767;
+            right = 60;
             posY = -42;
             leftMonsterLight.enabled = false;
             rightMonsterLight.enabled = false;
@@ -51,7 +51,7 @@ public class DialoguePositionTracker : MonoBehaviour
         else if (positionName == "leftSeat")
         {
             left = 366;
-            right = 599;
+            right = 417;
             posY = -42;
             leftMonsterLight.enabled = true;
             rightMonsterLight.enabled = false;
@@ -61,7 +61,7 @@ public class DialoguePositionTracker : MonoBehaviour
         }
         else if (positionName == "rightSeat")
         {
-            left = 599;
+            left = 417;
             right = 363;
             posY = -42;
             leftMonsterLight.enabled = false;
