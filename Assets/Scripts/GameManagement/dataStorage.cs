@@ -13,7 +13,10 @@ public class dataStorage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if(MonsterSpawner.currDay == 0)
+        {
+            monsters.Clear();
+        }
     }
 
     // Update is called once per frame

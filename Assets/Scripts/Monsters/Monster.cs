@@ -79,6 +79,11 @@ public class Monster : MonoBehaviour
             recipeManager = recipeSheetObject.GetComponent<RecipeManager>();
             drinkIcon = GameObject.FindWithTag("DrinkIcon");
         }
+        if(MonsterSpawner.currDay == 0)
+        {
+            pointsEarned = 0;
+            totalPoints = 0;
+        }
     }
 
     //Checks if it has encountered the drink, if it has, then it is ready to leave
