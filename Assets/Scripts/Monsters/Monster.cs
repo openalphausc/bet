@@ -71,6 +71,8 @@ public class Monster : MonoBehaviour
         {
             GetOrdersFromFile();
             entrance = GetRandomSide();
+            Debug.Log("Printing entrance:");
+            Debug.Log(entrance);
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
 
