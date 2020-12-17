@@ -80,6 +80,7 @@ public class YarnBarTending : MonoBehaviour
         }
 
 		GlassMove.cupCanMove = true;
+		GameObject.Find("ClearGlassButton").GetComponent<Button>().interactable = true;
 
 		dataStorage.stayingMonster = "Ghost";
 
@@ -128,6 +129,7 @@ public class YarnBarTending : MonoBehaviour
     public void TutorialLightCues(string firstItem, string secondItem)
     {
         TutorialSpotlight.spot1.enabled = true;
+        TutorialSpotlight.spot1.pointLightOuterRadius = 10;
         if (secondItem != "_")
         {
             TutorialSpotlight.spot2.enabled = true;
@@ -150,7 +152,7 @@ public class YarnBarTending : MonoBehaviour
             TutorialSpotlight.spot1.transform.position = new Vector3(GameObject.Find(firstItem).transform.position.x, GameObject.Find(firstItem).transform.position.y, 0);
         }
     }
-
+    
 	static IEnumerator EnableContinueButton()
 	{
 		while (true)
