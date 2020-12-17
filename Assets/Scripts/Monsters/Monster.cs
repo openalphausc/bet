@@ -138,7 +138,7 @@ public class Monster : MonoBehaviour
             // slide off when ready
             //Debug.Log(state);
             //Debug.Log(readyToLeave);
-            if ((state == MonsterState.center && readyToLeave) && !MonsterSpawner.inTutorial)
+            if ((state == MonsterState.center && readyToLeave) && (!MonsterSpawner.inTutorial && leaving))
             {
                 Monster.currentlyOrdering = false;
                 Monster.currentlyOrderingMonster = null;
