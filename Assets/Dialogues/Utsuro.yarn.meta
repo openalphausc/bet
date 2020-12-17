@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 05e2471ef55b0a441bbb9e5af32ad22b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Utsuro 1-UtsuroAH1-0
+  - Utsuro 1-UtsuroAH1-1
+  - Utsuro 1-UtsuroAH1-2
+  - Utsuro 1-UtsuroAH1-3
+  - Utsuro 1-UtsuroAH1-4
+  - Utsuro 1-UtsuroAH1-5
+  - Utsuro 1-UtsuroAH1-6
+  - Utsuro 1-UtsuroAH1-7
+  - Utsuro 1-UtsuroAH1-8
+  - Utsuro 1-UtsuroAH1-9
+  - Utsuro 1-UtsuroAH1-10
+  - Utsuro 1-UtsuroAH1-11
+  - Utsuro 1-UtsuroAH1-12
+  - Utsuro 1-UtsuroAH1-13
+  - Utsuro 1-UtsuroAH1-14
+  - Utsuro 1-UtsuroAH1-15
+  - Utsuro 1-UtsuroAH1-16
+  - Utsuro 1-UtsuroAH1-17
+  - Utsuro 1-UtsuroAH2RightAnswer-18
+  - Utsuro 1-UtsuroAH2RightAnswer-19
+  - Utsuro 1-UtsuroAH2RightAnswer-20
+  - Utsuro 1-UtsuroAH2RightAnswer-21
+  - Utsuro 1-UtsuroAH2RightAnswer-22
+  - Utsuro 1-UtsuroAH2RightAnswer-23
+  - Utsuro 1-UtsuroAH2RightAnswer-24
+  - Utsuro 1-UtsuroAH2RightAnswer-25
+  - Utsuro 1-UtsuroAH2RightAnswer-26
+  - Utsuro 1-UtsuroAH2RightAnswer-27
+  - Utsuro 1-UtsuroAH2RightAnswer-28
+  - Utsuro 1-UtsuroAH2RightAnswer-29
+  - Utsuro 1-UtsuroAH2RightAnswer-30
+  - Utsuro 1-UtsuroAH2RightAnswer-31
+  - Utsuro 1-UtsuroAH2RightAnswer-32
+  - Utsuro 1-UtsuroAH2RightAnswer-33
+  - Utsuro 1-UtsuroAH2RightAnswer-34
+  - Utsuro 1-UtsuroAH2RightAnswer-35
+  - Utsuro 1-UtsuroAH2RightAnswer-36
+  - Utsuro 1-UtsuroAH2RightAnswer-37
+  - Utsuro 1-UtsuroAH2WrongAnswer-38
+  - Utsuro 1-UtsuroAH2WrongAnswer-39
+  - Utsuro 1-UtsuroAH2WrongAnswer-40
+  - Utsuro 1-UtsuroAH2WrongAnswer-41
+  - Utsuro 1-UtsuroAH2WrongAnswer-42
+  - Utsuro 1-UtsuroAH2WrongAnswer-43
+  - Utsuro 1-UtsuroAH2WrongAnswer-44
+  - Utsuro 1-UtsuroAH2WrongAnswer-45
+  - Utsuro 1-UtsuroAH2WrongAnswer-46
+  - Utsuro 1-UtsuroAH2WrongAnswer-47
+  - Utsuro 1-UtsuroAH2WrongAnswer-48
+  - Utsuro 1-UtsuroAH2WrongAnswer-49
+  - Utsuro 1-UtsuroAH2WrongAnswer-50
+  - Utsuro 1-UtsuroAH2WrongAnswer-51
+  - Utsuro 1-UtsuroAH2WrongAnswer-52
+  - Utsuro 1-UtsuroAH2WrongAnswer-53
+  - Utsuro 1-UtsuroAH2WrongAnswer-54
+  - Utsuro 1-UtsuroAH2WrongAnswer-55
+  - Utsuro 1-UtsuroAH2WrongAnswer-56
+  - Utsuro 1-UtsuroAH2WrongAnswer-57
+  - Utsuro 1-UtsuroOrder3-58
+  - Utsuro 1-UtsuroOrder3-59
+  - Utsuro 1-UtsuroOrder3-60
+  - Utsuro 1-UtsuroOrder3-61
+  - Utsuro 1-UtsuroOrder3-62
+  - Utsuro 1-UtsuroOrder3-63
+  - Utsuro 1-UtsuroOrder3-64
+  - Utsuro 1-UtsuroOrder3-65
+  - Utsuro 1-UtsuroOrder3-66
+  - Utsuro 1-UtsuroOrder5-67
+  - Utsuro 1-UtsuroOrder5-68
+  - Utsuro 1-UtsuroOrder5-69
+  - Utsuro 1-UtsuroOrder5-70
+  - Utsuro 1-UtsuroOrder6-71
+  - Utsuro 1-UtsuroOrder6-72
+  - Utsuro 1-UtsuroOrder6-73
+  - Utsuro 1-UtsuroOrder6-74
+  - Utsuro 1-UtsuroOrder6-75
+  - Utsuro 1-UtsuroOrder6-76
+  - Utsuro 1-UtsuroOrder6-77
+  - Utsuro 1-UtsuroFeedbackGreat-78
+  - Utsuro 1-UtsuroFeedbackGreat-79
+  - Utsuro 1-UtsuroFeedbackGreat-80
+  - Utsuro 1-UtsuroFeedbackGreat-81
+  - Utsuro 1-UtsuroFeedbackGreat-82
+  - Utsuro 1-UtsuroFeedbackRatios-83
+  - Utsuro 1-UtsuroFeedbackRatios-84
+  - Utsuro 1-UtsuroFeedbackRatios-85
+  - Utsuro 1-UtsuroFeedbackRatios-86
+  - Utsuro 1-UtsuroFeedbackRatios-87
+  - Utsuro 1-UtsuroFeedbackIngredients-88
+  - Utsuro 1-UtsuroFeedbackIngredients-89
+  - Utsuro 1-UtsuroFeedbackIngredients-90
+  - Utsuro 1-UtsuroFeedbackIngredients-91
+  - Utsuro 1-UtsuroFeedbackIngredients-92
+  - Utsuro 1-UtsuroFeedbackIngredients-93
+  - Utsuro 1-UtsuroFeedbackIngredients-94
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 05e2471ef55b0a441bbb9e5af32ad22b,
+    type: 3}
+  localizations: []

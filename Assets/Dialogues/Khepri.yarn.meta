@@ -1,0 +1,107 @@
+fileFormatVersion: 2
+guid: c0e899e5cdd0f8b438d01bc0fc0147eb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Khepri 1-KhepriAH1-0
+  - Khepri 1-KhepriAH1-1
+  - Khepri 1-KhepriAH1-2
+  - Khepri 1-KhepriAH1-3
+  - Khepri 1-KhepriAH1-4
+  - Khepri 1-KhepriAH1-5
+  - Khepri 1-KhepriAH1-6
+  - Khepri 1-KhepriAH1-7
+  - Khepri 1-KhepriAH1-8
+  - Khepri 1-KhepriAH1-9
+  - Khepri 1-KhepriAH1-10
+  - Khepri 1-KhepriAH1-11
+  - Khepri 1-KhepriAH1-12
+  - Khepri 1-KhepriAH1-13
+  - Khepri 1-KhepriAH1-14
+  - Khepri 1-KhepriAH1-15
+  - Khepri 1-KhepriAH1-16
+  - Khepri 1-KhepriAH1-17
+  - Khepri 1-KhepriAH1-18
+  - Khepri 1-KhepriAH1-19
+  - Khepri 1-KhepriAH1-20
+  - Khepri 1-KhepriAH2ChoiceA-21
+  - Khepri 1-KhepriAH2ChoiceA-22
+  - Khepri 1-KhepriAH2ChoiceA-23
+  - Khepri 1-KhepriAH2ChoiceA-24
+  - Khepri 1-KhepriAH2ChoiceA-25
+  - Khepri 1-KhepriAH2ChoiceA-26
+  - Khepri 1-KhepriAH2ChoiceA-27
+  - Khepri 1-KhepriAH2ChoiceA-28
+  - Khepri 1-KhepriAH2ChoiceA-29
+  - Khepri 1-KhepriAH2ChoiceA-30
+  - Khepri 1-KhepriAH2ChoiceA-31
+  - Khepri 1-KhepriAH2ChoiceA-32
+  - Khepri 1-KhepriAH2ChoiceA-33
+  - Khepri 1-KhepriAH2ChoiceA-34
+  - Khepri 1-KhepriAH2ChoiceB-35
+  - Khepri 1-KhepriAH2ChoiceB-36
+  - Khepri 1-KhepriAH2ChoiceB-37
+  - Khepri 1-KhepriAH2ChoiceB-38
+  - Khepri 1-KhepriAH2ChoiceB-39
+  - Khepri 1-KhepriAH2ChoiceB-40
+  - Khepri 1-KhepriAH2ChoiceB-41
+  - Khepri 1-KhepriAH2ChoiceB-42
+  - Khepri 1-KhepriAH2ChoiceB-43
+  - Khepri 1-KhepriAH2ChoiceB-44
+  - Khepri 1-KhepriAH2ChoiceB-45
+  - Khepri 1-KhepriAH2ChoiceB-46
+  - Khepri 1-KhepriAH2ChoiceB-47
+  - Khepri 1-KhepriAH2ChoiceB-48
+  - Khepri 1-KhepriAH2ChoiceB-49
+  - Khepri 1-KhepriAH2ChoiceB-50
+  - Khepri 1-KhepriOrder1-51
+  - Khepri 1-KhepriOrder1-52
+  - Khepri 1-KhepriOrder1-53
+  - Khepri 1-KhepriOrder1-54
+  - Khepri 1-KhepriOrder2-55
+  - Khepri 1-KhepriOrder2-56
+  - Khepri 1-KhepriOrder2-57
+  - Khepri 1-KhepriOrder2-58
+  - Khepri 1-KhepriOrder2-59
+  - Khepri 1-KhepriOrder2-60
+  - Khepri 1-KhepriOrder2-61
+  - Khepri 1-KhepriOrder2-62
+  - Khepri 1-KhepriOrder3-63
+  - Khepri 1-KhepriOrder3-64
+  - Khepri 1-KhepriOrder3-65
+  - Khepri 1-KhepriOrder3-66
+  - Khepri 1-KhepriOrder3-67
+  - Khepri 1-KhepriOrder3-68
+  - Khepri 1-KhepriOrder3-69
+  - Khepri 1-KhepriOrder3-70
+  - Khepri 1-KhepriFeedbackGreat-71
+  - Khepri 1-KhepriFeedbackGreat-72
+  - Khepri 1-KhepriFeedbackGreat-73
+  - Khepri 1-KhepriFeedbackGreat-74
+  - Khepri 1-KhepriFeedbackGreat-75
+  - Khepri 1-KhepriFeedbackRatios-76
+  - Khepri 1-KhepriFeedbackRatios-77
+  - Khepri 1-KhepriFeedbackRatios-78
+  - Khepri 1-KhepriFeedbackRatios-79
+  - Khepri 1-KhepriFeedbackRatios-80
+  - Khepri 1-KhepriFeedbackIngredients-81
+  - Khepri 1-KhepriFeedbackIngredients-82
+  - Khepri 1-KhepriFeedbackIngredients-83
+  - Khepri 1-KhepriFeedbackIngredients-84
+  - Khepri 1-KhepriFeedbackIngredients-85
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 'Error on line 1 at position 1:token recognition error
+    at: ''=''
+
+'
+  baseLanguage: {fileID: 7128917941130120860, guid: c0e899e5cdd0f8b438d01bc0fc0147eb,
+    type: 3}
+  localizations: []

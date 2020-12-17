@@ -1,0 +1,251 @@
+
+title: UtsuroAH1
+tags:
+colorID:
+position:
+---
+...
+hi...Utsuro... my name... um... that's my name. sorry.
+... uh... sorry. i really... i... uh...
+
+<<changeEmotion Utsuro surprised>>
+i'm not really good at talking... i'm better at sax... saxophone, that is... it's much easier than talking.
+it scares people... i think. my voice... i mean... at least that's what my boss says.
+i work at the BBC...
+i'm, uh, a phone perso-a phone operator person... telemarketer. i think that's the word.
+
+-> Saxophone is super cool! Are you good?
+	<<changeEmotion Utsuro happy>>
+	...uh. not good, really... but i like it though... the sounds are... nice.
+
+-> Telemarketing? That sounds hard.
+	<<changeEmotion Utsuro sad>>
+	well... yeah. i'd be more useful to the boss if i uh... spoke better.
+
+yeah... talking on the phone is hard for me... but boss gave me a couple voice exercises to practice.
+
+i wish i was just... um... actually, never mind. i-uh, thanks for doing this. the bar, i mean. it's... nice.
+
+...it's... relaxing. your music, too... and so many nice-looking people...
+
+<<changeEmotion Utsuro happy>>
+i wish i were friends with these people... or these kind of people. telemarketing is hard... and i don't have many friends there.
+
+<<changeEmotion Utsuro neutral>>
+-> Maybe you should quit your job and do something you enjoy more. You shouldn't feel pressured to be exactly who your boss wants you to be.
+	<<rightAnswer Utsuro>>
+
+	<<changeEmotion Utsuro happy>>
+
+-> Well, maybe give it some time. You could get better at talking if you worked on it. It's all about confidence and having an enthusiastic tone of voice!
+	<<wrongAnswer Utsuro>>
+
+hm... uh... alright... i'm gonna go to sleep now... see you.
+
+<<finishedTalkingWith Utsuro>>
+
+===
+
+
+title: UtsuroAH2RightAnswer
+tags:
+colorID:
+position:
+---
+...how have you been doing? you haven't closed yet...so that's good...
+...me?
+...yeah, i ended quitting my job at the BBC. telemarketing just wasn't for me...
+
+<<changeEmotion Utsuro happy>>
+actually, i started a jazz cafe... and we're not doing too bad. people seem to like my saxophone..
+and i really get along with one of my regulars, actually...
+
+<<changeEmotion Utsuro neutral>>
+...his name is, uh, oh- i don't think he has a name... he's a hydra, so he doesn't talk...
+he's really good at drums, though... our chemistry on stage - playing jazz together - is really good..
+
+-> How do you communicate to him, though, if he doesn't talk?
+	well, yeah... we just don't talk much...
+	he can hear low vibrations, so sometimes i'll play sax for him
+	..but mostly, we just *get* each other.. there's not much to say.
+	we just enjoy each other's presence, i don't know..
+
+-> You own the jazz cafe? How's the place going?
+	it's going great... it's kinda like this place..
+	lots of people.. getting to know each other after work..
+	<<changeEmotion Utsuro happy>>
+	...cool music, too.
+
+well, thanks for your advice... i think things have been going well for me..
+good for me to get away from the BBC..
+...oh, and good luck with the bar. 
+a place like this deserves to stay open.
+
+<<finishedTalkingWith Utsuro>>
+
+===
+
+title: UtsuroAH2WrongAnswer
+tags:
+colorID:
+position:
+---
+...how have you been doing?
+you haven't closed yet...so that's good..
+...me?
+...yeah, i've been practicing my speaking skills..
+
+<<changeEmotion Utsuro sad>>
+..it's going okay, could be better..
+my boss at the BBC still isn't very happy with my performance..
+i made my first sale yesterday.. but i didn't feel as excited as i thought i would..
+
+<<changeEmotion Utsuro neutral>>
+-> Maybe you just need more practice? You'll get there, I'm sure.
+	..yeah, maybe. 
+	...
+	things will get better, yeah.
+
+-> You're not the only one who feels like that. Plenty of people work jobs they're not passionate about.
+	oh, alright, yeah. i might be expecting too much..
+	work is work, isn't it..
+	and at least the BBC is getting something out of it.
+
+well, it looks like you're having fun here - would love to own a place like this...
+
+<<changeEmotion Utsuro sad>>
+..doing something i love...
+anyways.. thanks for the drink.. i'll see you around..
+
+<<changeEmotion Utsuro neutral>>
+..that is, if this place stays open..
+good luck, and bye for now..
+
+<<finishedTalkingWith Utsuro>>
+
+===
+title: UtsuroOrder3
+tags:
+colorID:
+position:
+---
+
+hi...I'm feeling a cursed sorrow...
+
+<<changeEmotion Utsuro surprised>>
+...what?
+
+<<changeEmotion Utsuro happy>>
+...oh, sorry. that was a drink name - the Cursed Sorrow, please.
+
+<<changeEmotion Utsuro neutral>>
+i heard that it's...uh... lots of the cheery blossom sake... then a drop of cornpagne and something holy. i heard...
+last thing is to shake in some berries..
+
+<<changeEmotion Utsuro surprised>>
+...thank you... sorry... i'm kinda nervous talking to new people..
+...um...also... your stools are gone...
+i overheard that some people from the BBC came in and took them...
+
+<<changeEmotion Utsuro sad>>
+sorry about that...
+
+===
+
+title: UtsuroOrder5
+tags:
+colorID:
+position:
+---
+hey again...can i have something similar to last time?...
+...it's a bunch of the cheery blossom sake...then cornpagne, then the tears...
+
+<<changeEmotion Utsuro surprised>>
+...then can you put the berries on top this time?
+
+<<changeEmotion Utsuro happy>>
+thank you...
+===
+
+title: UtsuroOrder6
+tags:
+colorID:
+position:
+---
+...i think i'm finally ready for something complicated..
+too bad your bar is closing.. i'll really miss this place.
+anyways, here's my order again..
+...it's a bit of the cheery blossom sake, then cornpagne, then something deadly sweet mixed in... 
+then put some of that on top, too...
+
+<<changeEmotion Utsuro happy>>
+thank you... see you around...
+
+..maybe..
+
+===
+
+
+title: UtsuroFeedbackGreat
+tags:
+colorID:
+position:
+---
+<<changeEmotion Utsuro happy>>
+t-thank you... this is wonderful...
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Utsuro>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion Utsuro happy>>
+		s-s-sure... see you there!
+	-> No
+<<endif>>
+<<goodbye Utsuro>>
+===
+title: UtsuroFeedbackRatios
+tags:
+colorID:
+position:
+---
+<<changeEmotion Utsuro surprised>>
+...sorry...this is just too strong for me...
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Utsuro>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion Utsuro happy>>
+		s-s-sure... see you there!
+	-> No
+<<endif>>
+<<goodbye Utsuro>>
+===
+title: UtsuroFeedbackIngredients
+tags:
+colorID:
+position:
+---
+<<changeEmotion Utsuro surprised>>
+...*cough*
+this definitely isn't it...
+<<changeEmotion Utsuro angry>>
+...see you...
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours Utsuro>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion Utsuro happy>>
+		s-s-sure... see you there!
+	-> No
+<<endif>>
+<<goodbye Utsuro>>
+===
+
+
+

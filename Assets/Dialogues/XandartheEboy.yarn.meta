@@ -1,0 +1,90 @@
+fileFormatVersion: 2
+guid: b4f4bb735881f2a48842ea7dfeb11da4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - XandartheEboy 1-XandartheEboyAH1-0
+  - XandartheEboy 1-XandartheEboyAH1-1
+  - XandartheEboy 1-XandartheEboyAH1-2
+  - XandartheEboy 1-XandartheEboyAH1-3
+  - XandartheEboy 1-XandartheEboyAH1-4
+  - XandartheEboy 1-XandartheEboyAH1-5
+  - XandartheEboy 1-XandartheEboyAH1-6
+  - XandartheEboy 1-XandartheEboyAH1-7
+  - XandartheEboy 1-XandartheEboyAH1-8
+  - XandartheEboy 1-XandartheEboyAH1-9
+  - XandartheEboy 1-XandartheEboyAH1-10
+  - XandartheEboy 1-XandartheEboyAH1-11
+  - XandartheEboy 1-XandartheEboyAH1-12
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-13
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-14
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-15
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-16
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-17
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-18
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-19
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-20
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-21
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-22
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-23
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-24
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-25
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-26
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-27
+  - XandartheEboy 1-XandartheEboyAH2WrongAnswer-28
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-29
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-30
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-31
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-32
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-33
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-34
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-35
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-36
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-37
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-38
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-39
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-40
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-41
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-42
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-43
+  - XandartheEboy 1-XandartheEboyAH2RightAnswer-44
+  - XandartheEboy 1-XandartheEboyOrder2-45
+  - XandartheEboy 1-XandartheEboyOrder2-46
+  - XandartheEboy 1-XandartheEboyOrder2-47
+  - XandartheEboy 1-XandartheEboyOrder2-48
+  - XandartheEboy 1-XandartheEboyOrder4-49
+  - XandartheEboy 1-XandartheEboyOrder4-50
+  - XandartheEboy 1-XandartheEboyOrder4-51
+  - XandartheEboy 1-XandartheEboyOrder4-52
+  - XandartheEboy 1-XandartheEboyOrder6-53
+  - XandartheEboy 1-XandartheEboyOrder6-54
+  - XandartheEboy 1-XandartheEboyOrder6-55
+  - XandartheEboy 1-XandartheEboyOrder6-56
+  - XandartheEboy 1-XandartheEboyFeedbackGreat-57
+  - XandartheEboy 1-XandartheEboyFeedbackGreat-58
+  - XandartheEboy 1-XandartheEboyFeedbackGreat-59
+  - XandartheEboy 1-XandartheEboyFeedbackGreat-60
+  - XandartheEboy 1-XandartheEboyFeedbackGreat-61
+  - XandartheEboy 1-XandartheEboyFeedbackRatios-62
+  - XandartheEboy 1-XandartheEboyFeedbackRatios-63
+  - XandartheEboy 1-XandartheEboyFeedbackRatios-64
+  - XandartheEboy 1-XandartheEboyFeedbackRatios-65
+  - XandartheEboy 1-XandartheEboyFeedbackRatios-66
+  - XandartheEboy 1-XandartheEboyFeedbackIngredients-67
+  - XandartheEboy 1-XandartheEboyFeedbackIngredients-68
+  - XandartheEboy 1-XandartheEboyFeedbackIngredients-69
+  - XandartheEboy 1-XandartheEboyFeedbackIngredients-70
+  - XandartheEboy 1-XandartheEboyFeedbackIngredients-71
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: b4f4bb735881f2a48842ea7dfeb11da4,
+    type: 3}
+  localizations: []
