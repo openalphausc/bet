@@ -1,0 +1,84 @@
+fileFormatVersion: 2
+guid: 37c5feb79fcb1844b9a48bdb210d66d9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - EldritchMonster 1-EldritchMonsterAH1-0
+  - EldritchMonster 1-EldritchMonsterAH1-1
+  - EldritchMonster 1-EldritchMonsterAH1-2
+  - EldritchMonster 1-EldritchMonsterAH1-3
+  - EldritchMonster 1-EldritchMonsterAH1-4
+  - EldritchMonster 1-EldritchMonsterAH1-5
+  - EldritchMonster 1-EldritchMonsterAH1-6
+  - EldritchMonster 1-EldritchMonsterAH1-7
+  - EldritchMonster 1-EldritchMonsterAH1-8
+  - EldritchMonster 1-EldritchMonsterAH1-9
+  - EldritchMonster 1-EldritchMonsterAH1-10
+  - EldritchMonster 1-EldritchMonsterAH1-11
+  - EldritchMonster 1-EldritchMonsterAH1-12
+  - EldritchMonster 1-EldritchMonsterAH1-13
+  - EldritchMonster 1-EldritchMonsterAH1-14
+  - EldritchMonster 1-EldritchMonsterAH1-15
+  - EldritchMonster 1-EldritchMonsterAH1-16
+  - EldritchMonster 1-EldritchMonsterAH1-17
+  - EldritchMonster 1-EldritchMonsterAH1-18
+  - EldritchMonster 1-EldritchMonsterAH1-19
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-20
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-21
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-22
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-23
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-24
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-25
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-26
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-27
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-28
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-29
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-30
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-31
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-32
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-33
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-34
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-35
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-36
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-37
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-38
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-39
+  - EldritchMonster 1-EldritchMonsterOrder3-40
+  - EldritchMonster 1-EldritchMonsterOrder3-41
+  - EldritchMonster 1-EldritchMonsterOrder3-42
+  - EldritchMonster 1-EldritchMonsterOrder3-43
+  - EldritchMonster 1-EldritchMonsterOrder5-44
+  - EldritchMonster 1-EldritchMonsterOrder5-45
+  - EldritchMonster 1-EldritchMonsterOrder5-46
+  - EldritchMonster 1-EldritchMonsterOrder6-47
+  - EldritchMonster 1-EldritchMonsterOrder6-48
+  - EldritchMonster 1-EldritchMonsterOrder6-49
+  - EldritchMonster 1-EldritchMonsterOrder6-50
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-51
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-52
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-53
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-54
+  - EldritchMonster 1-EldritchMonsterFeedbackGreat-55
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-56
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-57
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-58
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-59
+  - EldritchMonster 1-EldritchMonsterFeedbackRatios-60
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-61
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-62
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-63
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-64
+  - EldritchMonster 1-EldritchMonsterFeedbackIngredients-65
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 37c5feb79fcb1844b9a48bdb210d66d9,
+    type: 3}
+  localizations: []

@@ -49,7 +49,6 @@ public class Blender : MonoBehaviour
         // start blend timer
         blending = true;
         blendTimer = 0.0f;
-        Debug.Log("Start blending!");
         
         // disappear the glass by teleporting it way offscreen lol
         glassMove.gameObject.transform.position = new Vector3(0, 10000, 0);
@@ -90,6 +89,5 @@ public class Blender : MonoBehaviour
             glassMove.holding = false;
             StartBlending();
         }
-        else Debug.Log("Can't be blended!");
     }
 }

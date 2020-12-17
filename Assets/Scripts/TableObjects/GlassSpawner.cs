@@ -9,5 +9,6 @@ public class GlassSpawner : MonoBehaviour
     public void SpawnGlass()
     {
         GameObject newGlass = Instantiate(emptyGlassPrefab);
+        newGlass.transform.position = new Vector2(-4.5f, -10.67f);
     }
 }

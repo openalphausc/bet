@@ -1,0 +1,92 @@
+fileFormatVersion: 2
+guid: 2e9708c0c49db79448140ad4bd5aae59
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - CowboyAlien 1-CowboyAlienOrder2-0
+  - CowboyAlien 1-CowboyAlienOrder2-1
+  - CowboyAlien 1-CowboyAlienOrder2-2
+  - CowboyAlien 1-CowboyAlienOrder2-3
+  - CowboyAlien 1-CowboyAlienOrder2-4
+  - CowboyAlien 1-CowboyAlienOrder4-5
+  - CowboyAlien 1-CowboyAlienOrder4-6
+  - CowboyAlien 1-CowboyAlienOrder4-7
+  - CowboyAlien 1-CowboyAlienOrder4-8
+  - CowboyAlien 1-CowboyAlienOrder4-9
+  - CowboyAlien 1-CowboyAlienOrder6-10
+  - CowboyAlien 1-CowboyAlienOrder6-11
+  - CowboyAlien 1-CowboyAlienOrder6-12
+  - CowboyAlien 1-CowboyAlienOrder6-13
+  - CowboyAlien 1-CowboyAlienAH1-14
+  - CowboyAlien 1-CowboyAlienAH1-15
+  - CowboyAlien 1-CowboyAlienAH1-16
+  - CowboyAlien 1-CowboyAlienAH1-17
+  - CowboyAlien 1-CowboyAlienAH1-18
+  - CowboyAlien 1-CowboyAlienAH1-19
+  - CowboyAlien 1-CowboyAlienAH1-20
+  - CowboyAlien 1-CowboyAlienAH1-21
+  - CowboyAlien 1-CowboyAlienAH1-22
+  - CowboyAlien 1-CowboyAlienAH1-23
+  - CowboyAlien 1-CowboyAlienAH1-24
+  - CowboyAlien 1-CowboyAlienAH1-25
+  - CowboyAlien 1-CowboyAlienAH1-26
+  - CowboyAlien 1-CowboyAlienAH1-27
+  - CowboyAlien 1-CowboyAlienAH1-28
+  - CowboyAlien 1-CowboyAlienAH1-29
+  - CowboyAlien 1-CowboyAlienAH1-30
+  - CowboyAlien 1-CowboyAlienAH1-31
+  - CowboyAlien 1-CowboyAlienAH1-32
+  - CowboyAlien 1-CowboyAlienAH1-33
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-34
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-35
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-36
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-37
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-38
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-39
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-40
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-41
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-42
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-43
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-44
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-45
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-46
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-47
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-48
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-49
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-50
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-51
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-52
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-53
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-54
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-55
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-56
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-57
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-58
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-59
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-60
+  - CowboyAlien 1-CowboyAlienFeedbackGreat-61
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-62
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-63
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-64
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-65
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-66
+  - CowboyAlien 1-CowboyAlienFeedbackRatios-67
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-68
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-69
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-70
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-71
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-72
+  - CowboyAlien 1-CowboyAlienFeedbackIngredients-73
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 2e9708c0c49db79448140ad4bd5aae59,
+    type: 3}
+  localizations: []

@@ -102,8 +102,6 @@ public class MonsterSpawner : MonoBehaviour
                     // if already served all monsters, go to after hours
                     if ((monstersOfTheDay.Count == 0 && monstersOnScreen.Count == 0))
                     {
-                        Debug.Log("GoingtoAfterHours");
-                        currDay++;
                         SceneManager.LoadScene("AfterHours");
                         monstersOfTheDay = monsterQueue[currDay];
                         tutorialHasRun = false;
@@ -125,14 +123,13 @@ public class MonsterSpawner : MonoBehaviour
     {
         if (monstersOfTheDay.Count == 0)
         {
-            Debug.Log("Tried to spawn a monster, but there isn't a monster in the list to spawn.");
+            //Debug.Log("Tried to spawn a monster, but there isn't a monster in the list to spawn.");
             return;
         }
 
         // no available seats
         if (GetAvailableSeat() == null)
         {
-            Debug.Log("No available seat to spawn monster, restarting spawn timer.");
             timeUntilNextSpawn = GetSpawnTime();
             return;
         }
@@ -154,7 +151,6 @@ public class MonsterSpawner : MonoBehaviour
 
             if (monsterIndex == -1)
             {
-                Debug.Log("Monster couldn't be found.");
                 return;
             }
 
@@ -314,7 +310,6 @@ public class MonsterSpawner : MonoBehaviour
 
     private void CreateMonsterQueue()
     {
-        //string path = "/Assets/Text/MonsterOrderNoGenerals.txt";
         string text = ordersFile.text;
 
         // create a stream from the above text
@@ -323,7 +318,7 @@ public class MonsterSpawner : MonoBehaviour
         writer.Write(text);
         writer.Flush();
         stream.Position = 0;
-        
+
         StreamReader reader = new StreamReader(stream);
         int currIndex = 0;
 

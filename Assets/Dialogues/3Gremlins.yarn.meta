@@ -1,0 +1,105 @@
+fileFormatVersion: 2
+guid: b8510ea77ed4e234a9d258d133bd8319
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - 3Gremlins 1-3GremlinsAH1-0
+  - 3Gremlins 1-3GremlinsAH1-1
+  - 3Gremlins 1-3GremlinsAH1-2
+  - 3Gremlins 1-3GremlinsAH1-3
+  - 3Gremlins 1-3GremlinsAH1-4
+  - 3Gremlins 1-3GremlinsAH1-5
+  - 3Gremlins 1-3GremlinsAH1-6
+  - 3Gremlins 1-3GremlinsAH1-7
+  - 3Gremlins 1-3GremlinsAH1-8
+  - 3Gremlins 1-3GremlinsAH1-9
+  - 3Gremlins 1-3GremlinsAH1-10
+  - 3Gremlins 1-3GremlinsAH1-11
+  - 3Gremlins 1-3GremlinsAH1-12
+  - 3Gremlins 1-3GremlinsAH1-13
+  - 3Gremlins 1-3GremlinsAH1-14
+  - 3Gremlins 1-3GremlinsAH1-15
+  - 3Gremlins 1-3GremlinsAH1-16
+  - 3Gremlins 1-3GremlinsAH1-17
+  - 3Gremlins 1-3GremlinsAH1-18
+  - 3Gremlins 1-3GremlinsAH1-19
+  - 3Gremlins 1-3GremlinsAH1-20
+  - 3Gremlins 1-3GremlinsAH1-21
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-22
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-23
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-24
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-25
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-26
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-27
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-28
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-29
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-30
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-31
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-32
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-33
+  - 3Gremlins 1-3GremlinsAH2WrongAnswer-34
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-35
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-36
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-37
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-38
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-39
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-40
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-41
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-42
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-43
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-44
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-45
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-46
+  - 3Gremlins 1-3GremlinsAH2RightAnswer-47
+  - 3Gremlins 1-3GremlinsOrder3-48
+  - 3Gremlins 1-3GremlinsOrder3-49
+  - 3Gremlins 1-3GremlinsOrder3-50
+  - 3Gremlins 1-3GremlinsOrder3-51
+  - 3Gremlins 1-3GremlinsOrder3-52
+  - 3Gremlins 1-3GremlinsOrder3-53
+  - 3Gremlins 1-3GremlinsOrder3-54
+  - 3Gremlins 1-3GremlinsOrder3-55
+  - 3Gremlins 1-3GremlinsOrder3-56
+  - 3Gremlins 1-3GremlinsOrder3-57
+  - 3Gremlins 1-3GremlinsOrder3-58
+  - 3Gremlins 1-3GremlinsOrder5-59
+  - 3Gremlins 1-3GremlinsOrder5-60
+  - 3Gremlins 1-3GremlinsOrder5-61
+  - 3Gremlins 1-3GremlinsOrder5-62
+  - 3Gremlins 1-3GremlinsOrder5-63
+  - 3Gremlins 1-3GremlinsOrder5-64
+  - 3Gremlins 1-3GremlinsOrder5-65
+  - 3Gremlins 1-3GremlinsOrder5-66
+  - 3Gremlins 1-3GremlinsOrder6-67
+  - 3Gremlins 1-3GremlinsOrder6-68
+  - 3Gremlins 1-3GremlinsOrder6-69
+  - 3Gremlins 1-3GremlinsOrder6-70
+  - 3Gremlins 1-3GremlinsFeedbackGreat-71
+  - 3Gremlins 1-3GremlinsFeedbackGreat-72
+  - 3Gremlins 1-3GremlinsFeedbackGreat-73
+  - 3Gremlins 1-3GremlinsFeedbackGreat-74
+  - 3Gremlins 1-3GremlinsFeedbackGreat-75
+  - 3Gremlins 1-3GremlinsFeedbackRatios-76
+  - 3Gremlins 1-3GremlinsFeedbackRatios-77
+  - 3Gremlins 1-3GremlinsFeedbackRatios-78
+  - 3Gremlins 1-3GremlinsFeedbackRatios-79
+  - 3Gremlins 1-3GremlinsFeedbackRatios-80
+  - 3Gremlins 1-3GremlinsFeedbackRatios-81
+  - 3Gremlins 1-3GremlinsFeedbackIngredients-82
+  - 3Gremlins 1-3GremlinsFeedbackIngredients-83
+  - 3Gremlins 1-3GremlinsFeedbackIngredients-84
+  - 3Gremlins 1-3GremlinsFeedbackIngredients-85
+  - 3Gremlins 1-3GremlinsFeedbackIngredients-86
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: b8510ea77ed4e234a9d258d133bd8319,
+    type: 3}
+  localizations: []

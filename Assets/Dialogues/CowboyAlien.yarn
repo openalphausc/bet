@@ -1,0 +1,261 @@
+title: CowboyAlienOrder2
+tags: 
+colorID:
+position:
+---
+
+Well howdy there pardner! Just parked my spaceship down in a nearby field.
+
+Can you fix me up a good ol' Country Charm? One of my go to's across the galaxy. I just love the kick o' flaver it gives you.
+
+You get some Cornpagne and put a lotta poison apple juice in there.
+
+I can't remember what the last thing was, but I think it was something real dirty. Anyway, I'm sure you can figure it out.
+
+Just take your time, I'd rather have a good drink than a rushed drink ya'hear?
+
+===
+
+title: CowboyAlienOrder4
+tags: 
+colorID:
+position:
+---
+
+Hey there, nice to see your friendly face again! Missin' a couple stools I see... Well, standing's better for the gams anyway.
+
+Think I'll take a Country Hospitality this time. It's pretty similar to Country Charm, with the cornpagne and poison apple juice.
+
+But just a little less graveyard mud and a little more... Hmm... some other fruit flavor.
+
+Ehhh, my memory ain't what it used to be.
+
+I've got full confidence in your drink makin' abilities, y'hear?
+
+
+===
+title: CowboyAlienOrder6
+tags: 
+colorID:
+position:
+---
+
+Howdy there again... I'll be sorry to see this place close. 
+
+One last drink to everyone, right?
+
+Going for somethin' grand today, the ol' Drunky Howdy. It's just Cornpagne, Apple Juice, Zombie Flesh... and... Something a bit teary?
+
+Anyway, I know your drink will be fine as a fiddle, no worries!
+
+===
+
+title: CowboyAlienAH1
+tags:
+colorID: 0
+position:
+---
+<<changeEmotion CowboyAlien happy>>
+Howdy there, just happened to pass by this fine establishment of yours for a swig o’ Apple Jack, put up my feet a bit, y’know? 
+
+Name's Colonel Corn, in case you didn't catch it earlier!
+
+Just one stop on this galaxian adventure o’ mine, I’ll be in n’ out lickety split, but I’ll be glad to give ya company while I can!
+
+Firstly, call me full as a tick, ‘cause that was about the finest meal I’ve had this side of the Milky Way! But if you don’t mind me askin’, well you see---
+
+<<changeEmotion CowboyAlien neutral>>
+I’ll admit I’m a newcomer ‘round these parts, so do pardon me sayin’ so, but this town’s lookin’ mighty downtrodden to this fella’s eyes, and these eyes have seen a fair bit more than all you boys here have. 
+
+Now from what I understand, this bar here’s boutta bite the dust? 
+
+-> Yeah, the BBC’s driving all of us out unfortunately, to make room for wealthier tourists. They’re the ones who can actually make them money.
+	<<changeEmotion CowboyAlien angry>>
+	So the BBC’s the big bug around here, huh? A bully makes me madder than an old wet hen, never liked someone willing to bulldoze the little guy around. 
+
+-> Well, at this point there’s not much we can do. I’ve been fighting this off for years, but now I think it’s finally time to throw down the white flag.
+	<<changeEmotion CowboyAlien sad>>
+	Aw buck up there pardner, I’m sure things will be lookin’ up soon. 
+
+<<changeEmotion CowboyAlien sad>>
+You know, I’ve been gallivantin’ around the galaxy for a mighty long time now, and thing’s have been real grummy as of late. I don’t got that adventurin’ spirit no more, you see? 
+
+<<changeEmotion CowboyAlien neutral>>
+I dunno, I’ve been thinking ‘bout finally makin’ a home somewhere, settlin’ down on a little piece o’ land to call my own. It’s been real lonely too, and the folks round here seem ace-high. 
+
+With what I know, maybe I lend my assistance to you with your own troubles with the BBC. 
+
+But it’s tragic to think about leaving the ship after years of being with her. I just feel as if life’s river has led me astray, untethered. 
+
+<<changeEmotion CowboyAlien sad>>
+I know this town’s got its problems too, but do you think they’d be willin’ to accept this old cowboy as a friend?
+
+-> Well, you’re more than welcome to stick around for as long as I’m here. Can’t promise how much longer that’ll be, but you’ll always have a seat at this bar.
+	<<rightAnswer CowboyAlien>>
+
+	<<changeEmotion CowboyAlien happy>>
+	Well, I certainly appreciate the offer, I might stick around just a bit longer to see this groggery through.
+
+-> Seems like you might not be ready to give up that life yet. Why don’t you sit on it for a bit and come back?
+	<<wrongAnswer CowboyAlien>>
+
+	<<changeEmotion CowboyAlien sad>>
+	You raise a good point, does seem like I might be a hair more attached than I’d like to admit doesn’t it?
+
+<<changeEmotion CowboyAlien happy>>
+Anyway, time to retire to that velvet couch back on the ship, I’ll be seein’ you around!
+
+<<finishedTalkingWith CowboyAlien>>
+===
+
+title: CowboyAlienAH2RightAnswer
+tags:
+colorID: 0
+position:
+---
+
+<<changeEmotion CowboyAlien happy>>
+Why if it isn’t my favorite Earthlin’ bartender! Hope things’ve been running alright.
+
+<<changeEmotion CowboyAlien neutral>>
+You know, I spent a couple days wanderin’ around this here city… folks ain’t too bad round these parts. 
+
+<<changeEmotion CowboyAlien angry>>
+That BBC’s sure got ‘em beat though, from what they’re all sayin’. It’s got me all puckered up!
+
+<<changeEmotion CowboyAlien surprised>>
+They seem to think I’m a pretty strange lookin’ fella, I got some funny looks whilst walkin’ around town. Still, they’re plenty friendly and make for good conversation once the ball gets rollin’.
+
+<<changeEmotion CowboyAlien neutral>>
+Think I will stay for a while at least. I can help folks out and maybe eventually settle down. I ain’t retiring the ol’ girl just yet, but maybe she can take a rest for a while.
+
+-> Well, we’re more than happy to have a friendly stranger stick around. Glad you got your heart figured out.
+
+->That sounds like a great plan. Anyone who’s willing to put up with the BBC is a friend around here.
+
+<<changeEmotion CowboyAlien surprised>>
+You know of any good settling land around here? Aw, shucks, bet that BBC’s got all the good stuff tied up already…
+
+<<changeEmotion CowboyAlien sad>>
+That’s alright though, I didn’t decide to stay for an easy time, just part of a new adventure I suppose.
+
+<<changeEmotion CowboyAlien neutral>>
+Don’t get your soul too worried now, things’ll figure themselves out in the end… and if not, this cowboy alien has got your back through and through!
+
+<<changeEmotion CowboyAlien happy>>
+I’ll be headin’ out, barkeep. It was certainly a pleasure makin’ your acquaintance. I’ll be seein’ you around!
+
+<<finishedTalkingWith CowboyAlien>>
+===
+
+title: CowboyAlienAH2WrongAnswer
+tags:
+colorID: 0
+position:
+---
+
+<<changeEmotion CowboyAlien happy>>
+Why if it isn’t my favorite Earthlin’ bartender! Hope things’ve been running alright.
+
+<<changeEmotion CowboyAlien neutral>>
+You know, I spent a couple days wanderin’ around this here city… folks ain’t too bad round these parts. 
+
+<<changeEmotion CowboyAlien angry>>
+That BBC’s sure got ‘em beat though, from what they’re all sayin’. It’s got me all puckered up!
+
+<<changeEmotion CowboyAlien surprised>>
+They seem to think I’m a pretty strange lookin’ fella, I got some funny looks whilst walkin’ around town. Still, they’re plenty friendly and make for good conversation once the ball gets rollin’.
+
+<<changeEmotion CowboyAlien neutral>>
+Still… the ol’ girl looks at me funny whenever I think too hard about puttin’ down for good. My heart’s tellin’ me it’s not quite the right time yet. 
+
+->It’s a shame you won’t be sticking around, but the heart must do as the heart desires. I certainly hope you’ll be happy up there.
+
+->That sounds like a great plan. I think you’ll know when the time is right. Until then, we’ll be missing you!
+
+<<changeEmotion CowboyAlien sad>>
+I’ll be leavin’ in a couple days’ time, ready to get back into all sorts of galaxian hullabaloo.
+
+<<changeEmotion CowboyAlien happy>>
+But you know? Don’t be missin’ me too much, I’ve gotten far too attached to the folks here to stay away for too long. 
+
+<<changeEmotion CowboyAlien neutral>>
+And for you- don’t your soul too worried now, things’ll figure themselves out in the end… and if not, this cowboy alien has got your back through and through!
+
+<<changeEmotion CowboyAlien happy>>
+I’ll be headin’ out, barkeep. It was certainly a pleasure makin’ your acquaintance. I’ll be seein’ you around!
+
+<<finishedTalkingWith CowboyAlien>>
+===
+title: CowboyAlienFeedbackGreat
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion CowboyAlien happy>>
+Why, this is one mighty fine drink! 
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours CowboyAlien>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion CowboyAlien surprised>>
+		Whatcha wanna talk to this ol' buckaroo for? 
+		<<changeEmotion CowboyAlien happy>>
+		Well, whatever the the reason, I'll be more than happy to give you some company. See ya later pardner! 
+	-> No
+<<endif>>
+<<goodbye CowboyAlien>>
+
+===
+title: CowboyAlienFeedbackRatios
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion CowboyAlien sad>>
+
+Hmm... You've almost got it pardner, just a lil' bit off.
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours CowboyAlien>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion CowboyAlien surprised>>
+		Whatcha wanna talk to this ol' buckaroo for? 
+		<<changeEmotion CowboyAlien happy>>
+		Well, whatever the the reason, I'll be more than happy to give you some company. See ya later pardner! 
+	-> No
+<<endif>>
+<<goodbye CowboyAlien>>
+
+===
+title: CowboyAlienFeedbackIngredients
+tags:
+colorID:
+position:
+
+---
+
+<<changeEmotion CowboyAlien surprised>>
+
+This is a drink all right, pretty good one, but I don't think it's quite what I ordered. 
+
+<<if $invitedAMonster is false>>
+	*Do you want to invite them to stay after hours?*
+	-> Yes
+		<<inviteToAfterHours CowboyAlien>>
+		<<set $invitedAMonster to true>>
+		<<changeEmotion CowboyAlien surprised>>
+		Whatcha wanna talk to this ol' buckaroo for? 
+		<<changeEmotion CowboyAlien happy>>
+		Well, whatever the the reason, I'll be more than happy to give you some company. See ya later pardner! 
+	-> No
+<<endif>>
+<<goodbye CowboyAlien>>
+
+===
