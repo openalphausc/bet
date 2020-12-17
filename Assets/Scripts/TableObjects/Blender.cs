@@ -72,6 +72,14 @@ public class Blender : MonoBehaviour
         
         // stop sound
         mixSound.Stop();
+        
+        // if in tutorial, then reenable dialogue functions
+        if (MonsterSpawner.inTutorial && YarnBarTending.readyToBlend)
+        {
+            YarnBarTending.EnableDialogueFunctions();
+            YarnBarTending.readyToBlend = false;
+            GlassMove.cupCanMove = false;
+        }
     }
 
     public void OnMouseUp()

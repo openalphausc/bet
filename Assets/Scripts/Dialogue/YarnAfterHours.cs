@@ -6,11 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class YarnAfterHours : MonoBehaviour
 {
+    public static GameObject currentMonster = null;
+    public static Vector3 monsterLocation = new Vector3(-25f, -5f, 0f);
+
     void Start()
     {
         if (SceneManager.GetActiveScene().name == "AfterHours")
         {
-            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH1");
+            if(dataStorage.currentDay == 0 && !AfterHoursMonsterSpawner.tutorialOver)
+            {
+                FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostDay1AH");
+            }
+            else
+            {
+                FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH1");
+            }
         }
     }
     [YarnCommand("finishedTalkingWith")]
@@ -20,7 +30,14 @@ public class YarnAfterHours : MonoBehaviour
         AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>().inAfterHours = false;
         AfterHoursMonsterSpawner.currentMonster = null;
         AfterHoursMonsterSpawner.active = false;
+        dataStorage.currentDay++;
         SceneManager.LoadScene("Tabsheet");
+    }
+
+    [YarnCommand("running")]
+    public void running()
+    {
+        Debug.Log("node is running");
     }
 
     // Update monster points for right answer
@@ -72,5 +89,14 @@ public class YarnAfterHours : MonoBehaviour
         {
             return x.name.CompareTo(y.name);
         }
+    }
+
+    [YarnCommand("TutorialOver")]
+    public void endTutorial()
+    {
+        AfterHoursMonsterSpawner.tutorialOver = true;
+        AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>().inAfterHours = false;
+        AfterHoursMonsterSpawner.currentMonster = null;
+        gameObject.SetActive(false);
     }
 }
