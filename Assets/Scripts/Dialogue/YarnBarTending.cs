@@ -77,6 +77,7 @@ public class YarnBarTending : MonoBehaviour
         }
 
 		GlassMove.cupCanMove = true;
+		GameObject.Find("ClearGlassButton").GetComponent<Button>().interactable = true;
 
 		dataStorage.stayingMonster = "Ghost";
 
