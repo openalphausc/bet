@@ -135,7 +135,7 @@ colorID:
 position:
 ---
 
-Hello, bartender. Adventure Ale please. The drink of a true hero.
+Hello, bartender. Adventurous Ale please. The drink of a true hero.
 
 It's a blend of vodka, golden dust, and something else I forget. I'm getting tired just thinking about it.
 
@@ -150,7 +150,7 @@ colorID:
 position:
 ---
 <<changeEmotion Shapeshifter sad>>
-Hello, bartender. Might be the last drink I'll have here, so I'm thinking to change it up a bit.
+Hello, bartender. Might be the last drink I'll have here, so I'm thinking to change it up a bit. An Adventurer's Ale.
 
 Maybe a blend of blood, whiskey, dust, and some other alcohol to lighten the mood. And a bit more dust to top it off.
 

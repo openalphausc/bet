@@ -74,7 +74,7 @@ Hope you've been havin' a good night, kid.
 The BBC can give ya shit for it, but the community's got heart; the bar looks nice like this, full of monsters wantin' to offer ya a few more good memories. 
 
 <<changeEmotion GalahadTheDragonborn neutral>>
-Alright, kid, impress me. A Tempestuous Torment, yeah? Whiskey, a liquid with a metalic tang, and some nightmare fuel. Give it a nice blend this time, though.
+Alright, kid, impress me. A Twisted Tempestuous Torment, yeah? Whiskey, a liquid with a metalic tang, and some nightmare fuel. Give it a nice blend this time, though.
 
 I appreciate ya givin' it your all, like always.
 
@@ -87,7 +87,7 @@ position:
 Tomorrow's the day, huh? I'd ask how you're doin' but the look on your face tells me enough. Shit like this is enough to rattle anyone's scales, but don't let it get to you. 
 
 <<changeEmotion GalahadTheDragonborn angry>>
-Fight it with all ya got. There's always a chance, yeah? Let's end this shit strong, though, if it's gotta end. Make me the best damn Tempestuous Torment I'll ever taste. 
+Fight it with all ya got. There's always a chance, yeah? Let's end this shit strong, though, if it's gotta end. Make me the strongest Tortured Tempestuous Torment I'll ever taste. 
 
 <<changeEmotion GalahadTheDragonborn neutral>>
 Add the usual: whiskey, blood, and somethin' terrifyin' enough to make even the BBC look like a freshly-shaven werewolf's keyster. 
