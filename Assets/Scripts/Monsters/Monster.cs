@@ -62,6 +62,8 @@ public class Monster : MonoBehaviour
 
     private bool ghostCenter = true;
 
+    private int timesVisited = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +72,7 @@ public class Monster : MonoBehaviour
         if (!inAfterHours)
         {
             GetOrdersFromFile();
+            timesVisited++;
             entrance = GetRandomSide();
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
@@ -348,8 +351,8 @@ public class Monster : MonoBehaviour
         // }
         // Debug.Log(temp);
 
-        drinkOrder = allOrders[dataStorage.currentDay][0];
-        orderNotes = allOrders[dataStorage.currentDay][1];
+        drinkOrder = allOrders[timesVisited][0];
+        orderNotes = allOrders[timesVisited][1];
 	}
 
     // name comparison class, don't mind
