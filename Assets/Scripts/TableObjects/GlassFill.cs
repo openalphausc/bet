@@ -104,17 +104,23 @@ public class GlassFill : MonoBehaviour
     {
         if (collisionInfo.gameObject.tag == "Monster" && !purchased && Monster.currentlyOrderingMonster != null && collisionInfo.gameObject.GetComponent<Monster>() == Monster.currentlyOrderingMonster)
         {
-           // Debug.Log("currentDrink.color = " + currentDrink.color.ToString() + ", targetDrink.color = " + targetDrink.color.ToString());
+            // Debug.Log("currentDrink.color = " + currentDrink.color.ToString() + ", targetDrink.color = " + targetDrink.color.ToString());
 
             // check if current drink = target drink
             //GameObject face;
+            string currMonster = Monster.currentlyOrderingMonster.name;
+            if(currMonster.StartsWith("GeneralMonster"))
+            {
+                currMonster = "GeneralMonster";
+            }
+
             if (currentDrink.Matches(targetDrink))
             {
                 // if drink matches color, happy face
                 //face = Instantiate(happyFace);
                 if (!MonsterSpawner.inTutorial)
                 {
-                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackGreat");
+                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(currMonster + "FeedbackGreat");
                 }
                 wellDone.Play();
             }
@@ -124,7 +130,7 @@ public class GlassFill : MonoBehaviour
                     //face = Instantiate(neutralFace);
                     if (!MonsterSpawner.inTutorial)
                     {
-                        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackIngredients");
+                        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(currMonster + "FeedbackIngredients");
                     }
                     notBad.Play();
                 }
@@ -133,7 +139,7 @@ public class GlassFill : MonoBehaviour
                     //face = Instantiate(frownFace);
                     if (!MonsterSpawner.inTutorial)
                     {
-                        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackRatios");
+                        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(currMonster + "FeedbackRatios");
                     }
                     ew.Play();
                 }

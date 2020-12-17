@@ -1,0 +1,84 @@
+fileFormatVersion: 2
+guid: f4db910fab646314db5e8f2ae1ab5cb9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - GeneralMonster-GeneralMonster1-0
+  - GeneralMonster-GeneralMonster1-1
+  - GeneralMonster-GeneralMonster2-2
+  - GeneralMonster-GeneralMonster2-3
+  - GeneralMonster-GeneralMonster2-4
+  - GeneralMonster-GeneralMonster3-5
+  - GeneralMonster-GeneralMonster3-6
+  - GeneralMonster-GeneralMonster4-7
+  - GeneralMonster-GeneralMonster4-8
+  - GeneralMonster-GeneralMonster5-9
+  - GeneralMonster-GeneralMonster5-10
+  - GeneralMonster-GeneralMonster6-11
+  - GeneralMonster-GeneralMonster6-12
+  - GeneralMonster-GeneralMonster6-13
+  - GeneralMonster-GeneralMonster7-14
+  - GeneralMonster-GeneralMonster7-15
+  - GeneralMonster-GeneralMonster7-16
+  - GeneralMonster-GeneralMonster7-17
+  - GeneralMonster-GeneralMonster8-18
+  - GeneralMonster-GeneralMonster8-19
+  - GeneralMonster-GeneralMonster9-20
+  - GeneralMonster-GeneralMonster9-21
+  - GeneralMonster-GeneralMonster9-22
+  - GeneralMonster-GeneralMonster10-23
+  - GeneralMonster-GeneralMonster10-24
+  - GeneralMonster-GeneralMonster10-25
+  - GeneralMonster-GeneralMonster11-26
+  - GeneralMonster-GeneralMonster11-27
+  - GeneralMonster-GeneralMonster11-28
+  - GeneralMonster-GeneralMonster11-29
+  - GeneralMonster-GeneralMonster12-30
+  - GeneralMonster-GeneralMonster12-31
+  - GeneralMonster-GeneralMonster12-32
+  - GeneralMonster-GeneralMonster12-33
+  - GeneralMonster-GeneralMonster13-34
+  - GeneralMonster-GeneralMonster13-35
+  - GeneralMonster-GeneralMonster13-36
+  - GeneralMonster-GeneralMonster13-37
+  - GeneralMonster-GeneralMonster14-38
+  - GeneralMonster-GeneralMonster14-39
+  - GeneralMonster-GeneralMonster14-40
+  - GeneralMonster-GeneralMonster14-41
+  - GeneralMonster-GeneralMonster14-42
+  - GeneralMonster-GeneralMonster14-43
+  - GeneralMonster-GeneralMonster15-44
+  - GeneralMonster-GeneralMonster15-45
+  - GeneralMonster-GeneralMonster16-46
+  - GeneralMonster-GeneralMonster16-47
+  - GeneralMonster-GeneralMonster16-48
+  - GeneralMonster-GeneralMonster17-49
+  - GeneralMonster-GeneralMonster17-50
+  - GeneralMonster-GeneralMonster18-51
+  - GeneralMonster-GeneralMonster18-52
+  - GeneralMonster-GeneralMonster19-53
+  - GeneralMonster-GeneralMonster19-54
+  - GeneralMonster-GeneralMonster20-55
+  - GeneralMonster-GeneralMonster20-56
+  - GeneralMonster-GeneralMonsterFeedbackGreatA-57
+  - GeneralMonster-GeneralMonsterFeedbackGreatB-58
+  - GeneralMonster-GeneralMonsterFeedbackRatiosA-59
+  - GeneralMonster-GeneralMonsterFeedbackRatiosB-60
+  - GeneralMonster-GeneralMonsterFeedbackIngredientA-61
+  - GeneralMonster-GeneralMonsterFeedbackIngredientB-62
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 'Error on line 2 at position 1:token recognition error
+    at: ''=''
+
+'
+  baseLanguage: {fileID: 7128917941130120860, guid: f4db910fab646314db5e8f2ae1ab5cb9,
+    type: 3}
+  localizations: []
