@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cf8e1891347deab448fb4f1ba59f650e
+guid: e729f85b0c8be804e86e2bd5491b130d
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,82 +10,75 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-0
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-1
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-2
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-3
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-4
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-5
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-6
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-7
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-8
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-9
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-10
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-11
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-12
-  - GalahadTheDragonborn-GalahadTheDragonbornAH1-13
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder1-14
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder1-15
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder1-16
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder1-17
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder1-18
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder1-19
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder2-20
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder2-21
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder2-22
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder2-23
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder3-24
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder3-25
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder3-26
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder3-27
-  - GalahadTheDragonborn-GalahadTheDragonbornOrder3-28
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackGreat-29
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackGreat-30
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackGreat-31
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackGreat-32
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackGreat-33
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackRatios-34
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackRatios-35
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackRatios-36
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackRatios-37
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackRatios-38
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackIngredients-39
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackIngredients-40
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackIngredients-41
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackIngredients-42
-  - GalahadTheDragonborn-GalahadTheDragonbornFeedbackIngredients-43
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-44
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-45
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-46
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-47
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-48
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-49
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-50
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-51
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-52
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-53
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceA-54
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-55
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-56
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-57
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-58
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-59
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-60
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-61
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-62
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-63
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-64
-  - GalahadTheDragonborn-GalahadTheDragonbornAH2ChoiceB-65
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-0
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-1
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-2
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-3
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-4
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-5
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-6
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-7
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-8
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-9
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-10
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-11
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-12
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH1-13
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder3-14
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder3-15
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder3-16
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder3-17
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder3-18
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder3-19
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder5-20
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder5-21
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder5-22
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder5-23
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder6-24
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder6-25
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder6-26
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder6-27
+  - GalahadTheDragonborn 1-GalahadTheDragonbornOrder6-28
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackGreat-29
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackGreat-30
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackGreat-31
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackGreat-32
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackGreat-33
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackRatios-34
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackRatios-35
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackRatios-36
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackRatios-37
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackRatios-38
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackIngredients-39
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackIngredients-40
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackIngredients-41
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackIngredients-42
+  - GalahadTheDragonborn 1-GalahadTheDragonbornFeedbackIngredients-43
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-44
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-45
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-46
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-47
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-48
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-49
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-50
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-51
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-52
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-53
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2RightAnswer-54
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-55
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-56
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-57
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-58
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-59
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-60
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-61
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-62
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-63
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-64
+  - GalahadTheDragonborn 1-GalahadTheDragonbornAH2WrongAnswer-65
   compilationStatus: 1
   isSuccesfullyCompiled: 1
-  compilationErrorMessage: 'Error on line 232 at position 1:
-
-    missing ''===''
-    at ''<EOF>''
-
-
-
-'
-  baseLanguage: {fileID: 7128917941130120860, guid: cf8e1891347deab448fb4f1ba59f650e,
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: e729f85b0c8be804e86e2bd5491b130d,
     type: 3}
   localizations: []

@@ -249,7 +249,7 @@ public class GlassFill : MonoBehaviour
 
     void GlassIsFullAlert()
     {
-        Debug.Log("Cup is full");
+        //Debug.Log("Cup is full");
     }
 
     // Clears the drink of ingredients and resets its sprite

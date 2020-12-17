@@ -34,9 +34,13 @@ Low: We want a simple game night at home, with bobbing for eyeballs and a pinata
 Moe: So, um, what do you think?
 
 -> Well, it is two against one. I think you should do the game night.
+	<<wrongAnswer 3Gremlins>>
+
 	Toe: Dangit, I was really looking forward to the delicious scent of boiled skin. But I get it, majority rules.
 
 -> Maybe you could come to a compromise? You could go eat at the flesh restaurant and then go home and play games.
+	<<rightAnswer 3Gremlins>>
+
 	Toe: You're right, a compromise is always the best option.
 	Low: I call first pick at the eyeballs!
 	Moe: But you always pick the best ones...
@@ -46,7 +50,7 @@ Toe: Thanks for all your help, I never know how to deal with the ideas my siblin
 -> I'm here to help. And before I forget, happy birthday! Let me know how the party goes.
 
 ===
-title: 3GremlinsAH2ChoiceA
+title: 3GremlinsAH2WrongAnswer
 tags:
 colorID:
 position:
@@ -81,7 +85,7 @@ Moe: You're right. And independence does sound kinda nice, I would actually be a
 -> Glad I was able to help. Hope to see you around soon, maybe without your siblings?
 
 ===
-title: 3GremlinsAH2ChoiceB
+title: 3GremlinsAH2RightAnswer
 tags:
 colorID:
 position:
@@ -128,7 +132,7 @@ Oh! It looks like you don't have any stools! That's ok, we prefer to be stacked 
 	<<changeEmotion 3Gremlins happy>>
 	Score! All right barkeep, I'll take a Liver Failure.
 	You've never heard of a Liver Failure? Wow, you must be the young one, not us.
-	(That's not happening, give 'em a chokky milk instead: a blend of poison apple juice, blood, and something dirty blended in)
+	Blend together some hollow whiskey, cornpagne, a handful of trippy mushrooms, and something Russian... 
 
 -> No
 	<<changeEmotion 3Gremlins sad>>
@@ -148,8 +152,7 @@ position:
 -> Yes
 	<<changeEmotion 3Gremlins happy>>
 	Nice! I always knew you were cool, barkeep, even though Mom said otherwise.
-	Instead of a Liver Failure, I'd like a Liver Collapse. 
-	(Hot chokky this time, a lil' spicier: a blend of poison apple juice, blood, nightmare fuel, and that dirty dish flavor again)
+	Instead of a Liver Failure, I'd like a Liver Collapse. This one's got hollow whiskey, cornpagne, trippy shrooms mixed in, and the same Russian thing as last time... Do you remember?
 
 -> No
 	<<changeEmotion 3Gremlins sad>>

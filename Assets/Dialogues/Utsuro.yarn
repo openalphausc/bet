@@ -33,15 +33,18 @@ i wish i were friends with these people... or these kind of people. telemarketin
 
 <<changeEmotion Utsuro neutral>>
 -> Maybe you should quit your job and do something you enjoy more. You shouldn't feel pressured to be exactly who your boss wants you to be.
+	<<rightAnswer Utsuro>>
+
 	<<changeEmotion Utsuro happy>>
 
 -> Well, maybe give it some time. You could get better at talking if you worked on it. It's all about confidence and having an enthusiastic tone of voice!
+	<<wrongAnswer Utsuro>>
 
 hm... uh... alright... i'm gonna go to sleep now... see you.
 ===
 
 
-title: UtsuroAH2ChoiceA
+title: UtsuroAH2RightAnswer
 tags:
 colorID:
 position:
@@ -76,7 +79,7 @@ good for me to get away from the BBC..
 a place like this deserves to stay open.
 ===
 
-title: UtsuroAH2ChoiceB
+title: UtsuroAH2WrongAnswer
 tags:
 colorID:
 position:
@@ -146,7 +149,7 @@ tags:
 colorID:
 position:
 ---
-hey again...can i have something similar to last time? a Cursed Misery...
+hey again...can i have something similar to last time?...
 ...it's a bunch of the cheery blossom sake...then cornpagne, then the tears...
 
 <<changeEmotion Utsuro surprised>>
@@ -161,7 +164,7 @@ tags:
 colorID:
 position:
 ---
-...i think i'm finally ready for something complicated.. a Cursed Despair...
+...i think i'm finally ready for something complicated..
 too bad your bar is closing.. i'll really miss this place.
 anyways, here's my order again..
 ...it's a bit of the cheery blossom sake, then cornpagne, then something deadly sweet mixed in... 

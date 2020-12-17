@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb18cb408a187414fa682e5edaf27102
+guid: 37c5feb79fcb1844b9a48bdb210d66d9
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -30,37 +30,37 @@ ScriptedImporter:
   - EldritchMonster 1-EldritchMonsterAH1-17
   - EldritchMonster 1-EldritchMonsterAH1-18
   - EldritchMonster 1-EldritchMonsterAH1-19
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-20
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-21
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-22
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-23
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-24
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-25
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-26
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-27
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-28
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceA-29
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-30
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-31
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-32
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-33
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-34
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-35
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-36
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-37
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-38
-  - EldritchMonster 1-EldritchMonsterAH2ChoiceB-39
-  - EldritchMonster 1-EldritchMonsterOrder1-40
-  - EldritchMonster 1-EldritchMonsterOrder1-41
-  - EldritchMonster 1-EldritchMonsterOrder1-42
-  - EldritchMonster 1-EldritchMonsterOrder1-43
-  - EldritchMonster 1-EldritchMonsterOrder2-44
-  - EldritchMonster 1-EldritchMonsterOrder2-45
-  - EldritchMonster 1-EldritchMonsterOrder2-46
-  - EldritchMonster 1-EldritchMonsterOrder3-47
-  - EldritchMonster 1-EldritchMonsterOrder3-48
-  - EldritchMonster 1-EldritchMonsterOrder3-49
-  - EldritchMonster 1-EldritchMonsterOrder3-50
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-20
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-21
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-22
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-23
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-24
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-25
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-26
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-27
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-28
+  - EldritchMonster 1-EldritchMonsterAH2WrongAnswer-29
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-30
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-31
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-32
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-33
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-34
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-35
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-36
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-37
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-38
+  - EldritchMonster 1-EldritchMonsterAH2RightAnswer-39
+  - EldritchMonster 1-EldritchMonsterOrder3-40
+  - EldritchMonster 1-EldritchMonsterOrder3-41
+  - EldritchMonster 1-EldritchMonsterOrder3-42
+  - EldritchMonster 1-EldritchMonsterOrder3-43
+  - EldritchMonster 1-EldritchMonsterOrder5-44
+  - EldritchMonster 1-EldritchMonsterOrder5-45
+  - EldritchMonster 1-EldritchMonsterOrder5-46
+  - EldritchMonster 1-EldritchMonsterOrder6-47
+  - EldritchMonster 1-EldritchMonsterOrder6-48
+  - EldritchMonster 1-EldritchMonsterOrder6-49
+  - EldritchMonster 1-EldritchMonsterOrder6-50
   - EldritchMonster 1-EldritchMonsterFeedbackGreat-51
   - EldritchMonster 1-EldritchMonsterFeedbackGreat-52
   - EldritchMonster 1-EldritchMonsterFeedbackGreat-53
@@ -79,6 +79,6 @@ ScriptedImporter:
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: eb18cb408a187414fa682e5edaf27102,
+  baseLanguage: {fileID: 7128917941130120860, guid: 37c5feb79fcb1844b9a48bdb210d66d9,
     type: 3}
   localizations: []

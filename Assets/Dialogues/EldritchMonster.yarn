@@ -50,10 +50,12 @@ The <last> time I <went into> the doctor’s office, <I told a joke and> someone
 But <this thing is> SO ITCHY.
 
 -> Maybe it’s best to stay away from the doctor’s then - try my mom’s home remedy of warm compresses.
+	<<wrongAnswer EldritchMonster>>
 
 	Alright, <I’ll try> that out!
 
 -> Better safe than sorry, it does look a little off to me - have it checked out.
+	<<rightAnswer EldritchMonster>>
 
 	You’re probably right, if <it> was allergies, it <would’ve affected> these eyes too.
 
@@ -62,7 +64,7 @@ But <this thing is> SO ITCHY.
 Thanks for the advice, bartender. I’ll <see> you <around again> soon.
 
 ===
-title: EldritchMonsterAH2ChoiceA
+title: EldritchMonsterAH2WrongAnswer
 tags:
 colorID:
 position:
@@ -99,7 +101,7 @@ I’ll be heading off then. Got to prepare for a <big gig> I booked for tomorrow
 *muttering to self* Eye drops <eye drops> eye drops
 
 ===
-title: EldritchMonsterAH2ChoiceB
+title: EldritchMonsterAH2RightAnswer
 tags:
 colorID:
 position:
@@ -174,7 +176,7 @@ Hello friend.
 
 <<changeEmotion EldritchMonster happy>>
 
-I'll go for an <Eternal Void> this time
+I'll go for <another> Perpetual Void
 
 Same ingredients as last time.
 

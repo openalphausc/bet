@@ -44,14 +44,16 @@ Hells, I haven’t been on a date in... ever. My boss at BBC says it’s a good 
 But some nights it just hurts. Looking in the mirror and realizing that no one will ever get to love the face looking back. 
 
 -> How about you start small? Get an app like Monstr. Go on a date, just one! They’ll love you, eye mask and all. 
+	<<rightAnswer KatetheCockatrice>>
 
--> Well, your stone-vision can’t work on everyone, can it? Find another cockatrice. Someone that it doesn’t work on!
+-> Well, your stone-vision can’t work on everyone, can it? Find someone that it doesn’t work on!
+	<<wrongAnswer KatetheCockatrice>>
 
 <<changeEmotion KatetheCockatrice surprised>>
 Maybe you’re right. Ha, I’m already nervous! But thanks, really. Wish me luck- I’ll need it. 
 
 ===
-title: KatetheCockatriceAH2ChoiceA
+title: KatetheCockatriceAH2RightAnswer
 tags:
 colorID:
 position:
@@ -93,7 +95,7 @@ Goodnight— oh, and thank you! Thank you for everything.
 
 
 ===
-title: KatetheCockatriceAH2ChoiceB
+title: KatetheCockatriceAH2WrongAnswer
 tags:
 colorID:
 position:

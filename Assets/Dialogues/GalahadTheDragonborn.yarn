@@ -30,8 +30,10 @@ Got a little sister at home to look after and uh… a Pixie I’ve been seein’
 I care for ‘im, and it kills me to know I’m takin’ part in tearin’ down a city that’s been his home all his life.
 
 -> It might be time to pull back, then. There’re plenty of places to find work; I’m sure a guy like you can put his talents to use elsewhere. You’ve got family to get home to, after all. 
+	<<rightAnswer GalahadTheDragonborn>>
 
 -> You look like a strong dude, how hard would it be to take them on from the inside? You’re in deep enough already, anyway. They wouldn’t see you coming.
+	<<wrongAnswer GalahadTheDragonborn>>
 
 <<changeEmotion GalahadTheDragonborn happy>>
 Hell, you’re right. I’ll give it some time and see how it goes. Keep an eye out, yeah? I’ll see ya around soon.
@@ -74,7 +76,7 @@ Hope you've been havin' a good night, kid.
 The BBC can give ya shit for it, but the community's got heart; the bar looks nice like this, full of monsters wantin' to offer ya a few more good memories. 
 
 <<changeEmotion GalahadTheDragonborn neutral>>
-Alright, kid, impress me. A Twisted Tempestuous Torment, yeah? Whiskey, a liquid with a metalic tang, and some nightmare fuel. Give it a nice blend this time, though.
+Alright, kid, impress me. A Tempestuous Torment, yeah? Whiskey, a liquid with a metalic tang, and some nightmare fuel. Give it a nice blend this time, though.
 
 I appreciate ya givin' it your all, like always.
 
@@ -87,7 +89,7 @@ position:
 Tomorrow's the day, huh? I'd ask how you're doin' but the look on your face tells me enough. Shit like this is enough to rattle anyone's scales, but don't let it get to you. 
 
 <<changeEmotion GalahadTheDragonborn angry>>
-Fight it with all ya got. There's always a chance, yeah? Let's end this shit strong, though, if it's gotta end. Make me the strongest Tortured Tempestuous Torment I'll ever taste. 
+Fight it with all ya got. There's always a chance, yeah? Let's end this shit strong, though, if it's gotta end. Make me the best damn Tempestuous Torment I'll ever taste. 
 
 <<changeEmotion GalahadTheDragonborn neutral>>
 Add the usual: whiskey, blood, and somethin' terrifyin' enough to make even the BBC look like a freshly-shaven werewolf's keyster. 
@@ -164,7 +166,7 @@ It's a strange recipe, but it ain't that difficult to follow. Give it a few more
 <<goodbye GalahadTheDragonborn>>
 
 ===
-title: GalahadTheDragonbornAH2ChoiceA
+title: GalahadTheDragonbornAH2RightAnswer
 tags:
 colorID:
 position:
@@ -195,7 +197,7 @@ Don't wait up tonight. Get a good night's rest an' remember... if you keep movin
 Night, kid.
 
 ===
-title: GalahadTheDragonbornAH2ChoiceB
+title: GalahadTheDragonbornAH2WrongAnswer
 tags:
 colorID:
 position:

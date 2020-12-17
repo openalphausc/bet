@@ -38,7 +38,9 @@ I know it’s dangerous, but if everything goes as planned, I can ascend from me
 So, will you help me?
 
 -> How about I hook you up with the actual Supershifter Sam? He’s here like… every day.
+	<<rightAnswer Shapeshifter>>
 -> Sounds legit. Come back another day and I’ll have your angel tears.
+	<<wrongAnswer Shapeshifter>>
 
 <<changeEmotion Shapeshifter surprised>>
 Wait, seriously?
@@ -48,7 +50,7 @@ That's awesome! See you soon, bartender!
 
 ===
 
-title: SampleMonsterAH2ChoiceA
+title: ShapeshifterAH2RightAnswer
 tags:
 colorID:
 position:
@@ -78,7 +80,7 @@ In fact, it's getting pretty late, and there's this huge research paper I've bee
 But when we meet again, you're gonna hear nothing but what an awesome grade I got on it, heh. Bye now!
 
 ===
-title: SampleMonsterAH2ChoiceB
+title: ShapeshifterAH2WrongAnswer
 tags:
 colorID:
 position:
@@ -135,7 +137,7 @@ colorID:
 position:
 ---
 
-Hello, bartender. Adventurous Ale please. The drink of a true hero.
+Hello, bartender. Adventure Ale please. The drink of a true hero.
 
 It's a blend of vodka, golden dust, and something else I forget. I'm getting tired just thinking about it.
 
@@ -150,7 +152,7 @@ colorID:
 position:
 ---
 <<changeEmotion Shapeshifter sad>>
-Hello, bartender. Might be the last drink I'll have here, so I'm thinking to change it up a bit. An Adventurer's Ale.
+Hello, bartender. Might be the last drink I'll have here, so I'm thinking to change it up a bit.
 
 Maybe a blend of blood, whiskey, dust, and some other alcohol to lighten the mood. And a bit more dust to top it off.
 

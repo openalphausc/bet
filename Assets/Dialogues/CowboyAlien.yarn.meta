@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d05c1b72906a3e245af2f583e2d0ab01
+guid: 2e9708c0c49db79448140ad4bd5aae59
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,20 +10,20 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - CowboyAlien 1-CowboyAlienOrder1-0
-  - CowboyAlien 1-CowboyAlienOrder1-1
-  - CowboyAlien 1-CowboyAlienOrder1-2
-  - CowboyAlien 1-CowboyAlienOrder1-3
-  - CowboyAlien 1-CowboyAlienOrder1-4
-  - CowboyAlien 1-CowboyAlienOrder2-5
-  - CowboyAlien 1-CowboyAlienOrder2-6
-  - CowboyAlien 1-CowboyAlienOrder2-7
-  - CowboyAlien 1-CowboyAlienOrder2-8
-  - CowboyAlien 1-CowboyAlienOrder2-9
-  - CowboyAlien 1-CowboyAlienOrder3-10
-  - CowboyAlien 1-CowboyAlienOrder3-11
-  - CowboyAlien 1-CowboyAlienOrder3-12
-  - CowboyAlien 1-CowboyAlienOrder3-13
+  - CowboyAlien 1-CowboyAlienOrder2-0
+  - CowboyAlien 1-CowboyAlienOrder2-1
+  - CowboyAlien 1-CowboyAlienOrder2-2
+  - CowboyAlien 1-CowboyAlienOrder2-3
+  - CowboyAlien 1-CowboyAlienOrder2-4
+  - CowboyAlien 1-CowboyAlienOrder4-5
+  - CowboyAlien 1-CowboyAlienOrder4-6
+  - CowboyAlien 1-CowboyAlienOrder4-7
+  - CowboyAlien 1-CowboyAlienOrder4-8
+  - CowboyAlien 1-CowboyAlienOrder4-9
+  - CowboyAlien 1-CowboyAlienOrder6-10
+  - CowboyAlien 1-CowboyAlienOrder6-11
+  - CowboyAlien 1-CowboyAlienOrder6-12
+  - CowboyAlien 1-CowboyAlienOrder6-13
   - CowboyAlien 1-CowboyAlienAH1-14
   - CowboyAlien 1-CowboyAlienAH1-15
   - CowboyAlien 1-CowboyAlienAH1-16
@@ -44,28 +44,28 @@ ScriptedImporter:
   - CowboyAlien 1-CowboyAlienAH1-31
   - CowboyAlien 1-CowboyAlienAH1-32
   - CowboyAlien 1-CowboyAlienAH1-33
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-34
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-35
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-36
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-37
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-38
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-39
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-40
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-41
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-42
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-43
-  - CowboyAlien 1-CowboyAlienAH2ChoiceA-44
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-45
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-46
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-47
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-48
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-49
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-50
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-51
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-52
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-53
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-54
-  - CowboyAlien 1-CowboyAlienAH2ChoiceB-55
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-34
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-35
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-36
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-37
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-38
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-39
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-40
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-41
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-42
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-43
+  - CowboyAlien 1-CowboyAlienAH2RightAnswer-44
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-45
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-46
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-47
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-48
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-49
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-50
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-51
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-52
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-53
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-54
+  - CowboyAlien 1-CowboyAlienAH2WrongAnswer-55
   - CowboyAlien 1-CowboyAlienFeedbackGreat-56
   - CowboyAlien 1-CowboyAlienFeedbackGreat-57
   - CowboyAlien 1-CowboyAlienFeedbackGreat-58
@@ -87,6 +87,6 @@ ScriptedImporter:
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: d05c1b72906a3e245af2f583e2d0ab01,
+  baseLanguage: {fileID: 7128917941130120860, guid: 2e9708c0c49db79448140ad4bd5aae59,
     type: 3}
   localizations: []

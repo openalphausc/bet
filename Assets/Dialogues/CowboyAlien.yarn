@@ -91,10 +91,14 @@ But it’s tragic to think about leaving the ship after years of being with her.
 I know this town’s got its problems too, but do you think they’d be willin’ to accept this old cowboy as a friend?
 
 -> Well, you’re more than welcome to stick around for as long as I’m here. Can’t promise how much longer that’ll be, but you’ll always have a seat at this bar.
+	<<rightAnswer CowboyAlien>>
+
 	<<changeEmotion CowboyAlien happy>>
 	Well, I certainly appreciate the offer, I might stick around just a bit longer to see this groggery through.
 
 -> Seems like you might not be ready to give up that life yet. Why don’t you sit on it for a bit and come back?
+	<<wrongAnswer CowboyAlien>>
+
 	<<changeEmotion CowboyAlien sad>>
 	You raise a good point, does seem like I might be a hair more attached than I’d like to admit doesn’t it?
 
@@ -102,7 +106,7 @@ I know this town’s got its problems too, but do you think they’d be willin�
 Anyway, time to retire to that velvet couch back on the ship, I’ll be seein’ you around!
 ===
 
-title: CowboyAlienAH2ChoiceA
+title: CowboyAlienAH2RightAnswer
 tags:
 colorID: 0
 position:
@@ -141,7 +145,7 @@ I’ll be headin’ out, barkeep. It was certainly a pleasure makin’ your acqu
 
 ===
 
-title: CowboyAlienAH2ChoiceB
+title: CowboyAlienAH2WrongAnswer
 tags:
 colorID: 0
 position:
