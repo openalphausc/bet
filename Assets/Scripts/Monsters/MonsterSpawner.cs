@@ -23,7 +23,6 @@ public class MonsterSpawner : MonoBehaviour
     public LightFadeUp fadeUpScript;
 
     public static bool inTutorial = true;
-    public static int currDay = 0;
     public static bool tutorialHasRun = false;
     public static GameObject SkipTutorialButton;
     public static Monster bob = null;
@@ -33,8 +32,9 @@ public class MonsterSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Day: " + dataStorage.currentDay);
         CreateMonsterQueue();
-        monstersOfTheDay = monsterQueue[currDay];
+        monstersOfTheDay = monsterQueue[dataStorage.currentDay];
 
         CreateBarSeats();
         //GameObject.Find("SkipTutorialButton").SetActive(false);
@@ -45,27 +45,27 @@ public class MonsterSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currDay == 0 && !tutorialHasRun)
+        if (dataStorage.currentDay == 0 && !tutorialHasRun)
         {
             inTutorial = true;
             RunTutorial0();
             SpawnMonster();
             tutorialHasRun = true;
         }
-        else if (currDay == 1 && !tutorialHasRun)
+        else if (dataStorage.currentDay == 1 && !tutorialHasRun)
         {
             inTutorial = true;
             RunTutorial1();
             SpawnMonster();
-            GameObject.Find("Ghost").GetComponent<Monster>().dialogueToStart = "TutorialGhostDay2";
+            GameObject.Find("Ghost").GetComponent<Monster>().dialogueToStart = "TutorialGhostDay";
             tutorialHasRun = true;
         }
-        else if (currDay == 2 && !tutorialHasRun)
+        else if (dataStorage.currentDay == 2 && !tutorialHasRun)
         {
             inTutorial = true;
             RunTutorial2();
             SpawnMonster();
-            GameObject.Find("Ghost").GetComponent<Monster>().dialogueToStart = "TutorialGhostDay3";
+            GameObject.Find("Ghost").GetComponent<Monster>().dialogueToStart = "TutorialGhostDay";
             tutorialHasRun = true;
         }
 
@@ -103,7 +103,7 @@ public class MonsterSpawner : MonoBehaviour
                     if ((monstersOfTheDay.Count == 0 && monstersOnScreen.Count == 0))
                     {
                         SceneManager.LoadScene("AfterHours");
-                        monstersOfTheDay = monsterQueue[currDay];
+                        monstersOfTheDay = monsterQueue[dataStorage.currentDay];
                         tutorialHasRun = false;
 
                         return;

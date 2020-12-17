@@ -124,6 +124,8 @@ Monsters tell you about their lives and their problems, and you get to listen! M
 <<changeEmotion TutorialGhost happy>>
 Looks like someone’s already coming! I’ll leave you to it. And good luck— not that you’ll need it, of course.
 
+<<TutorialOver Ghost>>
+
 ===
 
 title: TutorialGhostDay2

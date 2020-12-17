@@ -87,9 +87,9 @@ public class GlassFill : MonoBehaviour
             AddIngredient(equipIngredient.equippedObject);
             
             if (MonsterSpawner.inTutorial && (!YarnBarTending.multipleIngredients ||
-            (currentDrink.GetAmount() == 4 && MonsterSpawner.currDay == 0) ||
-            (currentDrink.GetAmount() == 3 && MonsterSpawner.currDay == 1) ||
-            (currentDrink.GetAmount() == 3 && MonsterSpawner.currDay == 2)))
+            (currentDrink.GetAmount() == 4 && dataStorage.currentDay == 0) ||
+            (currentDrink.GetAmount() == 3 && dataStorage.currentDay == 1) ||
+            (currentDrink.GetAmount() == 3 && dataStorage.currentDay == 2)))
             {
                 equipIngredient.equippedObject.GetComponent<HoverHighlight>().isEnabled = false;
                 equipIngredient.equippedObject.GetComponent<ClickIngredient>().isEnabled = false;
@@ -112,20 +112,29 @@ public class GlassFill : MonoBehaviour
             {
                 // if drink matches color, happy face
                 //face = Instantiate(happyFace);
-                FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackGreat");
+                if (!MonsterSpawner.inTutorial)
+                {
+                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackGreat");
+                }
                 wellDone.Play();
             }
             else {
                 // if doesn't match color, but has same ingredients, neutral face
                 if(currentDrink.HasSameIngredients(targetDrink)) {
                     //face = Instantiate(neutralFace);
-                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackIngredients");
+                    if (!MonsterSpawner.inTutorial)
+                    {
+                        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackIngredients");
+                    }
                     notBad.Play();
                 }
                 // if totally wrong, frown face
                 else {
                     //face = Instantiate(frownFace);
-                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackRatios");
+                    if (!MonsterSpawner.inTutorial)
+                    {
+                        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(Monster.currentlyOrderingMonster.name + "FeedbackRatios");
+                    }
                     ew.Play();
                 }
             }

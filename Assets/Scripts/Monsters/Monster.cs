@@ -79,7 +79,7 @@ public class Monster : MonoBehaviour
             recipeManager = recipeSheetObject.GetComponent<RecipeManager>();
             drinkIcon = GameObject.FindWithTag("DrinkIcon");
         }
-        if(MonsterSpawner.currDay == 0)
+        if(dataStorage.currentDay == 0)
         {
             pointsEarned = 0;
             totalPoints = 0;
@@ -256,7 +256,7 @@ public class Monster : MonoBehaviour
         alreadyClickedOn = true;
         Monster.currentlyOrdering = true;
         Monster.currentlyOrderingMonster = this;
-        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart + (MonsterSpawner.currDay+1));
+        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart + (dataStorage.currentDay + 1));
         
         // remove hover highlight
         Destroy(GetComponent<HoverHighlight>());
@@ -348,8 +348,8 @@ public class Monster : MonoBehaviour
         // }
         // Debug.Log(temp);
 
-        drinkOrder = allOrders[MonsterSpawner.currDay][0];
-        orderNotes = allOrders[MonsterSpawner.currDay][1];
+        drinkOrder = allOrders[dataStorage.currentDay][0];
+        orderNotes = allOrders[dataStorage.currentDay][1];
 	}
 
     // name comparison class, don't mind
