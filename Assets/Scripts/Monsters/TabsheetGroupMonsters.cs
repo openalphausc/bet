@@ -5,9 +5,8 @@ using TMPro;
 
 public class TabsheetGroupMonsters : MonoBehaviour
 {
-    // set these from Unity editor. It's ok if unused monsters are there.
     // A Monster with 0 / 0 points will just be ignored.
-    public List<Monster> allMonsters = dataStorage.monsters;
+    public static List<Monster> allMonsters = dataStorage.monsters;
 
     public List<Monster> oneStarMonsters = new List<Monster>();
     public List<Monster> twoStarMonsters = new List<Monster>();
@@ -22,11 +21,16 @@ public class TabsheetGroupMonsters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Debug.Log("Length of monsters array: " + dataStorage.monsters.Count);
+        allMonsters = dataStorage.monsters;
         foreach (Monster monster in allMonsters)
         {
             // If the total points are 0, then the monster never ordered
             if (monster.totalPoints == 0)
+            {
+                //Debug.Log("Monster " + monster.name + " has 0 points");
                 continue;
+            }
             Debug.Log(monster.name);
             // One star condition. < 60%
             if ((monster.pointsEarned + 0.0) / monster.totalPoints < 0.6)
