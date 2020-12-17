@@ -3,23 +3,31 @@ tags:
 colorID:
 position:
 ---
-
 //ghost enters
-Hello, it’s Bob! I was on my way to get my daughter, Boothany, from Undead Daycare but I’d heard the news about your bar. I just had to say goodbye y’know? 
+Hello, it’s Bob! I was on my way to get my daughter, Boothany, from Undead Daycare but I’d heard the news about your bar. I just had to say goodbye, y’know?
 
+<<changeEmotion Ghost sad>>
 Looking a bit down huh? Silly me, of course you are. I promise, everyone is pretty understanding about what’s going on.
 
-They won’t even care about how long you take, if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to de-stress after a long night.
+<<changeEmotion Ghost neutral>>
+They won’t even care about how long you take, if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to destress after a long night.
 
+<<changeEmotion Ghost happy>>
 Sorry, I was babbling! I should go ahead and order, shouldn’t I? I’ll help you out a bit, I know you’ve got lots on your mind...
 
-See the color here? Monsters will explain their orders to you, but we aren't perfect. This color shows what we’re thinking, so you can figure out what we want even if we left it out. Now for my drink… hmm...
+//reference drink highlight
+<<changeEmotion Ghost neutral>>
+See the color here? Monsters will explain their orders to you, but we aren't perfect. This color shows what we’re thinking, so you can figure out what we want even if we left something out.
 
-I think I’ll have a Happy Death today, please. It’s my husband’s favorite drink, Bobby absolutely loves it. It’s pretty simple, just some cheery blossom sake and angel tears. 
+Now for my drink… hmm...
 
+I think I’ll have a Happy Death today, please. It’s my husband's, Bobby, favorite drink; he absolutely loves it. It’s pretty simple, just some cheery blossom sake and angel tears. 
+
+<<changeEmotion Ghost happy>>
 Oh, look at me, talking on and on again! 
 
 //highlight order log
+<<changeEmotion Ghost neutral>>
 <<tutorialLightCues Ghost RecipeSheet _>>
 Don’t worry if you forgot! Remember, you’ve got your order log here, it has all the instructions a customer mentions to you. 
 
@@ -28,49 +36,339 @@ Don’t worry if you forgot! Remember, you’ve got your order log here, it has 
 <<tutorialUseIngredient Ghost cheeryBlossom>>
 We’re ready to start! Click on the cheery blossom sake to equip it. Then hover over the drink glass and click to pour!
 
+//don’t let the player continue until cheery blossom sake is added
+
 //spotlight on blood, then glass 
 <<tutorialLightCues Ghost blood Glass>>
 <<tutorialUseIngredient Ghost blood>>
-Now for some blood... 
+Now for some blood...
 
-//spotlight clear button
+//don’t let the player continue until blood is added
+
+//spotlight clear
+<<changeEmotion Ghost surprised>>
+<<tutorialLightCues Ghost _ _>>
+Ack, so sorry, even my mind is a bit fuzzy today! It’s the wrong color, but not a problem— as Bobby always says, mistakes are just lessons we haven’t learned yet!
+
+<<changeEmotion Ghost neutral>>
 <<tutorialLightCues Ghost ClearGlassButton _>>
 <<tutorialEnableClearButton Ghost>>
-Ack, so sorry, even my mind is a bit fuzzy today! It’s the wrong color, but not a problem— as Bobby always says, mistakes are just lessons we haven’t learned yet! Let's clear this drink, we can start over.
+Let's clear this drink and we can start over.
+
+//don’t let the player continue until clear button is pushed
 
 //spotlight cheery blossom, then glass
 <<tutorialLightCues Ghost cheeryBlossom Glass>>
 <<tutorialUseIngredient Ghost cheeryBlossom>>
 Second try! Let’s add the wonderful cheery blossom sake again. 
 
+//don’t let the player continue until cheery blossom sake is added
+
 //spotlight angel tears, then glass
 <<tutorialLightCues Ghost angelTears Glass>>
 <<tutorialUseIngredient Ghost angelTears>>
 And now for the angel tears!
 
+//don’t let the player continue until angel tears are added
+
 //spotlight angel tears, then glass
 <<tutorialLightCues Ghost angelTears Glass>>
 <<tutorialEnableIngredient Ghost angelTears>>
-The color still isn’t quite right, just try adding more angel tears until the color matches! 
+The color still isn’t quite right, just try adding more angel tears until the color matches!
+
+//don’t let the player continue until angel tears are added
 
 //arrow appears from glass to monster
 <<tutorialLightCues Ghost Glass _>>
 <<tutorialEnableCup Ghost>>
 It looks perfect! Now just click on it to equip and then click on me to give me the finished drink. 
 
+//don’t let the player continue until drink is handed to the ghost is added
+
 //smiling ghost sprite
+<<changeEmotion Ghost happy>>
 <<tutorialLightCues Ghost _ _>>
 Beautiful. See? You still got that bartending touch. Don’t worry about the BBC, it’ll all work out in the end. 
 
+<<changeEmotion Ghost neutral>>
 Make sure to listen to the other customers too, they might mention a thing or two about their own lives. 
 
-Bartending is as much about the connections as it is about making drinks, you’ll realize you aren’t alone in this, we’ve got your back. You can even invite one monster back each night to chat after the bar closes!
+Bartending is as much about the connections as it is about making drinks. You can even invite one monster back each night to chat after the bar closes!
 
-Oh, tonight’s a slight exception though, I think I’ll come back just to check up on you. I usually can’t come (parental duties await!) but I just want to make sure you’re doing alright. 
+<<changeEmotion Ghost happy>>
+Oh, tonight’s a slight exception though. I think I’ll come back just to check up on you! I usually can’t come (parental duties await!) but I just want to make sure you’re doing alright. 
 
+<<changeEmotion Ghost neutral>>
 Anyways, I’d best be off to pick up Boothany, we have family charades scheduled! Very exciting… looks like some other monsters are already here. Keep your head up, I’ll be seeing you later!
 
+<<endTutorial Ghost>>
+ 
+===
+
+title: TutorialGhostDay1AH
+tags:
+colorID:
+position:
+---
+
+Phew. Boothany absolutely destroyed me in charades.
+
+<<changeEmotion TutorialGhost happy>>
+Still, I haven’t been this happy in a while. Great to see the bar full of life again! And full of death, I suppose? It's lovely. 
+
+<<changeEmotion TutorialGhost neutral>>
+The best part about making drinks for monsters is getting to know them. Like now, when the place clears out and you get the chance to talk to someone one-on-one. 
+
+Monsters tell you about their lives and their problems, and you get to listen! Maybe even give some advice. 
+
+<<changeEmotion TutorialGhost happy>>
+Looks like someone’s already coming! I’ll leave you to it. And good luck— not that you’ll need it, of course.
+
+===
+
+title: TutorialGhostDay2
+tags:
+colorID:
+position:
+---
+
+//ghost enters, spotlight on ghost
+Hi, it’s me again! Great to have a break from a screaming toddler. If you’ve never seen a ghost throw a tantrum… makes the devil himself reach for earplugs. Now that was an awkward airplane ride.
+
+My husband reminded me of something important. I was telling him about how you’re doing wonderfully and he said his favorite part of any cocktail is the fancy decoration placed on top... 
+
+//spotlight on toppings
+
+<<changeEmotion TutorialGhost surprised>>
+<<tutorialLightCues Ghost toppings _>>
+Toppings! How could I have forgotten to tell you about toppings?
+
+//spotlight on toppings goes bye bye
+
+<<changeEmotion TutorialGhost neutral>>
+<<tutorialLightCues Ghost cheeryBlossom Glass>>
+<<tutorialUseIngredient Ghost cheeryBlossom>>
+Here, I can show you! I’ll have the Happy Happy Death again. That’s one part cheery blossom…
+
+//after player adds cherry blossom
+<<tutorialLightCues Ghost angelTears Glass>>
+<<tutorialEnableIngredient Ghost angelTears>>
+With two pours of angel tears. I just love the salty taste!
+
+//spotlight on Nightshade Berry
+<<tutorialLightCues Ghost nightshade Glass>>
+<<tutorialUseIngredient Ghost nightshade>>
+Now for the fun part. I’d like a nightshade berry. You can take one and put it on top of the drink!
+
+//spotlight goes away
+<<tutorialLightCues Ghost Glass _>>
+<<tutorialEnableCup Ghost>>
+Wonderful, I’ll take it. 
+
+//player gives ghost the drink
+
+<<changeEmotion TutorialGhost happy>>
+<<tutorialLightCues Ghost _ _>>
+Mmmm. This is perfect. I understand why Bobby loves toppings so much.
+
+<<changeEmotion TutorialGhost neutral>>
+Oh, and toppings on the drink don’t affect the color of the drink. Great as they are, you can only have one topping on top of a drink at a time. So make sure to pick the right one!  
+
+
+<<changeEmotion TutorialGhost happy>>
+That’s all! I’ve got to go help Bobby make a crop circle. Good luck today, and make sure to have fun talking to new monsters!
 
 <<endTutorial Ghost>>
+
+===
+
+title: TutorialGhostDay3
+tags:
+colorID:
+position:
+---
+
+//ghost enters, spotlight on ghost. Once ghost has been clicked:
+Wow, we need to stop running into each other like this, don’t we? 
+
+<<changeEmotion TutorialGhost happy>>
+Just kidding! I love dropping by. I know you’re a topping expert by now, but I’ll let you in on a secret— you can do more with them than just place them on drinks!
+
+<<changeEmotion TutorialGhost neutral>>
+So I want to tell you about another great part of drink-making... 
+
+<<changeEmotion TutorialGhost surprised>>
+//spotlight on shaker
+<<tutorialLightCues Ghost Blender _>>
+Topping mixing!!!!!!!!! 
+
+<<changeEmotion TutorialGhost neutral>>
+<<tutorialLightCues Ghost _ _>>
+Look at me, already getting all excited.
+
+//spotlight on shaker goes away.
+<<tutorialLightCues Ghost cheeryBlossom Glass>>
+<<tutorialUseIngredient Ghost cheeryBlossom>>
+Let’s give it a try. I’ll have the Happy Happy Happy Death this time. Like last time, one part cheery blossom sake…
+
+//dialogue only appears after the cheery blossom sake has been added. No other ingredient or amount can be added.
+<<tutorialLightCues Ghost angelTears Glass>>
+<<tutorialEnableIngredient Ghost angelTears>>
+Two pours of angel tears…
+
+//dialogue only appears after the two parts angel tears has been added. No other ingredient or amount can be added.
+<<changeEmotion TutorialGhost surprised>>
+<<tutorialLightCues Ghost nightshade Glass>>
+<<tutorialUseIngredient Ghost nightshade>>
+Now we’ll mix things up a bit! I’d like nightshade berries mixed in. So start by adding the nightshade berry to the glass…
+
+<<changeEmotion TutorialGhost neutral>>
+//spotlight on glass
+<<tutorialLightCues Ghost Glass Blender>>
+<<tutorialBlendDrink Ghost>>
+Now pick up the glass and bring the glass over to the shaker. Make sure to click to mix the drink!
+
+//spotlight on returned glass
+<<changeEmotion TutorialGhost happy>>
+<<tutorialLightCues Ghost Glass _>>
+Wow, look at that! See how the color of the drink has changed? Toppings mixed into the drink affect the drink color. Make sure to keep that in mind when monsters give drink orders. 
+
+<<changeEmotion TutorialGhost neutral>>
+<<tutorialLightCues Ghost _ _>>
+Toppings can be mixed into a drink at any time, just make sure to have a topping in the glass and click on the shaker. 
+
+You can mix multiple toppings into the drink, but make sure to only mix one topping at a time. The glass can’t fit more than one topping on top at once! 
+
+//spotlight goes away
+<<tutorialLightCues Ghost Glass _>>
+<<tutorialEnableCup Ghost>>
+Phew. I’ve been talking for a while. May I have my drink now?
+
+<<changeEmotion TutorialGhost happy>>
+<<tutorialLightCues Ghost _ _>>
+Delicious. You’re a natural! The other monsters are going to love this. 
+
+<<changeEmotion TutorialGhost neutral>>
+I’d best be off— need to help Bobby put the finishing touches on the crop circle. I just love exterior decorating.
+
+<<changeEmotion TutorialGhost happy>>
+See you around. Oh, and have a great time today for me. Okay? 
+
+<<endTutorial Ghost>>
+
+===
+
+title: TutorialGhostDay6
+tags:
+colorID:
+position:
+---
+<<changeEmotion TutorialGhost sad>>
+How are you holding up?
+
+<<changeEmotion TutorialGhost neutral>>
+It's a tough day for everyone. Still, great to see so many friendly faces... 
+
+In honor of your wonderful bar, I'm going to order my favorite drink- the drink my husband and I always make on our anniversary.
+
+<<changeEmotion TutorialGhost happy>>
+The Tricky Treat. 
+
+<<changeEmotion TutorialGhost neutral>>
+It's cheery blossom sake, golden dust, and another alcohol... I don't remember the name, I guess Bobby truly does have the brains in our family!
+
+Oh, and put nighshade berries on top.
+
+Thanks. And hey- you're doing great. Really. We're all here for you. 
+
+===
+
+title: TutorialGhostGoodEnding
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion TutorialGhost happy>>
+
+My, what a treat it is to see something like this. Your eyes aren't deceiving you, this is no trick!
+
+Bobby said everything would be okay, you know, when I voiced my concerns. 
+
+I'm more prone to believe in miracles, but what you did this past week was certainly anything but! 
+
+This all resulted from the goodwill you offered the community; they couldn't help but pay you back in spades. 
+
+<<changeEmotion TutorialGhost neutral>>
+Change starts small, I'm sure you know, and us monsters couldn't let the BBC take everything we cared about from us. 
+
+That being said, we banded together and came up with the necessary money to buy back the bar! 
+
+-> I- I don't know what to say... You did this all for me?
+	Of course we did. You can thank your own dedication, though, that's the only reason everything's still in one piece.  
+-> How in the world did you manage this?
+	<<changeEmotion TutorialGhost happy>>
+	We didn't! You were the catalyst, and we monsters just acted in tandem to your actions. They were louder than banshees, I'll have you know!  
+
+We couldn’t let your talents go to waste and didn’t want to imagine a neighborhood without you.
+
+<<changeEmotion TutorialGhost surprised>>
+Oh, don’t fret! I can tell from the expression on your face that you’re already thinking of ways to pay us back. There’s nothing to be concerned about, it was a favor we’ll all benefit from, isn’t that right?
+
+-> Yeah... yeah, you're right! The only thing left to do is keep moving forward. 
+-> I guess there's no better time than the present to reap those benefits, then!
+
+<<changeEmotion TutorialGhost happy>>
+You don’t even need to worry about the drinks themselves, for once. The next one’s on me! Come on, everyone’s waiting inside, ready for a grand re-opening, and the first triumph of many to come. 
+
+I’ve even brought Bobby and Boothany along for the ride, though the only alcohol she’s getting is a few sips of the Tricky Treat Bobby and I are always raving about! 
+
+Well, don’t let me ramble on, let’s celebrate!
+
+===
+
+title: TutorialGhostBadEnding
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion TutorialGhost sad>>
+Phew. Rough day.
+
+I'm going to miss this place. The music, the chatter, the drinks, the monsters.
+
+-> I guess good things can't last forever... 
+	<<changeEmotion TutorialGhost neutral>>
+	But that's not not entirely true, is it? 
+-> I'm happy good things came from it. 
+
+<<changeEmotion TutorialGhost sad>>
+You know what? I feel bad for the BBC. They can have all the money on the world, but if they're not able to value something like this... I don't think that's worth it. 
+
+<<changeEmotion TutorialGhost neutral>>
+So many memories were made here. I heard Points and Galahad exchanging knife-sharpening tips, and the gremlins gushing about their first alcoholic drink! 
+
+Even if the bar has seen its final days, we haven't. Sorry to say it, but you've made friends for life. You can't get rid of us!
+
+-> Thanks, it means a lot. 
+-> You're a great friend.
+
+<<changeEmotion TutorialGhost neutral>>
+I'll tell you what. Are you free next weekend? You should come over. I know Bobby and Boothany are practically dying to meet you. 
+
+<<changeEmotion TutorialGhost happy>>
+Invite some patrons from your bar. We'll have a toast: to good drinks and good friends! 
+
+<<changeEmotion TutorialGhost neutral>>
+In this case, maybe endings don't have to be a bad thing. 
+
+<<changeEmotion TutorialGhost sad>>
+I guess it's goodbye until then.
+
+...
+
+See you around, okay?
+
 ===
 

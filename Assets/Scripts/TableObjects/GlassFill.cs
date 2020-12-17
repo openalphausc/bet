@@ -86,7 +86,10 @@ public class GlassFill : MonoBehaviour
         {
             AddIngredient(equipIngredient.equippedObject);
             
-            if (MonsterSpawner.inTutorial && (!YarnBarTending.multipleIngredients || currentDrink.GetAmount() == 4))
+            if (MonsterSpawner.inTutorial && (!YarnBarTending.multipleIngredients ||
+            (currentDrink.GetAmount() == 4 && MonsterSpawner.currDay == 0) ||
+            (currentDrink.GetAmount() == 3 && MonsterSpawner.currDay == 1) ||
+            (currentDrink.GetAmount() == 3 && MonsterSpawner.currDay == 2)))
             {
                 equipIngredient.equippedObject.GetComponent<HoverHighlight>().isEnabled = false;
                 equipIngredient.equippedObject.GetComponent<ClickIngredient>().isEnabled = false;
@@ -235,6 +238,8 @@ public class GlassFill : MonoBehaviour
             else if (topping == "mud") { layerName = "OA_GraveyardMudTop0"; offset.y = 3.5f; offset.x = 0.2f; }
 			else if (topping == "zombieFlesh") { layerName = "OA ZombieFleshTop1"; offset.y = 1f; offset.x = 0f; }
 			else if (topping == "nightmareFuel") { layerName = "OA NightmareTop0"; offset.y = 2f; offset.x = 0f; }
+            else if (topping == "nightshade") { continue; }
+            else if (topping == "mushrooms") { continue; }
 			
 			// Calculate position to place object
 			position.y = minY + curLevel * layerHeight;
