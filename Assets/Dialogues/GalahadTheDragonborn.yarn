@@ -38,6 +38,7 @@ I care for ‘im, and it kills me to know I’m takin’ part in tearin’ down 
 <<changeEmotion GalahadTheDragonborn happy>>
 Hell, you’re right. I’ll give it some time and see how it goes. Keep an eye out, yeah? I’ll see ya around soon.
 
+<<finishedTalkingWith GalahadTheDragonborn>>
 
 ===
 title: GalahadTheDragonbornOrder3
@@ -196,6 +197,8 @@ Don't wait up tonight. Get a good night's rest an' remember... if you keep movin
 <<changeEmotion GalahadTheDragonborn happy>>
 Night, kid.
 
+<<finishedTalkingWith GalahadTheDragonborn>>
+
 ===
 title: GalahadTheDragonbornAH2WrongAnswer
 tags:
@@ -227,5 +230,7 @@ Don't wait up tonight. Get a good night's rest an' remember... if you keep movin
 
 <<changeEmotion GalahadTheDragonborn happy>>
 Night, kid.
+
+<<finishedTalkingWith GalahadTheDragonborn>>
 
 ===

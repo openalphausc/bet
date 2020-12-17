@@ -48,6 +48,8 @@ I'll admit you've surprised me bartender. I expected you to just get me drunk.
 
 I appreciate it. Also, the name's Khepri.
 
+<<finishedTalkingWith Khepri>>
+
 ===
 title: KhepriAH2ChoiceA
 tags: 
@@ -89,6 +91,8 @@ I'll stay in touch with them to make sure my friends still live comfortably, but
 It's time to live a simpler life. Even if the BBC takes your bar, we can still keep in touch.
 
 I'll talk to you later, bartender.
+
+<<finishedTalkingWith Khepri>>
 
 ===
 title: KhepriAH2ChoiceB
@@ -135,6 +139,8 @@ Hopefully it'll flourish to become a bright place for monsters to work and fight
 So, if you ever need another place to work after your bar shuts down, don't be afraid to contact me.
 
 Let's stay in touch, bartender.
+
+<<finishedTalkingWith Khepri>>
 
 ===
 title: KhepriOrder1

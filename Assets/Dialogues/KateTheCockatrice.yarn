@@ -52,6 +52,8 @@ But some nights it just hurts. Looking in the mirror and realizing that no one w
 <<changeEmotion KatetheCockatrice surprised>>
 Maybe you’re right. Ha, I’m already nervous! But thanks, really. Wish me luck- I’ll need it. 
 
+<<finishedTalkingWith KatetheCockatrice>>
+
 ===
 title: KatetheCockatriceAH2RightAnswer
 tags:
@@ -93,6 +95,7 @@ Maybe we can even move in together! Too soon? Too soon.
 
 Goodnight— oh, and thank you! Thank you for everything.
 
+<<finishedTalkingWith KatetheCockatrice>>
 
 ===
 title: KatetheCockatriceAH2WrongAnswer
@@ -139,6 +142,7 @@ Is it kidney as in the beans, or the organ? I should ask.
 <<changeEmotion KatetheCockatrice happy>> 
 Goodnight— oh, and thank you! Thank you for everything.
 
+<<finishedTalkingWith KatetheCockatrice>>
 
 ===
 title: KatetheCockatriceOrder2

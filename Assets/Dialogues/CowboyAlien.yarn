@@ -104,6 +104,8 @@ I know this town’s got its problems too, but do you think they’d be willin�
 
 <<changeEmotion CowboyAlien happy>>
 Anyway, time to retire to that velvet couch back on the ship, I’ll be seein’ you around!
+
+<<finishedTalkingWith CowboyAlien>>
 ===
 
 title: CowboyAlienAH2RightAnswer
@@ -143,6 +145,7 @@ Don’t get your soul too worried now, things’ll figure themselves out in the 
 <<changeEmotion CowboyAlien happy>>
 I’ll be headin’ out, barkeep. It was certainly a pleasure makin’ your acquaintance. I’ll be seein’ you around!
 
+<<finishedTalkingWith CowboyAlien>>
 ===
 
 title: CowboyAlienAH2WrongAnswer
@@ -182,6 +185,7 @@ And for you- don’t your soul too worried now, things’ll figure themselves ou
 <<changeEmotion CowboyAlien happy>>
 I’ll be headin’ out, barkeep. It was certainly a pleasure makin’ your acquaintance. I’ll be seein’ you around!
 
+<<finishedTalkingWith CowboyAlien>>
 ===
 title: CowboyAlienFeedbackGreat
 tags:

@@ -41,6 +41,9 @@ i wish i were friends with these people... or these kind of people. telemarketin
 	<<wrongAnswer Utsuro>>
 
 hm... uh... alright... i'm gonna go to sleep now... see you.
+
+<<finishedTalkingWith Utsuro>>
+
 ===
 
 
@@ -77,6 +80,9 @@ well, thanks for your advice... i think things have been going well for me..
 good for me to get away from the BBC..
 ...oh, and good luck with the bar. 
 a place like this deserves to stay open.
+
+<<finishedTalkingWith Utsuro>>
+
 ===
 
 title: UtsuroAH2WrongAnswer
@@ -114,6 +120,8 @@ anyways.. thanks for the drink.. i'll see you around..
 <<changeEmotion Utsuro neutral>>
 ..that is, if this place stays open..
 good luck, and bye for now..
+
+<<finishedTalkingWith Utsuro>>
 
 ===
 title: UtsuroOrder3

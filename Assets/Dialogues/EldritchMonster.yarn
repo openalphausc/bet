@@ -63,6 +63,8 @@ But <this thing is> SO ITCHY.
 
 Thanks for the advice, bartender. I’ll <see> you <around again> soon.
 
+<<finishedTalkingWith EldritchMonster>>
+
 ===
 title: EldritchMonsterAH2WrongAnswer
 tags:
@@ -100,6 +102,7 @@ I’ll be heading off then. Got to prepare for a <big gig> I booked for tomorrow
 
 *muttering to self* Eye drops <eye drops> eye drops
 
+<<finishedTalkingWith EldritchMonster>>
 ===
 title: EldritchMonsterAH2RightAnswer
 tags:
@@ -135,6 +138,8 @@ I’m headed over to my next gig right after this. Feeling great.
 <<changeEmotion EldritchMonster happy>>
 
 Thanks again bartender. 
+
+<<finishedTalkingWith EldritchMonster>>
 
 ===
 title: EldritchMonsterOrder3

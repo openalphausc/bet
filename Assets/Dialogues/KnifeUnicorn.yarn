@@ -65,7 +65,7 @@ You’re on to something, there. I THINK I LIKE YOU, KID. You’ll be seeing mor
 
 And my knives. And all of my friends who also love knives. I’m actually very popular.
 
-
+<<finishedTalkingWith KnifeUnicorn>>
 
 ===
 title: KnifeUnicornAH2WrongAnswer
@@ -102,6 +102,7 @@ What? It’s not like I stopped stabbing people... that was totally a thing I di
 <<changeEmotion KnifeUnicorn happy>> 
 Anyway, I gotta blast. I’ve got so many cooks in the kitchen… except the cooks are… YOU GUESSED IT, KNIVES! Monster God, you’re a good friend. See you, buddy!
 
+<<finishedTalkingWith KnifeUnicorn>>
 
 ===
 title: KnifeUnicornAH2RightAnswer
@@ -134,7 +135,7 @@ That’s what I like to hear, my friend! And listen, from this point forward, yo
 <<changeEmotion KnifeUnicorn happy>>
 Anyway, I gotta blast. I’ve got so many cooks in the kitchen… except the cooks are… YOU GUESSED IT, KNIVES! Monster God, you’re a good friend. See you, buddy!
 
-
+<<finishedTalkingWith KnifeUnicorn>>
 
 ===
 

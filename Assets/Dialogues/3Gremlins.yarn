@@ -49,6 +49,8 @@ Toe: Thanks for all your help, I never know how to deal with the ideas my siblin
 
 -> I'm here to help. And before I forget, happy birthday! Let me know how the party goes.
 
+<<finishedTalkingWith 3Gremlins>>
+
 ===
 title: 3GremlinsAH2WrongAnswer
 tags:
@@ -84,6 +86,8 @@ Moe: You're right. And independence does sound kinda nice, I would actually be a
 
 -> Glad I was able to help. Hope to see you around soon, maybe without your siblings?
 
+<<finishedTalkingWith 3Gremlins>>
+
 ===
 title: 3GremlinsAH2RightAnswer
 tags:
@@ -118,6 +122,8 @@ Moe: I don't know if you've noticed, but Mom actually gave me a human name, and 
 Moe: Really? I guess I hadn't thought about that. It is far more serious than Toe or Low...
 
 Moe: Thanks for the advice! I'm gonna go do some adulting... No idea what that means though.
+
+<<finishedTalkingWith 3Gremlins>>
 
 ===
 title: 3GremlinsOrder3

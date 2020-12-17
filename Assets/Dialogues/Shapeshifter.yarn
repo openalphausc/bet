@@ -48,6 +48,8 @@ Wait, seriously?
 <<changeEmotion Shapeshifter happy>>
 That's awesome! See you soon, bartender!
 
+<<finishedTalkingWith Shapeshifter>>
+
 ===
 
 title: ShapeshifterAH2RightAnswer
@@ -79,6 +81,8 @@ In fact, it's getting pretty late, and there's this huge research paper I've bee
 <<changeEmotion Shapeshifter happy>>
 But when we meet again, you're gonna hear nothing but what an awesome grade I got on it, heh. Bye now!
 
+<<finishedTalkingWith Shapeshifter>>
+
 ===
 title: ShapeshifterAH2WrongAnswer
 tags:
@@ -107,6 +111,8 @@ I think it's happening! The throbbing of my skull, the stinging feeling of bile 
 
 <<changeEmotion Shapeshifter sad>>
 Oh no... excuse me bartender, I think I need to go home and, uh... do some homework. Bye now!
+
+<<finishedTalkingWith Shapeshifter>>
 
 ===
 
