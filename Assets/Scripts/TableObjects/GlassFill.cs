@@ -126,7 +126,7 @@ public class GlassFill : MonoBehaviour
                     ew.Play();
                 }
             }
-            face.transform.parent = Monster.currentlyOrderingMonster.transform;
+            //face.transform.parent = Monster.currentlyOrderingMonster.transform;
 
             // update monster's points and happiness
             Monster.currentlyOrderingMonster.UpdatePoints(currentDrink.HasSameIngredients(targetDrink), currentDrink.Matches(targetDrink));

@@ -36,6 +36,7 @@ public class YarnAfterHours : MonoBehaviour
         {
             dataStorage.monsters[index].pointsEarned += 50;
             dataStorage.monsters[index].totalPoints += 50;
+            Debug.Log("+50 points");
         }
         else
         {
@@ -56,6 +57,7 @@ public class YarnAfterHours : MonoBehaviour
         {
             dataStorage.monsters[index].pointsEarned += 25;
             dataStorage.monsters[index].totalPoints += 50;
+            Debug.Log("+25 points");
         }
         else
         {
