@@ -55,11 +55,18 @@ public class Monster : MonoBehaviour
 
     private float seatTimer = 0.0f;
 
+    // Points for keeping track how well a player is serving a monster
+    public int pointsEarned;
+    public int totalPoints;
+    public NameComp nameComp = new NameComp();
+
     private bool ghostCenter = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        //pointsEarned = prefab.GetComponent<Monster>().pointsEarned;
+        //totalPoints = prefab.GetComponent<Monster>().totalPoints;
         if (!inAfterHours)
         {
             GetOrdersFromFile();
@@ -111,7 +118,12 @@ public class Monster : MonoBehaviour
                 seatTimer += Time.deltaTime;
                 // Debug.Log(seatTimer);
 
-                if (seatTimer >= 45.0f) { happiness -= 1; Debug.Log("decreased happiness"); }
+                if (seatTimer >= 45.0f) 
+                { 
+                    happiness -= 1; 
+                    Debug.Log("decreased happiness/failed to earn max points");
+                    totalPoints += 20;
+                }
             }
 
 
@@ -194,6 +206,43 @@ public class Monster : MonoBehaviour
 		if (MonsterSpawner.inTutorial) {
 			YarnBarTending.EnableDialogueFunctions();
 		}
+    }
+
+    // Updates the points after a drink is given to the monster. Called in GlassFill.cs
+    public void UpdatePoints(bool matchIngredients, bool matchColor)
+    {
+        if (seatTimer < 45.0f)
+        {
+            pointsEarned += 20; // 20 points for haste
+            totalPoints += 20;
+        } // else part is taken care of elsewhere
+
+        if (matchColor)
+        {
+            pointsEarned += 100;
+        }
+        totalPoints += 100; // for color
+
+        if (matchIngredients)
+        {
+            pointsEarned += 80;
+        }
+        totalPoints += 80; // for ingredients
+
+        // Update the points here
+        Debug.Log("Update to points count: " + pointsEarned + "/" + totalPoints);
+        prefab.GetComponent<Monster>().pointsEarned = pointsEarned;
+        prefab.GetComponent<Monster>().totalPoints = totalPoints;
+
+        // now, insert the prefab into the list of monsters from dataStorage
+        int index = dataStorage.monsters.BinarySearch(prefab.GetComponent<Monster>(), nameComp);
+        if (index < 0) // not in the list, add it
+        {
+            dataStorage.monsters.Add(prefab.GetComponent<Monster>());
+            dataStorage.monsters.Sort(nameComp);
+        }
+        //foreach (Monster m in dataStorage.monsters)
+        //    Debug.Log(m.name);
     }
 
     public void OnMouseDown()
@@ -297,4 +346,13 @@ public class Monster : MonoBehaviour
         drinkOrder = allOrders[MonsterSpawner.currDay][0];
         orderNotes = allOrders[MonsterSpawner.currDay][1];
 	}
+
+    // name comparison class, don't mind
+    public class NameComp : IComparer<Monster>
+    {
+        public int Compare(Monster x, Monster y)
+        {
+            return x.name.CompareTo(y.name);
+        }
+    }
 }

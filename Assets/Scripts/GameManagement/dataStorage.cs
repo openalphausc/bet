@@ -7,6 +7,9 @@ public class dataStorage : MonoBehaviour
     //List of monsters asked to stay afterHours
     public static string stayingMonster;
 
+    // List of all monsters for tabsheet
+    public static List<Monster> monsters = new List<Monster>();
+
     // Start is called before the first frame update
     void Start()
     {
