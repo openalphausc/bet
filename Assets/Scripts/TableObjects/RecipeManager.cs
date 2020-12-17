@@ -32,6 +32,7 @@ public class RecipeManager : MonoBehaviour
         // foreach(Drink drink in recipes) {
         //     Debug.Log(drink.name);
         // }
+        Debug.Log("index: " + index);
         return recipes[index];
     }
 

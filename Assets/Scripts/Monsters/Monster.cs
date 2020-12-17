@@ -178,7 +178,7 @@ public class Monster : MonoBehaviour
         alreadyClickedOn = true;
         Monster.currentlyOrdering = true;
         Monster.currentlyOrderingMonster = this;
-        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart);
+        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart + (MonsterSpawner.currDay+1));
         
         // remove hover highlight
         Destroy(GetComponent<HoverHighlight>());
@@ -270,7 +270,7 @@ public class Monster : MonoBehaviour
         // }
         // Debug.Log(temp);
 
-        drinkOrder = allOrders[0][0];
-        orderNotes = allOrders[0][1];
+        drinkOrder = allOrders[MonsterSpawner.currDay][0];
+        orderNotes = allOrders[MonsterSpawner.currDay][1];
 	}
 }
