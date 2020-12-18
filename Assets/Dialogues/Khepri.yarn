@@ -15,11 +15,9 @@ I knew that already. I saw what the BBC's doing to your bar. That's actually par
 However, I'll amuse you for tonight. You seem to want to meet monsters while you still can. What do you want to know?
 
 -> You seem to know a lot more than I'm being led to believe.
-	<<wrongAnswer Khepri>>
 	Oh? A little cheeky are we?
 
 -> I assume you're looking for some anonymity here?
-	<<rightAnswer Khepri>>
 	I mean, aren't we all in a way?
 
 <<changeEmotion Khepri neutral>>
@@ -34,10 +32,12 @@ It's just...so hard. Have you ever dealt with high expectations?
 
 -> Of course. I've always doubted my performance at the bar, especially seeing some of the other folks here.
 	<<changeEmotion Khepri happy>>
+	<<wrongAnswer Khepri>>
 	I see. It's a relief to hear I'm not alone.
 
 -> Remember to not let expectations get the better of you. You can never fit the exact expectations of everyone.
 	<<changeEmotion Khepri surprised>>
+	<<rightAnswer Khepri>>
 	I've never really thought about it that way.
 
 <<changeEmotion Khepri happy>>
