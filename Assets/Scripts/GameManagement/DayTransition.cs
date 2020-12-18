@@ -31,9 +31,20 @@ public class DayTransition : MonoBehaviour
 
     public GameObject EvilBuilding;
 
+    public GameObject Day1LetterSubtitles;
+    public GameObject Day1BuildingSubtitles;
+    public GameObject Day1CalendarSubtitles;
+    public GameObject Day2PhoneSubtitles;
+    public GameObject Day3StoolsSubtitles;
+    public GameObject Day4GiftSubtitles;
+    public GameObject Day5LetterSubtitles;
+    public GameObject Day6WreckingBallSubtitles;
+    public GameObject Day7DoorSubtitles;
+
 
     public void Start()
     {
+        // all the other days setting hella stuff to not active
         day0to1.SetActive(false);
         day1to2.SetActive(false);
         day2to3.SetActive(false);
@@ -56,6 +67,29 @@ public class DayTransition : MonoBehaviour
         BarBackground.SetActive(false);
         EvilBuilding = GameObject.Find("Day1BBCBuilding");
         EvilBuilding.SetActive(false);
+
+
+        // text disabling
+        Day1LetterSubtitles = GameObject.Find("Day1LetterSubtitles");
+        Day1LetterSubtitles.SetActive(false);
+        Day1BuildingSubtitles = GameObject.Find("Day1BuildingSubtitles");
+        Day1BuildingSubtitles.SetActive(false);
+        Day1CalendarSubtitles = GameObject.Find("Day1CalendarSubtitles");
+        Day1CalendarSubtitles.SetActive(false);
+        Day2PhoneSubtitles = GameObject.Find("Day2PhoneSubtitles");
+        Day2PhoneSubtitles.SetActive(false);
+        Day3StoolsSubtitles = GameObject.Find("Day3StoolsSubtitles");
+        Day3StoolsSubtitles.SetActive(false);
+        Day4GiftSubtitles = GameObject.Find("Day4GiftSubtitles");
+        Day4GiftSubtitles.SetActive(false);
+        Day5LetterSubtitles = GameObject.Find("Day5LetterSubtitles");
+        Day5LetterSubtitles.SetActive(false);
+        Day6WreckingBallSubtitles = GameObject.Find("Day6WreckingBallSubtitles");
+        Day6WreckingBallSubtitles.SetActive(false);
+        Day7DoorSubtitles = GameObject.Find("Day7DoorSubtitles");
+        Day7DoorSubtitles.SetActive(false);
+
+        // first day code
         if (dataStorage.currentDay == 0)
         {
             GameObject.Find("OneStarText").SetActive(false);
@@ -63,6 +97,7 @@ public class DayTransition : MonoBehaviour
             GameObject.Find("ThreeStarText").SetActive(false);
             GameObject.Find("TabsheetText").SetActive(false);
             GameObject.Find("TabsheetBackground").SetActive(false);
+            Day1LetterSubtitles.SetActive(true);
             BarBackground.SetActive(true);
             day0to1.SetActive(true);
         }
@@ -77,6 +112,7 @@ public class DayTransition : MonoBehaviour
             GameObject.Find("ThreeStarText").SetActive(false);
             GameObject.Find("TabsheetText").SetActive(false);
             GameObject.Find("TabsheetBackground").SetActive(false);
+            Day1LetterSubtitles.SetActive(false);
         }
         GameObject.Find("NextDayButton").SetActive(false);
         switch (dataStorage.currentDay-1)
@@ -84,25 +120,33 @@ public class DayTransition : MonoBehaviour
             case -1:
                 BarBackground.SetActive(false);
                 day0to1.SetActive(false);
+                Day1LetterSubtitles.SetActive(false);
                 EvilBuilding.SetActive(true);
+                Day1BuildingSubtitles.SetActive(true);
                 break;
             case 0:
                 day1to2.SetActive(true);
+                Day2PhoneSubtitles.SetActive(true);
                 break;
             case 1:
                 day2to3.SetActive(true);
+                Day3StoolsSubtitles.SetActive(true);
                 break;
             case 2:
                 day3to4.SetActive(true);
+                Day4GiftSubtitles.SetActive(true);
                 break;
             case 3:
                 day4to5.SetActive(true);
+                Day5LetterSubtitles.SetActive(true);
                 break;
             case 4:
                 day5to6.SetActive(true);
+                Day6WreckingBallSubtitles.SetActive(true);
                 break;
             case 5:
                 day6to7.SetActive(true);
+                Day7DoorSubtitles.SetActive(true);
                 break;
             default:
                 break;
@@ -118,30 +162,38 @@ public class DayTransition : MonoBehaviour
         {
             case -1:
                 EvilBuilding.SetActive(false);
+                GameObject.Find("Day1BuildingSubtitles").SetActive(false);
                 calendar1.SetActive(true);
+                Day1CalendarSubtitles.SetActive(true);
                 break;
             case 0:
                 day1to2.SetActive(false);
+                Day2PhoneSubtitles.SetActive(false);
                 calendar2.SetActive(true);
                 break;
             case 1:
                 day2to3.SetActive(false);
+                Day3StoolsSubtitles.SetActive(false);
                 calendar3.SetActive(true);
                 break;
             case 2:
                 day3to4.SetActive(false);
+                Day4GiftSubtitles.SetActive(false);
                 calendar4.SetActive(true);
                 break;
             case 3:
                 day4to5.SetActive(false);
+                Day5LetterSubtitles.SetActive(false);
                 calendar5.SetActive(true);
                 break;
             case 4:
                 day5to6.SetActive(false);
+                Day6WreckingBallSubtitles.SetActive(false);
                 calendar6.SetActive(true);
                 break;
             case 5:
                 day6to7.SetActive(false);
+                Day7DoorSubtitles.SetActive(false);
                 calendar7.SetActive(true);
                 break;
             default:
