@@ -37,6 +37,7 @@ public class GlassFill : MonoBehaviour
     public AudioSource wellDone; // perfect drink
     public AudioSource notBad; // color is off, but correct ingredients
     public AudioSource ew; // wrong
+    public AudioSource error; // drink is full
 
     private RecipeManager recipeManager;
 
@@ -271,6 +272,7 @@ public class GlassFill : MonoBehaviour
     void GlassIsFullAlert()
     {
         //Debug.Log("Cup is full");
+        error.Play();
     }
 
     // Clears the drink of ingredients and resets its sprite
