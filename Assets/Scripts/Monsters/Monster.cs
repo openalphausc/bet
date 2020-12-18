@@ -74,6 +74,8 @@ public class Monster : MonoBehaviour
             GetOrdersFromFile();
             timesVisited++;
             entrance = GetRandomSide();
+            Debug.Log("Printing entrance:");
+            Debug.Log(entrance);
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
 
@@ -255,6 +257,7 @@ public class Monster : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (inAfterHours) return;
         if (alreadyClickedOn || Monster.currentlyOrdering) return;
         alreadyClickedOn = true;
         Monster.currentlyOrdering = true;
@@ -342,8 +345,8 @@ public class Monster : MonoBehaviour
             }
 
             // last one is blank
-            if (i == lines.Length - 1)
-                order.RemoveAt(order.Count - 1);
+            /*if (i == lines.Length - 1)
+                order.RemoveAt(order.Count - 1);*/
 
             // put this ArrayList into recipes
             allOrders.Add(order);
@@ -357,7 +360,7 @@ public class Monster : MonoBehaviour
         //     temp += "\n";
         // }
         // Debug.Log(temp);
-
+        Debug.Log(timesVisited);
         drinkOrder = allOrders[timesVisited][0];
         orderNotes = allOrders[timesVisited][1];
 	}

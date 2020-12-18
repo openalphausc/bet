@@ -233,7 +233,6 @@ Congratulations, you did well on this one.
 		<<changeEmotion Khepri happy>>
 		You know what? Sure, why not?
 	-> No
-		In your dreams. Goodbye.
 <<endif>>
 <<goodbye Khepri>>
 ===
@@ -254,7 +253,6 @@ Well, it's almost there, but the taste isn't right. I think the proportions of t
 		<<changeEmotion Khepri happy>>
 		You know what? Sure, why not?
 	-> No
-		In your dreams. Goodbye.
 <<endif>>
 <<goodbye Khepri>>
 ===
@@ -275,7 +273,6 @@ This is insulting. This drink isn't even made correctly. Didn't you listen to wh
 		<<changeEmotion Khepri happy>>
 		You know what? Sure, why not?
 	-> No
-		In your dreams. Goodbye.
 <<endif>>
 <<goodbye Khepri>>
 ===

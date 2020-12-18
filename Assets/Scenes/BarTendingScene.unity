@@ -2905,12 +2905,32 @@ MonoBehaviour:
   - {fileID: 7625226208971749566, guid: 13e0db5673f8b4261b055cbb73422fe4, type: 3}
   - {fileID: 7173060465039907910, guid: 20b2c3a7822644af5a7da64ca2af400d, type: 3}
   - {fileID: 904005084864500645, guid: 6d2ed139f0c934c6db7e61100638ebf2, type: 3}
+  - {fileID: 8015646323003965053, guid: 6268eb6e1d23ac147814f7cfbbcee6b4, type: 3}
+  - {fileID: 8015646323003965053, guid: 1e495164209d3ad408a0f59587ac3bc3, type: 3}
+  - {fileID: 8015646323003965053, guid: c539f40312923714d89239b3f230670e, type: 3}
+  - {fileID: 8015646323003965053, guid: 3810700a95bc02642a637d6a24cd33e9, type: 3}
+  - {fileID: 8015646323003965053, guid: b5dac70c17cee704eb43e50533b3dfa6, type: 3}
+  - {fileID: 8015646323003965053, guid: ad80e8292f93fce44b942aa7d92bc850, type: 3}
+  - {fileID: 8015646323003965053, guid: 3fa5d4e99124a384598ab245d3a23cff, type: 3}
+  - {fileID: 8015646323003965053, guid: 2966b48203136a94cbf4ce420485a094, type: 3}
+  - {fileID: 8015646323003965053, guid: 0f6798a21cd37324eb45780d22a19be0, type: 3}
+  - {fileID: 8015646323003965053, guid: 8874d846ec374764c871c1d91f2c5304, type: 3}
+  - {fileID: 8015646323003965053, guid: f85f2166c8ab48844a2004dbb26562c6, type: 3}
+  - {fileID: 8015646323003965053, guid: 34ddcea2a15a6994386d481bd6fb9eba, type: 3}
+  - {fileID: 8015646323003965053, guid: 4921ee55b3993654b8b399a2d33a0361, type: 3}
+  - {fileID: 8015646323003965053, guid: a0f5a0f541598684db7c953997ad6832, type: 3}
+  - {fileID: 8015646323003965053, guid: c722f5879e49b5747b18f9a7185d8d23, type: 3}
+  - {fileID: 8015646323003965053, guid: 863afee6da4b95c489dc575164b87d35, type: 3}
+  - {fileID: 8015646323003965053, guid: cdc2811fbb86172418ad5466be280cbf, type: 3}
+  - {fileID: 8015646323003965053, guid: 8c29ff34651fcc541b788bcd06616431, type: 3}
+  - {fileID: 8015646323003965053, guid: a3ff99a70055d1345bde8d046a30dc8a, type: 3}
+  - {fileID: 8015646323003965053, guid: 2319b1fb93549af4ca1f5c01f64545ab, type: 3}
   monstersOnScreen: []
   totalMonstersSpawned: 0
   maxTotalMonsters: 9
   maxMonstersOnScreen: 3
   fadeUpScript: {fileID: 1204714789}
-  ordersFile: {fileID: 4900000, guid: d6e0b905aeeb397489759ff9c2d35574, type: 3}
+  ordersFile: {fileID: 4900000, guid: f006d90a411da374cb3db64b985f2285, type: 3}
 --- !u!1 &1091579442
 GameObject:
   m_ObjectHideFlags: 0
@@ -6549,7 +6569,7 @@ PrefabInstance:
     - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
         type: 3}
       propertyPath: yarnScripts.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
         type: 3}
@@ -6592,7 +6612,7 @@ PrefabInstance:
         type: 3}
       propertyPath: yarnScripts.Array.data[12]
       value: 
-      objectReference: {fileID: 2480198943629176163, guid: f2cc9d0181d01714591103f52787aeb0,
+      objectReference: {fileID: 2480198943629176163, guid: f4db910fab646314db5e8f2ae1ab5cb9,
         type: 3}
     - target: {fileID: 5639802912432844921, guid: 8ba6525bd9f78416a86b05e5d5916665,
         type: 3}
