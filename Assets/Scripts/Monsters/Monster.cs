@@ -23,6 +23,8 @@ public class Monster : MonoBehaviour
     public bool readyToLeave = false;
     public bool leaving = false;
 
+    private bool hasDrink = false;
+
     public Sprite[] emotions = new Sprite[5];
 
     public string dialogueToStart = "";
@@ -57,6 +59,8 @@ public class Monster : MonoBehaviour
 
     private float seatTimer = 0.0f;
 
+    private float waitTimer = 0.0f;
+
     // Points for keeping track how well a player is serving a monster
     public int pointsEarned;
     public int totalPoints;
@@ -78,6 +82,7 @@ public class Monster : MonoBehaviour
                 pointsEarned = 0;
                 totalPoints = 0;
             }
+            hasDrink = false;
             GetOrdersFromFile();
             timesVisited++;
             entrance = GetRandomSide();
@@ -155,7 +160,17 @@ public class Monster : MonoBehaviour
                 TutorialSpotlight.spot1.pointLightOuterRadius = 10;
                 TutorialSpotlight.spot1.intensity += 0.3f;
             }
-        
+
+            //Quick thing to bandade bug where monster gets stuck with drink in hand
+            if (hasDrink)
+            {
+                waitTimer += Time.deltaTime;
+                if (waitTimer >= 10.0f)
+                {
+                    readyToLeave = true;
+                }
+            }
+
             // slide off when ready
             //Debug.Log(state);
             //Debug.Log(readyToLeave);
@@ -215,6 +230,8 @@ public class Monster : MonoBehaviour
 		if (MonsterSpawner.inTutorial) {
 			YarnBarTending.EnableDialogueFunctions();
 		}
+
+        hasDrink = true;
     }
 
     // Updates the points after a drink is given to the monster. Called in GlassFill.cs
