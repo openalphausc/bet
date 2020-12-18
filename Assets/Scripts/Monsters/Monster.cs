@@ -73,11 +73,14 @@ public class Monster : MonoBehaviour
         //totalPoints = prefab.GetComponent<Monster>().totalPoints;
         if (!inAfterHours)
         {
+            if (timesVisited == 0)
+            {
+                pointsEarned = 0;
+                totalPoints = 0;
+            }
             GetOrdersFromFile();
             timesVisited++;
             entrance = GetRandomSide();
-            Debug.Log("Printing entrance:");
-            Debug.Log(entrance);
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
 
@@ -85,11 +88,6 @@ public class Monster : MonoBehaviour
             recipeSheet = recipeSheetObject.GetComponent<RecipeSheet>();
             recipeManager = recipeSheetObject.GetComponent<RecipeManager>();
             drinkIcon = GameObject.FindWithTag("DrinkIcon");
-        }
-        if(dataStorage.currentDay == 0)
-        {
-            pointsEarned = 0;
-            totalPoints = 0;
         }
     }
 
@@ -133,7 +131,6 @@ public class Monster : MonoBehaviour
                 if (seatTimer >= 45.0f) 
                 { 
                     happiness -= 1; 
-                    Debug.Log("decreased happiness/failed to earn max points");
                     totalPoints += 20;
                 }
             }
@@ -362,7 +359,6 @@ public class Monster : MonoBehaviour
         //     temp += "\n";
         // }
         // Debug.Log(temp);
-        Debug.Log(timesVisited);
         drinkOrder = allOrders[timesVisited][0];
         orderNotes = allOrders[timesVisited][1];
 	}

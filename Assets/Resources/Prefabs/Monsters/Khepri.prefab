@@ -111,7 +111,7 @@ MonoBehaviour:
   dialogueToStart: KhepriOrder
   ordersFile: {fileID: 4900000, guid: 22fbe7654c45a56458f8e0933c3838f7, type: 3}
   prefab: {fileID: 0}
-  happiness: -6
+  happiness: -4
   pointsEarned: 0
   totalPoints: 0
 --- !u!61 &1839809940294750953

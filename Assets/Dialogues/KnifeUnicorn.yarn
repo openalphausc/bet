@@ -56,13 +56,15 @@ You seem like a fella who knows their way around sharp objects… what do you th
 
 -> Start making and selling your own knives as a door-to-door salesman. Capitalism is inevitable and you might as well bow to it.
 	<<wrongAnswer KnifeUnicorn>>
+	<<changeEmotion KnifeUnicorn sad>>
+	Yeah... I guess you're right.
 
 -> FIGHT THE MAN! DISMANTLE THE ESTABLISHMENT! Forge your own knives from sheer rage and carve your name into the foundation of the BBC!
 	<<rightAnswer KnifeUnicorn>>
+	<<changeEmotion KnifeUnicorn happy>>
+	You’re on to something, there. I THINK I LIKE YOU, KID.
 
-<<changeEmotion KnifeUnicorn happy>>
-You’re on to something, there. I THINK I LIKE YOU, KID. You’ll be seeing more of me.
-
+Well, you’ll be seeing more of me.
 And my knives. And all of my friends who also love knives. I’m actually very popular.
 
 <<finishedTalkingWith KnifeUnicorn>>

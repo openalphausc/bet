@@ -111,9 +111,9 @@ MonoBehaviour:
   dialogueToStart: XandartheEboyOrder
   ordersFile: {fileID: 4900000, guid: 1cb4533f9e2ebc74a9c29ab20a2745a6, type: 3}
   prefab: {fileID: 0}
-  happiness: -5
-  pointsEarned: 20
-  totalPoints: 200
+  happiness: -6
+  pointsEarned: 0
+  totalPoints: 0
 --- !u!61 &8015646323003965054
 BoxCollider2D:
   m_ObjectHideFlags: 0

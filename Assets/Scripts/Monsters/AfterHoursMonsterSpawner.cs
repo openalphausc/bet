@@ -22,6 +22,7 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
 
             currentMonster.name = "Ghost";
             currentMonster.GetComponent<Monster>().inAfterHours = true;
+            currentMonster.GetComponent<SpriteRenderer>().sprite = currentMonster.GetComponent<Monster>().emotions[2];
         }
         else
         {

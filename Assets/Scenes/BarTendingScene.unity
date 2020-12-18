@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2930,7 +2930,7 @@ MonoBehaviour:
   maxTotalMonsters: 9
   maxMonstersOnScreen: 3
   fadeUpScript: {fileID: 1204714789}
-  ordersFile: {fileID: 4900000, guid: e111b7d604f615848b58cc14e27465f2, type: 3}
+  ordersFile: {fileID: 4900000, guid: f006d90a411da374cb3db64b985f2285, type: 3}
 --- !u!1 &1091579442
 GameObject:
   m_ObjectHideFlags: 0

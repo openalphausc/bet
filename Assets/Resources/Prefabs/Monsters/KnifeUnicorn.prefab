@@ -111,9 +111,9 @@ MonoBehaviour:
   dialogueToStart: KnifeUnicornOrder
   ordersFile: {fileID: 4900000, guid: 16b65c930c5484fa5b3c141e80474a40, type: 3}
   prefab: {fileID: 0}
-  happiness: -4
-  pointsEarned: 20
-  totalPoints: 200
+  happiness: -1
+  pointsEarned: 0
+  totalPoints: 0
 --- !u!61 &904005084864500644
 BoxCollider2D:
   m_ObjectHideFlags: 0
