@@ -288,6 +288,13 @@ public class Monster : MonoBehaviour
         {
             MonsterSpawner.SkipTutorialButton.SetActive(true);
         }
+
+        if (!MonsterSpawner.inTutorial && MonsterSpawner.tutorialJustEnded)
+        {
+            YarnBarTending.instance = gameObject.GetComponent<YarnBarTending>();
+            YarnBarTending.EnableDialogueFunctions();
+            MonsterSpawner.tutorialJustEnded = false;
+        }
     }
 
     // Slides the monster towards a location
