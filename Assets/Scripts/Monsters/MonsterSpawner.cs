@@ -29,6 +29,8 @@ public class MonsterSpawner : MonoBehaviour
 
     public TextAsset ordersFile;
 
+    public static bool tutorialJustEnded = true;
+
     // Start is called before the first frame update
     void Start()
     {

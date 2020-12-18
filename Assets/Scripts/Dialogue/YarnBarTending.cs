@@ -110,6 +110,7 @@ public class YarnBarTending : MonoBehaviour
 	{
 		MonsterSpawner.bob.readyToLeave = true;
 		MonsterSpawner.timeUntilNextSpawn = 2.0f;
+		EnableDialogueFunctions();
 		EndTutorial();
 	}
 
