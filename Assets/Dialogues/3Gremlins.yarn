@@ -138,7 +138,7 @@ Oh! It looks like you don't have any stools! That's ok, we prefer to be stacked 
 	<<changeEmotion 3Gremlins happy>>
 	Score! All right barkeep, I'll take a Liver Failure.
 	You've never heard of a Liver Failure? Wow, you must be the young one, not us.
-	Blend together some hollow whiskey, cornpagne, a handful of trippy mushrooms, and something Russian... 
+	(No way we're actually gonna give them that, Chokky Milk instead. Poison apple juice, blood, and something like dirty dishes blended in.)
 
 -> No
 	<<changeEmotion 3Gremlins sad>>
@@ -158,7 +158,8 @@ position:
 -> Yes
 	<<changeEmotion 3Gremlins happy>>
 	Nice! I always knew you were cool, barkeep, even though Mom said otherwise.
-	Instead of a Liver Failure, I'd like a Liver Collapse. This one's got hollow whiskey, cornpagne, trippy shrooms mixed in, and the same Russian thing as last time... Do you remember?
+	Instead of a Liver Failure, I'd like a Liver Collapse.
+	(Hot Chokky this time, poison apple juice, blood, nightmare fuel, and some graveyard tasting thing.)
 
 -> No
 	<<changeEmotion 3Gremlins sad>>

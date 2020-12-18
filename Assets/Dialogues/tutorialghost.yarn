@@ -4,13 +4,15 @@ colorID:
 position:
 ---
 //ghost enters
-Hello, it’s Bob! I was on my way to get my daughter, Boothany, from Undead Daycare but I’d heard the news about your bar. I just had to say goodbye, y’know?
+Hi, it’s Bob! It's been a while since we've last seen once another, hasn't it?
+
+I was on my way to get my daughter, Boothany, from Undead Daycare when I heard the news about your bar. I just had to say goodbye, y’know?
 
 <<changeEmotion Ghost sad>>
-Looking a bit down huh? Silly me, of course you are. I promise, everyone is pretty understanding about what’s going on.
+Looking a bit down, huh? Silly me, of course you are. I promise, everyone is pretty understanding about what’s going on.
 
 <<changeEmotion Ghost neutral>>
-They won’t even care about how long you take, if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to destress after a long night.
+They won’t even care about how long you take if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to destress after a long night.
 
 <<changeEmotion Ghost happy>>
 Sorry, I was babbling! I should go ahead and order, shouldn’t I? I’ll help you out a bit, I know you’ve got lots on your mind...
@@ -21,7 +23,7 @@ See the color here? Monsters will explain their orders to you, but we aren't per
 
 Now for my drink… hmm...
 
-I think I’ll have a Happy Death today, please. It’s my husband's, Bobby, favorite drink; he absolutely loves it. It’s pretty simple, just some cheery blossom sake and angel tears. 
+I think I’ll have a Happy Death today, please. It’s my husband's, Larry, favorite drink; he absolutely loves it. It’s pretty simple, just some cheery blossom sake and angel tears. 
 
 <<changeEmotion Ghost happy>>
 Oh, look at me, talking on and on again! 
@@ -34,7 +36,7 @@ Don’t worry if you forgot! Remember, you’ve got your order log here, it has 
 //spotlight cheery blossom, then glass
 <<tutorialLightCues Ghost cheeryBlossom Glass>>
 <<tutorialUseIngredient Ghost cheeryBlossom>>
-We’re ready to start! Click on the cheery blossom sake to equip it. Then hover over the drink glass and click to pour!
+We’re ready to start! Click on the cheery blossom sake to pick it up. Then hover over the mixing glass and click to pour!
 
 //don’t let the player continue until cheery blossom sake is added
 
@@ -48,7 +50,7 @@ Now for some blood...
 //spotlight clear
 <<changeEmotion Ghost surprised>>
 <<tutorialLightCues Ghost _ _>>
-Ack, so sorry, even my mind is a bit fuzzy today! It’s the wrong color, but not a problem— as Bobby always says, mistakes are just lessons we haven’t learned yet!
+Ack, so sorry, even my mind is a bit fuzzy today! It’s the wrong color, but not a problem— as Larry always says, mistakes are just lessons we haven’t learned yet!
 
 <<changeEmotion Ghost neutral>>
 <<tutorialLightCues Ghost ClearGlassButton _>>
@@ -81,7 +83,7 @@ The color still isn’t quite right, just try adding more angel tears until the 
 //arrow appears from glass to monster
 <<tutorialLightCues Ghost Glass _>>
 <<tutorialEnableCup Ghost>>
-It looks perfect! Now just click on it to equip and then click on me to give me the finished drink. 
+It looks perfect! Now just click on it to pick it up and then click on me to give me the finished drink. 
 
 //don’t let the player continue until drink is handed to the ghost is added
 
@@ -171,14 +173,14 @@ Wonderful, I’ll take it.
 
 <<changeEmotion TutorialGhost happy>>
 <<tutorialLightCues Ghost _ _>>
-Mmmm. This is perfect. I understand why Bobby loves toppings so much.
+Mmmm. This is perfect. I understand why Larry loves toppings so much.
 
 <<changeEmotion TutorialGhost neutral>>
 Oh, and toppings on the drink don’t affect the color of the drink. Great as they are, you can only have one topping on top of a drink at a time. So make sure to pick the right one!  
 
 
 <<changeEmotion TutorialGhost happy>>
-That’s all! I’ve got to go help Bobby make a crop circle. Good luck today, and make sure to have fun talking to new monsters!
+That’s all! I’ve got to go help Larry make a crop circle. Good luck today, and make sure to have fun talking to new monsters!
 
 <<endTutorial Ghost>>
 
@@ -251,7 +253,7 @@ Phew. I’ve been talking for a while. May I have my drink now?
 Delicious. You’re a natural! The other monsters are going to love this. 
 
 <<changeEmotion TutorialGhost neutral>>
-I’d best be off— need to help Bobby put the finishing touches on the crop circle. I just love exterior decorating.
+I’d best be off— need to help Larry put the finishing touches on the crop circle. I just love exterior decorating.
 
 <<changeEmotion TutorialGhost happy>>
 See you around. Oh, and have a great time today for me. Okay? 
@@ -277,7 +279,7 @@ In honor of your wonderful bar, I'm going to order my favorite drink- the drink 
 The Tricky Treat. 
 
 <<changeEmotion TutorialGhost neutral>>
-It's cheery blossom sake, golden dust, and another alcohol... I don't remember the name, I guess Bobby truly does have the brains in our family!
+It's cheery blossom sake, golden dust, and another alcohol... I don't remember the name, I guess Larry truly does have the brains in our family!
 
 Oh, and put nighshade berries on top.
 
@@ -295,7 +297,7 @@ position:
 
 My, what a treat it is to see something like this. Your eyes aren't deceiving you, this is no trick!
 
-Bobby said everything would be okay, you know, when I voiced my concerns. 
+Larry said everything would be okay, you know, when I voiced my concerns. 
 
 I'm more prone to believe in miracles, but what you did this past week was certainly anything but! 
 
@@ -323,7 +325,7 @@ Oh, don’t fret! I can tell from the expression on your face that you’re alre
 <<changeEmotion TutorialGhost happy>>
 You don’t even need to worry about the drinks themselves, for once. The next one’s on me! Come on, everyone’s waiting inside, ready for a grand re-opening, and the first triumph of many to come. 
 
-I’ve even brought Bobby and Boothany along for the ride, though the only alcohol she’s getting is a few sips of the Tricky Treat Bobby and I are always raving about! 
+I’ve even brought Larry and Boothany along for the ride, though the only alcohol she’s getting is a few sips of the Tricky Treat Larry and I are always raving about! 
 
 Well, don’t let me ramble on, let’s celebrate!
 
@@ -357,7 +359,7 @@ Even if the bar has seen its final days, we haven't. Sorry to say it, but you've
 -> You're a great friend.
 
 <<changeEmotion TutorialGhost neutral>>
-I'll tell you what. Are you free next weekend? You should come over. I know Bobby and Boothany are practically dying to meet you. 
+I'll tell you what. Are you free next weekend? You should come over. I know Larry and Boothany are practically dying to meet you. 
 
 <<changeEmotion TutorialGhost happy>>
 Invite some patrons from your bar. We'll have a toast: to good drinks and good friends! 
