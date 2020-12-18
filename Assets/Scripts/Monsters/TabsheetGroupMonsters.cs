@@ -32,7 +32,6 @@ public class TabsheetGroupMonsters : MonoBehaviour
                 //Debug.Log("Monster " + monster.name + " has 0 points");
                 continue;
             }
-            Debug.Log(monster.name);
             // One star condition. < 60%
             if ((monster.pointsEarned + 0.0) / monster.totalPoints < 0.6)
                 oneStarMonsters.Add(monster);

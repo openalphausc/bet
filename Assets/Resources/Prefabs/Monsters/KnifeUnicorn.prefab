@@ -31,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904005084864500667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.9, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalPosition: {x: 0, y: 12, z: 0}
+  m_LocalScale: {x: 3.1, y: 3.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -1505601185
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2b9874f8220d94159a152c2518e1dd9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08a96c1b61c44e144905dc8780158c90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,10 +102,18 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   leaving: 0
+  emotions:
+  - {fileID: 21300000, guid: 26106be90c17a3a46ae8cac4d31d4995, type: 3}
+  - {fileID: 21300000, guid: d8bc0953eab9bb849838a1c4e47ce92e, type: 3}
+  - {fileID: 21300000, guid: 08a96c1b61c44e144905dc8780158c90, type: 3}
+  - {fileID: 21300000, guid: 5bad55781925cdf46940ba89e6954cac, type: 3}
+  - {fileID: 21300000, guid: a9744c1dc0b02af4793b0d100c07e022, type: 3}
   dialogueToStart: KnifeUnicornOrder
   ordersFile: {fileID: 4900000, guid: 16b65c930c5484fa5b3c141e80474a40, type: 3}
   prefab: {fileID: 0}
-  happiness: 0
+  happiness: -1
+  pointsEarned: 0
+  totalPoints: 0
 --- !u!61 &904005084864500644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -119,18 +127,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6928563, y: 3.0104914}
+  m_Offset: {x: -0.05896902, y: 0.085572064}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.72, y: 15}
+    oldSize: {x: 10, y: 10}
     newSize: {x: 10.18, y: 15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.859012, y: 8.979017}
+  m_Size: {x: 4.236678, y: 3.7987285}
   m_EdgeRadius: 0
 --- !u!114 &1315460285603139397
 MonoBehaviour:

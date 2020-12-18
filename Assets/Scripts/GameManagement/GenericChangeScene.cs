@@ -10,7 +10,6 @@ public class GenericChangeScene : MonoBehaviour
     // very advanced and hard to understand changescene function
     public void ChangeScene()
     {
-        Debug.Log("Changing Scene");
         SceneManager.LoadScene(sceneToChangeTo);
     }
 }
