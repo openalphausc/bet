@@ -337,8 +337,8 @@ public class Monster : MonoBehaviour
             }
 
             // last one is blank
-            if (i == lines.Length - 1)
-                order.RemoveAt(order.Count - 1);
+            /*if (i == lines.Length - 1)
+                order.RemoveAt(order.Count - 1);*/
 
             // put this ArrayList into recipes
             allOrders.Add(order);
@@ -352,7 +352,7 @@ public class Monster : MonoBehaviour
         //     temp += "\n";
         // }
         // Debug.Log(temp);
-
+        Debug.Log(timesVisited);
         drinkOrder = allOrders[timesVisited][0];
         orderNotes = allOrders[timesVisited][1];
 	}

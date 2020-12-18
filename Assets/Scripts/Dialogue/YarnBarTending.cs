@@ -131,7 +131,8 @@ public class YarnBarTending : MonoBehaviour
 	public void DialogueEnd()
 	{
 		//this is called when the afterhours invite has concluded
-		gameObject.GetComponent<Monster>().leaving = true;
+		//gameObject.GetComponent<Monster>().leaving = true;
+		Monster.currentlyOrderingMonster.leaving = true;
 	}
 
 
