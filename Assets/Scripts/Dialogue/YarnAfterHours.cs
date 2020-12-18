@@ -27,6 +27,7 @@ public class YarnAfterHours : MonoBehaviour
     public void deleteMonster()
     {
         gameObject.SetActive(false);
+        gameObject.GetComponent<SpriteRenderer>().sprite = gameObject.GetComponent<Monster>().emotions[2];
         AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>().inAfterHours = false;
         AfterHoursMonsterSpawner.currentMonster = null;
         AfterHoursMonsterSpawner.active = false;
@@ -38,7 +39,7 @@ public class YarnAfterHours : MonoBehaviour
     [YarnCommand("running")]
     public void running()
     {
-        Debug.Log("node is running");
+       // Debug.Log("node is running");
     }
 
     // Update monster points for right answer
@@ -58,7 +59,7 @@ public class YarnAfterHours : MonoBehaviour
         }
         else
         {
-            Debug.Log("Unknown monster in After Hours, not in points array");
+           // Debug.Log("Unknown monster in After Hours, not in points array");
         }
     }
 
@@ -79,7 +80,7 @@ public class YarnAfterHours : MonoBehaviour
         }
         else
         {
-            Debug.Log("Unknown monster in After Hours, not in points array");
+           // Debug.Log("Unknown monster in After Hours, not in points array");
         }
     }
 

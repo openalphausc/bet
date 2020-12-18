@@ -189,4 +189,30 @@ public class YarnBarTending : MonoBehaviour
 		}
 	}
 
+	[YarnCommand("changeEmotion")]
+	public void changeEmotion(string emotion)
+	{
+		int temp = 2;
+		if (emotion == "angry")
+		{
+			temp = 0;
+		}
+		if (emotion == "happy")
+		{
+			temp = 1;
+		}
+		if (emotion == "neutral")
+		{
+			temp = 2;
+		}
+		if (emotion == "sad")
+		{
+			temp = 3;
+		}
+		if (emotion == "surprised")
+		{
+			temp = 4;
+		}
+		gameObject.GetComponent<SpriteRenderer>().sprite = gameObject.GetComponent<Monster>().emotions[temp];
+	}
 }
