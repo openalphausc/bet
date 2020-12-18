@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -1505601185
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a7fe138824feb4af296ac1836c19c768, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e19e9576530869c40be17f8b680ef0f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,10 +101,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
+  leaving: 0
+  emotions:
+  - {fileID: 21300000, guid: 03a54a4b18b759949b3174a8d3fb113f, type: 3}
+  - {fileID: 21300000, guid: 327580eaf000b974d92769e11b5bc111, type: 3}
+  - {fileID: 21300000, guid: e19e9576530869c40be17f8b680ef0f1, type: 3}
+  - {fileID: 21300000, guid: 221806a079421a84abe6ac41f8b5884f, type: 3}
+  - {fileID: 21300000, guid: 2faa20a1725d37a4ca79aa00a39b1284, type: 3}
   dialogueToStart: CowboyAlienOrder
   ordersFile: {fileID: 4900000, guid: 60423b85ab5a36c469043418cc11093d, type: 3}
   prefab: {fileID: 0}
   happiness: -3
+  pointsEarned: 0
+  totalPoints: 0
 --- !u!61 &7625226208971749565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.89, y: 9.48}
+    oldSize: {x: 10, y: 10}
     newSize: {x: 13.94, y: 15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
