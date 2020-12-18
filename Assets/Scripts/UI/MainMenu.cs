@@ -19,14 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        if (LoadPlaytestingContext)
-        {
-            SceneManager.LoadScene(PlaytestingContextSceneName);
-        }
-        else
-        {
-            SceneManager.LoadScene(BarTendingSceneName);
-        }
+        SceneManager.LoadScene("Tabsheet");
     }
 
     public void Quit()
