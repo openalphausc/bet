@@ -31,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9080916782879359262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.8, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalScale: {x: 2.65, y: 2.65, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -1505601185
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcdecb49fe6bc4fc79a019fee26f476d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9beb3160400c1374a9ee9a47eeae8b28, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,10 +101,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
+  leaving: 0
+  emotions:
+  - {fileID: 21300000, guid: b6bc1710b59672a4e84956d396f4e27d, type: 3}
+  - {fileID: 21300000, guid: 3500347b5326e7b42b9b911d05b1915f, type: 3}
+  - {fileID: 21300000, guid: 9beb3160400c1374a9ee9a47eeae8b28, type: 3}
+  - {fileID: 21300000, guid: ee05aa725a0f6c3419324a55f6fd22e7, type: 3}
+  - {fileID: 21300000, guid: 5b32a26ce6c33a6488d5c5c65ea40bf6, type: 3}
   dialogueToStart: KateTheCockatriceOrder
   ordersFile: {fileID: 4900000, guid: a570548977da69c4aa910f9e1eb6ec04, type: 3}
   prefab: {fileID: 0}
   happiness: -2
+  pointsEarned: 0
+  totalPoints: 0
 --- !u!61 &9080916782879359250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 14, y: 10.65}
+    oldSize: {x: 10, y: 10}
     newSize: {x: 13.94, y: 15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 6938775252450162193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.75, y: 2.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -1505601185
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8f5ae10ae22e7449cbfdccef45141efe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0861a4ad9dcaf742b7a9861644fe40d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,10 +101,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   readyToLeave: 0
+  leaving: 0
+  emotions:
+  - {fileID: 21300000, guid: 6418bbccb491d224db21d927739a43e0, type: 3}
+  - {fileID: 21300000, guid: dd449056c5def5a44bb85a4aea7ba738, type: 3}
+  - {fileID: 21300000, guid: d0861a4ad9dcaf742b7a9861644fe40d, type: 3}
+  - {fileID: 21300000, guid: 1bd5ce337842bd24a9eddb6ed54e956e, type: 3}
+  - {fileID: 21300000, guid: db7f8bd50245fcd458db2ced76b778a5, type: 3}
   dialogueToStart: UtsuroOrder
   ordersFile: {fileID: 4900000, guid: 425ca36cc3e409548930db2bc2fb6d99, type: 3}
   prefab: {fileID: 0}
-  happiness: -3
+  happiness: -6
+  pointsEarned: 0
+  totalPoints: 200
 --- !u!61 &6938775252450162205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11, y: 25.426636}
+    oldSize: {x: 10, y: 10}
     newSize: {x: 13.94, y: 15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

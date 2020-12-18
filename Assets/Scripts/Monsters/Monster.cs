@@ -23,6 +23,8 @@ public class Monster : MonoBehaviour
     public bool readyToLeave = false;
     public bool leaving = false;
 
+    public Sprite[] emotions = new Sprite[5];
+
     public string dialogueToStart = "";
 
 	public TextAsset ordersFile;

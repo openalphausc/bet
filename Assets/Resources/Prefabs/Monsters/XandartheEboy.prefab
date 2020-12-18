@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 8015646323003965055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 7.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.15, y: 2.15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -1505601185
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c77730edb9834e18b1997b2133d045f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d042f2913d60c6c4b87abed188a6fad4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,10 +102,18 @@ MonoBehaviour:
   state: 0
   readyToLeave: 0
   leaving: 0
+  emotions:
+  - {fileID: 21300000, guid: 13e2060227810cb49b3880ee1f673928, type: 3}
+  - {fileID: 21300000, guid: af2f2ba2450021d4a8180eb84872e5ed, type: 3}
+  - {fileID: 21300000, guid: d042f2913d60c6c4b87abed188a6fad4, type: 3}
+  - {fileID: 21300000, guid: 86146a36458b25e42947d61d4109c19e, type: 3}
+  - {fileID: 21300000, guid: 580025e2a82c62b41b306a3f5ac2aa49, type: 3}
   dialogueToStart: XandartheEboyOrder
   ordersFile: {fileID: 4900000, guid: 1cb4533f9e2ebc74a9c29ab20a2745a6, type: 3}
   prefab: {fileID: 0}
-  happiness: -1
+  happiness: -5
+  pointsEarned: 20
+  totalPoints: 200
 --- !u!61 &8015646323003965054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.43, y: 17}
+    oldSize: {x: 10, y: 10}
     newSize: {x: 10.18, y: 15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
