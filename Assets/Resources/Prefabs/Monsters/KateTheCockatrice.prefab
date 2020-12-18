@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5581719546192392323}
   - component: {fileID: 2530910491735687863}
   m_Layer: 0
-  m_Name: KateTheCockatrice
+  m_Name: KatetheCockatrice
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9beb3160400c1374a9ee9a47eeae8b28, type: 3}
   - {fileID: 21300000, guid: ee05aa725a0f6c3419324a55f6fd22e7, type: 3}
   - {fileID: 21300000, guid: 5b32a26ce6c33a6488d5c5c65ea40bf6, type: 3}
-  dialogueToStart: KateTheCockatriceOrder
+  dialogueToStart: KatetheCockatriceOrder
   ordersFile: {fileID: 4900000, guid: a570548977da69c4aa910f9e1eb6ec04, type: 3}
   prefab: {fileID: 0}
   happiness: -2
