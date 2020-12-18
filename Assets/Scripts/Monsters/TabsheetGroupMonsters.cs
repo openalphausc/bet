@@ -32,6 +32,12 @@ public class TabsheetGroupMonsters : MonoBehaviour
                 //Debug.Log("Monster " + monster.name + " has 0 points");
                 continue;
             }
+            // If the monster is a general monster, take it out back and liquidate it
+            if (monster.name.IndexOf("GeneralMonster") >= 0)
+            {
+                continue;
+            }
+
             // One star condition. < 60%
             if ((monster.pointsEarned + 0.0) / monster.totalPoints < 0.6)
                 oneStarMonsters.Add(monster);
