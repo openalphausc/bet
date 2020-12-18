@@ -1,1 +1,1 @@
-Ghost,KnifeUnicorn,KateTheCockatrice,XandartheEboy,Utsuro,GalahadTheDragonborn,EldritchMonster,Shapeshifter,3Gremlins,CowboyAlien,Khepri
+Ghost,EldritchMonster,KnifeUnicorn,KateTheCockatrice,XandartheEboy,Utsuro,GalahadTheDragonborn,Shapeshifter,3Gremlins,CowboyAlien,Khepri
