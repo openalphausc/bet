@@ -10,9 +10,10 @@ public class Blender : MonoBehaviour
 
     private bool blending;
     private float blendTimer;
-    private float maxBlendTime = 3.0f;
+    private float maxBlendTime = 1.0f;
 
-    private float glassYPosition = -11.2f;
+    private float glassXPosition = -4.5f;
+    private float glassYPosition = -10.67f;
 
     public AudioSource mixSound;
     
@@ -62,7 +63,7 @@ public class Blender : MonoBehaviour
         blending = false;
         
         // teleport cup back to center
-        glassMove.gameObject.transform.position = new Vector3(0, glassYPosition, 0);
+        glassMove.gameObject.transform.position = new Vector3(glassXPosition, glassYPosition, 0);
         
         // blend drink
         glassFill.currentDrink.BlendToppings();
