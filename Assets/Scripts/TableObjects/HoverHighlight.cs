@@ -24,13 +24,13 @@ public class HoverHighlight : MonoBehaviour
     {
         if ((equipIngredient == null 
             || equipIngredient.equippedObject != gameObject)
-            && !PauseMenu.isPaused && isEnabled)
+            && !PauseMenu.isPaused && isEnabled && light != null)
             light.enabled = true;
     }
 
     void OnMouseExit()
     {
-        light.enabled = false;
+        if(light != null) light.enabled = false;
     }
 
     void OnMouseUp()
