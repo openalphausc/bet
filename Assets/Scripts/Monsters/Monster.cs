@@ -257,6 +257,7 @@ public class Monster : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (inAfterHours) return;
         if (alreadyClickedOn || Monster.currentlyOrdering) return;
         alreadyClickedOn = true;
         Monster.currentlyOrdering = true;
