@@ -21,6 +21,7 @@ public class TabsheetGroupMonsters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (dataStorage.currentDay == 0) return;
         //Debug.Log("Length of monsters array: " + dataStorage.monsters.Count);
         allMonsters = dataStorage.monsters;
         foreach (Monster monster in allMonsters)
