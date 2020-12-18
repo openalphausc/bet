@@ -31,6 +31,7 @@ public class YarnAfterHours : MonoBehaviour
         AfterHoursMonsterSpawner.currentMonster = null;
         AfterHoursMonsterSpawner.active = false;
         dataStorage.currentDay++;
+        dataStorage.stayingMonster = null;
         SceneManager.LoadScene("Tabsheet");
     }
 
