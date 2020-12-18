@@ -150,7 +150,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bab15b554d638419b99085ce6842d7c3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.211
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -753,12 +753,15 @@ MonoBehaviour:
 
 
 
+
     Sound
 
 
 
 
+
     Playtesting
+
 
 
 
@@ -885,7 +888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902213726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.6355, y: -97, z: -1557.322}
+  m_LocalPosition: {x: 43.6355, y: -97, z: -1357.322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 776477164}
@@ -1139,12 +1142,12 @@ MonoBehaviour:
     Hermann\nBen Heid\nLee Albanese\nCharlie Feuerborn\nRyan Levy\nColin Spiridonov\nCoco
     Zhang\nGabriella Martinez\n\n\n\n\nSarah Yuen\nAylish Turner\nMasato Lin\nRyan
     Levy\n\n\n\n\nJustin Sindecuse-Hayden\nHelen Spight\nColin Spiridonov\nSam Mehdi\nCharlie
-    Feuerborn\nPhilippe Cutillas\nCoco Zhang \nAlaina Palmer\n\n\n\n\nJon Ranieri\nOwen
-    Mench\n\n\n\nGabriella Martinez\nAylish Tuner\nMasato Lin\nHelen Spight\nMegan
-    Hermann\nSarah Yuen\nColin Spiridonov\nCharlie Feuerborn\nAlicia John\nCoco Zhang\nAlaina
-    Palmer\n\n\n\nMegan Hermann\nCoco Zhang\nHelen Spight\nAylish Turner\nColin Spiridonov\nLee
-    Albanese\nCharlie Feuerborn\nAlicia John\nMasato Lin\nGabriella Martinez\n\n\n\n\n\n\nJane
-    Pinckard\nAndy Nealan\nAll our Playtesters"
+    Feuerborn\nPhilippe Cutillas\nCoco Zhang \nAlaina Palmer\nOwen Mech\n\n\n\n\nJon
+    Ranieri\nOwen Mech\n\n\n\n\n\nGabriella Martinez\nAylish Tuner\nMasato Lin\nHelen
+    Spight\nMegan Hermann\nSarah Yuen\nColin Spiridonov\nCharlie Feuerborn\nAlicia
+    John\nCoco Zhang\nAlaina Palmer\n\n\n\n\nMegan Hermann\nCoco Zhang\nHelen Spight\nAylish
+    Turner\nColin Spiridonov\nLee Albanese\nCharlie Feuerborn\nAlicia John\nMasato
+    Lin\nGabriella Martinez\n\n\n\n\n\n\n\nJane Pinckard\nAndy Nealan\nAll our Playtesters"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1389,7 +1392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: -3351}
+  m_AnchoredPosition: {x: -27, y: -3551}
   m_SizeDelta: {x: 530.4733, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1785638141

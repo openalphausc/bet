@@ -1186,7 +1186,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 476baf1e9061e4962ad3f00a9b455a12, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.12
+  m_Volume: 0.09
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3532,6 +3532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283226435}
   - component: {fileID: 1283226436}
+  - component: {fileID: 1283226437}
   m_Layer: 0
   m_Name: bar music
   m_TagString: Untagged
@@ -3563,9 +3564,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 47937aaf6ace73f4a8f06b784dbce8a0, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.106
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.228
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3649,6 +3650,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1283226437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283226434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f2c800064c74341bae332b0d325a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayMusic1: {fileID: 8300000, guid: 7daedee6b8859ec41bc941f5cf98bd09, type: 3}
+  dayMusic2: {fileID: 8300000, guid: 7ac5c39ef4ea8434889b9f6543badf59, type: 3}
 --- !u!1 &1311632296
 GameObject:
   m_ObjectHideFlags: 0
