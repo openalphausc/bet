@@ -161,7 +161,7 @@ public class EndingScene : MonoBehaviour
         switch (monstersTemp.Count)
         {
             case 0: // the player didn't interact with ANY monsters...
-                monster1 = "Khephri";
+                monster1 = "Khepri";
                 monster2 = "CowboyAlien";
                 monster3 = "Utsuro";
                 break;
