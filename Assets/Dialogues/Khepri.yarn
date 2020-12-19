@@ -73,7 +73,7 @@ I appreciate it. Also, the name's Khepri.
 <<finishedTalkingWith Khepri>>
 
 ===
-title: KhepriAH2ChoiceA
+title: KhepriAH2RightAnswer
 tags: 
 colorID:
 position:
@@ -117,7 +117,7 @@ I'll talk to you later, bartender.
 <<finishedTalkingWith Khepri>>
 
 ===
-title: KhepriAH2ChoiceB
+title: KhepriAH2WrongAnswer
 tags: 
 colorID:
 position:
