@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public string BarTendingSceneName;
     public string PlaytestingContextSceneName;
     public bool LoadPlaytestingContext;
+    public GameObject buttonSounds;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
+        buttonSounds.GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Tabsheet");
     }
 

@@ -31,6 +31,7 @@ public class DayTransition : MonoBehaviour
 
     public GameObject EvilBuilding;
 
+    public GameObject buttonSounds;
     public GameObject Day1LetterSubtitles;
     public GameObject Day1BuildingSubtitles;
     public GameObject Day1CalendarSubtitles;
@@ -105,6 +106,7 @@ public class DayTransition : MonoBehaviour
 
     public void startDayTransition()
     {
+        buttonSounds.GetComponent<AudioSource>().Play();
         if (dataStorage.currentDay != 0)
         {
             GameObject.Find("OneStarText").SetActive(false);
@@ -155,6 +157,7 @@ public class DayTransition : MonoBehaviour
     }
     public void startCalendarTransition()
     {
+        buttonSounds.GetComponent<AudioSource>().Play();
         GameObject.Find("Next...Button").SetActive(false);
         GameObject.Find("TransitionBackground").SetActive(false);
         OpenBarButton.SetActive(true);
