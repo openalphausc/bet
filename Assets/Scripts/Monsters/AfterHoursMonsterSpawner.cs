@@ -5,7 +5,7 @@ using Yarn.Unity;
 
 public class AfterHoursMonsterSpawner : MonoBehaviour
 {
-    public static Vector3 monsterLocation = new Vector3(-25f, -5f, 0f);
+    public static Vector3 monsterLocation = new Vector3(-15f, -5f, 0f);
     public static GameObject currentMonster = null;
     public static bool active = false;
     public static bool tutorialOver = false;

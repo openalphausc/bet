@@ -57,12 +57,15 @@ I care for ‘im, and it kills me to know I’m takin’ part in tearin’ down 
 
 -> It might be time to pull back, then. There’re plenty of places to find work; I’m sure a guy like you can put his talents to use elsewhere. You’ve got family to get home to, after all. 
 	<<rightAnswer GalahadTheDragonborn>>
+	<<changeEmotion GalahadTheDragonborn happy>>
+	Hell, you’re right. I’ll give it some time and see how it goes.
 
 -> You look like a strong dude, how hard would it be to take them on from the inside? You’re in deep enough already, anyway. They wouldn’t see you coming.
 	<<wrongAnswer GalahadTheDragonborn>>
+	<<changeEmotion GalahadTheDragonborn happy>>
+	Hell, you’re right. I’ll give it some time and see how it goes.
 
-<<changeEmotion GalahadTheDragonborn happy>>
-Hell, you’re right. I’ll give it some time and see how it goes. Keep an eye out, yeah? I’ll see ya around soon.
+Keep an eye out, yeah? I’ll see ya around soon.
 
 <<finishedTalkingWith GalahadTheDragonborn>>
 

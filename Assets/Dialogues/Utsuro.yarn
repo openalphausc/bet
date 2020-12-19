@@ -59,11 +59,13 @@ i wish i were friends with these people... or these kind of people. telemarketin
 	<<rightAnswer Utsuro>>
 
 	<<changeEmotion Utsuro happy>>
+	hm... uh... alright...
 
 -> Well, maybe give it some time. You could get better at talking if you worked on it. It's all about confidence and having an enthusiastic tone of voice!
 	<<wrongAnswer Utsuro>>
+	hm... uh... alright...
 
-hm... uh... alright... i'm gonna go to sleep now... see you.
+i'm gonna go to sleep now... see you.
 
 <<finishedTalkingWith Utsuro>>
 

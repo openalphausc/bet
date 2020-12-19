@@ -174,6 +174,8 @@ MonoBehaviour:
   Day1LetterSubtitles: {fileID: 0}
   Day1BuildingSubtitles: {fileID: 0}
   Day1CalendarSubtitles: {fileID: 0}
+  Day1CalendarSubtitles2: {fileID: 0}
+  Day1CalendarSubtitles3: {fileID: 0}
   Day2PhoneSubtitles: {fileID: 0}
   Day3StoolsSubtitles: {fileID: 0}
   Day4GiftSubtitles: {fileID: 0}
@@ -299,7 +301,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -156}
-  m_SizeDelta: {x: 1140, y: 50}
+  m_SizeDelta: {x: 1140, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64224314
 MonoBehaviour:
@@ -324,8 +326,8 @@ MonoBehaviour:
     not watching your every step, BUB. You better start clearing out soon, if you
     don\u2019t want to get crushed under the rubble. You\u2019ve got 5 days.\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
-  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+  m_fontAsset: {fileID: 11400000, guid: eb1d6028091c84a399ccf86500ebd0d0, type: 2}
+  m_sharedMaterial: {fileID: 3371454467025790575, guid: eb1d6028091c84a399ccf86500ebd0d0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -618,7 +620,7 @@ SpriteRenderer:
   m_SortingLayerID: 329643649
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: c3192bc45216a452cbd1a24dcaca0c79, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fdb497c70f104cefbb08795cfbd9dea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -679,7 +681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -101.56, y: 30.86}
+  m_AnchoredPosition: {x: -89.03, y: 30.86}
   m_SizeDelta: {x: 277.0976, y: 79.46852}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211880025
@@ -755,7 +757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 07b7603d1f1b846afa2b4764a195ed7e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 468cdb0e3ee874c9291c55e1626bb4f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1313,7 +1315,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -173.2}
+  m_AnchoredPosition: {x: 0, y: -190}
   m_SizeDelta: {x: 1140, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471060309
@@ -1335,12 +1337,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Get out? Not quite yet.\nYou\u2019re determined to give one last fight:
-    If you build a community strong enough, you might be able to change the future
-    of your bar. Are you up to it?"
+  m_text: "You\u2019re determined to give one last fight: If you build a community
+    strong enough, you might be able to change the future of your bar. Are you up
+    to it?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
-  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+  m_fontAsset: {fileID: 11400000, guid: eb1d6028091c84a399ccf86500ebd0d0, type: 2}
+  m_sharedMaterial: {fileID: 3371454467025790575, guid: eb1d6028091c84a399ccf86500ebd0d0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1450,7 +1452,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -173.52}
-  m_SizeDelta: {x: 1140, y: 50}
+  m_SizeDelta: {x: 1140, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522207801
 MonoBehaviour:
@@ -1471,12 +1473,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Another warning from the B.B.C. shows up at your doorstep: \u201CLast
-    chance to clear out. Your bar better be empty by then. . .or else.\u201D Two
-    days left, huh? There\u2019s still a bit of time. . ."
+  m_text: "\"Last chance to clear out. Your bar better be empty by then. \nOr else.\""
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
-  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+  m_fontAsset: {fileID: 11400000, guid: 66f3d13c68727ea49810b2dd448ed4bc, type: 2}
+  m_sharedMaterial: {fileID: -6684024424949782087, guid: 66f3d13c68727ea49810b2dd448ed4bc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1501,8 +1501,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 15
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1610,8 +1610,8 @@ MonoBehaviour:
   m_text: "You hear the BBC demolishing buildings across the street. Your time is
     almost up, but you can\u2019t help but hope for a miracle."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
-  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+  m_fontAsset: {fileID: 11400000, guid: eb1d6028091c84a399ccf86500ebd0d0, type: 2}
+  m_sharedMaterial: {fileID: 3371454467025790575, guid: eb1d6028091c84a399ccf86500ebd0d0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2273,6 +2273,140 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &919677296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 919677297}
+  - component: {fileID: 919677299}
+  - component: {fileID: 919677298}
+  m_Layer: 5
+  m_Name: Day1CalendarSubtitles2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &919677297
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919677296}
+  m_LocalRotation: {x: 0, y: 0, z: 0.08715578, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032915137}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -350, y: 165}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &919677298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919677296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Get out?
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
+  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 2
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &919677299
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919677296}
+  m_CullTransparentMesh: 0
 --- !u!1 &927251750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,8 +2467,8 @@ MonoBehaviour:
     got nabbed yesterday! Here are some extra ones to boost morale.\u201D You remind
     him that the bar is closing in a couple days, but he insists that you take them."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
-  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+  m_fontAsset: {fileID: 11400000, guid: eb1d6028091c84a399ccf86500ebd0d0, type: 2}
+  m_sharedMaterial: {fileID: 3371454467025790575, guid: eb1d6028091c84a399ccf86500ebd0d0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2723,7 +2857,7 @@ RectTransform:
   m_GameObject: {fileID: 1036848292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 2032915137}
   m_RootOrder: 7
@@ -2752,12 +2886,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This is your final week. Although it\u2019s been a valiant struggle against
-    the Big Bad Company, aka the B.B.C, they\u2019re planning on buying out your
-    bar at the end of the week. They\u2019ve sent a letter:"
+  m_text: "This is your final week. It's been a valiant struggle against the Big
+    Bad Company, the B.B.C,\nbut they\u2019re planning on buying out your bar at
+    the end of the week. \nThey\u2019ve sent a letter:"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
-  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+  m_fontAsset: {fileID: 11400000, guid: 6a07f6510bce31d4aaed1a9bb27f86ae, type: 2}
+  m_sharedMaterial: {fileID: -2687345539713193575, guid: 6a07f6510bce31d4aaed1a9bb27f86ae,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2782,8 +2916,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3578,8 +3712,8 @@ MonoBehaviour:
   m_text: "You\u2019ve arrived at your bar and notice that your stools are mysteriously
     missing. . . It must have been those B.B.C. goons. . ."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
-  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+  m_fontAsset: {fileID: 11400000, guid: eb1d6028091c84a399ccf86500ebd0d0, type: 2}
+  m_sharedMaterial: {fileID: 3371454467025790575, guid: eb1d6028091c84a399ccf86500ebd0d0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3876,6 +4010,140 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1745805930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745805931}
+  - component: {fileID: 1745805933}
+  - component: {fileID: 1745805932}
+  m_Layer: 5
+  m_Name: Day1CalendarSubtitles3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1745805931
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745805930}
+  m_LocalRotation: {x: 0, y: -0, z: 0.08715596, w: -0.9961947}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032915137}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 350}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 339, y: -0.0000038147}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1745805932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745805930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Not quite yet.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
+  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 2
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1745805933
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745805930}
+  m_CullTransparentMesh: 0
 --- !u!1 &1768528388
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,8 +4580,8 @@ MonoBehaviour:
   m_text: You have had a good run. But it looks like this is the end. You decide
     to walk by your bar one last time to say goodbye. . .
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
-  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+  m_fontAsset: {fileID: 11400000, guid: eb1d6028091c84a399ccf86500ebd0d0, type: 2}
+  m_sharedMaterial: {fileID: 3371454467025790575, guid: eb1d6028091c84a399ccf86500ebd0d0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4678,6 +4946,8 @@ RectTransform:
   - {fileID: 522207800}
   - {fileID: 542929324}
   - {fileID: 1903250009}
+  - {fileID: 919677297}
+  - {fileID: 1745805931}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4813,7 +5083,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -173.2}
-  m_SizeDelta: {x: 1000, y: 50}
+  m_SizeDelta: {x: 800, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142251996
 MonoBehaviour:
@@ -4837,8 +5107,8 @@ MonoBehaviour:
   m_text: "\u201CThis is an official notice of the demolition of the Spooky Speakeasy
     in seven days\u2019 time. GET OUT!\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9d11bf9998c144a5ba87ed951f865b36, type: 2}
-  m_sharedMaterial: {fileID: -3931348902456460025, guid: 9d11bf9998c144a5ba87ed951f865b36,
+  m_fontAsset: {fileID: 11400000, guid: 66f3d13c68727ea49810b2dd448ed4bc, type: 2}
+  m_sharedMaterial: {fileID: -6684024424949782087, guid: 66f3d13c68727ea49810b2dd448ed4bc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4863,8 +5133,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
