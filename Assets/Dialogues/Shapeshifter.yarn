@@ -1,3 +1,27 @@
+title: ShapeshifterGoodEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion Shapeshifter happy>>
+It took a bit of shelling out, but seeing this place up fills me with heroic validation!
+<<changeEmotion Shapeshifter neutral>>
+Technically I used my mom’s bank account, but I’m sure she’ll understand.
+
+
+===
+title: ShapeshifterBadEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion Shapeshifter neutral>>
+Aw man… well, it was nice while it lasted.
+If you’re looking for another job by the way, I’m opening up applications for a sidekick pretty soon.
+<<changeEmotion Shapeshifter happy>>
+A pretty big career shift I know, but just think about it okay?
+
+===
 title: ShapeshifterAH1
 tags:
 colorID:

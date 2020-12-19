@@ -1,3 +1,27 @@
+title: CowboyAlienGoodEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion CowboyAlien surprised>>
+Well I’ll be darned, the bar’s gonna be saved.
+
+<<changeEmotion CowboyAlien happy>>
+I’m as pleased as a hog in slop, looks like we can beat back that BBC together after all huh?
+
+===
+title: CowboyAlienBadEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion CowboyAlien sad>>
+Well this turned out to be all beer and skittles, huh?
+
+<<changeEmotion CowboyAlien neutral>>
+I’m still real glad I met y’all folks here. Here’s to winning the fight against the BBC another day!
+
+===
 title: CowboyAlienOrder2
 tags: 
 colorID:

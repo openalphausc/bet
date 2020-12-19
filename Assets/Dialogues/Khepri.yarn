@@ -1,3 +1,24 @@
+title: KhepriGoodEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion Khepri happy>>
+Well, color me surprised! You actually fought off the BBC!
+Let’s meet up sometime to celebrate.
+
+===
+title: KhepriBadEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion Khepri sad>>
+There wasn’t much that you could do. It was only a matter of time.
+<<changeEmotion Khepri happy>>
+Hey, I’m still glad to have met you. I owe you one.
+
+===
 title: KhepriAH1
 tags:
 colorID:

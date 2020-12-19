@@ -1,4 +1,27 @@
+title: KnifeUnicornGoodEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion KnifeUnicorn happy>>
+Heard you told those corporate cronies to SHOVE IT! I knew I pricked a good friend in you.
+ <<changeEmotion KnifeUnicorn surprised>>
+Get it? Pricked? Like my knives!
+<<changeEmotion KnifeUnicorn happy>>
+Haha! Ha... yeah.
+===
+title: KnifeUnicornBadEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion KnifeUnicorn angry>> Lost the bar, huh? Another victim of the bourgeoisie…
+<<changeEmotion KnifeUnicorn happy>>
+Listen, if you ever wanna take matters into your own hands, I've got a knife with your name on it…
+<<changeEmotion KnifeUnicorn neutral>>
+in a non-threatening way.
 
+===
 title: KnifeUnicornAH1
 tags:
 colorID:
