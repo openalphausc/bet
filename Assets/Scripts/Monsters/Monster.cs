@@ -77,13 +77,13 @@ public class Monster : MonoBehaviour
         //totalPoints = prefab.GetComponent<Monster>().totalPoints;
         if (!inAfterHours)
         {
+            timesVisited = dataStorage.incrementVisited(prefab.name);
             if (timesVisited == 0)
             {
                 pointsEarned = 0;
                 totalPoints = 0;
             }
             GetOrdersFromFile();
-            timesVisited++;
             entrance = GetRandomSide();
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
@@ -257,6 +257,7 @@ public class Monster : MonoBehaviour
 
         // Update the points here
         Debug.Log("Update to points count: " + pointsEarned + "/" + totalPoints);
+        dataStorage.totalPointsOverall += pointsEarned;
         prefab.GetComponent<Monster>().pointsEarned = pointsEarned;
         prefab.GetComponent<Monster>().totalPoints = totalPoints;
 

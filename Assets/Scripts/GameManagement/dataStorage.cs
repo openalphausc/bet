@@ -13,6 +13,12 @@ public class dataStorage : MonoBehaviour
     public static int allMonsterPoints = 0;
     public static List<Monster> threeStarMonsters = new List<Monster>();
 
+    // Array to keep track of how many times monster has visited
+    public static List<string> monstersVisited;
+    public static int[] timesVisited;
+
+    public static int totalPointsOverall = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +27,9 @@ public class dataStorage : MonoBehaviour
             monsters = new List<Monster>();
             monsters.Clear();
         }
+        monstersVisited = new List<string>(new string[]
+            {"3Gremlins", "CowboyAlien", "EldritchMonster", "GalahadTheDragonborn", "KatetheCockatrice", "Khepri", "KnifeUnicorn", "Shapeshifter", "Utsuro", "XandartheEboy", "Ghost"});
+        timesVisited = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0};
     }
 
     // Update is called once per frame
@@ -39,5 +48,20 @@ public class dataStorage : MonoBehaviour
             }
         }
         return -1;
+    }
+
+    public static int incrementVisited(string monster)
+    {
+        for(int i = 0; i < monstersVisited.Count; i++)
+        {
+            if(monster == monstersVisited[i])
+            {
+                int val = timesVisited[i];
+                timesVisited[i]++;
+                return val;
+            }
+        }
+
+        return 0;
     }
 }

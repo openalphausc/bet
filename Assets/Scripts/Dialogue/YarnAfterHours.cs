@@ -76,6 +76,7 @@ public class YarnAfterHours : MonoBehaviour
         {
             dataStorage.monsters[index].pointsEarned += 50;
             dataStorage.monsters[index].totalPoints += 50;
+            dataStorage.totalPointsOverall += 50;
             Debug.Log("+50 points to " + dataStorage.monsters[index].name);
             if (AfterHoursMonsterSpawner.findMonster(AfterHoursMonsterSpawner.currentMonster.name) == -1)
             {
@@ -104,6 +105,7 @@ public class YarnAfterHours : MonoBehaviour
         {
             dataStorage.monsters[index].pointsEarned += 25;
             dataStorage.monsters[index].totalPoints += 50;
+            dataStorage.totalPointsOverall += 25;
             Debug.Log("+25 points to " + dataStorage.monsters[index].name);
             if (AfterHoursMonsterSpawner.findMonster(AfterHoursMonsterSpawner.currentMonster.name) == -1)
             {

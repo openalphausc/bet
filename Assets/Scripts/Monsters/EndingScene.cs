@@ -12,20 +12,19 @@ public class EndingScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(dataStorage.allMonsterPoints);
-        /*if (dataStorage.allMonsterPoints > 1750)
+        if (dataStorage.totalPointsOverall > 6500)
         {
             GameObject.Find("BadEnding").SetActive(false);
             GameObject.Find("GoodEnding").SetActive(true);
+            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostGoodEnding");
         }
         else
         {
             GameObject.Find("BadEnding").SetActive(true);
             GameObject.Find("GoodEnding").SetActive(false);
-        }*/
-        GameObject.Find("BadEnding").SetActive(false);
-        GameObject.Find("GoodEnding").SetActive(true);
-        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostGoodEnding");
+            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostBadEnding");
+        }
+        
     }
 
     // Update is called once per frame
