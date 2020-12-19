@@ -33,6 +33,10 @@ public class Monster : MonoBehaviour
 
     public Monster prefab;
 
+    private bool hasDrink = false;
+
+    private float waitTimer = 0.0f;
+
     public int happiness; // on a scale from -10 to 10, or whatever
 
     private RecipeSheet recipeSheet;
@@ -83,7 +87,8 @@ public class Monster : MonoBehaviour
             entrance = GetRandomSide();
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
-
+            hasDrink = false;
+            waitTimer = 0.0f;
             GameObject recipeSheetObject = GameObject.FindWithTag("RecipeSheet");
             recipeSheet = recipeSheetObject.GetComponent<RecipeSheet>();
             recipeManager = recipeSheetObject.GetComponent<RecipeManager>();
@@ -155,6 +160,16 @@ public class Monster : MonoBehaviour
                 TutorialSpotlight.spot1.pointLightOuterRadius = 10;
                 TutorialSpotlight.spot1.intensity += 0.3f;
             }
+
+            //Quick bandade to fix monster stuck problem
+            if(hasDrink == true)
+            {
+                waitTimer += Time.deltaTime;
+                if(waitTimer >= 10.0f)
+                {
+                    readyToLeave = true;
+                }
+            }
         
             // slide off when ready
             //Debug.Log(state);
@@ -215,6 +230,8 @@ public class Monster : MonoBehaviour
 		if (MonsterSpawner.inTutorial) {
 			YarnBarTending.EnableDialogueFunctions();
 		}
+
+        hasDrink = true;
     }
 
     // Updates the points after a drink is given to the monster. Called in GlassFill.cs
