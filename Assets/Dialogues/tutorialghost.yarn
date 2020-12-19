@@ -83,7 +83,7 @@ The color still isn’t quite right, just try adding more angel tears until the 
 //arrow appears from glass to monster
 <<tutorialLightCues Ghost Glass _>>
 <<tutorialEnableCup Ghost>>
-It looks perfect! Now just click on it to pick it up and then click on me to give me the finished drink. 
+It looks perfect! Now just click on it to pick it up, then drag it to me to give me the finished drink. 
 
 //don’t let the player continue until drink is handed to the ghost is added
 
