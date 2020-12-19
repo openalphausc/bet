@@ -13,7 +13,7 @@ public class HoverHighlight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!AfterHoursMonsterSpawner.active)
+        if (!AfterHoursMonsterSpawner.active && !EndingScene.active)
         {
             equipIngredient = GameObject.FindWithTag("EquipIngredient").GetComponent<EquipIngredient>();
             light = GetComponent<Light2D>();

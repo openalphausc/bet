@@ -9,6 +9,7 @@ position:
 <<changeEmotion Utsuro happy>>
 ..i’m happy to see you stick around..
 ...this place has done so much good.. it was only right...
+<<endingMonsterCount Utsuro>>
 
 ===
 title: UtsuroBadEnding
@@ -20,7 +21,7 @@ position:
 ..well i guess this is it..
 ..good luck with whatever you do next..
 …see you around..
-
+<<endingMonsterCount Utsuro>>
 ===
 title: UtsuroAH1
 tags:

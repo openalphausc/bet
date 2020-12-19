@@ -49,19 +49,40 @@ public class Drink
     // returns whether two drinks have the same ingredients
     public bool HasSameIngredients(Drink otherDrink) {
         // check this drink
-        foreach(string liquid in this.liquids) {
-            if(!otherDrink.liquids.Contains(liquid)) return false;
+        
+        foreach (string liquid in this.liquids) {
+            
+            if (!otherDrink.liquids.Contains(liquid))
+            {
+                //Debug.Log("Wrong liquid in this drink");
+                return false;
+            }
         }
         foreach(string topping in this.toppings) {
-            if(!otherDrink.toppings.Contains(topping)) return false;
+            
+            if (!otherDrink.toppings.Contains(topping))
+            {
+               // Debug.Log("Wrong topping in this drink");
+                return false;
+            }
         }
 
         // check other drink
         foreach(string liquid in otherDrink.liquids) {
-            if(!this.liquids.Contains(liquid)) return false;
+            
+            if (!this.liquids.Contains(liquid))
+            {
+                //Debug.Log("Wrong liquid in other drink");
+                return false;
+            }
         }
         foreach(string topping in otherDrink.toppings) {
-            if(!this.toppings.Contains(topping)) return false;
+            
+            if (!this.toppings.Contains(topping))
+            {
+                //Debug.Log("Wrong topping in other drink");
+                return false;
+            }
         }
 
         return true;
@@ -84,11 +105,12 @@ public class Drink
     }
 
     public bool AddIngredient(string newIngredient) {
-        // check if liquid or topping
         bool isLiquid = allLiquids.Contains(newIngredient);
         bool isTopping = allToppings.Contains(newIngredient);
         if (isLiquid == isTopping)
         {
+            //Debug.Log("do we ever even hit this??");
+           // Debug.Log(newIngredient);
             if (newIngredient == "") return false;
             return false;
         }

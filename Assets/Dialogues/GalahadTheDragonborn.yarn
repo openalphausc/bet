@@ -9,7 +9,7 @@ Hell, kid, what did I tell ya!? You're a champ, pullin' through like that.
 All the more reason ta keep your head up, now, ain’t it? 
 
 Don’t look at me like that, heh… the money was worth it. Yer stickin’ it to the BBC now! Can’t wait ta see what’s next.
-
+<<endingMonsterCount GalahadTheDragonborn>>
 ===
 title: GalahadTheDragonbornBadEnding
 tags:
@@ -22,6 +22,7 @@ Hey, kid… keep in touch, won’t ya? Shit doesn’t hafta end here… there’
 One foot after the other… one day, runnin’ won’t be so hard.
 
 See ya around.
+<<endingMonsterCount GalahadTheDragonborn>>
 
 ===
 title: GalahadTheDragonbornAH1

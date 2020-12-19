@@ -45,6 +45,7 @@ public class Monster : MonoBehaviour
     private GameObject drinkIcon;
 
     [NonSerializedAttribute] public Boolean inAfterHours = false;
+    [NonSerializedAttribute] public Boolean inEnding = false;
 
     // members for moving to seats
     public Seat seat = null; // the seat the monster is occupying / will occupy
@@ -75,15 +76,15 @@ public class Monster : MonoBehaviour
     {
         //pointsEarned = prefab.GetComponent<Monster>().pointsEarned;
         //totalPoints = prefab.GetComponent<Monster>().totalPoints;
-        if (!inAfterHours)
+        if (!inAfterHours && !inEnding)
         {
+            timesVisited = dataStorage.incrementVisited(prefab.name);
             if (timesVisited == 0)
             {
                 pointsEarned = 0;
                 totalPoints = 0;
             }
             GetOrdersFromFile();
-            timesVisited++;
             entrance = GetRandomSide();
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
@@ -111,7 +112,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!inAfterHours)
+        if (!inAfterHours && !inEnding)
         {
             // slide in to correct seat
             if (state == MonsterState.slidingOn) SlideTo(seat.seatLocation);
@@ -255,8 +256,11 @@ public class Monster : MonoBehaviour
         }
         totalPoints += 80; // for ingredients
 
+        totalPoints += 100; // to be earned in after hours
+
         // Update the points here
         Debug.Log("Update to points count: " + pointsEarned + "/" + totalPoints);
+        dataStorage.totalPointsOverall += pointsEarned;
         prefab.GetComponent<Monster>().pointsEarned = pointsEarned;
         prefab.GetComponent<Monster>().totalPoints = totalPoints;
 
@@ -273,7 +277,7 @@ public class Monster : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (inAfterHours) return;
+        if (inAfterHours || inEnding) return;
         if (alreadyClickedOn || Monster.currentlyOrdering) return;
         alreadyClickedOn = true;
         Monster.currentlyOrdering = true;

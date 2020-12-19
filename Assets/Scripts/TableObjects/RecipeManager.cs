@@ -75,6 +75,7 @@ public class RecipeManager : MonoBehaviour
         for (int i = 0; i < csvResults.Count; i++)
         {
         	Drink currentDrink = new Drink();
+            bool hasTopping = false;
             for (int j = 0; j < csvResults[i].Count; j++)
             {
                 if (j == 0)
@@ -85,11 +86,18 @@ public class RecipeManager : MonoBehaviour
                 else
                 {
                     // Ingredient
-                    currentDrink.AddIngredient(csvResults[i][j]);
+                    if(!currentDrink.AddIngredient(csvResults[i][j]) && csvResults[i][j].Contains(";"))
+                    {
+                        string[] toppingManip = csvResults[i][j].Split(';');
+                        currentDrink.AddIngredient(toppingManip[0]);
+                        currentDrink.BlendToppings();
+                        currentDrink.AddIngredient(toppingManip[1]);
+                        hasTopping = true;
+                    }
                 }
             }
 
-            currentDrink.BlendToppings();
+            if(!hasTopping) currentDrink.BlendToppings();
             recipes.Add(currentDrink);
         }
         recipes.Sort(new Drink.DrinkComp());

@@ -6,6 +6,7 @@ position:
 <<changeEmotion XandartheEboy happy>>
 This is, like, totallyyyyy the best thing ever. 
 We couldn’t let bad stuff happen to your bar. The vibes are just too good!
+<<endingMonsterCount XandartheEboy>>
 
 ===
 title: XandartheEboyBadEnding
@@ -18,6 +19,7 @@ I think I had too many of those shrooms… This feels like a bad trip.
 <<changeEmotion XandartheEboy sad>>
 I guess sometimes… life is the bad trip. 
 Woah, that’s too deep. Gotta go sit down. 
+<<endingMonsterCount XandartheEboy>>
 
 ===
 title: XandartheEboyAH1

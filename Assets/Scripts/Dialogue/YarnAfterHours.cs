@@ -19,10 +19,12 @@ public class YarnAfterHours : MonoBehaviour
             }
             else
             {
-                if(dataStorage.stayingMonster == "Ghost"){
+                if (dataStorage.stayingMonster == "Ghost")
+                {
                     FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostNoInvite");
                 }
-                else {
+                else
+                {
                     int index = AfterHoursMonsterSpawner.findMonster(gameObject.name);
                     if (index != -1)
                     {
@@ -74,9 +76,10 @@ public class YarnAfterHours : MonoBehaviour
         // if the monster is in the data storage array, update its points
         if (index >= 0)
         {
-            dataStorage.monsters[index].pointsEarned += 50;
-            dataStorage.monsters[index].totalPoints += 50;
-            Debug.Log("+50 points to " + dataStorage.monsters[index].name);
+            dataStorage.monsters[index].pointsEarned += 100;
+            //dataStorage.monsters[index].totalPoints += 50; total points now incremented in UpdatePoints in Monster.cs
+            dataStorage.totalPointsOverall += 100;
+            Debug.Log("+100 points to " + dataStorage.monsters[index].name);
             if (AfterHoursMonsterSpawner.findMonster(AfterHoursMonsterSpawner.currentMonster.name) == -1)
             {
                 AfterHoursMonsterSpawner.monsterList.Add(AfterHoursMonsterSpawner.currentMonster.name);
@@ -102,9 +105,10 @@ public class YarnAfterHours : MonoBehaviour
         // if the monster is in the data storage array, update its points
         if (index != -1)
         {
-            dataStorage.monsters[index].pointsEarned += 25;
-            dataStorage.monsters[index].totalPoints += 50;
-            Debug.Log("+25 points to " + dataStorage.monsters[index].name);
+            dataStorage.monsters[index].pointsEarned += 50;
+            //dataStorage.monsters[index].totalPoints += 50; total points now incremented in UpdatePoints in Monster.cs
+            dataStorage.totalPointsOverall += 50;
+            Debug.Log("+50 points to " + dataStorage.monsters[index].name);
             if (AfterHoursMonsterSpawner.findMonster(AfterHoursMonsterSpawner.currentMonster.name) == -1)
             {
                AfterHoursMonsterSpawner.monsterList.Add(AfterHoursMonsterSpawner.currentMonster.name);
@@ -141,5 +145,26 @@ public class YarnAfterHours : MonoBehaviour
             gameObject.SetActive(false);
         }
         
+    }
+
+    [YarnCommand("endingIntro")]
+    public void endingDialogue1()
+    {
+        EndingScene.introEnded = true;
+        gameObject.SetActive(false);
+    }
+
+    [YarnCommand("endingMonsterCount")]
+    public void incrementMonsterCountEnding()
+    {
+        EndingScene.monstersSpoken++;
+        gameObject.SetActive(false);
+    }
+
+    [YarnCommand("endingGame")]
+    public void rollCredits()
+    {
+        //endLightsFadeDown.StartFadeDown();
+        SceneManager.LoadScene("Credits");
     }
 }
