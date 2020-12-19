@@ -62,7 +62,7 @@ public class EndingScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(monstersSpoken == 0 && introEnded && !monster3Spoken)
+        if((monstersSpoken == 0 && introEnded) && !monster3Spoken)
         {
             currentMonster = Instantiate(
                Resources.Load<GameObject>("Prefabs/Monsters/"+monster3),
@@ -90,6 +90,7 @@ public class EndingScene : MonoBehaviour
             FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(monster2 + ending);
             monster2Spoken = true;
         }
+        
         if(monstersSpoken == 2 && !monster1Spoken)
         {
             currentMonster = Instantiate(
