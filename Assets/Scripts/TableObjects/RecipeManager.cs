@@ -44,6 +44,8 @@ public class RecipeManager : MonoBehaviour
             if(ingredient.name == "zombie flesh") {
                 lightColor = new Color(8.0f, 145.0f, 0.0f, 1.0f);
             }
+
+            lightColor = new Color(255.0f, 255.0f, 255.0f, 1.0f); // make them all white
             lightColor /= 255.0f;
     		ingredient.GetComponent<Light2D>().color = lightColor;
     	}
