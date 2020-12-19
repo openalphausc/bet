@@ -35,6 +35,8 @@ public class DayTransition : MonoBehaviour
     public GameObject Day1LetterSubtitles;
     public GameObject Day1BuildingSubtitles;
     public GameObject Day1CalendarSubtitles;
+    public GameObject Day1CalendarSubtitles2;
+    public GameObject Day1CalendarSubtitles3;
     public GameObject Day2PhoneSubtitles;
     public GameObject Day3StoolsSubtitles;
     public GameObject Day4GiftSubtitles;
@@ -77,6 +79,10 @@ public class DayTransition : MonoBehaviour
         Day1BuildingSubtitles.SetActive(false);
         Day1CalendarSubtitles = GameObject.Find("Day1CalendarSubtitles");
         Day1CalendarSubtitles.SetActive(false);
+        Day1CalendarSubtitles2 = GameObject.Find("Day1CalendarSubtitles2");
+        Day1CalendarSubtitles2.SetActive(false);
+        Day1CalendarSubtitles3 = GameObject.Find("Day1CalendarSubtitles3");
+        Day1CalendarSubtitles3.SetActive(false);
         Day2PhoneSubtitles = GameObject.Find("Day2PhoneSubtitles");
         Day2PhoneSubtitles.SetActive(false);
         Day3StoolsSubtitles = GameObject.Find("Day3StoolsSubtitles");
@@ -168,6 +174,8 @@ public class DayTransition : MonoBehaviour
                 GameObject.Find("Day1BuildingSubtitles").SetActive(false);
                 calendar1.SetActive(true);
                 Day1CalendarSubtitles.SetActive(true);
+                Day1CalendarSubtitles2.SetActive(true);
+                Day1CalendarSubtitles3.SetActive(true);
                 break;
             case 0:
                 day1to2.SetActive(false);
