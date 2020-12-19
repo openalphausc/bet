@@ -417,32 +417,32 @@ Goodbye!
 
 ===
 
-title: TutorialGhostFeedbackGreat
+title: GhostFeedbackGreat
 tags:
 colorID:
 position:
 ---
 <<changeEmotion TutorialGhost happy>>
 Awesome!
-<<goodbye TutorialGhost>>
+<<goodbye Ghost>>
 ===
 
-title: TutorialGhostFeedbackRatios
+title: GhostFeedbackRatios
 tags:
 colorID:
 position:
 ---
 <<changeEmotion TutorialGhost surprised>>
 Not quite...
-<<goodbye TutorialGhost>>
+<<goodbye Ghost>>
 ===
 
-title: TutorialGhostFeedbackIngredients
+title: GhostFeedbackIngredients
 tags:
 colorID:
 position:
 ---
 <<changeEmotion TutorialGhost sad>>
 Well, that's not it.
-<<goodbye TutorialGhost>>
+<<goodbye Ghost>>
 ===
