@@ -256,6 +256,8 @@ public class Monster : MonoBehaviour
         }
         totalPoints += 80; // for ingredients
 
+        totalPoints += 100; // to be earned in after hours
+
         // Update the points here
         Debug.Log("Update to points count: " + pointsEarned + "/" + totalPoints);
         dataStorage.totalPointsOverall += pointsEarned;
