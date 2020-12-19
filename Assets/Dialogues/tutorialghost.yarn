@@ -12,7 +12,7 @@ I was on my way to get my daughter, Boothany, from Undead Daycare when I heard t
 Looking a bit down, huh? Silly me, of course you are. I promise, everyone is pretty understanding about what’s going on.
 
 <<changeEmotion Ghost neutral>>
-They won’t even care about how long you take if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to destress after a long night.
+They won’t even care about how long you take if the drink is what they ordered and they enjoy your company enough. Nothing like a good conversation to de-stress after a long night.
 
 <<changeEmotion Ghost happy>>
 Sorry, I was babbling! I should go ahead and order, shouldn’t I? I’ll help you out a bit, I know you’ve got lots on your mind...
@@ -23,7 +23,7 @@ See the color here? Monsters will explain their orders to you, but we aren't per
 
 Now for my drink… hmm...
 
-I think I’ll have a Happy Death today, please. It’s my husband's, Theodore, favorite drink; he absolutely loves it. It’s pretty simple, just some cheery blossom sake and angel tears. 
+I think I’ll have a Happy Death today, please. It’s my husband Theodore's favorite drink; he absolutely loves it. It’s pretty simple, just some cheery blossom sake and angel tears. 
 
 <<changeEmotion Ghost happy>>
 Oh, look at me, talking on and on again! 
@@ -83,7 +83,7 @@ The color still isn’t quite right, just try adding more angel tears until the 
 //arrow appears from glass to monster
 <<tutorialLightCues Ghost Glass _>>
 <<tutorialEnableCup Ghost>>
-It looks perfect! Now just click on it to pick it up and then click on me to give me the finished drink. 
+It looks perfect! Now just click on it to pick it up, then drag it to me to give me the finished drink. 
 
 //don’t let the player continue until drink is handed to the ghost is added
 
