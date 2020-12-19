@@ -63,11 +63,12 @@ So, will you help me?
 
 -> How about I hook you up with the actual Supershifter Sam? He’s here like… every day.
 	<<rightAnswer Shapeshifter>>
+	<<changeEmotion Shapeshifter surprised>>
+	Wait, seriously?
 -> Sounds legit. Come back another day and I’ll have your angel tears.
 	<<wrongAnswer Shapeshifter>>
-
-<<changeEmotion Shapeshifter surprised>>
-Wait, seriously?
+	<<changeEmotion Shapeshifter surprised>>
+	Wait, seriously?
 
 <<changeEmotion Shapeshifter happy>>
 That's awesome! See you soon, bartender!
