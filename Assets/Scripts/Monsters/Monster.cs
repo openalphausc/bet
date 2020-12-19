@@ -353,7 +353,7 @@ public class Monster : MonoBehaviour
         List<List<string>> allOrders = new List<List<string>>();
         for (int i = 1; i < lines.Length; ++i)
         {
-            string[] elements = lines[i].Split(',');
+            string[] elements = lines[i].Split(';');
             List<string> order = new List<string>();
             for (int j = 0; j < elements.Length; ++j)
             {
