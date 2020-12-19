@@ -19,10 +19,12 @@ public class YarnAfterHours : MonoBehaviour
             }
             else
             {
-                if(dataStorage.stayingMonster == "Ghost"){
+                if (dataStorage.stayingMonster == "Ghost")
+                {
                     FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostNoInvite");
                 }
-                else {
+                else
+                {
                     int index = AfterHoursMonsterSpawner.findMonster(gameObject.name);
                     if (index != -1)
                     {
@@ -143,5 +145,26 @@ public class YarnAfterHours : MonoBehaviour
             gameObject.SetActive(false);
         }
         
+    }
+
+    [YarnCommand("endingIntro")]
+    public void endingDialogue1()
+    {
+        EndingScene.introEnded = true;
+        gameObject.SetActive(false);
+    }
+
+    [YarnCommand("endingMonsterCount")]
+    public void incrementMonsterCountEnding()
+    {
+        EndingScene.monstersSpoken++;
+        gameObject.SetActive(false);
+    }
+
+    [YarnCommand("endingGame")]
+    public void rollCredits()
+    {
+        //endLightsFadeDown.StartFadeDown();
+        SceneManager.LoadScene("Credits");
     }
 }

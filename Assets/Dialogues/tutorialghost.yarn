@@ -326,8 +326,23 @@ Oh, don’t fret! I can tell from the expression on your face that you’re alre
 You don’t even need to worry about the drinks themselves, for once. The next one’s on me! Come on, everyone’s waiting inside, ready for a grand re-opening, and the first triumph of many to come. 
 
 I’ve even brought Theodore and Boothany along for the ride, though the only alcohol she’s getting is a few sips of the Tricky Treat Theodore and I are always raving about! 
+<<endingIntro TutorialGhost>>
+===
 
-Well, don’t let me ramble on, let’s celebrate!
+title: TutorialGhostGoodEndingB
+tags:
+colorID:
+position:
+---
+<<changeEmotion TutorialGhost neutral>>
+
+Well, let's not spend the whole time talking now, let’s celebrate! 
+
+<<changeEmotion TutorialGhost happy>>
+
+To friends we find in the most unexpected places!!
+
+<<endingGame TutorialGhost>>
 
 ===
 
@@ -367,12 +382,23 @@ Invite some patrons from your bar. We'll have a toast: to good drinks and good f
 <<changeEmotion TutorialGhost neutral>>
 In this case, maybe endings don't have to be a bad thing. 
 
+<<endingIntro TutorialGhost>>
+
+===
+
+title: TutorialGhostBadEndingB
+tags:
+colorID:
+position:
+---
+
 <<changeEmotion TutorialGhost sad>>
 I guess it's goodbye until then.
 
 ...
 
 See you around, okay?
+<<endingGame TutorialGhost>>
 
 ===
 title: TutorialGhostNoInvite

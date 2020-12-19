@@ -7,6 +7,7 @@ position:
 All of this is because of you, you know. 
 <<changeEmotion KatetheCockatrice happy>>
 I didn’t want to jinx it by saying it out loud, but I had a feeling things would work out. 
+<<endingMonsterCount KatetheCockatrice>>
 
 ===
 title: KatetheCockatriceBadEnding
@@ -17,6 +18,7 @@ position:
 <<changeEmotion KatetheCockatrice sad>>
 I’m- I’m so sorry you had to close down. 
 It was a great place, you know. We’ll never forget that. 
+<<endingMonsterCount KatetheCockatrice>>
 
 ===
 title: KatetheCockatriceAH1

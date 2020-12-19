@@ -7,6 +7,7 @@ position:
 Hi bartender, I am pleasantly surprised to <see> you. Glad to have <met> you.
 <<changeEmotion EldritchMonster happy>>
 You've helped me and many <others> so much. Here's to many more years of business.
+<<endingMonsterCount EldritchMonster>>
 
 ===
 title: EldritchMonsterBadEnding
@@ -18,6 +19,7 @@ position:
 B-b-bartender… I am <disheartened> to see what the BBC has done.
 <<changeEmotion EldritchMonster neutral>>
 I am <pleased> to have met you. We can only <hope> their greed stops here.
+<<endingMonsterCount EldritchMonster>>
 
 ===
 title: EldritchMonsterAH1

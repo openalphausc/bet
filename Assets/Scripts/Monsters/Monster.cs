@@ -45,6 +45,7 @@ public class Monster : MonoBehaviour
     private GameObject drinkIcon;
 
     [NonSerializedAttribute] public Boolean inAfterHours = false;
+    [NonSerializedAttribute] public Boolean inEnding = false;
 
     // members for moving to seats
     public Seat seat = null; // the seat the monster is occupying / will occupy
@@ -75,7 +76,7 @@ public class Monster : MonoBehaviour
     {
         //pointsEarned = prefab.GetComponent<Monster>().pointsEarned;
         //totalPoints = prefab.GetComponent<Monster>().totalPoints;
-        if (!inAfterHours)
+        if (!inAfterHours && !inEnding)
         {
             timesVisited = dataStorage.incrementVisited(prefab.name);
             if (timesVisited == 0)
@@ -111,7 +112,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!inAfterHours)
+        if (!inAfterHours && !inEnding)
         {
             // slide in to correct seat
             if (state == MonsterState.slidingOn) SlideTo(seat.seatLocation);
@@ -274,7 +275,7 @@ public class Monster : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (inAfterHours) return;
+        if (inAfterHours || inEnding) return;
         if (alreadyClickedOn || Monster.currentlyOrdering) return;
         alreadyClickedOn = true;
         Monster.currentlyOrdering = true;

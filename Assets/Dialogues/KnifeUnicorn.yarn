@@ -9,6 +9,7 @@ Heard you told those corporate cronies to SHOVE IT! I knew I pricked a good frie
 Get it? Pricked? Like my knives!
 <<changeEmotion KnifeUnicorn happy>>
 Haha! Ha... yeah.
+<<endingMonsterCount KnifeUnicorn>>
 ===
 title: KnifeUnicornBadEnding
 tags:
@@ -20,6 +21,7 @@ position:
 Listen, if you ever wanna take matters into your own hands, I've got a knife with your name on it…
 <<changeEmotion KnifeUnicorn neutral>>
 in a non-threatening way.
+<<endingMonsterCount KnifeUnicorn>>
 
 ===
 title: KnifeUnicornAH1
