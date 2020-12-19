@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1147,7 +1147,7 @@ MonoBehaviour:
     Spight\nMegan Hermann\nSarah Yuen\nColin Spiridonov\nCharlie Feuerborn\nAlicia
     John\nCoco Zhang\nAlaina Palmer\n\n\n\n\nMegan Hermann\nCoco Zhang\nHelen Spight\nAylish
     Turner\nColin Spiridonov\nLee Albanese\nCharlie Feuerborn\nAlicia John\nMasato
-    Lin\nGabriella Martinez\n\n\n\n\n\n\n\nJane Pinckard\nAndy Nealan\nAll our Playtesters"
+    Lin\nGabriella Martinez\n\n\n\n\n\n\n\nJane Pinckard\nAndy Nealen\nAll our Playtesters"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
