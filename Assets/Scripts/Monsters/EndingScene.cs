@@ -191,7 +191,7 @@ public class EndingScene : MonoBehaviour
             // If either's total points is 0, then the percent is also 0.
             double xPoints = x.pointsEarned;
             double yPoints = y.pointsEarned;
-            return yPercent.CompareTo(xPercent); // switch yPercent and xPercent for a regular points comp
+            return yPoints.CompareTo(xPoints); // switch yPercent and xPercent for a regular points comp
         }
     }
 }
