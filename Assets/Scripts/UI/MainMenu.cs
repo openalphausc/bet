@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public string BarTendingSceneName;
     public string PlaytestingContextSceneName;
     public bool LoadPlaytestingContext;
+    public GameObject buttonSounds;
 
     // Start is called before the first frame update
     void Start()
@@ -17,23 +18,14 @@ public class MainMenu : MonoBehaviour
         versionText.text = "v" + Application.version;
     }
 
-    // TODO: Don't hardcode load scene. Create some sort of global variable
     public void Play()
     {
-        if (LoadPlaytestingContext)
-        {
-            Debug.Log("Loading Playtesting Context Menu");
-            SceneManager.LoadScene(PlaytestingContextSceneName);
-        }
-        else
-        {
-            SceneManager.LoadScene(BarTendingSceneName);
-        }
+        buttonSounds.GetComponent<AudioSource>().Play();
+        SceneManager.LoadScene("Tabsheet");
     }
 
     public void Quit()
     {
-        Debug.Log("Quitting Game");
         Application.Quit();
     }
 }

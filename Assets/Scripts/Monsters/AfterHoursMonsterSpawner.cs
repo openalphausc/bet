@@ -5,43 +5,70 @@ using Yarn.Unity;
 
 public class AfterHoursMonsterSpawner : MonoBehaviour
 {
-
-    private static string monsterStay;
-    private static Vector3 monsterLocation = new Vector3(-25f, -5f, 0f);
-
+    public static Vector3 monsterLocation = new Vector3(-15f, -5f, 0f);
     public static GameObject currentMonster = null;
-    public DialogueRunner dRunner;  // DialogueRunner
-
-    // Start is called before the first frame update
+    public static bool active = false;
+    public static bool tutorialOver = false;
+    private static bool khepriSpawned = false;
+    public static ArrayList monsterList = new ArrayList();
+    public static ArrayList monsterAnswers = new ArrayList();
     void Start()
     {
-        monsterStay = dataStorage.stayingMonster;
+        // Instantiate ghost if first day, otherwise regular monster
+        if (dataStorage.currentDay == 0)
+        {
+            currentMonster = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monsters/Ghost"),
+                monsterLocation,
+                Quaternion.identity);
+
+            currentMonster.name = "Ghost";
+            currentMonster.GetComponent<Monster>().inAfterHours = true;
+            currentMonster.GetComponent<SpriteRenderer>().sprite = currentMonster.GetComponent<Monster>().emotions[2];
+        }
+        else
+        {
+            currentMonster = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monsters/" + dataStorage.stayingMonster),
+                monsterLocation,
+                Quaternion.identity);
+
+            currentMonster.name = dataStorage.stayingMonster;
+            currentMonster.GetComponent<Monster>().inAfterHours = true;
+
+            
+        }
+
+        active = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (currentMonster != null)
+        //spawn khepri after ghost disappears from scene
+        if (tutorialOver && !khepriSpawned)
         {
-            currentMonster = GetFirstMonster();
+            currentMonster = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monsters/" + dataStorage.stayingMonster),
+                monsterLocation,
+                Quaternion.identity);
+
+            currentMonster.name = dataStorage.stayingMonster;
             currentMonster.GetComponent<Monster>().inAfterHours = true;
-            currentMonster = null;
+            khepriSpawned = true;
         }
     }
 
-    GameObject GetFirstMonster()
+    //finds if monster has been in afterhours, if it has, then it will return the index of its answer. Otherwise it returns -1.
+    public static int findMonster(string monster)
     {
-        // Get monster name
-        string monsterName = monsterStay;
-
-        // Set node to the current monster's
-        dRunner.StartDialogue(monsterName + "AH1");
-
-        // Instantiate it
-        GameObject afterHoursMonster = Instantiate(Resources.Load<GameObject>("Prefabs/Monsters/" + monsterName), monsterLocation, Quaternion.identity);
-        afterHoursMonster.name = monsterName;
-        return afterHoursMonster;
-
+        for (int i = 0; i < monsterList.Count; i++)
+        {
+            if (monster == (string)monsterList[i])
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 
 }

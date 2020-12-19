@@ -1,0 +1,87 @@
+fileFormatVersion: 2
+guid: 58944d606034c8c4bb44f565316baf3a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Shapeshifter 1-ShapeshifterAH1-0
+  - Shapeshifter 1-ShapeshifterAH1-1
+  - Shapeshifter 1-ShapeshifterAH1-2
+  - Shapeshifter 1-ShapeshifterAH1-3
+  - Shapeshifter 1-ShapeshifterAH1-4
+  - Shapeshifter 1-ShapeshifterAH1-5
+  - Shapeshifter 1-ShapeshifterAH1-6
+  - Shapeshifter 1-ShapeshifterAH1-7
+  - Shapeshifter 1-ShapeshifterAH1-8
+  - Shapeshifter 1-ShapeshifterAH1-9
+  - Shapeshifter 1-ShapeshifterAH1-10
+  - Shapeshifter 1-ShapeshifterAH1-11
+  - Shapeshifter 1-ShapeshifterAH1-12
+  - Shapeshifter 1-ShapeshifterAH1-13
+  - Shapeshifter 1-ShapeshifterAH1-14
+  - Shapeshifter 1-ShapeshifterAH1-15
+  - Shapeshifter 1-ShapeshifterAH1-16
+  - Shapeshifter 1-ShapeshifterAH1-17
+  - Shapeshifter 1-ShapeshifterAH1-18
+  - Shapeshifter 1-ShapeshifterAH1-19
+  - Shapeshifter 1-ShapeshifterAH1-20
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-21
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-22
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-23
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-24
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-25
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-26
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-27
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-28
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-29
+  - Shapeshifter 1-ShapeshifterAH2RightAnswer-30
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-31
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-32
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-33
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-34
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-35
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-36
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-37
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-38
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-39
+  - Shapeshifter 1-ShapeshifterAH2WrongAnswer-40
+  - Shapeshifter 1-ShapeshifterOrder3-41
+  - Shapeshifter 1-ShapeshifterOrder3-42
+  - Shapeshifter 1-ShapeshifterOrder3-43
+  - Shapeshifter 1-ShapeshifterOrder3-44
+  - Shapeshifter 1-ShapeshifterOrder3-45
+  - Shapeshifter 1-ShapeshifterOrder3-46
+  - Shapeshifter 1-ShapeshifterOrder5-47
+  - Shapeshifter 1-ShapeshifterOrder5-48
+  - Shapeshifter 1-ShapeshifterOrder5-49
+  - Shapeshifter 1-ShapeshifterOrder5-50
+  - Shapeshifter 1-ShapeshifterOrder6-51
+  - Shapeshifter 1-ShapeshifterOrder6-52
+  - Shapeshifter 1-ShapeshifterOrder6-53
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-54
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-55
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-56
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-57
+  - Shapeshifter 1-ShapeshifterFeedbackGreat-58
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-59
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-60
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-61
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-62
+  - Shapeshifter 1-ShapeshifterFeedbackRatios-63
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-64
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-65
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-66
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-67
+  - Shapeshifter 1-ShapeshifterFeedbackIngredients-68
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 58944d606034c8c4bb44f565316baf3a,
+    type: 3}
+  localizations: []

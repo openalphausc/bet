@@ -1,0 +1,90 @@
+fileFormatVersion: 2
+guid: 47a8f4aa71fbd9d409441a0ce765c46d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - KateTheCockatrice 1-KatetheCockatriceAH1-0
+  - KateTheCockatrice 1-KatetheCockatriceAH1-1
+  - KateTheCockatrice 1-KatetheCockatriceAH1-2
+  - KateTheCockatrice 1-KatetheCockatriceAH1-3
+  - KateTheCockatrice 1-KatetheCockatriceAH1-4
+  - KateTheCockatrice 1-KatetheCockatriceAH1-5
+  - KateTheCockatrice 1-KatetheCockatriceAH1-6
+  - KateTheCockatrice 1-KatetheCockatriceAH1-7
+  - KateTheCockatrice 1-KatetheCockatriceAH1-8
+  - KateTheCockatrice 1-KatetheCockatriceAH1-9
+  - KateTheCockatrice 1-KatetheCockatriceAH1-10
+  - KateTheCockatrice 1-KatetheCockatriceAH1-11
+  - KateTheCockatrice 1-KatetheCockatriceAH1-12
+  - KateTheCockatrice 1-KatetheCockatriceAH1-13
+  - KateTheCockatrice 1-KatetheCockatriceAH1-14
+  - KateTheCockatrice 1-KatetheCockatriceAH1-15
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-16
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-17
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-18
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-19
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-20
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-21
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-22
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-23
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-24
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-25
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-26
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-27
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-28
+  - KateTheCockatrice 1-KatetheCockatriceAH2RightAnswer-29
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-30
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-31
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-32
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-33
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-34
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-35
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-36
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-37
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-38
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-39
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-40
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-41
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-42
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-43
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-44
+  - KateTheCockatrice 1-KatetheCockatriceAH2WrongAnswer-45
+  - KateTheCockatrice 1-KatetheCockatriceOrder2-46
+  - KateTheCockatrice 1-KatetheCockatriceOrder2-47
+  - KateTheCockatrice 1-KatetheCockatriceOrder2-48
+  - KateTheCockatrice 1-KatetheCockatriceOrder2-49
+  - KateTheCockatrice 1-KatetheCockatriceOrder4-50
+  - KateTheCockatrice 1-KatetheCockatriceOrder4-51
+  - KateTheCockatrice 1-KatetheCockatriceOrder4-52
+  - KateTheCockatrice 1-KatetheCockatriceOrder6-53
+  - KateTheCockatrice 1-KatetheCockatriceOrder6-54
+  - KateTheCockatrice 1-KatetheCockatriceOrder6-55
+  - KateTheCockatrice 1-KatetheCockatriceOrder6-56
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-57
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-58
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-59
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-60
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackGreat-61
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-62
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-63
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-64
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-65
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackRatios-66
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-67
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-68
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-69
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-70
+  - KateTheCockatrice 1-KatetheCockatriceFeedbackIngredients-71
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 47a8f4aa71fbd9d409441a0ce765c46d,
+    type: 3}
+  localizations: []

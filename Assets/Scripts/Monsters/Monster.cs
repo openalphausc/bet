@@ -21,6 +21,9 @@ public class Monster : MonoBehaviour
     private float slidingSpeed = 30.0f;
     private float currentSpeed;
     public bool readyToLeave = false;
+    public bool leaving = false;
+
+    public Sprite[] emotions = new Sprite[5];
 
     public string dialogueToStart = "";
 
@@ -30,6 +33,10 @@ public class Monster : MonoBehaviour
 
     public Monster prefab;
 
+    private bool hasDrink = false;
+
+    private float waitTimer = 0.0f;
+
     public int happiness; // on a scale from -10 to 10, or whatever
 
     private RecipeSheet recipeSheet;
@@ -38,6 +45,7 @@ public class Monster : MonoBehaviour
     private GameObject drinkIcon;
 
     [NonSerializedAttribute] public Boolean inAfterHours = false;
+    [NonSerializedAttribute] public Boolean inEnding = false;
 
     // members for moving to seats
     public Seat seat = null; // the seat the monster is occupying / will occupy
@@ -54,16 +62,34 @@ public class Monster : MonoBehaviour
 
     private float seatTimer = 0.0f;
 
+    // Points for keeping track how well a player is serving a monster
+    public int pointsEarned;
+    public int totalPoints;
+    public NameComp nameComp = new NameComp();
+
+    private bool ghostCenter = true;
+
+    private int timesVisited = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        if (!inAfterHours)
+        //pointsEarned = prefab.GetComponent<Monster>().pointsEarned;
+        //totalPoints = prefab.GetComponent<Monster>().totalPoints;
+        if (!inAfterHours && !inEnding)
         {
+            timesVisited = dataStorage.incrementVisited(prefab.name);
+            if (timesVisited == 0)
+            {
+                pointsEarned = 0;
+                totalPoints = 0;
+            }
             GetOrdersFromFile();
             entrance = GetRandomSide();
             transform.position = entrance;
             exit = new Vector3(-2 * transform.position.x, transform.position.y, transform.position.z);
-
+            hasDrink = false;
+            waitTimer = 0.0f;
             GameObject recipeSheetObject = GameObject.FindWithTag("RecipeSheet");
             recipeSheet = recipeSheetObject.GetComponent<RecipeSheet>();
             recipeManager = recipeSheetObject.GetComponent<RecipeManager>();
@@ -86,7 +112,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!inAfterHours)
+        if (!inAfterHours && !inEnding)
         {
             // slide in to correct seat
             if (state == MonsterState.slidingOn) SlideTo(seat.seatLocation);
@@ -108,11 +134,48 @@ public class Monster : MonoBehaviour
                 seatTimer += Time.deltaTime;
                 // Debug.Log(seatTimer);
 
-                if (seatTimer >= 45.0f) { happiness -= 1; Debug.Log("decreased happiness"); }
+                if (seatTimer >= 45.0f) 
+                { 
+                    happiness -= 1; 
+                    totalPoints += 20;
+                }
             }
 
+
+            if (MonsterSpawner.inTutorial && state == MonsterState.center && ghostCenter && !alreadyClickedOn)
+            {
+                ghostCenter = false;
+                
+                TutorialSpotlight.spot1.enabled = true;
+                TutorialSpotlight.spot2.enabled = false;
+                TutorialSpotlight.spot1.transform.position = new Vector3(0, 8.3f, 0);
+                TutorialSpotlight.spot1.pointLightOuterRadius = 20;
+                TutorialSpotlight.spot1.intensity -= 0.3f;
+            }
+
+            if (MonsterSpawner.inTutorial && state == MonsterState.center && !ghostCenter && alreadyClickedOn)
+            {
+                ghostCenter = true;
+                TutorialSpotlight.spot1.enabled = false;
+                TutorialSpotlight.spot2.enabled = false;
+                TutorialSpotlight.spot1.pointLightOuterRadius = 10;
+                TutorialSpotlight.spot1.intensity += 0.3f;
+            }
+
+            //Quick bandade to fix monster stuck problem
+            if(hasDrink == true)
+            {
+                waitTimer += Time.deltaTime;
+                if(waitTimer >= 10.0f)
+                {
+                    readyToLeave = true;
+                }
+            }
+        
             // slide off when ready
-            if (state == MonsterState.center && readyToLeave)
+            //Debug.Log(state);
+            //Debug.Log(readyToLeave);
+            if ((state == MonsterState.center && readyToLeave) && (!MonsterSpawner.inTutorial && leaving))
             {
                 Monster.currentlyOrdering = false;
                 Monster.currentlyOrderingMonster = null;
@@ -133,14 +196,14 @@ public class Monster : MonoBehaviour
                 FindObjectOfType<Yarn.Unity.DialogueUI>().DialogueComplete();
                 FindObjectOfType<NodeVisitedTracker>().NodeComplete(dialogueToStart);
                 // hide the drink icon
-                drinkIcon.transform.GetChild(0).gameObject.SetActive(false);
-                drinkIcon.transform.GetChild(1).gameObject.SetActive(false);
+                GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDialogueSystem();
             }
 
             if (state == MonsterState.slidingOff)
             {
                 //Debug.Log("Sliding to exit");
                 SlideTo(exit);
+				GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = true;
             }
 
             // set state to offscreen (ready to be despawned) if offscreen
@@ -158,21 +221,68 @@ public class Monster : MonoBehaviour
     // correctness is a float from 0.0 to 1.0, where 0.0 is totally wrong and 1.0 is totally correct
     public void GivenDrink(float correctness) {
         int change = (int)Mathf.Round(4 * (correctness - 0.5f));
-        Debug.Log("correctness = " + correctness + ", change = " + change);
+        //Debug.Log("correctness = " + correctness + ", change = " + change);
         happiness += change; 
         prefab.GetComponent<Monster>().happiness = happiness; // update the prefab's data
 
 		// hide the drink icon
 		GameObject.Find("Dialogue System").GetComponent<DialoguePositionTracker>().HideDialogueSystem();
+
+		if (MonsterSpawner.inTutorial) {
+			YarnBarTending.EnableDialogueFunctions();
+		}
+
+        hasDrink = true;
+    }
+
+    // Updates the points after a drink is given to the monster. Called in GlassFill.cs
+    public void UpdatePoints(bool matchIngredients, bool matchColor)
+    {
+        if (seatTimer < 45.0f)
+        {
+            pointsEarned += 20; // 20 points for haste
+            totalPoints += 20;
+        } // else part is taken care of elsewhere
+
+        if (matchColor)
+        {
+            pointsEarned += 100;
+        }
+        totalPoints += 100; // for color
+
+        if (matchIngredients)
+        {
+            pointsEarned += 80;
+        }
+        totalPoints += 80; // for ingredients
+
+        totalPoints += 100; // to be earned in after hours
+
+        // Update the points here
+        Debug.Log("Update to points count: " + pointsEarned + "/" + totalPoints);
+        dataStorage.totalPointsOverall += pointsEarned;
+        prefab.GetComponent<Monster>().pointsEarned = pointsEarned;
+        prefab.GetComponent<Monster>().totalPoints = totalPoints;
+
+        // now, insert the prefab into the list of monsters from dataStorage
+        int index = dataStorage.monsters.BinarySearch(prefab.GetComponent<Monster>(), nameComp);
+        if (index < 0) // not in the list, add it
+        {
+            dataStorage.monsters.Add(prefab.GetComponent<Monster>());
+            dataStorage.monsters.Sort(nameComp);
+        }
+        //foreach (Monster m in dataStorage.monsters)
+        //    Debug.Log(m.name);
     }
 
     public void OnMouseDown()
     {
+        if (inAfterHours || inEnding) return;
         if (alreadyClickedOn || Monster.currentlyOrdering) return;
         alreadyClickedOn = true;
         Monster.currentlyOrdering = true;
         Monster.currentlyOrderingMonster = this;
-        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart);
+        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(dialogueToStart + (dataStorage.currentDay + 1));
         
         // remove hover highlight
         Destroy(GetComponent<HoverHighlight>());
@@ -191,8 +301,23 @@ public class Monster : MonoBehaviour
 		recipeSheet.AddOrderNotes(drinkOrder, orderNotes);
 
         // Increase happiness if clicked within first 15 s of sitting down
-        if (seatTimer <= 15.0f) { happiness += 1; Debug.Log("Increased happiness"); }
+        if (seatTimer <= 15.0f) { 
+            happiness += 1; 
+        }
 
+		GameObject.Find("CloseBarButton").GetComponent<Button>().interactable = false;
+
+        if(MonsterSpawner.inTutorial)
+        {
+            MonsterSpawner.SkipTutorialButton.SetActive(true);
+        }
+
+        if (!MonsterSpawner.inTutorial && MonsterSpawner.tutorialJustEnded)
+        {
+            YarnBarTending.instance = gameObject.GetComponent<YarnBarTending>();
+            YarnBarTending.EnableDialogueFunctions();
+            MonsterSpawner.tutorialJustEnded = false;
+        }
     }
 
     // Slides the monster towards a location
@@ -232,7 +357,7 @@ public class Monster : MonoBehaviour
         List<List<string>> allOrders = new List<List<string>>();
         for (int i = 1; i < lines.Length; ++i)
         {
-            string[] elements = lines[i].Split(',');
+            string[] elements = lines[i].Split(';');
             List<string> order = new List<string>();
             for (int j = 0; j < elements.Length; ++j)
             {
@@ -240,8 +365,8 @@ public class Monster : MonoBehaviour
             }
 
             // last one is blank
-            if (i == lines.Length - 1)
-                order.RemoveAt(order.Count - 1);
+            /*if (i == lines.Length - 1)
+                order.RemoveAt(order.Count - 1);*/
 
             // put this ArrayList into recipes
             allOrders.Add(order);
@@ -255,8 +380,16 @@ public class Monster : MonoBehaviour
         //     temp += "\n";
         // }
         // Debug.Log(temp);
-
-        drinkOrder = allOrders[0][0];
-        orderNotes = allOrders[0][1];
+        drinkOrder = allOrders[timesVisited][0];
+        orderNotes = allOrders[timesVisited][1];
 	}
+
+    // name comparison class, don't mind
+    public class NameComp : IComparer<Monster>
+    {
+        public int Compare(Monster x, Monster y)
+        {
+            return x.name.CompareTo(y.name);
+        }
+    }
 }

@@ -1,0 +1,85 @@
+fileFormatVersion: 2
+guid: b51e78c4ec0ae2240b6f1e0deece1079
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - KnifeUnicorn 1-KnifeUnicornAH1-0
+  - KnifeUnicorn 1-KnifeUnicornAH1-1
+  - KnifeUnicorn 1-KnifeUnicornAH1-2
+  - KnifeUnicorn 1-KnifeUnicornAH1-3
+  - KnifeUnicorn 1-KnifeUnicornAH1-4
+  - KnifeUnicorn 1-KnifeUnicornAH1-5
+  - KnifeUnicorn 1-KnifeUnicornAH1-6
+  - KnifeUnicorn 1-KnifeUnicornAH1-7
+  - KnifeUnicorn 1-KnifeUnicornAH1-8
+  - KnifeUnicorn 1-KnifeUnicornAH1-9
+  - KnifeUnicorn 1-KnifeUnicornAH1-10
+  - KnifeUnicorn 1-KnifeUnicornAH1-11
+  - KnifeUnicorn 1-KnifeUnicornAH1-12
+  - KnifeUnicorn 1-KnifeUnicornAH1-13
+  - KnifeUnicorn 1-KnifeUnicornAH1-14
+  - KnifeUnicorn 1-KnifeUnicornAH1-15
+  - KnifeUnicorn 1-KnifeUnicornAH1-16
+  - KnifeUnicorn 1-KnifeUnicornAH1-17
+  - KnifeUnicorn 1-KnifeUnicornAH1-18
+  - KnifeUnicorn 1-KnifeUnicornAH1-19
+  - KnifeUnicorn 1-KnifeUnicornAH1-20
+  - KnifeUnicorn 1-KnifeUnicornAH1-21
+  - KnifeUnicorn 1-KnifeUnicornAH2WrongAnswer-22
+  - KnifeUnicorn 1-KnifeUnicornAH2WrongAnswer-23
+  - KnifeUnicorn 1-KnifeUnicornAH2WrongAnswer-24
+  - KnifeUnicorn 1-KnifeUnicornAH2WrongAnswer-25
+  - KnifeUnicorn 1-KnifeUnicornAH2WrongAnswer-26
+  - KnifeUnicorn 1-KnifeUnicornAH2WrongAnswer-27
+  - KnifeUnicorn 1-KnifeUnicornAH2WrongAnswer-28
+  - KnifeUnicorn 1-KnifeUnicornAH2WrongAnswer-29
+  - KnifeUnicorn 1-KnifeUnicornAH2WrongAnswer-30
+  - KnifeUnicorn 1-KnifeUnicornAH2RightAnswer-31
+  - KnifeUnicorn 1-KnifeUnicornAH2RightAnswer-32
+  - KnifeUnicorn 1-KnifeUnicornAH2RightAnswer-33
+  - KnifeUnicorn 1-KnifeUnicornAH2RightAnswer-34
+  - KnifeUnicorn 1-KnifeUnicornAH2RightAnswer-35
+  - KnifeUnicorn 1-KnifeUnicornAH2RightAnswer-36
+  - KnifeUnicorn 1-KnifeUnicornAH2RightAnswer-37
+  - KnifeUnicorn 1-KnifeUnicornAH2RightAnswer-38
+  - KnifeUnicorn 1-KnifeUnicornOrder2-39
+  - KnifeUnicorn 1-KnifeUnicornOrder2-40
+  - KnifeUnicorn 1-KnifeUnicornOrder2-41
+  - KnifeUnicorn 1-KnifeUnicornOrder4-42
+  - KnifeUnicorn 1-KnifeUnicornOrder4-43
+  - KnifeUnicorn 1-KnifeUnicornOrder4-44
+  - KnifeUnicorn 1-KnifeUnicornOrder6-45
+  - KnifeUnicorn 1-KnifeUnicornOrder6-46
+  - KnifeUnicorn 1-KnifeUnicornOrder6-47
+  - KnifeUnicorn 1-KnifeUnicornOrder6-48
+  - KnifeUnicorn 1-KnifeUnicornFeedbackGreat-49
+  - KnifeUnicorn 1-KnifeUnicornFeedbackGreat-50
+  - KnifeUnicorn 1-KnifeUnicornFeedbackGreat-51
+  - KnifeUnicorn 1-KnifeUnicornFeedbackGreat-52
+  - KnifeUnicorn 1-KnifeUnicornFeedbackGreat-53
+  - KnifeUnicorn 1-KnifeUnicornFeedbackGreat-54
+  - KnifeUnicorn 1-KnifeUnicornFeedbackRatios-55
+  - KnifeUnicorn 1-KnifeUnicornFeedbackRatios-56
+  - KnifeUnicorn 1-KnifeUnicornFeedbackRatios-57
+  - KnifeUnicorn 1-KnifeUnicornFeedbackRatios-58
+  - KnifeUnicorn 1-KnifeUnicornFeedbackRatios-59
+  - KnifeUnicorn 1-KnifeUnicornFeedbackRatios-60
+  - KnifeUnicorn 1-KnifeUnicornFeedbackIngredients-61
+  - KnifeUnicorn 1-KnifeUnicornFeedbackIngredients-62
+  - KnifeUnicorn 1-KnifeUnicornFeedbackIngredients-63
+  - KnifeUnicorn 1-KnifeUnicornFeedbackIngredients-64
+  - KnifeUnicorn 1-KnifeUnicornFeedbackIngredients-65
+  - KnifeUnicorn 1-KnifeUnicornFeedbackIngredients-66
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: b51e78c4ec0ae2240b6f1e0deece1079,
+    type: 3}
+  localizations: []

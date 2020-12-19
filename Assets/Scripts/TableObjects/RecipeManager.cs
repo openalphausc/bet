@@ -44,6 +44,8 @@ public class RecipeManager : MonoBehaviour
             if(ingredient.name == "zombie flesh") {
                 lightColor = new Color(8.0f, 145.0f, 0.0f, 1.0f);
             }
+
+            lightColor = new Color(255.0f, 255.0f, 255.0f, 1.0f); // make them all white
             lightColor /= 255.0f;
     		ingredient.GetComponent<Light2D>().color = lightColor;
     	}
@@ -54,7 +56,7 @@ public class RecipeManager : MonoBehaviour
     {
         // For each line in the CSV, set the drink name and the ingredients
         List<List<string>> csvResults = ReadCSV(colorsFile);
-        for (int i = 0; i < csvResults.Count; i++)
+        for (int i = 0; i < csvResults.Count - 1; i++)
         {
             Drink currentDrink = new Drink();
             List<string> ingredients = new List<string>();
@@ -73,7 +75,7 @@ public class RecipeManager : MonoBehaviour
         for (int i = 0; i < csvResults.Count; i++)
         {
         	Drink currentDrink = new Drink();
-            List<string> ingredients = new List<string>();
+            bool hasTopping = false;
             for (int j = 0; j < csvResults[i].Count; j++)
             {
                 if (j == 0)
@@ -84,14 +86,18 @@ public class RecipeManager : MonoBehaviour
                 else
                 {
                     // Ingredient
-                    ingredients.Add(csvResults[i][j]);
+                    if(!currentDrink.AddIngredient(csvResults[i][j]) && csvResults[i][j].Contains(";"))
+                    {
+                        string[] toppingManip = csvResults[i][j].Split(';');
+                        currentDrink.AddIngredient(toppingManip[0]);
+                        currentDrink.BlendToppings();
+                        currentDrink.AddIngredient(toppingManip[1]);
+                        hasTopping = true;
+                    }
                 }
             }
 
-            currentDrink.ingredients = ingredients;
-            foreach(string ingredient in currentDrink.ingredients) {
-            	currentDrink.color += ingredientColors[ingredient]/currentDrink.ingredients.Count;
-            }
+            if(!hasTopping) currentDrink.BlendToppings();
             recipes.Add(currentDrink);
         }
         recipes.Sort(new Drink.DrinkComp());

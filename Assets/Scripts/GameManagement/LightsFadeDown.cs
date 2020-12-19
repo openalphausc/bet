@@ -41,6 +41,7 @@ public class LightsFadeDown : MonoBehaviour
             {
                 fadingDown = false;
                 // change scene here
+                MonsterSpawner.tutorialHasRun = false;
                 SceneManager.LoadScene(sceneToChangeTo);
             }
         }
@@ -54,4 +55,6 @@ public class LightsFadeDown : MonoBehaviour
         }
         fadingDown = true;
     }
+
+    
 }

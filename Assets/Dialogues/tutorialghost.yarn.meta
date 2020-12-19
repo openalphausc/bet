@@ -1,0 +1,112 @@
+fileFormatVersion: 2
+guid: f3c0d84c608d041c1a3279c2b0d6d80d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - tutorialghost 1-TutorialGhostDay1-0
+  - tutorialghost 1-TutorialGhostDay1-1
+  - tutorialghost 1-TutorialGhostDay1-2
+  - tutorialghost 1-TutorialGhostDay1-3
+  - tutorialghost 1-TutorialGhostDay1-4
+  - tutorialghost 1-TutorialGhostDay1-5
+  - tutorialghost 1-TutorialGhostDay1-6
+  - tutorialghost 1-TutorialGhostDay1-7
+  - tutorialghost 1-TutorialGhostDay1-8
+  - tutorialghost 1-TutorialGhostDay1-9
+  - tutorialghost 1-TutorialGhostDay1-10
+  - tutorialghost 1-TutorialGhostDay1-11
+  - tutorialghost 1-TutorialGhostDay1-12
+  - tutorialghost 1-TutorialGhostDay1-13
+  - tutorialghost 1-TutorialGhostDay1-14
+  - tutorialghost 1-TutorialGhostDay1-15
+  - tutorialghost 1-TutorialGhostDay1-16
+  - tutorialghost 1-TutorialGhostDay1-17
+  - tutorialghost 1-TutorialGhostDay1-18
+  - tutorialghost 1-TutorialGhostDay1-19
+  - tutorialghost 1-TutorialGhostDay1-20
+  - tutorialghost 1-TutorialGhostDay1-21
+  - tutorialghost 1-TutorialGhostDay1AH-22
+  - tutorialghost 1-TutorialGhostDay1AH-23
+  - tutorialghost 1-TutorialGhostDay1AH-24
+  - tutorialghost 1-TutorialGhostDay1AH-25
+  - tutorialghost 1-TutorialGhostDay1AH-26
+  - tutorialghost 1-TutorialGhostDay2-27
+  - tutorialghost 1-TutorialGhostDay2-28
+  - tutorialghost 1-TutorialGhostDay2-29
+  - tutorialghost 1-TutorialGhostDay2-30
+  - tutorialghost 1-TutorialGhostDay2-31
+  - tutorialghost 1-TutorialGhostDay2-32
+  - tutorialghost 1-TutorialGhostDay2-33
+  - tutorialghost 1-TutorialGhostDay2-34
+  - tutorialghost 1-TutorialGhostDay2-35
+  - tutorialghost 1-TutorialGhostDay2-36
+  - tutorialghost 1-TutorialGhostDay3-37
+  - tutorialghost 1-TutorialGhostDay3-38
+  - tutorialghost 1-TutorialGhostDay3-39
+  - tutorialghost 1-TutorialGhostDay3-40
+  - tutorialghost 1-TutorialGhostDay3-41
+  - tutorialghost 1-TutorialGhostDay3-42
+  - tutorialghost 1-TutorialGhostDay3-43
+  - tutorialghost 1-TutorialGhostDay3-44
+  - tutorialghost 1-TutorialGhostDay3-45
+  - tutorialghost 1-TutorialGhostDay3-46
+  - tutorialghost 1-TutorialGhostDay3-47
+  - tutorialghost 1-TutorialGhostDay3-48
+  - tutorialghost 1-TutorialGhostDay3-49
+  - tutorialghost 1-TutorialGhostDay3-50
+  - tutorialghost 1-TutorialGhostDay3-51
+  - tutorialghost 1-TutorialGhostDay3-52
+  - tutorialghost 1-TutorialGhostDay3-53
+  - tutorialghost 1-TutorialGhostDay6-54
+  - tutorialghost 1-TutorialGhostDay6-55
+  - tutorialghost 1-TutorialGhostDay6-56
+  - tutorialghost 1-TutorialGhostDay6-57
+  - tutorialghost 1-TutorialGhostDay6-58
+  - tutorialghost 1-TutorialGhostDay6-59
+  - tutorialghost 1-TutorialGhostDay6-60
+  - tutorialghost 1-TutorialGhostGoodEnding-61
+  - tutorialghost 1-TutorialGhostGoodEnding-62
+  - tutorialghost 1-TutorialGhostGoodEnding-63
+  - tutorialghost 1-TutorialGhostGoodEnding-64
+  - tutorialghost 1-TutorialGhostGoodEnding-65
+  - tutorialghost 1-TutorialGhostGoodEnding-66
+  - tutorialghost 1-TutorialGhostGoodEnding-67
+  - tutorialghost 1-TutorialGhostGoodEnding-68
+  - tutorialghost 1-TutorialGhostGoodEnding-69
+  - tutorialghost 1-TutorialGhostGoodEnding-70
+  - tutorialghost 1-TutorialGhostGoodEnding-71
+  - tutorialghost 1-TutorialGhostGoodEnding-72
+  - tutorialghost 1-TutorialGhostGoodEnding-73
+  - tutorialghost 1-TutorialGhostGoodEnding-74
+  - tutorialghost 1-TutorialGhostGoodEnding-75
+  - tutorialghost 1-TutorialGhostGoodEnding-76
+  - tutorialghost 1-TutorialGhostGoodEnding-77
+  - tutorialghost 1-TutorialGhostBadEnding-78
+  - tutorialghost 1-TutorialGhostBadEnding-79
+  - tutorialghost 1-TutorialGhostBadEnding-80
+  - tutorialghost 1-TutorialGhostBadEnding-81
+  - tutorialghost 1-TutorialGhostBadEnding-82
+  - tutorialghost 1-TutorialGhostBadEnding-83
+  - tutorialghost 1-TutorialGhostBadEnding-84
+  - tutorialghost 1-TutorialGhostBadEnding-85
+  - tutorialghost 1-TutorialGhostBadEnding-86
+  - tutorialghost 1-TutorialGhostBadEnding-87
+  - tutorialghost 1-TutorialGhostBadEnding-88
+  - tutorialghost 1-TutorialGhostBadEnding-89
+  - tutorialghost 1-TutorialGhostBadEnding-90
+  - tutorialghost 1-TutorialGhostBadEnding-91
+  - tutorialghost 1-TutorialGhostBadEnding-92
+  - tutorialghost 1-TutorialGhostBadEnding-93
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: f3c0d84c608d041c1a3279c2b0d6d80d,
+    type: 3}
+  localizations: []

@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AfterHours.unity
     guid: ded2b4368512cd54a8dde022f90c8556
+  - enabled: 1
+    path: Assets/Scenes/Tabsheet.unity
+    guid: 3b4e6fe1d43930c44a85cd71b11cdd26
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 06d302b214d18fd4787ee87a63faedd5
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 52eb10c759e204610907cb959c749ed3
   m_configObjects: {}

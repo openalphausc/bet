@@ -39,8 +39,8 @@ public class DialoguePositionTracker : MonoBehaviour
         float soloIntensity = 0.7f;
         if (positionName == "centerSeat")
         {
-            left = 744;
-            right = 218;
+            left = 767;
+            right = 60;
             posY = -42;
             leftMonsterLight.enabled = false;
             rightMonsterLight.enabled = false;
@@ -51,7 +51,7 @@ public class DialoguePositionTracker : MonoBehaviour
         else if (positionName == "leftSeat")
         {
             left = 366;
-            right = 599;
+            right = 417;
             posY = -42;
             leftMonsterLight.enabled = true;
             rightMonsterLight.enabled = false;
@@ -61,7 +61,7 @@ public class DialoguePositionTracker : MonoBehaviour
         }
         else if (positionName == "rightSeat")
         {
-            left = 599;
+            left = 417;
             right = 363;
             posY = -42;
             leftMonsterLight.enabled = false;
@@ -75,8 +75,8 @@ public class DialoguePositionTracker : MonoBehaviour
         dialogueContainer.offsetMax = new Vector2(-right, posY);
         if (drinkIcon != null)
         {
-            drinkIcon.offsetMin = new Vector2(left + 287, drinkIcon.offsetMin.y);
-            drinkIcon.offsetMax = new Vector2(-(right - 69), -93);
+            drinkIcon.offsetMin = new Vector2(744 + 287, drinkIcon.offsetMin.y);
+            drinkIcon.offsetMax = new Vector2(-(218 - 69), -93);
         }
     }
 
@@ -86,7 +86,6 @@ public class DialoguePositionTracker : MonoBehaviour
         {
             // hide the drink icon
             drinkIcon.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            drinkIcon.gameObject.transform.GetChild(1).gameObject.SetActive(false);
         }
 
         if (leftMonsterLight != null)
@@ -106,8 +105,7 @@ public class DialoguePositionTracker : MonoBehaviour
         if (drinkIcon != null)
         {
             // show the drink icon
-            drinkIcon.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            GameObject liquidIcon = drinkIcon.gameObject.transform.GetChild(1).gameObject;
+            GameObject liquidIcon = drinkIcon.gameObject.transform.GetChild(0).gameObject;
             liquidIcon.SetActive(true);
             liquidIcon.GetComponent<Image>().color = color;
         }
