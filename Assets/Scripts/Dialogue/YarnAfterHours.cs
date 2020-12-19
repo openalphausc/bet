@@ -19,21 +19,26 @@ public class YarnAfterHours : MonoBehaviour
             }
             else
             {
-                int index = AfterHoursMonsterSpawner.findMonster(gameObject.name);
-                if (index != -1)
-                {
-                    if ((int)AfterHoursMonsterSpawner.monsterAnswers[index] == 0)
-                    {
-                        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH2WrongAnswer");
-                    }
-                    else if ((int)AfterHoursMonsterSpawner.monsterAnswers[index] == 1)
-                    {
-                        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH2RightAnswer");
-                    }
+                if(dataStorage.stayingMonster == "Ghost"){
+                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostNoInvite");
                 }
-                else
-                {
-                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH1");
+                else {
+                    int index = AfterHoursMonsterSpawner.findMonster(gameObject.name);
+                    if (index != -1)
+                    {
+                        if ((int)AfterHoursMonsterSpawner.monsterAnswers[index] == 0)
+                        {
+                            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH2WrongAnswer");
+                        }
+                        else if ((int)AfterHoursMonsterSpawner.monsterAnswers[index] == 1)
+                        {
+                            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH2RightAnswer");
+                        }
+                    }
+                    else
+                    {
+                        FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH1");
+                    }
                 }
             }
         }
@@ -125,9 +130,15 @@ public class YarnAfterHours : MonoBehaviour
     [YarnCommand("TutorialOver")]
     public void endTutorial()
     {
-        AfterHoursMonsterSpawner.tutorialOver = true;
-        AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>().inAfterHours = false;
-        AfterHoursMonsterSpawner.currentMonster = null;
-        gameObject.SetActive(false);
+        if(dataStorage.stayingMonster == "Ghost") {
+            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostNoInvite");
+        }
+        else {
+            AfterHoursMonsterSpawner.tutorialOver = true;
+            AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>().inAfterHours = false;
+            AfterHoursMonsterSpawner.currentMonster = null;
+            gameObject.SetActive(false);
+        }
+        
     }
 }

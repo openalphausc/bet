@@ -383,6 +383,8 @@ position:
 
 Oh actually, looks like you didn't invite anyone today.
 
-That's alright! Let's just move on to tomorrow...
+Nevermind, that's alright! Let's just move on to tomorrow...
+
+<<FinishedTalkingWith TutorialGhost>>
 
 ===
