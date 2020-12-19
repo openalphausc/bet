@@ -179,6 +179,7 @@ MonoBehaviour:
   Day5LetterSubtitles: {fileID: 0}
   Day6WreckingBallSubtitles: {fileID: 0}
   Day7DoorSubtitles: {fileID: 0}
+  buttonSounds: {fileID: 1160976942}
 --- !u!212 &5301485
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -398,6 +399,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64224312}
   m_CullTransparentMesh: 0
+  buttonSounds: {fileID: 1160976942}
 --- !u!1 &96425438
 GameObject:
   m_ObjectHideFlags: 0
