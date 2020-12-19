@@ -21,11 +21,13 @@ public class TabsheetGroupMonsters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dataStorage.allMonsterPoints = 0;
         if (dataStorage.currentDay == 0) return;
         //Debug.Log("Length of monsters array: " + dataStorage.monsters.Count);
         allMonsters = dataStorage.monsters;
         foreach (Monster monster in allMonsters)
         {
+            dataStorage.allMonsterPoints += monster.totalPoints;
             // If the total points are 0, then the monster never ordered
             if (monster.totalPoints == 0)
             {
@@ -75,6 +77,8 @@ public class TabsheetGroupMonsters : MonoBehaviour
         oneStarMonstersText.text = ListToString(oneStarMonsters);
         twoStarMonstersText.text = ListToString(twoStarMonsters);
         threeStarMonstersText.text = ListToString(threeStarMonsters);
+
+        dataStorage.threeStarMonsters = threeStarMonsters;
 
     }
 
