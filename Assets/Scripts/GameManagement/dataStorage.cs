@@ -10,6 +10,8 @@ public class dataStorage : MonoBehaviour
 
     // List of all monsters for tabsheet
     public static List<Monster> monsters;
+    public static int allMonsterPoints = 0;
+    public static List<Monster> threeStarMonsters = new List<Monster>();
 
     // Start is called before the first frame update
     void Start()
