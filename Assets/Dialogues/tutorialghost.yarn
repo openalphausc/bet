@@ -381,8 +381,12 @@ colorID:
 position:
 ---
 
-Oh actually, looks like you didn't invite anyone today.
+Hmmm...
 
-That's alright! Let's just move on to tomorrow...
+Seems like you didn't invite anyone today. That's alright! Let's just move on to tomorrow...
+
+<<finishedTalkingWith Ghost>>
+
+Goodbye!
 
 ===

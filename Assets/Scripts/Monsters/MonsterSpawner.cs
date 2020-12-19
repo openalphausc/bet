@@ -34,6 +34,7 @@ public class MonsterSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dataStorage.stayingMonster = "Ghost";
         CreateMonsterQueue();
         monstersOfTheDay = monsterQueue[dataStorage.currentDay];
 
@@ -41,31 +42,6 @@ public class MonsterSpawner : MonoBehaviour
         //GameObject.Find("SkipTutorialButton").SetActive(false);
         SkipTutorialButton = GameObject.Find("SkipTutorialButton");
         SkipTutorialButton.SetActive(false);
-
-        if (dataStorage.currentDay == 0)
-        {
-            dataStorage.stayingMonster = "Khepri";
-        }
-        if (dataStorage.currentDay == 1)
-        {
-            dataStorage.stayingMonster = "CowboyAlien";
-        }
-        if (dataStorage.currentDay == 2)
-        {
-            dataStorage.stayingMonster = "Shapeshifter";
-        }
-        if (dataStorage.currentDay == 3)
-        {
-            dataStorage.stayingMonster = "CowboyAlien";
-        }
-        if (dataStorage.currentDay == 4)
-        {
-            dataStorage.stayingMonster = "Shapeshifter";
-        }
-        if (dataStorage.currentDay == 5)
-        {
-            dataStorage.stayingMonster = "Khepri";
-        }
     }
 
     // Update is called once per frame

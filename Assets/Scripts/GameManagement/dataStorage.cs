@@ -26,4 +26,16 @@ public class dataStorage : MonoBehaviour
     {
         
     }
+
+    public static int findMonster(string monster)
+    {
+        for (int i = 0; i < monsters.Count; i++)
+        {
+            if (monster == monsters[i].name)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
