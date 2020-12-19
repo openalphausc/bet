@@ -2,13 +2,13 @@ Drink,Ingredient 1,Ingredient 2,Ingredient 3,Ingredient 4,Ingredient 5,Ingredien
 Happy Death Drink,cheeryBlossom,angelTears,angelTears
 Cornshire,vodka,cornpagne
 Royal Downfall,whiskey,whiskey,cornpagne,cornpagne,cornpagne
-Happy Happy Death Drink,cheeryBlossom,angelTears,angelTears,nightshade
-xXSicarusXx,angelTears,angelTears,vodka,vodka,vodka,mushrooms
-Yuck Yuck,blood,blood,blood,blood,whiskey,mud
-The Big Slurp,vodka,vodka,cheeryBlossom,nightshade
-Golden Summer,whiskey,whiskey,whiskey,cheeryBlossom,cheeryBlossom,goldenDust
-Country Charm,cornpagne,appleJuice,appleJuice,appleJuice,appleJuice,mud
-Happy Happy Happy Death Drink,cheeryBlossom,angelTears,angelTears,nightshade,nightshade
+Happy Happy Death Drink,cheeryBlossom,angelTears,angelTears;nightshade
+xXSicarusXx,angelTears,angelTears,vodka,vodka,vodka;mushrooms
+Yuck Yuck,blood,blood,blood,blood,whiskey;mud
+The Big Slurp,vodka,vodka,cheeryBlossom;nightshade
+Golden Summer,whiskey,whiskey,whiskey,cheeryBlossom,cheeryBlossom;goldenDust
+Country Charm,cornpagne,appleJuice,appleJuice,appleJuice,appleJuice;mud
+Happy Happy Happy Death Drink,cheeryBlossom,angelTears,angelTears,nightshade
 Chokky Milk,appleJuice,appleJuice,blood,blood,mud
 Tipsy Zombie,cheeryBlossom,cheeryBlossom,appleJuice,appleJuice,appleJuice;mushrooms
 Tempestuous Torment,whiskey,whiskey,whiskey,blood,blood;nightmareFuel
@@ -20,9 +20,9 @@ Adventure Ale,vodka,vodka,whiskey,goldenDust
 Late Bloomer,cornpagne,cornpagne,cornpagne,zombieFlesh,mushrooms,mushrooms
 Royal Darkness,whiskey,whiskey,goldenDust,goldenDust,goldenDust;mud
 Barking Banshee,appleJuice,appleJuice,appleJuice,nightmareFuel,zombieFlesh,nightshade
-x2XSicarusX2x,angelTears,angelTears,vodka,vodka,mushrooms,nightshade
+x2XSicarusX2x,angelTears,angelTears,vodka,vodka,vodka,mushrooms,nightshade
 Yucky Yucky,blood,blood,blood,whiskey,zombieFlesh,zombieFlesh
-Run 'N Gun,goldenDust,goldenDust;angelTears,angelTears,goldenDust,goldenDust
+Run 'N Gun,goldenDust,goldenDust,angelTears,angelTears;goldenDust
 Northern Blights,vodka,cheeryBlossom,cheeryBlossom,cheeryBlossom,mud
 Mossy Gravestone,cornpagne,cornpagne,cornpagne,cheeryBlossom,mushrooms,mushrooms
 Golden Hour Summer,whiskey,whiskey,whiskey,cheeryBlossom,cheeryBlossom,goldenDust
@@ -36,13 +36,13 @@ Perpetual Void,blood,appleJuice,appleJuice,nightmareFuel,nightmareFuel,mud
 The Bigger Slurp,vodka,vodka,vodka,cheeryBlossom,cheeryBlossom;mud
 Tripsy Zombie,cheeryBlossom,appleJuice,appleJuice,mushrooms,mushrooms,mushrooms
 Barking Banshee,appleJuice,appleJuice,nightmareFuel,zombieFlesh,nightshade;nightshade
-Fun Run 'N Gun,goldenDust,goldenDust,mushrooms;angelTears,angelTears,goldenDust
+Fun Run 'N Gun,goldenDust,goldenDust,mushrooms,angelTears,angelTears;goldenDust
 Cursed Misery,cheeryBlossom,cheeryBlossom,cheeryBlossom,cornpagne,angelTears;nightshade
-Gravestone Deluxe,angelTears,angelTears,cheeryBlossom,mushrooms;nightmareFuel
+Gravestone Deluxe,angelTears,angelTears,cheeryBlossom,mushrooms,nightmareFuel
 Adventurous Ale,vodka,vodka,whiskey,goldenDust,goldenDust;mud
 The Biggest Slurp,vodka,cheeryBlossom,cheeryBlossom,cheeryBlossom,cheeryBlossom;nightshade
 Drunken Zombie,blood,blood,appleJuice,mushrooms;zombieFlesh
-xXSicarusXDx,angelTears,angelTears,vodka,nightmareFuel;mushrooms
+xXSicarusXDx,angelTears,angelTears,vodka,nightmareFuel,nightmareFuel;mushrooms
 Cursed Despair,cheeryBlossom,cheeryBlossom,cheeryBlossom,cornpagne,nightshade;nightshade
 Eternal Void,blood,appleJuice,appleJuice,nightmareFuel,nightmareFuel;mud
 Tricky Treat,whiskey,whiskey,whiskey,cheeryBlossom,goldenDust;nightshade
