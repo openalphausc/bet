@@ -46,6 +46,7 @@ public class YarnAfterHours : MonoBehaviour
     [YarnCommand("finishedTalkingWith")]
     public void deleteMonster()
     {
+        Debug.Log("delete ghost");
         gameObject.SetActive(false);
         gameObject.GetComponent<SpriteRenderer>().sprite = gameObject.GetComponent<Monster>().emotions[2];
         AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>().inAfterHours = false;
