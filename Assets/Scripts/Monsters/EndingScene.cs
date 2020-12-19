@@ -30,7 +30,7 @@ public class EndingScene : MonoBehaviour
         monster1 = "CowboyAlien";
         monster2 = "Utsuro";
         monster3 = "Khepri";
-        //FindBestSupports();
+        FindBestSupports();
         
         currentMonster = Instantiate(
                 Resources.Load<GameObject>("Prefabs/Monsters/Ghost"),
@@ -42,7 +42,7 @@ public class EndingScene : MonoBehaviour
         currentMonster.GetComponent<SpriteRenderer>().sprite = currentMonster.GetComponent<Monster>().emotions[2];
         currentMonster.GetComponent<SpriteRenderer>().transform.localScale = new Vector3(.9f, .9f, .9f);
         
-        if (dataStorage.totalPointsOverall < 6500)
+        if (dataStorage.totalPointsOverall > 6500)
         {
             ending = "GoodEnding";
             GameObject.Find("BadEnding").SetActive(false);
@@ -122,6 +122,7 @@ public class EndingScene : MonoBehaviour
 
     void FindBestSupports()
     {
+        /*
         int first = 0;
         int second = 0;
         int third = 0;
@@ -147,34 +148,50 @@ public class EndingScene : MonoBehaviour
 
         monster1 = dataStorage.monstersVisited[first];
         monster2 = dataStorage.monstersVisited[second];
-        monster3 = dataStorage.monstersVisited[third];
+        monster3 = dataStorage.monstersVisited[third];*/
+
+        // Use ReversePointsComp to get the best 3 supports at the beginning of the array
+        ReversePointsComp comp = new ReversePointsComp();
+        List<Monster> monstersTemp = dataStorage.monsters;
+        if (monstersTemp == null)
+            monstersTemp = new List<Monster>();
+
+        monstersTemp.Sort(comp);
+
+        switch (monstersTemp.Count)
+        {
+            case 0: // the player didn't interact with ANY monsters...
+                monster1 = "Khephri";
+                monster2 = "CowboyAlien";
+                monster3 = "Utsuro";
+                break;
+            case 1: // the player interacted with 1 monster
+                monster1 = monstersTemp[0].name;
+                monster2 = "CowboyAlien";
+                monster3 = "Utsuro";
+                break;
+            case 2:
+                monster1 = monstersTemp[0].name;
+                monster2 = monstersTemp[1].name;
+                monster3 = "Utsuro";
+                break;
+            default:
+                monster1 = monstersTemp[0].name;
+                monster2 = monstersTemp[1].name;
+                monster3 = monstersTemp[2].name;
+                break;
+        }
     }
 
-    public class PointsComp : IComparer<Monster>
+    public class ReversePointsComp : IComparer<Monster>
     {
         public int Compare(Monster x, Monster y)
         {
             // Calculate the percentage of points earned for each monster.
             // If either's total points is 0, then the percent is also 0.
-            double xPercent;
-            double yPercent;
-            if (x.totalPoints == 0)
-            {
-                xPercent = 0;
-            }
-            else
-            {
-                xPercent = (x.pointsEarned + 0.0) / x.totalPoints;
-            }
-            if (y.totalPoints == 0)
-            {
-                yPercent = 0;
-            }
-            else
-            {
-                yPercent = (y.pointsEarned + 0.0) / y.totalPoints;
-            }
-            return xPercent.CompareTo(yPercent);
+            double xPoints = x.pointsEarned;
+            double yPoints = y.pointsEarned;
+            return yPercent.CompareTo(xPercent); // switch yPercent and xPercent for a regular points comp
         }
     }
 }
