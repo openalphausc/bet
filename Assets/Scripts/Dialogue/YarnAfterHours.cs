@@ -19,20 +19,14 @@ public class YarnAfterHours : MonoBehaviour
             }
             else
             {
-
-                /*NameComp nameComp = new NameComp();
-                int index = dataStorage.monsters.BinarySearch(AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>(), nameComp);
-                if (index >= 0)
-                {*/
                 int index = AfterHoursMonsterSpawner.findMonster(gameObject.name);
-
                 if (index != -1)
                 {
-                    if (index == 0)
+                    if ((int)AfterHoursMonsterSpawner.monsterAnswers[index] == 0)
                     {
                         FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH2WrongAnswer");
                     }
-                    else if (index == 1)
+                    else if ((int)AfterHoursMonsterSpawner.monsterAnswers[index] == 1)
                     {
                         FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(gameObject.name + "AH2RightAnswer");
                     }
@@ -70,16 +64,16 @@ public class YarnAfterHours : MonoBehaviour
         string talkingMonster = dataStorage.stayingMonster;
         // find the talking monster in the points array
         NameComp nameComp = new NameComp();
-        int index = dataStorage.monsters.BinarySearch(AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>(), nameComp);
+        int index = dataStorage.findMonster(talkingMonster);
         // if the monster is in the data storage array, update its points
         if (index >= 0)
         {
             dataStorage.monsters[index].pointsEarned += 50;
             dataStorage.monsters[index].totalPoints += 50;
             Debug.Log("+50 points to " + dataStorage.monsters[index].name);
-            if (AfterHoursMonsterSpawner.findMonster(currentMonster.name) == -1)
+            if (AfterHoursMonsterSpawner.findMonster(AfterHoursMonsterSpawner.currentMonster.name) == -1)
             {
-                AfterHoursMonsterSpawner.monsterList.Add(currentMonster.name);
+                AfterHoursMonsterSpawner.monsterList.Add(AfterHoursMonsterSpawner.currentMonster.name);
             }
             AfterHoursMonsterSpawner.monsterAnswers.Add(1);
         }
@@ -98,16 +92,16 @@ public class YarnAfterHours : MonoBehaviour
         string talkingMonster = dataStorage.stayingMonster;
         // find the talking monster in the points array
         NameComp nameComp = new NameComp();
-        int index = dataStorage.monsters.BinarySearch(AfterHoursMonsterSpawner.currentMonster.GetComponent<Monster>(), nameComp);
+        int index = dataStorage.findMonster(talkingMonster);
         // if the monster is in the data storage array, update its points
-        if (index >= 0)
+        if (index != -1)
         {
             dataStorage.monsters[index].pointsEarned += 25;
             dataStorage.monsters[index].totalPoints += 50;
             Debug.Log("+25 points to " + dataStorage.monsters[index].name);
-            if (AfterHoursMonsterSpawner.findMonster(currentMonster.name) == -1)
+            if (AfterHoursMonsterSpawner.findMonster(AfterHoursMonsterSpawner.currentMonster.name) == -1)
             {
-               AfterHoursMonsterSpawner.monsterList.Add(currentMonster.name);
+               AfterHoursMonsterSpawner.monsterList.Add(AfterHoursMonsterSpawner.currentMonster.name);
             }
             AfterHoursMonsterSpawner.monsterAnswers.Add(0);
         }
