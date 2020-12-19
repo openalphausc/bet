@@ -10,6 +10,8 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
     public static bool active = false;
     public static bool tutorialOver = false;
     private static bool khepriSpawned = false;
+    public static ArrayList monsterList = new ArrayList();
+    public static ArrayList monsterAnswers = new ArrayList();
     void Start()
     {
         // Instantiate ghost if first day, otherwise regular monster
@@ -33,7 +35,10 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
 
             currentMonster.name = dataStorage.stayingMonster;
             currentMonster.GetComponent<Monster>().inAfterHours = true;
+
+            
         }
+
         active = true;
     }
 
@@ -51,6 +56,19 @@ public class AfterHoursMonsterSpawner : MonoBehaviour
             currentMonster.GetComponent<Monster>().inAfterHours = true;
             khepriSpawned = true;
         }
+    }
+
+    //finds if monster has been in afterhours, if it has, then it will return the index of its answer. Otherwise it returns -1.
+    public static int findMonster(string monster)
+    {
+        for (int i = 0; i < monsterList.Count; i++)
+        {
+            if (monster == (string)monsterList[i])
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 
 }
