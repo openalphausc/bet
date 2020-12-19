@@ -1,4 +1,25 @@
+title: EldritchMonsterGoodEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion EldritchMonster surprised>>
+Hi bartender, I am pleasantly surprised to <see> you. Glad to have <met> you.
+<<changeEmotion EldritchMonster happy>>
+You've helped me and many <others> so much. Here's to many more years of business.
 
+===
+title: EldritchMonsterBadEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion EldritchMonster sad>>
+B-b-bartender… I am <disheartened> to see what the BBC has done.
+<<changeEmotion EldritchMonster neutral>>
+I am <pleased> to have met you. We can only <hope> their greed stops here.
+
+===
 title: EldritchMonsterAH1
 tags:
 colorID:

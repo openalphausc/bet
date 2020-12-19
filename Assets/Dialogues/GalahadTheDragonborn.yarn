@@ -1,3 +1,29 @@
+title: GalahadTheDragonbornGoodEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion GalahadTheDragonborn happy>>
+Hell, kid, what did I tell ya!? You're a champ, pullin' through like that. 
+
+All the more reason ta keep your head up, now, ain’t it? 
+
+Don’t look at me like that, heh… the money was worth it. Yer stickin’ it to the BBC now! Can’t wait ta see what’s next.
+
+===
+title: GalahadTheDragonbornBadEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion GalahadTheDragonborn sad>>
+Hey, kid… keep in touch, won’t ya? Shit doesn’t hafta end here… there’ll be plenty more opportunities, so keep goin’. 
+
+One foot after the other… one day, runnin’ won’t be so hard.
+
+See ya around.
+
+===
 title: GalahadTheDragonbornAH1
 tags:
 colorID:

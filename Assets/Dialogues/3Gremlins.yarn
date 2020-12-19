@@ -1,4 +1,26 @@
+title: 3GremlinsGoodEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion 3Gremlins happy>>
+We’re so happy that your bar is gonna stay open! 
 
+Now we can bring mom around sometime to prove just how cool you are!
+
+===
+title: 3GremlinsBadEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion 3Gremlins sad>>
+We’re so sorry your bar is gonna close…
+
+<<changeEmotion 3Gremlins neutral>>
+We’re still really glad we got to know you though… That BBC is gonna pay for taking our favorite bartender away!
+
+===
 title: 3GremlinsAH1
 tags:
 colorID:

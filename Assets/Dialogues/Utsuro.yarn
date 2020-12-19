@@ -1,4 +1,27 @@
+title: UtsuroGoodEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion Utsuro surprised>>
+...it worked..
+...you’re still in business.. we all pitched in..
+<<changeEmotion Utsuro happy>>
+..i’m happy to see you stick around..
+...this place has done so much good.. it was only right...
 
+===
+title: UtsuroBadEnding
+tags:
+colorID:
+position:
+---
+<<changeEmotion Utsuro sad>>
+..well i guess this is it..
+..good luck with whatever you do next..
+…see you around..
+
+===
 title: UtsuroAH1
 tags:
 colorID:
