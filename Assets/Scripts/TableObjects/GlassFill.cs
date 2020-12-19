@@ -255,8 +255,8 @@ public class GlassFill : MonoBehaviour
             else if (topping == "mud") { layerName = "OA_GraveyardMudTop0"; offset.y = 3.5f; offset.x = 0.2f; }
 			else if (topping == "zombieFlesh") { layerName = "OA ZombieFleshTop1"; offset.y = 1f; offset.x = 0f; }
 			else if (topping == "nightmareFuel") { layerName = "OA NightmareTop0"; offset.y = 2f; offset.x = 0f; }
-            else if (topping == "nightshade") { continue; }
-            else if (topping == "mushrooms") { continue; }
+            else if (topping == "nightshade") { layerName = "Nightshade"; offset.y = 2.2f; offset.x = 0f; }
+            else if (topping == "mushrooms") { layerName = "Mushrooms"; offset.y = 1.5f; offset.x = 0.6f; }
 			
 			// Calculate position to place object
 			position.y = minY + curLevel * layerHeight;
