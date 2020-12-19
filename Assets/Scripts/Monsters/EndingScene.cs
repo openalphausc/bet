@@ -42,7 +42,7 @@ public class EndingScene : MonoBehaviour
         currentMonster.GetComponent<SpriteRenderer>().sprite = currentMonster.GetComponent<Monster>().emotions[2];
         currentMonster.GetComponent<SpriteRenderer>().transform.localScale = new Vector3(.9f, .9f, .9f);
         
-        if (dataStorage.totalPointsOverall > 6500)
+        if (dataStorage.totalPointsOverall > 7000)
         {
             ending = "GoodEnding";
             GameObject.Find("BadEnding").SetActive(false);

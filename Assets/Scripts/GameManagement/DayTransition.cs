@@ -15,6 +15,7 @@ public class DayTransition : MonoBehaviour
     public GameObject day6to7;
     // buttons
     public GameObject NextButton;
+    public GameObject FinalDayButton;
 
     // calendar game objects
     public GameObject calendar1;
@@ -66,6 +67,8 @@ public class DayTransition : MonoBehaviour
         calendar7.SetActive(false);
         OpenBarButton = GameObject.Find("OpenBarButton");
         OpenBarButton.SetActive(false);
+        FinalDayButton = GameObject.Find("FinalDayButton");
+        FinalDayButton.SetActive(false);
         BarBackground = GameObject.Find("Day1BarBackground");
         BarBackground.SetActive(false);
         EvilBuilding = GameObject.Find("Day1BBCBuilding");
@@ -164,9 +167,6 @@ public class DayTransition : MonoBehaviour
     public void startCalendarTransition()
     {
         buttonSounds.GetComponent<AudioSource>().Play();
-        GameObject.Find("Next...Button").SetActive(false);
-        GameObject.Find("TransitionBackground").SetActive(false);
-        OpenBarButton.SetActive(true);
         switch (dataStorage.currentDay-1)
         {
             case -1:
@@ -176,36 +176,57 @@ public class DayTransition : MonoBehaviour
                 Day1CalendarSubtitles.SetActive(true);
                 Day1CalendarSubtitles2.SetActive(true);
                 Day1CalendarSubtitles3.SetActive(true);
+                GameObject.Find("Next...Button").SetActive(false);
+                GameObject.Find("TransitionBackground").SetActive(false);
+                OpenBarButton.SetActive(true);
                 break;
             case 0:
                 day1to2.SetActive(false);
                 Day2PhoneSubtitles.SetActive(false);
                 calendar2.SetActive(true);
+                GameObject.Find("Next...Button").SetActive(false);
+                GameObject.Find("TransitionBackground").SetActive(false);
+                OpenBarButton.SetActive(true);
                 break;
             case 1:
                 day2to3.SetActive(false);
                 Day3StoolsSubtitles.SetActive(false);
                 calendar3.SetActive(true);
+                GameObject.Find("Next...Button").SetActive(false);
+                GameObject.Find("TransitionBackground").SetActive(false);
+                OpenBarButton.SetActive(true);
                 break;
             case 2:
                 day3to4.SetActive(false);
                 Day4GiftSubtitles.SetActive(false);
                 calendar4.SetActive(true);
+                GameObject.Find("Next...Button").SetActive(false);
+                GameObject.Find("TransitionBackground").SetActive(false);
+                OpenBarButton.SetActive(true);
                 break;
             case 3:
                 day4to5.SetActive(false);
                 Day5LetterSubtitles.SetActive(false);
                 calendar5.SetActive(true);
+                GameObject.Find("Next...Button").SetActive(false);
+                GameObject.Find("TransitionBackground").SetActive(false);
+                OpenBarButton.SetActive(true);
                 break;
             case 4:
                 day5to6.SetActive(false);
                 Day6WreckingBallSubtitles.SetActive(false);
                 calendar6.SetActive(true);
+                GameObject.Find("Next...Button").SetActive(false);
+                GameObject.Find("TransitionBackground").SetActive(false);
+                OpenBarButton.SetActive(true);
                 break;
             case 5:
                 day6to7.SetActive(false);
                 Day7DoorSubtitles.SetActive(false);
                 calendar7.SetActive(true);
+                GameObject.Find("Next...Button").SetActive(false);
+                GameObject.Find("TransitionBackground").SetActive(false);
+                FinalDayButton.SetActive(true);
                 break;
             default:
                 break;
