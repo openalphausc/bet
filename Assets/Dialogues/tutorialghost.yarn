@@ -281,7 +281,7 @@ The Tricky Treat.
 <<changeEmotion TutorialGhost neutral>>
 It's cheery blossom sake, golden dust, and another alcohol... I don't remember the name, I guess Theodore truly does have the brains in our family!
 
-Oh, and put nighshade berries on top.
+Oh, and put nightshade berries on top.
 
 Thanks. And hey- you're doing great. Really. We're all here for you. 
 
@@ -415,4 +415,34 @@ Seems like you didn't invite anyone today. That's alright! Let's just move on to
 
 Goodbye!
 
+===
+
+title: TutorialGhostFeedbackGreat
+tags:
+colorID:
+position:
+---
+<<changeEmotion TutorialGhost happy>>
+Awesome!
+<<goodbye TutorialGhost>>
+===
+
+title: TutorialGhostFeedbackRatios
+tags:
+colorID:
+position:
+---
+<<changeEmotion TutorialGhost surprised>>
+Not quite...
+<<goodbye TutorialGhost>>
+===
+
+title: TutorialGhostFeedbackIngredients
+tags:
+colorID:
+position:
+---
+<<changeEmotion TutorialGhost sad>>
+Well, that's not it.
+<<goodbye TutorialGhost>>
 ===
