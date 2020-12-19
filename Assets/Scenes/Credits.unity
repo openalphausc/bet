@@ -1416,8 +1416,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
+    Spooky Speakeasy
 
-    Spooky Speakeasy'
+
+    Dedicated to Jane Pinckard'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eb1d6028091c84a399ccf86500ebd0d0, type: 2}
   m_sharedMaterial: {fileID: 3371454467025790575, guid: eb1d6028091c84a399ccf86500ebd0d0,
