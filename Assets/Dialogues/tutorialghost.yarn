@@ -284,6 +284,19 @@ It's cheery blossom sake, golden dust, and another alcohol... I don't remember t
 Oh, and put nighshade berries on top.
 
 Thanks. And hey- you're doing great. Really. We're all here for you. 
+===
+
+title: TutorialGhostFeedback
+tags:
+colorID:
+position:
+---
+
+<<changeEmotion TutorialGhost sad>>
+
+Guess this is the last drink huh?
+
+Thank you for being such a great friend...
 
 ===
 
