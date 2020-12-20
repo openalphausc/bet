@@ -115,15 +115,15 @@ position:
 
 Phew. Boothany absolutely destroyed me in charades.
 
-<<changeEmotion TutorialGhost happy>>
+<<changeEmotion Ghost happy>>
 Still, I haven’t been this happy in a while. Great to see the bar full of life again! And full of death, I suppose? It's lovely. 
 
-<<changeEmotion TutorialGhost neutral>>
+<<changeEmotion Ghost neutral>>
 The best part about making drinks for monsters is getting to know them. Like now, when the place clears out and you get the chance to talk to someone one-on-one. 
 
 Monsters tell you about their lives and their problems, and you get to listen! Maybe even give some advice. 
 
-<<changeEmotion TutorialGhost happy>>
+<<changeEmotion Ghost happy>>
 Looks like someone’s already coming! I’ll leave you to it. And good luck— not that you’ll need it, of course.
 
 <<TutorialOver Ghost>>
@@ -292,11 +292,12 @@ colorID:
 position:
 ---
 
-<<changeEmotion TutorialGhost sad>>
+<<changeEmotion Ghost sad>>
 
 Guess this is the last drink huh?
 
 Thank you for being such a great friend...
+<<goodbye Ghost>>
 
 ===
 
@@ -419,10 +420,14 @@ tags:
 colorID:
 position:
 ---
-
+<<changeEmotion Ghost neutral>>
 Hmmm...
+<<changeEmotion Ghost sad>>
+Seems like you didn't invite anyone today. 
 
-Seems like you didn't invite anyone today. That's alright! Let's just move on to tomorrow...
+<<changeEmotion Ghost neutral>>
+
+That's alright! Let's just move on to tomorrow...
 
 <<finishedTalkingWith Ghost>>
 

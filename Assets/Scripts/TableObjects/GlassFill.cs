@@ -118,7 +118,7 @@ public class GlassFill : MonoBehaviour
             {
                 if (!MonsterSpawner.inTutorial)
                 {
-                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(currMonster + "FeedbackGreat");
+                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostFeedback");
                 }
             }
 
@@ -126,9 +126,10 @@ public class GlassFill : MonoBehaviour
             {
                 // if drink matches color, happy face
                 //face = Instantiate(happyFace);
-                if (!MonsterSpawner.inTutorial)
+                
+                if(!MonsterSpawner.inTutorial)
                 {
-                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostFeedback");
+                    FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue(currMonster + "FeedbackGreat");
                 }
                 wellDone.Play();
             }
