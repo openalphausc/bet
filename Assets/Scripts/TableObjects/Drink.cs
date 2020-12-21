@@ -23,6 +23,8 @@ public class Drink
     private static List<string> allLiquids;
     private static List<string> allToppings;
 
+    public bool hasTopping = false;
+
     public Drink()
     {
         name = "";
@@ -117,7 +119,7 @@ public class Drink
 
         // add to ingredients list
         if (isLiquid) liquids.Add(newIngredient);
-        else toppings.Add(newIngredient);
+        else if(!hasTopping) toppings.Add(newIngredient);
 
         // re-calculate color if liquid is added
         if (isLiquid) CalculateColor();
@@ -133,6 +135,7 @@ public class Drink
             liquids.Add(topping);
         }
         toppings.Clear();
+        hasTopping = false;
         
         // recalculate color
         CalculateColor();
