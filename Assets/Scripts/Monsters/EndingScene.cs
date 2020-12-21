@@ -24,6 +24,7 @@ public class EndingScene : MonoBehaviour
     private bool monster3Spoken = false;
     private bool monster4Spoken = false;
     public static bool introEnded = false;
+    private bool introHasNotRun = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,26 +43,31 @@ public class EndingScene : MonoBehaviour
         currentMonster.GetComponent<SpriteRenderer>().sprite = currentMonster.GetComponent<Monster>().emotions[2];
         currentMonster.GetComponent<SpriteRenderer>().transform.localScale = new Vector3(.9f, .9f, .9f);
         
-        if (dataStorage.totalPointsOverall > 7000)
-        {
-            ending = "GoodEnding";
-            GameObject.Find("BadEnding").SetActive(false);
-            GameObject.Find("GoodEnding").SetActive(true);
-            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostGoodEnding");
-        }
-        else
-        {
-            ending = "BadEnding";
-            GameObject.Find("BadEnding").SetActive(true);
-            GameObject.Find("GoodEnding").SetActive(false);
-            FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostBadEnding");
-        }
+        
         active = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(introHasNotRun)
+        {
+            introHasNotRun = false;
+            if (dataStorage.totalPointsOverall > 7000)
+            {
+                ending = "GoodEnding";
+                GameObject.Find("BadEnding").SetActive(false);
+                GameObject.Find("GoodEnding").SetActive(true);
+                FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostGoodEnding");
+            }
+            else
+            {
+                ending = "BadEnding";
+                GameObject.Find("BadEnding").SetActive(true);
+                GameObject.Find("GoodEnding").SetActive(false);
+                FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostBadEnding");
+            }
+        }
         if((monstersSpoken == 0 && introEnded) && !monster3Spoken)
         {
             currentMonster = Instantiate(
