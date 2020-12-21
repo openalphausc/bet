@@ -186,7 +186,10 @@ public class GlassFill : MonoBehaviour
 
         // play pouring sound
         if (isLiquid) addLiquid.Play();
+        else if (currentDrink.hasTopping && !isLiquid) error.Play();
         else addTopping.Play();
+
+        if (!isLiquid) currentDrink.hasTopping = true;
     }
 
     public void UpdateDrinkSprite(bool lerp = true)
