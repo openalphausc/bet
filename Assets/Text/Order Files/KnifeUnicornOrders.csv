@@ -1,4 +1,7 @@
-Drink Name;Order Notes
-Yuck Yuck;lots of blood, graveyard mud, whiskey
-Yucky Yucky;blood, whiskey, something fleshy
+Drink Name;Order Notes,,,
+Ignore;Ignore,,,
+Yuck Yuck;lots of blood, graveyard mud, whiskey,
+Ignore;Ignore,,,
+Yucky Yucky;blood, whiskey, something fleshy,
+Ignore;Ignore,,,
 Super Yuck Yuck;blood, whiskey, mud, something to make you smile

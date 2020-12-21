@@ -380,8 +380,8 @@ public class Monster : MonoBehaviour
         //     temp += "\n";
         // }
         // Debug.Log(temp);
-        drinkOrder = allOrders[timesVisited][0];
-        orderNotes = allOrders[timesVisited][1];
+        drinkOrder = allOrders[dataStorage.currentDay][0];
+        orderNotes = allOrders[dataStorage.currentDay][1];
 	}
 
     // name comparison class, don't mind
