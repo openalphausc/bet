@@ -118,6 +118,7 @@ public class GlassFill : MonoBehaviour
             {
                 if (!MonsterSpawner.inTutorial)
                 {
+                    wellDone.Play();
                     FindObjectOfType<Yarn.Unity.DialogueRunner>().StartDialogue("TutorialGhostFeedback");
                 }
             }
