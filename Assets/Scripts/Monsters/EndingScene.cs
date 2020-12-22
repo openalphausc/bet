@@ -176,16 +176,53 @@ public class EndingScene : MonoBehaviour
                 monster1 = monstersTemp[0].name;
                 monster2 = "CowboyAlien";
                 monster3 = "Utsuro";
+
+                if (monster1 == "Ghost")
+                {
+                    monster1 = monstersTemp[1].name;
+                }
+
                 break;
             case 2:
                 monster1 = monstersTemp[0].name;
                 monster2 = monstersTemp[1].name;
                 monster3 = "Utsuro";
+
+                if (monster1 == "Ghost")
+                {
+                    monster1 = monstersTemp[1].name;
+                    monster2 = monstersTemp[2].name;
+                }
+
+                if (monster2 == "Ghost")
+                {
+                    monster2 = monstersTemp[2].name;
+                }
+
                 break;
             default:
                 monster1 = monstersTemp[0].name;
                 monster2 = monstersTemp[1].name;
                 monster3 = monstersTemp[2].name;
+
+                if (monster1 == "Ghost")
+                {
+                    monster1 = monstersTemp[1].name;
+                    monster2 = monstersTemp[2].name;
+                    monster3 = monstersTemp[3].name;
+                }
+
+                if (monster2 == "Ghost")
+                {
+                    monster2 = monstersTemp[2].name;
+                    monster3 = monstersTemp[3].name;
+                }
+
+                if (monster3 == "Ghost")
+                {
+                    monster3 = monstersTemp[3].name;
+                }
+
                 break;
         }
     }
