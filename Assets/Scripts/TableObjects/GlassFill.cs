@@ -103,7 +103,7 @@ public class GlassFill : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collisionInfo)
     {
-        if (collisionInfo.gameObject.tag == "Monster" && !purchased && Monster.currentlyOrderingMonster != null && collisionInfo.gameObject.GetComponent<Monster>() == Monster.currentlyOrderingMonster)
+        if (collisionInfo.gameObject.tag == "Monster" && !purchased && Monster.currentlyOrderingMonster != null && collisionInfo.gameObject.GetComponent<Monster>() == Monster.currentlyOrderingMonster && collisionInfo.gameObject.GetComponent<Monster>().state == Monster.MonsterState.center)
         {
             // Debug.Log("currentDrink.color = " + currentDrink.color.ToString() + ", targetDrink.color = " + targetDrink.color.ToString());
 
