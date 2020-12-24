@@ -193,6 +193,7 @@ public class GlassFill : MonoBehaviour
 
     public void UpdateDrinkSprite(bool lerp = true)
     {
+        Debug.Log("Updating Sprite...");
         int total = currentDrink.liquids.Count + currentDrink.toppings.Count;
         //changes the sprite of the glass to the number of ingredients
         //TODO: change the fullSprite to different sprites
@@ -252,14 +253,22 @@ public class GlassFill : MonoBehaviour
         string layerName = "", topping = "";
 		GameObject layer = null;
 		Vector3 position = gameObject.transform.position, offset = new Vector3(0,0,0);
-		float layerHeight = gameObject.GetComponent<BoxCollider2D>().bounds.size.y / 5.5f,
+        Debug.Log(gameObject.GetComponent<BoxCollider2D>().bounds.size.y);
+        Debug.Log(gameObject.GetComponent<BoxCollider2D>().bounds.min.y);
+        float layerHeight = gameObject.GetComponent<BoxCollider2D>().bounds.size.y / 5.5f,
 			  minY = gameObject.GetComponent<BoxCollider2D>().bounds.min.y + layerHeight / 2.0f;
+        //layerHeight = 8.428314f / 6.0f;
+        //minY = 8.428314f + layerHeight / 2.0f;
 
         for (int curLevel = currentDrink.liquids.Count; curLevel < total; curLevel++)
         {
-			// Reset position to cup position and get topping name from current drink
-			position = gameObject.transform.position;
+            layerHeight = 8.428314f / 5.5f;
+            minY = -14.71385f + layerHeight / 2.0f;
+            // Reset position to cup position and get topping name from current drink
+            position = gameObject.transform.position;
+            Debug.Log("Position: " + position);
 			topping = currentDrink.toppings[curLevel - currentDrink.liquids.Count];
+            Debug.Log("Topping: " + topping);
 
 			// Adjust variables per topping type
             if (topping == "goldenDust") { layerName = "OA GoldDustTop0"; offset.y = 3.5f; offset.x = 0f; }
@@ -268,15 +277,19 @@ public class GlassFill : MonoBehaviour
 			else if (topping == "nightmareFuel") { layerName = "OA NightmareTop0"; offset.y = 2f; offset.x = 0f; }
             else if (topping == "nightshade") { layerName = "Nightshade"; offset.y = 2.2f; offset.x = 0f; }
             else if (topping == "mushrooms") { layerName = "Mushrooms"; offset.y = 1.5f; offset.x = 0.6f; }
-			
-			// Calculate position to place object
+
+            // Calculate position to place object
+            Debug.Log("CurrLevel: " + curLevel);
+            Debug.Log("LayerHeight: " + layerHeight);
 			position.y = minY + curLevel * layerHeight;
 			position += offset;
+            Debug.Log("New Position: " + position);
 
-			// Instantiate topping at position and add it to the toppings list
-			layer = Instantiate(Resources.Load<GameObject>("Prefabs/CupToppings/" + layerName), position, Quaternion.identity);
+            // Instantiate topping at position and add it to the toppings list
+            layer = Instantiate(Resources.Load<GameObject>("Prefabs/CupToppings/" + layerName), position, Quaternion.identity);
 			layer.transform.SetParent(gameObject.transform);
 			toppings.Add(layer);
+            Debug.Log(layer.name);
 		}
     }
 
