@@ -56,5 +56,11 @@ public class LightsFadeDown : MonoBehaviour
         fadingDown = true;
     }
 
-    
+    public void CloseBarButton()
+    {
+        MonsterSpawner.CloseBar();
+
+        StartFadeDown();
+
+    }
 }
