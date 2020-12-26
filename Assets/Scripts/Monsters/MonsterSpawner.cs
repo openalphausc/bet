@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class MonsterSpawner : MonoBehaviour
 {
     public List<Monster> monstersToSpawn = new List<Monster>();
-    public List<Monster> monstersOnScreen = new List<Monster>();
+    public static List<Monster> monstersOnScreen = new List<Monster>();
     public int totalMonstersSpawned = 0;
     public Queue<string>[] monsterQueue = new Queue<string>[6];
     public Queue<string> monstersOfTheDay = new Queue<string>();
@@ -104,7 +104,6 @@ public class MonsterSpawner : MonoBehaviour
                     timeUntilNextSpawn = GetSpawnTime();
                 }
             }
-
             // cycle through on screen monsters and despawn them if they're offscreen
             // also count how many are on screen
             for (int i = 0; i < monstersOnScreen.Count; i++)
@@ -130,6 +129,16 @@ public class MonsterSpawner : MonoBehaviour
                     }
                 }
             }
+        }
+
+    }
+
+    public static void CloseBar()
+    {
+        for (int i = 0; i < monstersOnScreen.Count; ++i)
+        {
+            monstersOnScreen[i].leaving = true;
+            monstersOnScreen[i].state = Monster.MonsterState.slidingOff;
         }
 
     }

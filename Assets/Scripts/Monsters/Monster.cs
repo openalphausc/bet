@@ -277,6 +277,7 @@ public class Monster : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (state == MonsterState.slidingOff) return;
         if (inAfterHours || inEnding) return;
         if (alreadyClickedOn || Monster.currentlyOrdering) return;
         alreadyClickedOn = true;
